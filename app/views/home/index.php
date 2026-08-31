@@ -30,7 +30,39 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     2. WHY SECTION: 3-COLUMN PARALLAX EDITORIAL PANELS
+     2. BISTRO INTRO STATEMENT WITH DARK LUXURY GRADIENT & SCRIPT ACCENTS
+     ========================================================================= -->
+<section class="kh-bistro-intro-sec">
+  <p class="kh-bistro-intro-text">
+    AS NIGHT FALLS OVER <span class="kh-bistro-script">the heritage hearths</span><br>
+    CANDLELIT TABLES AND <span class="kh-bistro-script">thoughtful plates</span><br>
+    SET THE TONE FOR <span class="kh-bistro-script">lingering evenings</span>
+  </p>
+</section>
+
+<!-- =========================================================================
+     3. PARALLAX ARCH SECTION & FLOATING BIRDS ORNAMENT (.kh-arch-section)
+     ========================================================================= -->
+<section class="kh-arch-section">
+  <div class="kh-semicircle"></div>
+
+  <div class="kh-bird-left">
+    <img src="/assets/images/birds-dark.webp" alt="Ornamental Flying Bird Left" loading="lazy">
+  </div>
+
+  <div class="kh-bird-right">
+    <img src="/assets/images/birds-light.webp" alt="Ornamental Flying Bird Right" loading="lazy">
+  </div>
+
+  <div class="kh-arch-wrap">
+    <div class="kh-arch">
+      <img src="/assets/images/arch-photo.webp" alt="Elevated Dining Atmosphere Arch" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     4. WHY SECTION: 3-COLUMN PARALLAX EDITORIAL PANELS
      ========================================================================= -->
 <section class="khf-why-sec" id="khfWhySec">
   <div class="khf-why-grid">
@@ -105,7 +137,87 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     3. 3D PERSPECTIVE CYLINDRICAL GALLERY
+     5. HORIZONTAL EXPANDING ACCORDION (BISTRO & GASTRONOMY TABS)
+     ========================================================================= -->
+<section class="khufusbistro-accordion-sec">
+  <div class="khufusbistro-accordion-header-block">
+    <div class="khufusbistro-accordion-number">03</div>
+    <div class="khufusbistro-accordion-kicker">Atmosphere & Expression</div>
+    <h2 class="khufusbistro-accordion-main-title">
+      The Dining Chapters
+      <span style="display:block; font-family: var(--font-script); font-size: clamp(24px, 2.5vw, 36px); color: var(--color-sand); text-transform: capitalize; margin-top: 2px;">three distinct expressions of flavor</span>
+    </h2>
+  </div>
+
+  <div class="khufusbistro-accordion">
+    <!-- Tab 1 -->
+    <div class="khufusbistro-accordion__item is-active" data-index="1" style="background-image: url('/assets/images/bistro-team.webp');">
+      <div class="khufusbistro-accordion__overlay"></div>
+      <div class="khufusbistro-accordion__header">
+        <span class="khufusbistro-accordion__side-title">The Hearth</span>
+        <span class="khufusbistro-accordion__active-icon" aria-hidden="true"></span>
+        <img class="khufusbistro-accordion__corner-icon" src="/assets/images/corner-ornament.svg" alt="Corner Ornament">
+        <span class="khufusbistro-accordion__number">01</span>
+        <div class="khufusbistro-accordion__content">
+          <div class="khufusbistro-accordion__kicker">The Hearth</div>
+          <h3 class="khufusbistro-accordion__title">WHERE TRADITION MEETS TABLE</h3>
+          <p class="khufusbistro-accordion__description">An open dining room filled with the warm scent of simmering whole cardamom, clove, and saffron, inviting every meal to unfold slowly with quiet intention.</p>
+          <a href="/about" class="khufusbistro-accordion__button">
+            <span>EXPLORE THE HERITAGE</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2 -->
+    <div class="khufusbistro-accordion__item" data-index="2" style="background-image: url('/assets/images/why-card-2.webp');">
+      <div class="khufusbistro-accordion__overlay"></div>
+      <div class="khufusbistro-accordion__header">
+        <span class="khufusbistro-accordion__side-title">The Evening</span>
+        <span class="khufusbistro-accordion__active-icon" aria-hidden="true"></span>
+        <img class="khufusbistro-accordion__corner-icon" src="/assets/images/corner-ornament.svg" alt="Corner Ornament">
+        <span class="khufusbistro-accordion__number">02</span>
+        <div class="khufusbistro-accordion__content">
+          <div class="khufusbistro-accordion__kicker">The Evening</div>
+          <h3 class="khufusbistro-accordion__title">A SLOWER, DEEPER RHYTHM</h3>
+          <p class="khufusbistro-accordion__description">As twilight falls across the Bay, the lights soften and the handis are unsealed. An intimate culinary journey that lingers well beyond the final course.</p>
+          <a href="/reservations" class="khufusbistro-accordion__button">
+            <span>RESERVE FOR EVENING</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div class="khufusbistro-accordion__item" data-index="3" style="background-image: url('/assets/images/why-card-3.webp');">
+      <div class="khufusbistro-accordion__overlay"></div>
+      <div class="khufusbistro-accordion__header">
+        <span class="khufusbistro-accordion__side-title">The Craft</span>
+        <span class="khufusbistro-accordion__active-icon" aria-hidden="true"></span>
+        <img class="khufusbistro-accordion__corner-icon" src="/assets/images/corner-ornament.svg" alt="Corner Ornament">
+        <span class="khufusbistro-accordion__number">03</span>
+        <div class="khufusbistro-accordion__content">
+          <div class="khufusbistro-accordion__kicker">The Craft</div>
+          <h3 class="khufusbistro-accordion__title">REFINED SIMPLICITY</h3>
+          <p class="khufusbistro-accordion__description">Fermented cast-iron dosas crisped with ghee, paired with hand-ground chutneys and aromatic sambar crafted daily without shortcuts.</p>
+          <a href="/menu" class="khufusbistro-accordion__button">
+            <span>VIEW SIGNATURE MENU</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Decorative separator ornament -->
+<div class="kh-ornament-divider">
+  <div class="kh-ornament-line"></div>
+  <div class="kh-ornament-mark"></div>
+  <div class="kh-ornament-line"></div>
+</div>
+
+<!-- =========================================================================
+     6. 3D PERSPECTIVE CYLINDRICAL GALLERY
      ========================================================================= -->
 <section class="khx-gallery" id="khxGallery">
   <div class="khx-header-stage">
@@ -142,7 +254,7 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     4. POLAROID SLIDER V2 (CHEF & GASTRONOMY)
+     7. POLAROID SLIDER V2 (CHEF & GASTRONOMY)
      ========================================================================= -->
 <section class="monarq-polaroid-slider-v2" id="monarqPolaroidSliderV2">
   <div class="mps5-shell">
@@ -195,7 +307,7 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     5. STORY & AMBIENT PARALLAX COLLAGE
+     8. STORY & AMBIENT PARALLAX COLLAGE
      ========================================================================= -->
 <section class="kh-home-story-sec" id="khHomeStorySec">
   <div class="kh-home-story-wrap">
@@ -247,7 +359,7 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     6. ARCHITECTURAL PILLAR CTA REVEAL
+     9. ARCHITECTURAL PILLAR CTA REVEAL
      ========================================================================= -->
 <section class="kh-cta-reveal" id="khCtaReveal">
   <div class="kh-cta-inner">

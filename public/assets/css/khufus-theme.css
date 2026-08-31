@@ -1417,3 +1417,405 @@ button {
   .kh-home-story-card { position: relative; right: auto; bottom: auto; width: 100%; margin-top: 24px; }
   .khf-footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+
+/* --------------------------------------------------------------------------
+   14. KHUFU'S BISTRO LUXURY INTRO BANNER & GRADIENTS
+   -------------------------------------------------------------------------- */
+.kh-bistro-intro-sec {
+  width: 100%;
+  background: linear-gradient(180deg, #241810 0%, #3D291C 50%, #241810 100%);
+  padding: 110px 40px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.kh-bistro-intro-sec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(198, 166, 121, 0.08) 0%, transparent 70%),
+              url("/assets/images/hieroglyphics.svg") center / 600px repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.kh-bistro-intro-text {
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: clamp(32px, 3.8vw, 58px);
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  position: relative;
+  z-index: 2;
+}
+
+.kh-bistro-script {
+  display: inline-block;
+  font-family: var(--font-script);
+  font-weight: 400;
+  text-transform: none;
+  color: var(--color-sand);
+  font-size: 1.18em;
+  line-height: 0.8;
+  letter-spacing: 0;
+  transform: rotate(-2deg);
+}
+
+/* --------------------------------------------------------------------------
+   15. PARALLAX ARCH SECTION & FLOATING BIRDS (.kh-arch-section)
+   -------------------------------------------------------------------------- */
+.kh-arch-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 620px;
+  background: #241810;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kh-semicircle {
+  position: absolute;
+  width: 150vw;
+  height: 150vw;
+  background: var(--color-cream);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  z-index: 1;
+  box-shadow: 0 -20px 80px rgba(0,0,0,0.15);
+}
+
+.kh-arch-wrap {
+  position: relative;
+  z-index: 3;
+  will-change: transform;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+
+.kh-arch {
+  width: clamp(260px, 24vw, 360px);
+  height: clamp(360px, 34vw, 480px);
+  border-radius: 220px 220px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kh-arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.kh-bird-left {
+  position: absolute;
+  width: clamp(140px, 14vw, 220px);
+  left: 10%;
+  top: 32%;
+  z-index: 4;
+  will-change: transform;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.kh-bird-right {
+  position: absolute;
+  width: clamp(140px, 14vw, 220px);
+  right: 10%;
+  top: 58%;
+  z-index: 4;
+  will-change: transform;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   16. HORIZONTAL EXPANDING ACCORDION (.khufusbistro-accordion)
+   -------------------------------------------------------------------------- */
+.khufusbistro-accordion-sec {
+  width: 100%;
+  padding: 80px 48px;
+  background-color: var(--color-cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.khufusbistro-accordion-header-block {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.khufusbistro-accordion-number {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-size: clamp(70px, 8vw, 130px);
+  color: rgba(92, 71, 43, 0.08);
+  line-height: 0.8;
+  pointer-events: none;
+}
+
+.khufusbistro-accordion-kicker {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgb(106, 76, 54);
+  margin-bottom: 8px;
+}
+
+.khufusbistro-accordion-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--color-espresso);
+}
+
+.khufusbistro-accordion {
+  display: flex;
+  gap: 16px;
+  height: 80vh !important;
+  min-height: 540px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.khufusbistro-accordion__item {
+  flex: 0.28;
+  overflow: hidden;
+  position: relative;
+  transition: flex 0.45s var(--ease-luxury);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 24px;
+  height: 100%;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.khufusbistro-accordion__item.is-active {
+  flex: 5.5;
+}
+
+.khufusbistro-accordion__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(36, 24, 16, 0.88) 0%,
+    rgba(36, 24, 16, 0.55) 40%,
+    rgba(36, 24, 16, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.khufusbistro-accordion__header {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  z-index: 2;
+}
+
+.khufusbistro-accordion__side-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-script) !important;
+  font-size: 34px;
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.khufusbistro-accordion__item.is-active .khufusbistro-accordion__side-title {
+  opacity: 0;
+}
+
+.khufusbistro-accordion__active-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: opacity 0.3s;
+}
+
+.khufusbistro-accordion__item.is-active .khufusbistro-accordion__active-icon {
+  opacity: 0;
+}
+
+.khufusbistro-accordion__corner-icon {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  width: 38px;
+  height: 38px;
+  opacity: 0;
+  transition: opacity 0.35s;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+.khufusbistro-accordion__number {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: var(--font-script);
+  font-size: 44px;
+  line-height: 1;
+  color: var(--color-sand);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.khufusbistro-accordion__item.is-active .khufusbistro-accordion__corner-icon,
+.khufusbistro-accordion__item.is-active .khufusbistro-accordion__number {
+  opacity: 1;
+}
+
+.khufusbistro-accordion__content {
+  position: absolute;
+  bottom: 36px;
+  left: 36px;
+  right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 3;
+  max-width: 680px;
+}
+
+.khufusbistro-accordion__item.is-active .khufusbistro-accordion__content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s var(--ease-luxury) 0.12s, transform 0.4s var(--ease-luxury) 0.12s;
+}
+
+.khufusbistro-accordion__kicker {
+  font-family: var(--font-script) !important;
+  font-size: 38px !important;
+  line-height: 1 !important;
+  color: var(--color-sand);
+  margin-bottom: 6px !important;
+}
+
+.khufusbistro-accordion__title {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(22px, 2.2vw, 32px) !important;
+  line-height: 1.1 !important;
+  font-weight: 300 !important;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 12px !important;
+}
+
+.khufusbistro-accordion__description {
+  font-family: var(--font-sans) !important;
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8 !important;
+  margin-bottom: 24px !important;
+  max-width: 620px;
+}
+
+.khufusbistro-accordion__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+
+.khufusbistro-accordion__button:hover {
+  background: #fff;
+  color: var(--color-espresso-dark);
+  border-color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   17. DECORATIVE SECTION DIVIDERS & HIEROGLYPHIC EMBLEMS
+   -------------------------------------------------------------------------- */
+.kh-ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 0;
+  position: relative;
+}
+
+.kh-ornament-line {
+  flex: 0 0 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(61, 41, 28, 0.25), transparent);
+}
+
+.kh-ornament-mark {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-espresso);
+  mask: url("/assets/images/flat-rose-icon.svg") center / contain no-repeat;
+  -webkit-mask: url("/assets/images/flat-rose-icon.svg") center / contain no-repeat;
+  opacity: 0.45;
+}
+
+@media (max-width: 768px) {
+  .khufusbistro-accordion {
+    flex-direction: column;
+    height: auto !important;
+    gap: 12px;
+  }
+  .khufusbistro-accordion__item {
+    width: 100%;
+    height: 74px;
+    flex: initial;
+  }
+  .khufusbistro-accordion__item.is-active {
+    height: 480px;
+    flex: initial;
+  }
+  .khufusbistro-accordion__side-title {
+    writing-mode: horizontal-tb;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+    font-size: 24px;
+  }
+  .kh-arch-section {
+    height: 70vh;
+  }
+}

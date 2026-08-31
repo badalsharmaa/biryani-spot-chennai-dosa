@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   init3DGallery();
   initPolaroidSlider();
   initFooterAccordion();
+  initBistroAccordion();
 });
 
 /* --------------------------------------------------------------------------
@@ -23,7 +24,6 @@ function initPreloader() {
 
   if (!intro) return;
 
-  // Stagger words
   const words = intro.querySelectorAll(".khf-word");
   words.forEach((w, idx) => {
     w.style.setProperty("--d", `${idx * 85}ms`);
@@ -40,7 +40,6 @@ function initPreloader() {
     skipBtn.addEventListener("click", dismissIntro);
   }
 
-  // Auto dismiss after 2.6s
   setTimeout(dismissIntro, 2600);
 }
 
@@ -88,15 +87,17 @@ function initMenuOverlay() {
 }
 
 /* --------------------------------------------------------------------------
-   4. PARALLAX CONTROLLER
+   4. PARALLAX & BIRD MOTION CONTROLLER
    -------------------------------------------------------------------------- */
 function initParallax() {
   const whyPanels = document.querySelectorAll(".khf-why-panel");
   const storyCols = document.querySelectorAll(".kh-home-story-col");
   const ctaInner = document.querySelector(".kh-cta-inner");
+  const birdLeft = document.querySelector(".kh-bird-left");
+  const birdRight = document.querySelector(".kh-bird-right");
+  const archWrap = document.querySelector(".kh-arch-wrap");
 
   function onScroll() {
-    const scrollY = window.scrollY;
     const windowH = window.innerHeight;
 
     whyPanels.forEach(panel => {
@@ -116,6 +117,19 @@ function initParallax() {
         col.style.transform = `translate3d(0, ${offset * 0.3}px, 0)`;
       }
     });
+
+    if (birdLeft || birdRight || archWrap) {
+      const archSec = document.querySelector(".kh-arch-section");
+      if (archSec) {
+        const rect = archSec.getBoundingClientRect();
+        if (rect.top < windowH && rect.bottom > 0) {
+          const offset = (rect.top - windowH / 2);
+          if (birdLeft) birdLeft.style.transform = `translate3d(0, ${offset * -0.15}px, 0)`;
+          if (birdRight) birdRight.style.transform = `translate3d(0, ${offset * 0.18}px, 0)`;
+          if (archWrap) archWrap.style.transform = `translate3d(0, ${offset * 0.08}px, 0)`;
+        }
+      }
+    }
 
     if (ctaInner) {
       const rect = ctaInner.getBoundingClientRect();
@@ -141,10 +155,8 @@ function init3DGallery() {
   const items = Array.from(track.querySelectorAll(".khx-item"));
   let isDown = false;
   let startX = 0;
-  let scrollLeft = 0;
-  let currentX = 0;
   let targetX = 0;
-  let animationFrame;
+  let currentX = 0;
 
   function updateItems() {
     const viewportCenter = window.innerWidth / 2;
@@ -169,7 +181,7 @@ function init3DGallery() {
     currentX += (targetX - currentX) * 0.08;
     track.style.transform = `translate3d(${currentX}px, 0, 0) rotateX(6deg)`;
     updateItems();
-    animationFrame = requestAnimationFrame(render);
+    requestAnimationFrame(render);
   }
 
   viewport.addEventListener("mousedown", e => {
@@ -189,7 +201,6 @@ function init3DGallery() {
     targetX = e.pageX - startX;
   });
 
-  // Touch support
   viewport.addEventListener("touchstart", e => {
     isDown = true;
     startX = e.touches[0].pageX - targetX;
@@ -248,7 +259,6 @@ function initPolaroidSlider() {
   const photoLayer = document.getElementById("mps5ImageCurrent");
   const photoTitle = document.getElementById("mps5PhotoTitle");
   const titleEl = document.querySelector(".mps5-title");
-  const scriptEl = document.querySelector(".mps5-script");
   const kickerEl = document.querySelector(".mps5-kicker");
   const textEl = document.querySelector(".mps5-text");
   const noteEl = document.querySelector(".mps5-note");
@@ -262,9 +272,7 @@ function initPolaroidSlider() {
     currentIndex = index;
     const slide = slides[currentIndex];
 
-    if (photoLayer) {
-      photoLayer.style.backgroundImage = `url(${slide.image})`;
-    }
+    if (photoLayer) photoLayer.style.backgroundImage = `url(${slide.image})`;
     if (photoTitle) photoTitle.textContent = slide.title;
     if (kickerEl) kickerEl.textContent = slide.kicker;
     if (titleEl) titleEl.innerHTML = `${slide.headline}<span class="mps5-script">${slide.script}</span>`;
@@ -298,6 +306,26 @@ function initFooterAccordion() {
       if (!isOpen) {
         item.classList.add("is-open");
       }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   8. BISTRO EXPANDING ACCORDION CONTROLLER
+   -------------------------------------------------------------------------- */
+function initBistroAccordion() {
+  const accordionItems = document.querySelectorAll(".khufusbistro-accordion__item");
+  if (!accordionItems.length) return;
+
+  accordionItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      accordionItems.forEach(i => i.classList.remove("is-active"));
+      item.classList.add("is-active");
+    });
+
+    item.addEventListener("click", () => {
+      accordionItems.forEach(i => i.classList.remove("is-active"));
+      item.classList.add("is-active");
     });
   });
 }
