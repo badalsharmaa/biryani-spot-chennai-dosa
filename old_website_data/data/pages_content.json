@@ -1,0 +1,51 @@
+{
+  "home": {
+    "hero": {
+      "headline": "Authentic Chettinad Indian Cuisine",
+      "subheadline": "Experience a fiery and aromatic South Indian style known for its complex, freshly ground spice blends (masalas), sun-dried meats, and slow-cooked dishes",
+      "primaryCta": "Order Now",
+      "bannerImage": "public/assets/images/banners/hero_banner.webp"
+    },
+    "features": [
+      {
+        "title": "Signature Biryani",
+        "description": "Aromatic basmati rice cooked with premium spices and your choice of protein",
+        "image": "public/assets/images/dishes/traditional_thali.webp"
+      },
+      {
+        "title": "Crispy Dosas",
+        "description": "South Indian crepes made with fermented rice batter, served with authentic chutneys",
+        "image": "public/assets/images/dishes/indian_thali_curries.webp"
+      },
+      {
+        "title": "Fresh Curries",
+        "description": "Traditional curry dishes prepared daily with fresh ingredients and aromatic spices",
+        "image": "public/assets/images/dishes/curries_and_naan.webp"
+      }
+    ],
+    "foodTruck": {
+      "title": "Biryani Spot Food Truck",
+      "description": "Bringing authentic South Indian flavors on wheels"
+    },
+    "drinks": {
+      "title": "Wine and Beer Menu",
+      "image": "public/assets/images/menus/wine_and_beer_menu.jpg"
+    }
+  },
+  "catering": {
+    "title": "Biryani Spot Catering",
+    "description": "Catering for weddings, corporate events, birthday parties, and gatherings with authentic Chettinad and South Indian specialties.",
+    "image": "public/assets/images/dishes/catering_spread.webp"
+  },
+  "contact": {
+    "title": "Get in Touch with us!",
+    "description": "We'd love to hear from you! Whether you have questions, feedback, or special requests, our team is here to help.",
+    "responseTime": "We aim to respond within 24 hours."
+  },
+  "promos": [
+    {
+      "title": "Tea Combo Happy Hour",
+      "image": "public/assets/images/promos/tea_combo_happy_hour.jpeg"
+    }
+  ]
+}

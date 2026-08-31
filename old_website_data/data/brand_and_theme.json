@@ -1,0 +1,279 @@
+{
+  "name": "Biryani and Dosa Grill",
+  "brandTitle": "Biryani Spot Chennai Dosa",
+  "tagline": "Authentic Chettinad South Indian Cuisine",
+  "cuisine": "Indian",
+  "priceRange": "$$",
+  "acceptedPaymentTypes": "Cash, Credit card, Tap to pay, Apple Pay, Google Pay, Debit card",
+  "domains": [
+    "biryanispotchennaidosa.com",
+    "chennaidosa.toast.site"
+  ],
+  "theme": {
+    "__typename": "Theme",
+    "generatedPalettes": {
+      "__typename": "GeneratedPalettes",
+      "brandPalette": {
+        "__typename": "ColorPalette",
+        "light": [
+          "#fbfdfe",
+          "#f7f9fa",
+          "#eef1f1",
+          "#e6e9ea",
+          "#dee2e3",
+          "#d6dadb",
+          "#cbcfd0",
+          "#b8bcbd",
+          "#0d1416",
+          "#252d2f",
+          "#5f6566",
+          "#192123",
+          "#fff"
+        ],
+        "lightAlpha": [
+          "#0080c004",
+          "#00406008",
+          "#002d2d11",
+          "#001f2919",
+          "#001f2721",
+          "#00192029",
+          "#00141934",
+          "#000f1247",
+          "#00070af2",
+          "#00090cda",
+          "#000a0ba0",
+          "#00090be6",
+          "#fff"
+        ],
+        "dark": [
+          "#101719",
+          "#111c1f",
+          "#1d292c",
+          "#283437",
+          "#334043",
+          "#414d51",
+          "#515e61",
+          "#647175",
+          "#c8d7db",
+          "#becdd1",
+          "#b1bfc3",
+          "#dcebf0",
+          "#05262e"
+        ],
+        "darkAlpha": [
+          "#0056d604",
+          "#00b0fc0a",
+          "#5ed8f719",
+          "#93e5fa25",
+          "#aaedfc32",
+          "#bfeefe41",
+          "#ccf4fd53",
+          "#d6f6ff68",
+          "#e9faffd8",
+          "#e7faffcd",
+          "#e6f8febe",
+          "#eafaffef",
+          "#05262e"
+        ]
+      },
+      "complimentaryPalette": {
+        "__typename": "ColorPalette",
+        "light": [
+          "#fefcfb",
+          "#faf8f7",
+          "#f2efee",
+          "#eae7e6",
+          "#e4e0df",
+          "#dcd8d7",
+          "#d1cdcc",
+          "#bfbab9",
+          "#160f0d",
+          "#302826",
+          "#686260",
+          "#251d1b",
+          "#fff"
+        ],
+        "lightAlpha": [
+          "#c0400004",
+          "#60200008",
+          "#3c0f0011",
+          "#290b0019",
+          "#28080020",
+          "#20070028",
+          "#19050033",
+          "#16040046",
+          "#0a0200f2",
+          "#0c0200d9",
+          "#0d04009f",
+          "#0b0200e4",
+          "#fff"
+        ],
+        "dark": [
+          "#1b1412",
+          "#241815",
+          "#2d221e",
+          "#352926",
+          "#3f322f",
+          "#4b3f3b",
+          "#5c4f4b",
+          "#746662",
+          "#9d8e89",
+          "#90827e",
+          "#c9b9b5",
+          "#f1e1dc",
+          "#fff"
+        ],
+        "darkAlpha": [
+          "#eb000006",
+          "#f6360710",
+          "#f88c651a",
+          "#ffa58e22",
+          "#ffb5a42d",
+          "#fcc8b63b",
+          "#fed3c64d",
+          "#ffddd367",
+          "#ffe5dd94",
+          "#ffe4dc86",
+          "#ffeae5c4",
+          "#ffeee9f0",
+          "#fff"
+        ]
+      }
+    },
+    "colorScheme": {
+      "__typename": "ColorScheme",
+      "surface": {
+        "__typename": "SurfaceColorScheme",
+        "default": "#f7f9fa",
+        "secondary": "#fbfdfe",
+        "tertiary": "#ffffff",
+        "focus": "#eef1f1",
+        "overlay": "#0000009b",
+        "inverse": "#202020",
+        "shadow": "#00000044"
+      },
+      "text": {
+        "__typename": "TextColorScheme",
+        "default": "#202020",
+        "secondary": "#646464",
+        "action": "#4b5152",
+        "onBgPrimary": "#fff",
+        "onBgPrimarySubtle": "#5f6566",
+        "onBgSecondary": "#fff",
+        "onBgSecondarySubtle": "#686260",
+        "onOverlay": "#fff",
+        "onErrorPrimary": "#fffbff",
+        "onErrorSecondary": "#ba1a1a"
+      },
+      "icon": {
+        "__typename": "TextColorScheme",
+        "default": "#202020",
+        "secondary": "#646464",
+        "action": "#4b5152",
+        "onBgPrimary": "#fff",
+        "onBgPrimarySubtle": "#5f6566",
+        "onBgSecondary": "#fff",
+        "onBgSecondarySubtle": "#686260",
+        "onOverlay": "#fff",
+        "onErrorPrimary": "#fffbff",
+        "onErrorSecondary": "#ba1a1a"
+      },
+      "background": {
+        "__typename": "BackgroundColorScheme",
+        "primary": "#0d1416",
+        "primaryOverlay": "#00192029",
+        "primaryFocus": "#252d2f",
+        "primarySubtle": "#eef1f1",
+        "primarySubtleFocus": "#e6e9ea",
+        "secondary": "#160f0d",
+        "secondaryOverlay": "#20070028",
+        "secondaryFocus": "#302826",
+        "secondarySubtle": "#f2efee",
+        "secondarySubtleFocus": "#eae7e6"
+      },
+      "border": {
+        "__typename": "BorderColorScheme",
+        "default": "#cecece",
+        "focus": "#bbb",
+        "withPrimary": "#d6dadb",
+        "withPrimarySubtle": "#b8bcbd",
+        "withSecondary": "#bfbab9",
+        "withSecondarySubtle": "#dcd8d7"
+      }
+    },
+    "colorOverrides": {
+      "__typename": "ColorOverrides",
+      "navigation": {
+        "__typename": "NavigationColorOverrides",
+        "background": null,
+        "text": null
+      },
+      "viewOnlyMenu": {
+        "__typename": "MenuColorOverrides",
+        "cardBackground": null,
+        "itemTitle": null,
+        "itemDescription": null,
+        "cardBorder": null
+      },
+      "onlineOrderingMenu": {
+        "__typename": "MenuColorOverrides",
+        "cardBackground": null,
+        "itemTitle": null,
+        "itemDescription": null,
+        "cardBorder": null
+      },
+      "ecommMenu": {
+        "__typename": "MenuColorOverrides",
+        "cardBackground": null,
+        "itemTitle": null,
+        "itemDescription": null,
+        "cardBorder": null
+      },
+      "offerColorOverrides": {
+        "__typename": "OfferColorOverrides",
+        "illustration": null
+      },
+      "spotlightBannerColorOverrides": {
+        "__typename": "SpotlightBannerColorOverrides",
+        "background": null,
+        "text": null
+      },
+      "footerColorOverrides": {
+        "__typename": "FooterColorOverrides",
+        "background": null,
+        "text": null
+      },
+      "actionBannerColorOverrides": {
+        "__typename": "ActionBannerColorOverrides",
+        "background": null,
+        "ctaText": null,
+        "ctaBackground": null
+      }
+    },
+    "brandColor": "#0d1416",
+    "variant": "lightOnBrand",
+    "enabled": true,
+    "fonts": {
+      "__typename": "FontsTheme",
+      "heading1": null,
+      "heading2": null,
+      "heading3": null,
+      "heading4": null,
+      "default": null,
+      "subtext": null
+    }
+  },
+  "fonts": {
+    "heading": "Zilla Slab",
+    "body": "Inter",
+    "secondary": "Effra"
+  },
+  "colors": {
+    "primary": "#0d1416",
+    "surface": "#f7f9fa",
+    "surfaceSecondary": "#fbfdfe",
+    "surfaceTertiary": "#ffffff",
+    "textDefault": "#202020",
+    "textSecondary": "#646464"
+  }
+}

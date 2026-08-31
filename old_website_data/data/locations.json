@@ -1,0 +1,319 @@
+[
+  {
+    "id": "2c43b56f-6e78-49ec-94c7-4df3620f7952",
+    "externalId": "2c43b56f-6e78-49ec-94c7-4df3620f7952",
+    "name": "Milpitas",
+    "slug": "biryani-and-dosa-grill-milpitas-380-south-main-street",
+    "address": {
+      "address1": "380 South Main Street",
+      "address2": "",
+      "city": "Milpitas",
+      "state": "CA",
+      "zipcode": "95035",
+      "country": "US",
+      "fullAddress": "380 South Main Street, Milpitas, CA 95035"
+    },
+    "phoneNumber": "(669) 264-7920",
+    "rawPhone": "6692647920",
+    "coordinates": {
+      "latitude": 37.425353,
+      "longitude": -121.905125
+    },
+    "schedule": [
+      {
+        "__typename": "Schedule",
+        "days": [
+          "monday",
+          "wednesday",
+          "thursday",
+          "friday",
+          "saturday",
+          "sunday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "21:00:00.000",
+            "startTime": "10:30:00.000",
+            "overnight": false
+          }
+        ]
+      }
+    ],
+    "businessHours": null,
+    "orderUrl": "https://biryanispotchennaidosa.com/order/biryani-and-dosa-grill-milpitas-380-south-main-street",
+    "toastOrderUrl": "https://order.toasttab.com/online/biryani-and-dosa-grill-milpitas-380-south-main-street",
+    "googleMapsUrl": "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%20380%20South%20Main%20Street%2C%20Milpitas%2C%20CA%2095035"
+  },
+  {
+    "id": "3132bbec-8b3f-49ae-9cae-e0002b345b15",
+    "externalId": "3132bbec-8b3f-49ae-9cae-e0002b345b15",
+    "name": "Dublin",
+    "slug": "biryani-spot-4288-dublin-blvd-111",
+    "address": {
+      "address1": "4288 Dublin Blvd #111",
+      "address2": "",
+      "city": "Dublin",
+      "state": "CA",
+      "zipcode": "94568",
+      "country": "US",
+      "fullAddress": "4288 Dublin Blvd #111, Dublin, CA 94568"
+    },
+    "phoneNumber": "(925) 361-5317",
+    "rawPhone": "9253615317",
+    "coordinates": {
+      "latitude": 37.704563,
+      "longitude": -121.87544
+    },
+    "schedule": [
+      {
+        "__typename": "Schedule",
+        "days": [
+          "monday",
+          "wednesday",
+          "thursday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "14:30:00.000",
+            "startTime": "11:30:00.000",
+            "overnight": false
+          },
+          {
+            "__typename": "Interval",
+            "endTime": "21:30:00.000",
+            "startTime": "17:30:00.000",
+            "overnight": false
+          }
+        ]
+      },
+      {
+        "__typename": "Schedule",
+        "days": [
+          "friday",
+          "saturday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "22:00:00.000",
+            "startTime": "11:30:00.000",
+            "overnight": false
+          }
+        ]
+      },
+      {
+        "__typename": "Schedule",
+        "days": [
+          "sunday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "21:30:00.000",
+            "startTime": "11:30:00.000",
+            "overnight": false
+          }
+        ]
+      }
+    ],
+    "businessHours": null,
+    "orderUrl": "https://biryanispotchennaidosa.com/order/biryani-spot-4288-dublin-blvd-111",
+    "toastOrderUrl": "https://order.toasttab.com/online/biryani-spot-4288-dublin-blvd-111",
+    "googleMapsUrl": "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%204288%20Dublin%20Blvd%20%23111%2C%20Dublin%2C%20CA%2094568"
+  },
+  {
+    "id": "8a1b667d-f3fc-458b-9607-0b891eea1cd8",
+    "externalId": "8a1b667d-f3fc-458b-9607-0b891eea1cd8",
+    "name": "Livermore",
+    "slug": "chennai-biryani-and-dosa-livermore-portal-ave",
+    "address": {
+      "address1": "2050 Portola Avenue",
+      "address2": "",
+      "city": "Livermore",
+      "state": "CA",
+      "zipcode": "94551",
+      "country": "US",
+      "fullAddress": "2050 Portola Avenue, Livermore, CA 94551"
+    },
+    "phoneNumber": "(669) 264-7920",
+    "rawPhone": "6692647920",
+    "coordinates": {
+      "latitude": 37.69143,
+      "longitude": -121.773786
+    },
+    "schedule": [
+      {
+        "__typename": "Schedule",
+        "days": [
+          "monday",
+          "wednesday",
+          "thursday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "21:00:00.000",
+            "startTime": "11:30:00.000",
+            "overnight": false
+          }
+        ]
+      },
+      {
+        "__typename": "Schedule",
+        "days": [
+          "friday",
+          "saturday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "22:00:00.000",
+            "startTime": "11:30:00.000",
+            "overnight": false
+          }
+        ]
+      },
+      {
+        "__typename": "Schedule",
+        "days": [
+          "sunday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "21:00:00.000",
+            "startTime": "11:30:00.000",
+            "overnight": false
+          }
+        ]
+      }
+    ],
+    "businessHours": null,
+    "orderUrl": "https://biryanispotchennaidosa.com/order/chennai-biryani-and-dosa-livermore-portal-ave",
+    "toastOrderUrl": "https://order.toasttab.com/online/chennai-biryani-and-dosa-livermore-portal-ave",
+    "googleMapsUrl": "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%202050%20Portola%20Avenue%2C%20Livermore%2C%20CA%2094551"
+  },
+  {
+    "id": "feb79ab5-31a6-4405-add2-5946e51635ff",
+    "externalId": "feb79ab5-31a6-4405-add2-5946e51635ff",
+    "name": "Concord",
+    "slug": "chennai-dosa",
+    "address": {
+      "address1": "3540 Clayton Road",
+      "address2": "",
+      "city": "Concord",
+      "state": "CA",
+      "zipcode": "94519",
+      "country": "US",
+      "fullAddress": "3540 Clayton Road, Concord, CA 94519"
+    },
+    "phoneNumber": "(925) 494-4470",
+    "rawPhone": "9254944470",
+    "coordinates": {
+      "latitude": 37.970282,
+      "longitude": -122.011414
+    },
+    "schedule": [
+      {
+        "__typename": "Schedule",
+        "days": [
+          "monday",
+          "wednesday",
+          "thursday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "15:00:00.000",
+            "startTime": "11:00:00.000",
+            "overnight": false
+          },
+          {
+            "__typename": "Interval",
+            "endTime": "21:30:00.000",
+            "startTime": "17:30:00.000",
+            "overnight": false
+          }
+        ]
+      },
+      {
+        "__typename": "Schedule",
+        "days": [
+          "friday",
+          "saturday",
+          "sunday"
+        ],
+        "intervals": [
+          {
+            "__typename": "Interval",
+            "endTime": "22:00:00.000",
+            "startTime": "11:00:00.000",
+            "overnight": false
+          }
+        ]
+      }
+    ],
+    "businessHours": {
+      "__typename": "BusinessHours",
+      "monday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "10:00:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ],
+      "tuesday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "11:30:00.000",
+          "endTime": "15:30:00.000"
+        },
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "17:30:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ],
+      "wednesday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "10:00:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ],
+      "thursday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "10:00:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ],
+      "friday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "10:00:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ],
+      "saturday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "10:00:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ],
+      "sunday": [
+        {
+          "__typename": "BusinessHoursInterval",
+          "startTime": "10:00:00.000",
+          "endTime": "22:00:00.000"
+        }
+      ]
+    },
+    "orderUrl": "https://biryanispotchennaidosa.com/order/chennai-dosa",
+    "toastOrderUrl": "https://order.toasttab.com/online/chennai-dosa",
+    "googleMapsUrl": "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%203540%20Clayton%20Road%2C%20Concord%2C%20CA%2094519"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/jTzPBHssdBYRhtMbTuMEIIzUicFgc3WnXMv3PPsiOJY/ext:webp/quality:85/c:3456:1344:ce:0:0/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/Biryani_Spot_Website_Banner_0402260852.png",
+    "localPath": "public/assets/images/banners/hero_banner.webp",
+    "name": "Hero Website Banner",
+    "category": "banners"
+  },
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/TkC9ALxcEEMKDZw9jjSFt3wAIRlthQWQMZpvsd9TMAs/ext:webp/quality:85/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/94accf6d-7a70-43f3-a6d3-c845b7a5eeff-3",
+    "localPath": "public/assets/images/dishes/traditional_thali.webp",
+    "name": "Traditional Indian Thali",
+    "category": "dishes"
+  },
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/X4dhqozAy3a7-YD7UuXjqhMzS8Pr6SP4TCIIyT6KLVg/ext:webp/quality:85/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/94accf6d-7a70-43f3-a6d3-c845b7a5eeff-6",
+    "localPath": "public/assets/images/dishes/indian_thali_curries.webp",
+    "name": "Indian Thali with Curries & Rice",
+    "category": "dishes"
+  },
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/YicAPL0QGtqQTsAhsmCfY31FOeqDExeGFvGjnsLzE1U/ext:webp/quality:85/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/94accf6d-7a70-43f3-a6d3-c845b7a5eeff-1",
+    "localPath": "public/assets/images/dishes/curries_and_naan.webp",
+    "name": "Assorted Indian Curries and Naan",
+    "category": "dishes"
+  },
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/TlnSPV32UOQVKTn_n1cgv4wYt2ePn_KIcB-sOG0oJYI/ext:webp/quality:85/c:1079:1919:ce:0:0/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/94accf6d-7a70-43f3-a6d3-c845b7a5eeff-1",
+    "localPath": "public/assets/images/dishes/catering_spread.webp",
+    "name": "Catering Spread & Curries",
+    "category": "dishes"
+  },
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/5j14_pEMYTgmycNalMojyhLPbHk1gwE_Il6eOBVBL54/ext:webp/quality:85/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/94accf6d-7a70-43f3-a6d3-c845b7a5eeff-0",
+    "localPath": "public/assets/images/brand/restaurant_icon.webp",
+    "name": "Restaurant Brand Icon",
+    "category": "brand"
+  },
+  {
+    "url": "https://d1w7312wesee68.cloudfront.net/Z4LpFFj4HhvWJtnJmoE7DYk609NidTDa3c3gHBMe9VQ/ext:webp/quality:85/c:1236:1600:ce:0:0/plain/s3://toast-sites-resources-prod/restaurantImages/36ff028b-5def-4475-b7d4-3e7d5ba38526/BiryaniSpotWineandBeerMenu.jpg",
+    "localPath": "public/assets/images/menus/wine_and_beer_menu.jpg",
+    "name": "Wine & Beer Menu Board",
+    "category": "menus"
+  },
+  {
+    "url": "https://cf-images.hiraya.digital/emails/compatible-images/images/WhatsApp_Image_2026-08-28_at_01.16.41.jpeg",
+    "localPath": "public/assets/images/promos/tea_combo_happy_hour.jpeg",
+    "name": "Tea Combo Happy Hour Promo Flyer",
+    "category": "promos"
+  }
+]
