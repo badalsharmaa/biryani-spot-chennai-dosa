@@ -1,7 +1,6 @@
 <?php
 $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-// Simple router
 switch ($uri) {
     case "/":
     case "":
@@ -14,8 +13,10 @@ switch ($uri) {
         require __DIR__ . "/../app/views/locations/index.php";
         break;
     case "/about":
-    case "/legacy":
         require __DIR__ . "/../app/views/about/index.php";
+        break;
+    case "/legacy":
+        require __DIR__ . "/../app/views/legacy/index.php";
         break;
     case "/experience":
         require __DIR__ . "/../app/views/experience/index.php";
@@ -26,6 +27,9 @@ switch ($uri) {
         break;
     case "/gallery":
         require __DIR__ . "/../app/views/gallery/index.php";
+        break;
+    case "/bistro":
+        require __DIR__ . "/../app/views/bistro/index.php";
         break;
     default:
         http_response_code(404);

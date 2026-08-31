@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= $pageTitle ?? "Biryani Spot Chennai Dosa | Elevated Indian Dining" ?></title>
+  <title><?= $pageTitle ?? "Biryani Spot Chennai Dosa | Award-Winning Elevated Indian Dining" ?></title>
   <meta name="description" content="An elevated dining experience celebrating authentic Hyderabadi Dum Biryanis and crisp South Indian Dosas across 4 premier California locations.">
   
   <!-- Favicon & Stylesheet -->
   <link rel="icon" type="image/svg+xml" href="/assets/images/logo-white.svg">
   <link rel="stylesheet" href="/assets/css/khufus-theme.css">
+  
+  <!-- Lottie web player -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js"></script>
 </head>
 <body>
 
@@ -41,13 +44,12 @@
   </div>
 
   <!-- =========================================================================
-       2. LUXURY ABSOLUTE HEADER
+       2. EXACT LUXURY HEADER (MATCHING KHUFUS.COM)
        ========================================================================= -->
   <header class="khf-header">
     <div class="khf-header-left">
-      <a href="/reservations" class="khf-nav-link">Reservations</a>
-      <a href="/menu" class="khf-nav-link">Unified Menu</a>
-      <a href="/locations" class="khf-nav-link">Locations</a>
+      <a href="/reservations" class="khf-nav-link">RESERVATIONS</a>
+      <a href="/bistro" class="khf-nav-link">BISTRO</a>
     </div>
 
     <a href="/" class="khf-header-logo" aria-label="Homepage">
@@ -55,27 +57,25 @@
     </a>
 
     <div class="khf-header-right">
-      <a href="/reservations" class="khf-btn-luxury khf-btn-gold" style="padding: 10px 22px; font-size: 11px;">Book Table</a>
-      <button id="khfBurgerBtn" class="khf-burger-btn" aria-label="Toggle navigation menu">
-        <span class="khf-burger-line"></span>
-        <span class="khf-burger-line"></span>
-        <span class="khf-burger-line"></span>
-      </button>
+      <!-- Lottie Toggle Animated Hamburger -->
+      <div class="lottie-wrapper" style="position: relative; height: 50px; overflow: visible;">
+        <div id="lottie-toggle" style="width: 80px; height: 50px; cursor: pointer;" aria-label="Open navigation menu"></div>
+      </div>
     </div>
   </header>
 
   <!-- =========================================================================
-       3. FULLSCREEN NAVIGATION OVERLAY
+       3. FULLSCREEN NAVIGATION OVERLAY MODAL (MATCHING POPUP-166)
        ========================================================================= -->
   <div id="khufusMenuOverlay" class="khf-menu-overlay" aria-modal="true" role="dialog">
     <nav class="khf-menu-container">
-      <a href="/about" class="khf-menu-item">About & Heritage</a>
-      <a href="/experience" class="khf-menu-item">The Experience</a>
-      <a href="/menu" class="khf-menu-item">Explore Menu (426 Dishes)</a>
-      <a href="/gallery" class="khf-menu-item">Culinary Gallery</a>
-      <a href="/locations" class="khf-menu-item">4 California Locations</a>
-      <a href="/reservations" class="khf-menu-item">Reservations & Catering</a>
-      <a href="/contact" class="khf-menu-item">Contact & Hours</a>
+      <a href="/about" class="khf-menu-item">ABOUT</a>
+      <a href="/experience" class="khf-menu-item">THE EXPERIENCE</a>
+      <a href="/menu" class="khf-menu-item">MENUS</a>
+      <a href="/gallery" class="khf-menu-item">GALLERY</a>
+      <a href="/legacy" class="khf-menu-item">THE LEGACY</a>
+      <a href="/reservations" class="khf-menu-item">RESERVATIONS</a>
+      <a href="/locations" class="khf-menu-item">LOCATION &amp; HOURS</a>
     </nav>
   </div>
 

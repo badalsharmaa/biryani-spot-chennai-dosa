@@ -6,11 +6,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   initPreloader();
   initHeader();
-  initMenuOverlay();
+  initLottieMenu();
   initParallax();
   init3DGallery();
   initPolaroidSlider();
-  initFooterAccordion();
   initBistroAccordion();
 });
 
@@ -40,7 +39,7 @@ function initPreloader() {
     skipBtn.addEventListener("click", dismissIntro);
   }
 
-  setTimeout(dismissIntro, 2600);
+  setTimeout(dismissIntro, 2400);
 }
 
 /* --------------------------------------------------------------------------
@@ -51,7 +50,7 @@ function initHeader() {
   if (!header) return;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       header.classList.add("is-scrolled");
     } else {
       header.classList.remove("is-scrolled");
@@ -60,29 +59,58 @@ function initHeader() {
 }
 
 /* --------------------------------------------------------------------------
-   3. MENU OVERLAY CONTROLLER
+   3. LOTTIE MENU CONTROLLER (EXACT KHUFUS POPUP ENGINE)
    -------------------------------------------------------------------------- */
-function initMenuOverlay() {
-  const burgerBtn = document.getElementById("khfBurgerBtn");
+function initLottieMenu() {
+  const toggleEl = document.getElementById("lottie-toggle");
   const overlay = document.getElementById("khufusMenuOverlay");
-  const menuLinks = overlay ? overlay.querySelectorAll(".khf-menu-item") : [];
+  if (!toggleEl || !overlay) return;
 
-  if (!burgerBtn || !overlay) return;
+  let anim = null;
+  let isOpen = false;
 
-  function toggleMenu() {
-    const isOpen = overlay.classList.toggle("is-open");
-    burgerBtn.classList.toggle("is-active", isOpen);
-    document.body.style.overflow = isOpen ? "hidden" : "";
+  if (window.lottie) {
+    anim = lottie.loadAnimation({
+      container: toggleEl,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: "/assets/js/lottie-burger.json"
+    });
+
+    anim.addEventListener("data_ready", () => {
+      const total = anim.totalFrames;
+      const start = Math.floor(total * 0.1);
+      anim.goToAndStop(start, true);
+    });
   }
 
-  burgerBtn.addEventListener("click", toggleMenu);
+  function toggleMenu() {
+    isOpen = !isOpen;
+    overlay.classList.toggle("is-open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
+    if (anim) {
+      const total = anim.totalFrames;
+      const start = Math.floor(total * 0.1);
+      const end = Math.floor(total * 0.65);
+      anim.playSegments(isOpen ? [start, end] : [end, start], true);
+    }
+  }
+
+  toggleEl.addEventListener("click", toggleMenu);
+
+  const menuLinks = overlay.querySelectorAll(".khf-menu-item");
   menuLinks.forEach(link => {
     link.addEventListener("click", () => {
-      overlay.classList.remove("is-open");
-      burgerBtn.classList.remove("is-active");
-      document.body.style.overflow = "";
+      if (isOpen) toggleMenu();
     });
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && isOpen) {
+      toggleMenu();
+    }
   });
 }
 
@@ -293,25 +321,7 @@ function initPolaroidSlider() {
 }
 
 /* --------------------------------------------------------------------------
-   7. FOOTER ACCORDION CONTROLLER
-   -------------------------------------------------------------------------- */
-function initFooterAccordion() {
-  const items = document.querySelectorAll(".khf-accordion-item");
-  items.forEach(item => {
-    const header = item.querySelector(".khf-accordion-header");
-    if (!header) return;
-    header.addEventListener("click", () => {
-      const isOpen = item.classList.contains("is-open");
-      items.forEach(i => i.classList.remove("is-open"));
-      if (!isOpen) {
-        item.classList.add("is-open");
-      }
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   8. BISTRO EXPANDING ACCORDION CONTROLLER
+   7. BISTRO EXPANDING ACCORDION CONTROLLER
    -------------------------------------------------------------------------- */
 function initBistroAccordion() {
   const accordionItems = document.querySelectorAll(".khufusbistro-accordion__item");
