@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   init3DGallery();
   initPolaroidSlider();
   initBistroAccordion();
+  initFaqAccordion();
+  initMenuTabs();
 });
 
 /* --------------------------------------------------------------------------
@@ -467,6 +469,61 @@ function initBistroAccordion() {
     item.addEventListener("click", () => {
       accordionItems.forEach(i => i.classList.remove("is-active"));
       item.classList.add("is-active");
+    });
+  });
+}
+
+
+/* --------------------------------------------------------------------------
+   10. FAQ ACCORDION CONTROLLER (EXACT KHUFUS FAQ ENGINE)
+   -------------------------------------------------------------------------- */
+function initFaqAccordion() {
+  const items = document.querySelectorAll(".kh-faq-item");
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const questionBtn = item.querySelector(".kh-faq-question");
+    const answer = item.querySelector(".kh-faq-answer");
+    if (!questionBtn || !answer) return;
+
+    questionBtn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-open");
+      
+      items.forEach(i => {
+        i.classList.remove("is-open");
+        const a = i.querySelector(".kh-faq-answer");
+        if (a) a.style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add("is-open");
+        answer.style.maxHeight = answer.scrollHeight + 30 + "px";
+      }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   11. MENU TABS CONTROLLER
+   -------------------------------------------------------------------------- */
+function initMenuTabs() {
+  const tabs = document.querySelectorAll(".kh-menu-tab-btn");
+  const categories = document.querySelectorAll(".menu-category-section");
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("is-active"));
+      tab.classList.add("is-active");
+
+      const target = tab.dataset.target;
+      categories.forEach(cat => {
+        if (!target || target === "all" || cat.dataset.type === target) {
+          cat.style.display = "block";
+        } else {
+          cat.style.display = "none";
+        }
+      });
     });
   });
 }
