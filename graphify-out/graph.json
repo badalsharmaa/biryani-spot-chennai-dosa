@@ -1,0 +1,1689 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "old_website_data_scripts_process_and_download_downloadfile",
+      "label": "downloadFile()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "downloadfile()",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L261"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_rundownloads",
+      "label": "runDownloads()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "rundownloads()",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L293"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download",
+      "label": "process_and_download.js",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "process_and_download.js",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_apollostate",
+      "label": "apolloState",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "apollostate",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L17"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_assets_dir",
+      "label": "ASSETS_DIR",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "assets_dir",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_assetstodownload",
+      "label": "assetsToDownload",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "assetstodownload",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L206"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_brandandtheme",
+      "label": "brandAndTheme",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "brandandtheme",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L25"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_concorddata",
+      "label": "concordData",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "concorddata",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_data_dir",
+      "label": "DATA_DIR",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "data_dir",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_dublindata",
+      "label": "dublinData",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "dublindata",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L18"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_fs",
+      "label": "fs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "fs",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_https",
+      "label": "https",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "https",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_livermoredata",
+      "label": "livermoreData",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "livermoredata",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L20"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_locationentities",
+      "label": "locationEntities",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "locationentities",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L53"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_locations",
+      "label": "locations",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "locations",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L54"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_menusbylocation",
+      "label": "menusByLocation",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "menusbylocation",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L87"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_milpitasdata",
+      "label": "milpitasData",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "milpitasdata",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L19"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_pagescontent",
+      "label": "pagesContent",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "pagescontent",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L150"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_path",
+      "label": "path",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_root_dir",
+      "label": "ROOT_DIR",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "root_dir",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_totalunifieditems",
+      "label": "totalUnifiedItems",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "totalunifieditems",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L144"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_unifiedcategories",
+      "label": "unifiedCategories",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "unifiedcategories",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L98"
+    },
+    {
+      "id": "old_website_data_scripts_process_and_download_unifiedmenu",
+      "label": "unifiedMenu",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "unifiedmenu",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L138"
+    },
+    {
+      "id": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "label": "PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "community": 1,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 235,
+        "chars": 9039
+      },
+      "norm_label": "production_deployment_ai_guide.md",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "document"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#1. Force HTTPS and canonical non-www dom",
+      "label": "1. Force HTTPS and canonical non-www domain",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "1. force https and canonical non-www domain",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#2. Whitelist static assets & metadata fi",
+      "label": "2. Whitelist static assets & metadata files",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "2. whitelist static assets & metadata files",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#3. Protect sensitive files from direct b",
+      "label": "3. Protect sensitive files from direct browser access",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "3. protect sensitive files from direct browser access",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#4. Universal clean URL routing to index.",
+      "label": "4. Universal clean URL routing to index.php",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "4. universal clean url routing to index.php",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#A. Web Server Gateway (`public_html/.hta",
+      "label": "A. Web Server Gateway (`public_html/.htaccess`)",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "a. web server gateway (`public_html/.htaccess`)",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#B. Environment Configuration (`public_ht",
+      "label": "B. Environment Configuration (`public_html/.env`)",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "b. environment configuration (`public_html/.env`)",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Daily Automated MySQL Database Dump at 2",
+      "label": "Daily Automated MySQL Database Dump at 2:00 AM",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "daily automated mysql database dump at 2:00 am",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Disable directory browsing",
+      "label": "Disable directory browsing",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "disable directory browsing",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Hourly Google Ads offline conversion upl",
+      "label": "Hourly Google Ads offline conversion upload (CLI worker)",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "hourly google ads offline conversion upload (cli worker)",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#In `<head>` of `includes/header.php` (BE",
+      "label": "In `<head>` of `includes/header.php` (BEFORE any GTM or Google Tag):",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "in `<head>` of `includes/header.php` (before any gtm or google tag):",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Lead Attribution Deduplication on Forms ",
+      "label": "Lead Attribution Deduplication on Forms (`assets/js/main.js`):",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "lead attribution deduplication on forms (`assets/js/main.js`):",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Project: Biryani Spot Chennai Dosa",
+      "label": "Project: Biryani Spot Chennai Dosa",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "project: biryani spot chennai dosa",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\u23f0 6. Server Crontab Automations",
+      "label": "\u23f0 6. Server Crontab Automations",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\u23f0 6. server crontab automations",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\u2699\ufe0f 2. Core Server Configuration Files",
+      "label": "\u2699\ufe0f 2. Core Server Configuration Files",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\u2699\ufe0f 2. core server configuration files",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83c\udf6a 4. Privacy, Google Consent Mode v2 & A",
+      "label": "\ud83c\udf6a 4. Privacy, Google Consent Mode v2 & Ad Attribution",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udf6a 4. privacy, google consent mode v2 & ad attribution",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83c\udfaf High-Level Deployment Goals",
+      "label": "\ud83c\udfaf High-Level Deployment Goals",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udfaf high-level deployment goals",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\udcc1 1. Standard Server Directory Structure",
+      "label": "\ud83d\udcc1 1. Standard Server Directory Structure",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udcc1 1. standard server directory structure",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\uddc4\ufe0f 3. Database Engine & Schema Migration",
+      "label": "\ud83d\uddc4\ufe0f 3. Database Engine & Schema Migrations (`config/database.php`)",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83d\uddc4\ufe0f 3. database engine & schema migrations (`config/database.php`)",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\ude80 AI Instruction Manual: Enterprise PHP ",
+      "label": "\ud83d\ude80 AI Instruction Manual: Enterprise PHP Production Server Deployment",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83d\ude80 ai instruction manual: enterprise php production server deployment",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\udee1\ufe0f 5. Lead Qualification & Spam Protecti",
+      "label": "\ud83d\udee1\ufe0f 5. Lead Qualification & Spam Protection (`api/catering-submit.php`)",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udee1\ufe0f 5. lead qualification & spam protection (`api/catering-submit.php`)",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83e\uddea 7. Post-Deployment Verification Protoc",
+      "label": "\ud83e\uddea 7. Post-Deployment Verification Protocol",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "\ud83e\uddea 7. post-deployment verification protocol",
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "label": "FEATURES_AND_REQUIREMENTS.md",
+      "community": 2,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 57,
+        "chars": 3830
+      },
+      "norm_label": "features_and_requirements.md",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "document"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#1. Primary Objectives",
+      "label": "1. Primary Objectives",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "1. primary objectives",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#2. Core Pages & Feature Specifications",
+      "label": "2. Core Pages & Feature Specifications",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "2. core pages & feature specifications",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#3. User Journeys",
+      "label": "3. User Journeys",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "3. user journeys",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf5b 4. Catering & Events Page (`/catering`",
+      "label": "\ud83c\udf5b 4. Catering & Events Page (`/catering`)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udf5b 4. catering & events page (`/catering`)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf7d\ufe0f 2. Interactive Menu Page (`/menu` & `",
+      "label": "\ud83c\udf7d\ufe0f 2. Interactive Menu Page (`/menu` & `/menu/[location]`)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udf7d\ufe0f 2. interactive menu page (`/menu` & `/menu/[location]`)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf81 6. Gift Cards Page (`/gift-cards`)",
+      "label": "\ud83c\udf81 6. Gift Cards Page (`/gift-cards`)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udf81 6. gift cards page (`/gift-cards`)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udfe0 1. Home Page (`/`)",
+      "label": "\ud83c\udfe0 1. Home Page (`/`)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udfe0 1. home page (`/`)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udccb FEATURES & PRODUCT REQUIREMENTS (PRD)",
+      "label": "\ud83d\udccb FEATURES & PRODUCT REQUIREMENTS (PRD)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udccb features & product requirements (prd)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udccd 3. Locations & Hours Page (`/locations",
+      "label": "\ud83d\udccd 3. Locations & Hours Page (`/locations`)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udccd 3. locations & hours page (`/locations`)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udcde 5. Contact & Feedback Page (`/contact`",
+      "label": "\ud83d\udcde 5. Contact & Feedback Page (`/contact`)",
+      "community": 2,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udcde 5. contact & feedback page (`/contact`)",
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:PERSONA.md",
+      "label": "PERSONA.md",
+      "community": 3,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 59,
+        "chars": 3339
+      },
+      "norm_label": "persona.md",
+      "source_file": "guideline/PERSONA.md",
+      "type": "document"
+    },
+    {
+      "id": "section:PERSONA.md#1. Brand Identity & Overview",
+      "label": "1. Brand Identity & Overview",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "1. brand identity & overview",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#2. Brand Voice, Tone & Messaging",
+      "label": "2. Brand Voice, Tone & Messaging",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "2. brand voice, tone & messaging",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#3. Target Audience & Customer Personas",
+      "label": "3. Target Audience & Customer Personas",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "3. target audience & customer personas",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#4. Restaurant Locations & Operational In",
+      "label": "4. Restaurant Locations & Operational Information",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "4. restaurant locations & operational information",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#5. Payment Methods & Services Accepted",
+      "label": "5. Payment Methods & Services Accepted",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "5. payment methods & services accepted",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#Location 1: Dublin",
+      "label": "Location 1: Dublin",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "location 1: dublin",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#Location 2: Milpitas",
+      "label": "Location 2: Milpitas",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "location 2: milpitas",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#Location 3: Livermore",
+      "label": "Location 3: Livermore",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "location 3: livermore",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#Location 4: Concord (Chennai Dosa Expres",
+      "label": "Location 4: Concord (Chennai Dosa Express)",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "location 4: concord (chennai dosa express)",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "section:PERSONA.md#\ud83d\udc64 PERSONA & PRODUCT CONTEXT",
+      "label": "\ud83d\udc64 PERSONA & PRODUCT CONTEXT",
+      "community": 3,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udc64 persona & product context",
+      "source_file": "guideline/PERSONA.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:MEMORY.md",
+      "label": "MEMORY.md",
+      "community": 4,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 80,
+        "chars": 5102
+      },
+      "norm_label": "memory.md",
+      "source_file": "MEMORY.md",
+      "type": "document"
+    },
+    {
+      "id": "section:MEMORY.md#Session 1 \u2014 August 31, 2026",
+      "label": "Session 1 \u2014 August 31, 2026",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "session 1 \u2014 august 31, 2026",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "section:MEMORY.md#\ud83c\udfaf 5. Immediate Next Steps & Backlog",
+      "label": "\ud83c\udfaf 5. Immediate Next Steps & Backlog",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udfaf 5. immediate next steps & backlog",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "section:MEMORY.md#\ud83d\udcc2 3. Sources of Truth & Project Map",
+      "label": "\ud83d\udcc2 3. Sources of Truth & Project Map",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udcc2 3. sources of truth & project map",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "section:MEMORY.md#\ud83d\udccc 1. Project Overview & Fundamental Cont",
+      "label": "\ud83d\udccc 1. Project Overview & Fundamental Context",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udccc 1. project overview & fundamental context",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "section:MEMORY.md#\ud83d\udcdc 4. Chronological Session History",
+      "label": "\ud83d\udcdc 4. Chronological Session History",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udcdc 4. chronological session history",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "section:MEMORY.md#\ud83d\udee0\ufe0f 2. Core Technical Decisions & Archite",
+      "label": "\ud83d\udee0\ufe0f 2. Core Technical Decisions & Architecture",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udee0\ufe0f 2. core technical decisions & architecture",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "section:MEMORY.md#\ud83e\udde0 AI Long-Term Memory & Context Ledger",
+      "label": "\ud83e\udde0 AI Long-Term Memory & Context Ledger",
+      "community": 4,
+      "file_type": "concept",
+      "norm_label": "\ud83e\udde0 ai long-term memory & context ledger",
+      "source_file": "MEMORY.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:TECH_STACK.md",
+      "label": "TECH_STACK.md",
+      "community": 5,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 80,
+        "chars": 4953
+      },
+      "norm_label": "tech_stack.md",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "document"
+    },
+    {
+      "id": "section:TECH_STACK.md#1. Core Framework & Technologies",
+      "label": "1. Core Framework & Technologies",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "1. core framework & technologies",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "section"
+    },
+    {
+      "id": "section:TECH_STACK.md#2. Directory Structure Conventions",
+      "label": "2. Directory Structure Conventions",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "2. directory structure conventions",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "section"
+    },
+    {
+      "id": "section:TECH_STACK.md#3. Database Architecture (MySQL)",
+      "label": "3. Database Architecture (MySQL)",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "3. database architecture (mysql)",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "section"
+    },
+    {
+      "id": "section:TECH_STACK.md#4. Security & Performance Best Practices",
+      "label": "4. Security & Performance Best Practices",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "4. security & performance best practices",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "section"
+    },
+    {
+      "id": "section:TECH_STACK.md#Key Relational Tables:",
+      "label": "Key Relational Tables:",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "key relational tables:",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "section"
+    },
+    {
+      "id": "section:TECH_STACK.md#\ud83d\udee0\ufe0f TECH STACK & SYSTEM ARCHITECTURE (PHP",
+      "label": "\ud83d\udee0\ufe0f TECH STACK & SYSTEM ARCHITECTURE (PHP + MySQL)",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udee0\ufe0f tech stack & system architecture (php + mysql)",
+      "source_file": "guideline/TECH_STACK.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:AI_RULES.md",
+      "label": "AI_RULES.md",
+      "community": 6,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 34,
+        "chars": 2663
+      },
+      "norm_label": "ai_rules.md",
+      "source_file": "guideline/AI_RULES.md",
+      "type": "document"
+    },
+    {
+      "id": "section:AI_RULES.md#1. Core Principles",
+      "label": "1. Core Principles",
+      "community": 6,
+      "file_type": "concept",
+      "norm_label": "1. core principles",
+      "source_file": "guideline/AI_RULES.md",
+      "type": "section"
+    },
+    {
+      "id": "section:AI_RULES.md#2. Component Design & Styling Rules",
+      "label": "2. Component Design & Styling Rules",
+      "community": 6,
+      "file_type": "concept",
+      "norm_label": "2. component design & styling rules",
+      "source_file": "guideline/AI_RULES.md",
+      "type": "section"
+    },
+    {
+      "id": "section:AI_RULES.md#3. Data & State Management Guidelines",
+      "label": "3. Data & State Management Guidelines",
+      "community": 6,
+      "file_type": "concept",
+      "norm_label": "3. data & state management guidelines",
+      "source_file": "guideline/AI_RULES.md",
+      "type": "section"
+    },
+    {
+      "id": "section:AI_RULES.md#4. What NOT to Do \ud83d\udeab",
+      "label": "4. What NOT to Do \ud83d\udeab",
+      "community": 6,
+      "file_type": "concept",
+      "norm_label": "4. what not to do \ud83d\udeab",
+      "source_file": "guideline/AI_RULES.md",
+      "type": "section"
+    },
+    {
+      "id": "section:AI_RULES.md#\ud83e\udd16 AI CODING STANDARDS & WORKFLOW RULES (",
+      "label": "\ud83e\udd16 AI CODING STANDARDS & WORKFLOW RULES (PHP + MySQL)",
+      "community": 6,
+      "file_type": "concept",
+      "norm_label": "\ud83e\udd16 ai coding standards & workflow rules (php + mysql)",
+      "source_file": "guideline/AI_RULES.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:DEVELOPMENT_TRACKER.md",
+      "label": "DEVELOPMENT_TRACKER.md",
+      "community": 7,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 69,
+        "chars": 4668
+      },
+      "norm_label": "development_tracker.md",
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md",
+      "type": "document"
+    },
+    {
+      "id": "section:DEVELOPMENT_TRACKER.md#\ud83d\udcc2 Project Directory Structure",
+      "label": "\ud83d\udcc2 Project Directory Structure",
+      "community": 7,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udcc2 project directory structure",
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md",
+      "type": "section"
+    },
+    {
+      "id": "section:DEVELOPMENT_TRACKER.md#\ud83d\udcc8 Development Roadmap & Status",
+      "label": "\ud83d\udcc8 Development Roadmap & Status",
+      "community": 7,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udcc8 development roadmap & status",
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md",
+      "type": "section"
+    },
+    {
+      "id": "section:DEVELOPMENT_TRACKER.md#\ud83d\udccb Biryani Spot Chennai Dosa \u2014 AI Develop",
+      "label": "\ud83d\udccb Biryani Spot Chennai Dosa \u2014 AI Development Tracker & Progress Log",
+      "community": 7,
+      "file_type": "concept",
+      "norm_label": "\ud83d\udccb biryani spot chennai dosa \u2014 ai development tracker & progress log",
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md",
+      "type": "section"
+    },
+    {
+      "id": "section:DEVELOPMENT_TRACKER.md#\ud83e\udded Quick Context for AI Agents & Develope",
+      "label": "\ud83e\udded Quick Context for AI Agents & Developers",
+      "community": 7,
+      "file_type": "concept",
+      "norm_label": "\ud83e\udded quick context for ai agents & developers",
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md",
+      "type": "section"
+    },
+    {
+      "id": "doc:VISUAL_GUIDELINES.md",
+      "label": "VISUAL_GUIDELINES.md",
+      "community": 8,
+      "file_type": "concept",
+      "metadata": {
+        "lines": 4,
+        "chars": 153
+      },
+      "norm_label": "visual_guidelines.md",
+      "source_file": "guideline/VISUAL_GUIDELINES.md",
+      "type": "document"
+    },
+    {
+      "id": "section:VISUAL_GUIDELINES.md#\ud83c\udfa8 VISUAL GUIDELINES & DESIGN SYSTEM",
+      "label": "\ud83c\udfa8 VISUAL GUIDELINES & DESIGN SYSTEM",
+      "community": 8,
+      "file_type": "concept",
+      "norm_label": "\ud83c\udfa8 visual guidelines & design system",
+      "source_file": "guideline/VISUAL_GUIDELINES.md",
+      "type": "section"
+    }
+  ],
+  "links": [
+    {
+      "source": "old_website_data_scripts_process_and_download_rundownloads",
+      "target": "old_website_data_scripts_process_and_download_downloadfile",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_fs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_unifiedmenu",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_totalunifieditems",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_pagescontent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_apollostate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_dublindata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_milpitasdata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_livermoredata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_assetstodownload",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_concorddata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_brandandtheme",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_downloadfile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_rundownloads",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_https",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_root_dir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_locationentities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_locations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_data_dir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_assets_dir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_menusbylocation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "old_website_data_scripts_process_and_download",
+      "target": "old_website_data_scripts_process_and_download_unifiedcategories",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "old_website_data/scripts/process_and_download.js",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "doc:AI_RULES.md",
+      "target": "section:AI_RULES.md#1. Core Principles",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/AI_RULES.md"
+    },
+    {
+      "source": "doc:AI_RULES.md",
+      "target": "section:AI_RULES.md#2. Component Design & Styling Rules",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/AI_RULES.md"
+    },
+    {
+      "source": "doc:AI_RULES.md",
+      "target": "section:AI_RULES.md#3. Data & State Management Guidelines",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/AI_RULES.md"
+    },
+    {
+      "source": "doc:AI_RULES.md",
+      "target": "section:AI_RULES.md#4. What NOT to Do \ud83d\udeab",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/AI_RULES.md"
+    },
+    {
+      "source": "doc:AI_RULES.md",
+      "target": "section:AI_RULES.md#\ud83e\udd16 AI CODING STANDARDS & WORKFLOW RULES (",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/AI_RULES.md"
+    },
+    {
+      "source": "doc:DEVELOPMENT_TRACKER.md",
+      "target": "section:DEVELOPMENT_TRACKER.md#\ud83d\udcc2 Project Directory Structure",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md"
+    },
+    {
+      "source": "doc:DEVELOPMENT_TRACKER.md",
+      "target": "section:DEVELOPMENT_TRACKER.md#\ud83d\udcc8 Development Roadmap & Status",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md"
+    },
+    {
+      "source": "doc:DEVELOPMENT_TRACKER.md",
+      "target": "section:DEVELOPMENT_TRACKER.md#\ud83d\udccb Biryani Spot Chennai Dosa \u2014 AI Develop",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md"
+    },
+    {
+      "source": "doc:DEVELOPMENT_TRACKER.md",
+      "target": "section:DEVELOPMENT_TRACKER.md#\ud83e\udded Quick Context for AI Agents & Develope",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/DEVELOPMENT_TRACKER.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#1. Primary Objectives",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#2. Core Pages & Feature Specifications",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#3. User Journeys",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf5b 4. Catering & Events Page (`/catering`",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf7d\ufe0f 2. Interactive Menu Page (`/menu` & `",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf81 6. Gift Cards Page (`/gift-cards`)",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udfe0 1. Home Page (`/`)",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udccb FEATURES & PRODUCT REQUIREMENTS (PRD)",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udccd 3. Locations & Hours Page (`/locations",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:FEATURES_AND_REQUIREMENTS.md",
+      "target": "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udcde 5. Contact & Feedback Page (`/contact`",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/FEATURES_AND_REQUIREMENTS.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#Session 1 \u2014 August 31, 2026",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#\ud83c\udfaf 5. Immediate Next Steps & Backlog",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#\ud83d\udcc2 3. Sources of Truth & Project Map",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#\ud83d\udccc 1. Project Overview & Fundamental Cont",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#\ud83d\udcdc 4. Chronological Session History",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#\ud83d\udee0\ufe0f 2. Core Technical Decisions & Archite",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:MEMORY.md",
+      "target": "section:MEMORY.md#\ud83e\udde0 AI Long-Term Memory & Context Ledger",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "MEMORY.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#1. Brand Identity & Overview",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#2. Brand Voice, Tone & Messaging",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#3. Target Audience & Customer Personas",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#4. Restaurant Locations & Operational In",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#5. Payment Methods & Services Accepted",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#Location 1: Dublin",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#Location 2: Milpitas",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#Location 3: Livermore",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#Location 4: Concord (Chennai Dosa Expres",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PERSONA.md",
+      "target": "section:PERSONA.md#\ud83d\udc64 PERSONA & PRODUCT CONTEXT",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PERSONA.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#1. Force HTTPS and canonical non-www dom",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#2. Whitelist static assets & metadata fi",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#3. Protect sensitive files from direct b",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#4. Universal clean URL routing to index.",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#A. Web Server Gateway (`public_html/.hta",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#B. Environment Configuration (`public_ht",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Daily Automated MySQL Database Dump at 2",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Disable directory browsing",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Hourly Google Ads offline conversion upl",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#In `<head>` of `includes/header.php` (BE",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Lead Attribution Deduplication on Forms ",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Project: Biryani Spot Chennai Dosa",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\u23f0 6. Server Crontab Automations",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\u2699\ufe0f 2. Core Server Configuration Files",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83c\udf6a 4. Privacy, Google Consent Mode v2 & A",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83c\udfaf High-Level Deployment Goals",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\udcc1 1. Standard Server Directory Structure",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\uddc4\ufe0f 3. Database Engine & Schema Migration",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\ude80 AI Instruction Manual: Enterprise PHP ",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\udee1\ufe0f 5. Lead Qualification & Spam Protecti",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "target": "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83e\uddea 7. Post-Deployment Verification Protoc",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/PRODUCTION_DEPLOYMENT_AI_GUIDE.md"
+    },
+    {
+      "source": "doc:TECH_STACK.md",
+      "target": "section:TECH_STACK.md#1. Core Framework & Technologies",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/TECH_STACK.md"
+    },
+    {
+      "source": "doc:TECH_STACK.md",
+      "target": "section:TECH_STACK.md#2. Directory Structure Conventions",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/TECH_STACK.md"
+    },
+    {
+      "source": "doc:TECH_STACK.md",
+      "target": "section:TECH_STACK.md#3. Database Architecture (MySQL)",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/TECH_STACK.md"
+    },
+    {
+      "source": "doc:TECH_STACK.md",
+      "target": "section:TECH_STACK.md#4. Security & Performance Best Practices",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/TECH_STACK.md"
+    },
+    {
+      "source": "doc:TECH_STACK.md",
+      "target": "section:TECH_STACK.md#Key Relational Tables:",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/TECH_STACK.md"
+    },
+    {
+      "source": "doc:TECH_STACK.md",
+      "target": "section:TECH_STACK.md#\ud83d\udee0\ufe0f TECH STACK & SYSTEM ARCHITECTURE (PHP",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/TECH_STACK.md"
+    },
+    {
+      "source": "doc:VISUAL_GUIDELINES.md",
+      "target": "section:VISUAL_GUIDELINES.md#\ud83c\udfa8 VISUAL GUIDELINES & DESIGN SYSTEM",
+      "relation": "CONTAINS_SECTION",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "guideline/VISUAL_GUIDELINES.md"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "36ca9d288cb338fe4272196d96ae1865d8f0ec74"
+}
