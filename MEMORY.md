@@ -94,6 +94,13 @@
 - Applied container reset in `khufus-theme.css` to allow full viewport width bleed.
 - Validated with DevTools screenshots across all pages on `http://127.0.0.1:8899/`.
 
+
+### Session 5 — Header, Popup Drawer & Full Section Restoration
+- Fixed regex matching for Elementor header (`data-elementor-type="header" class="elementor elementor-48 elementor-location-header"`) and footer (`data-elementor-type="footer" class="elementor elementor-58 elementor-location-footer"`).
+- Stripped Cloudflare Rocket Loader MIME types (`type="...-text/javascript"`) across all PHP views so all scripts and Lottie loaders execute properly.
+- Integrated Elementor popup modal (`.elementor-location-popup`, 27.6KB) with full navigation menu and animated Lottie toggle -> close button transitions.
+- Validated all 9 page sections on Home (total height 7,068px) and confirmed header and footer are fully rendered and visible.
+
 ## 🎯 5. Immediate Next Steps & Backlog
 1. [ ] **Database Schema & Seeders**:
    - Create `database/schema.sql` (MySQL table definitions for locations, schedules, categories, menu items, catering leads, contact messages).
