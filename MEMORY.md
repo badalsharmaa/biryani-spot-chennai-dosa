@@ -19,20 +19,31 @@
 - **System Design Foundation**: Follows [`guideline/SYSTEM_DESIGN.md`](./guideline/SYSTEM_DESIGN.md) (MVC architecture, relational MySQL schema, request lifecycle, CSRF/XSS armor, Alpine.js/Vanilla JS motion layer).
 - **Backend**: PHP 8.2+ using clean MVC separation (`Controllers/`, `Models/`, `views/`).
 - **Database**: MySQL 8.0+ on production with SQLite fallback for local development via PDO multi-driver wrapper (`config/database.php`).
-- **Frontend**: Master stylesheet `public/assets/css/khufus-theme.css` + Vanilla JS engine `public/assets/js/khufus-core.js` + Lottie web player.
-- **Custom Font Stack**: `IvyOraDisplay` (serif), `GoldenHopes` (cursive script), and `BricolageGrotesque` (sans-serif) served locally from `public/assets/fonts/`.
+- **Frontend Architecture**:
+  - Exact compiled Elementor + Astra stylesheets located in `public/assets/css/elementor/` (51 stylesheets).
+  - Theme customization & overlay rules in `public/assets/css/khufus-theme.css`.
+  - Core interaction engine in `public/assets/js/khufus-core.js`.
+  - Elementor runtime scripts in `public/assets/js/elementor/` (`jquery.min.js`, `frontend.min.js`, `frontend-modules.min.js`, `webpack.runtime.min.js`).
+- **Custom Font Stack**: `IvyOraDisplay` (serif), `GoldenHopes` (cursive script), and `BricolageGrotesque` (sans-serif) served locally from `public/assets/fonts/` and `public/assets/images/`.
 - **Knowledge Graph Search**: Knowledge graph indexing in `graphify-out/` (95 nodes, 87 relations) for high-speed concept navigation and file search.
 
 ---
 
-## 📂 3. Sources of Truth & Project Map
-- **Guideline Documentation**: Located in [`guideline/`](./guideline/)
-- **Scraped Data & Assets**: Located in [`old_website_data/`](./old_website_data/)
-  - `old_website_data/data/unified_menu.json`: 426 unique dishes across 32 categories.
-  - `old_website_data/data/locations.json`: 4 verified restaurant locations & hours.
-- **Master CSS & JS Engine**:
-  - `public/assets/css/khufus-theme.css`: Complete styling for hero video, FAQ 3-image collage, 3D card shuffle deck, Polaroid slider v2, 3D curved gallery, horizontal expanding accordion, parallax arch, and footer.
-  - `public/assets/js/khufus-core.js`: Core interaction controller with `IntersectionObserver` scroll reveals, Lottie hamburger toggle, Reserve glass dropdown, Recognition card shuffle, Polaroid slider, and FAQ accordion.
+## 📂 3. Live Page Directory & Route Mappings
+
+All pages are served via the PHP development server on `http://127.0.0.1:8899/`:
+
+| Page Route | Local Development URL | Source View File | Content / Layout Status |
+| :--- | :--- | :--- | :--- |
+| **Home** | `http://127.0.0.1:8899/` | `app/views/home/index.php` | 9 full sections (`7,068px` total height), hero video, card deck, polaroid slider, 3D gallery |
+| **Reservations & FAQ** | `http://127.0.0.1:8899/reservations` | `app/views/reservations/index.php` | Step-booking widget + Section 04 `#khFaq` 2-column interactive accordion |
+| **The Experience** | `http://127.0.0.1:8899/experience` | `app/views/experience/index.php` | Approach hero + 4-moment sequential cards |
+| **The Legacy** | `http://127.0.0.1:8899/legacy` | `app/views/legacy/index.php` | Founder & head chef profiles + kitchen team spread |
+| **The Menu** | `http://127.0.0.1:8899/menu` | `app/views/menu/index.php` | Platter frame + full culinary course listings |
+| **Contact & Locations** | `http://127.0.0.1:8899/contact` / `/locations` | `app/views/locations/index.php` | Operating hours schedule table + concierge message form |
+| **About** | `http://127.0.0.1:8899/about` | `app/views/about/index.php` | Heritage chapters, philosophy & culinary vision |
+| **Gallery** | `http://127.0.0.1:8899/gallery` | `app/views/gallery/index.php` | High-res responsive masonry photography grid |
+| **The Bistro** | `http://127.0.0.1:8899/bistro` | `app/views/bistro/index.php` | Khufu's Bistro evening dining visual clone |
 
 ---
 
@@ -48,58 +59,25 @@
 - Extracted local custom webfonts (`IvyOraDisplay`, `GoldenHopes`, `BricolageGrotesque`) and background video (`hero-video.mp4`).
 - Implemented MVC architecture, front controller router, preloader intro, and Polaroid slider v2.
 
-### Session 3 — August 31, 2026 (Complete 1:1 Page Clones, FAQ Screenshot Reproduction & Motion Polish)
-- **FAQ Section 04 Reproduction**:
-  - Reverse-engineered exact layout from user's desktop screenshot (`Screenshot 2026-08-31 at 22.49.11.png`).
-  - Added numeral `04`, title `What Guests Often Ask Before They Arrive / Useful To Know In Advance`.
-  - Added center 3-image collage (`faq-img-1.webp`, `faq-img-2.webp`, `faq-img-3.webp`).
-  - Added 2-column interactive accordion (*Do I need a reservation? / Is there a dress code? / Are children welcome? / Is there a minimum charge? / Can dietary needs be accommodated?*).
-- **Global Recognition 3D Card Stack**:
-  - Cloned section `03 GLOBAL RECOGNITION / A PLACE THE WORLD TOOK NOTE OF / Recognition With Substance`.
-  - Implemented 3-card bezier translation stack (`MENA'S 50 BEST`, `RESY ONE TO WATCH`, `LA LISTE`) with blur text transitions and counter arrow trigger.
-- **Reserve Your Table Glass Dropdown**:
-  - Implemented `.mnq-reserve-wrapper` with hover underline transition and frosted glass dropdown modal.
-- **All 8 Subpages 1:1 Cloned & Linked**:
-  - `/` (Home)
-  - `/about` (Heritage & Craft with Chapter I & II)
-  - `/experience` (Approach Hero + 4-Moment Sequential Cards)
-  - `/legacy` (Founder & Chef Profiles + Kitchen Team)
-  - `/menu` (Featured Platter Frame + Dynamic Category Filter Tabs + 426 dishes)
-  - `/locations` & `/contact` (Hours schedule tables + concierge form)
-  - `/gallery` (Responsive masonry culinary photography grid)
-  - `/bistro` (Dedicated evening dining experience)
-  - `/reservations` (Table booking interface + FAQ Section 04)
-- **IntersectionObserver Fix**:
-  - Implemented proactive lookahead observer ensuring all animated elements immediately render without blank gaps during scrolling or screenshot capture.
-- **Live Verification**: Verified on local server `http://127.0.0.1:8899/` with 0 console warnings or errors across all routes. All milestones committed to git.
-
----
-
+### Session 3 — August 31, 2026 (Subpage Clones & Visual Fidelity)
+- Cloned FAQ Section 04 matching desktop screenshot (`Screenshot 2026-08-31 at 22.49.11.png`) with numeral `04`, 3-image collage, and 2-column accordion.
+- Implemented 3D recognition card stack with bezier translation and counter trigger.
+- Implemented reserve glass dropdown with frosted modal.
+- Configured lookahead `IntersectionObserver` to eliminate blank gaps during scrolling.
 
 ### Session 4 — August 31, 2026 (100% Exact Raw Elementor DOM & CSS Architecture)
 - Rebuilt entire PHP view layer directly from `scratch/khufus_raw/*.html` to ensure 100% pixel-perfect fidelity matching `khufus.com`.
 - Downloaded and linked all 51 compiled Elementor, Astra, and widget stylesheets locally in `public/assets/css/elementor/`.
 - Downloaded all runtime dependencies (`jquery.min.js`, `frontend-modules.min.js`, `frontend.min.js`, `webpack.runtime.min.js`) locally in `public/assets/js/elementor/`.
-- Generated 1:1 identical PHP views for:
-  - `app/views/layouts/header.php` and `footer.php`
-  - `app/views/home/index.php`
-  - `app/views/reservations/index.php` (with exact `#khFaq` accordion engine)
-  - `app/views/experience/index.php`
-  - `app/views/legacy/index.php`
-  - `app/views/menu/index.php`
-  - `app/views/locations/index.php`
-  - `app/views/about/index.php`
-  - `app/views/gallery/index.php`
-  - `app/views/bistro/index.php`
-- Applied container reset in `khufus-theme.css` to allow full viewport width bleed.
-- Validated with DevTools screenshots across all pages on `http://127.0.0.1:8899/`.
-
+- Generated 1:1 identical PHP views for all 9 routes.
 
 ### Session 5 — Header, Popup Drawer & Full Section Restoration
 - Fixed regex matching for Elementor header (`data-elementor-type="header" class="elementor elementor-48 elementor-location-header"`) and footer (`data-elementor-type="footer" class="elementor elementor-58 elementor-location-footer"`).
 - Stripped Cloudflare Rocket Loader MIME types (`type="...-text/javascript"`) across all PHP views so all scripts and Lottie loaders execute properly.
 - Integrated Elementor popup modal (`.elementor-location-popup`, 27.6KB) with full navigation menu and animated Lottie toggle -> close button transitions.
 - Validated all 9 page sections on Home (total height 7,068px) and confirmed header and footer are fully rendered and visible.
+
+---
 
 ## 🎯 5. Immediate Next Steps & Backlog
 1. [ ] **Database Schema & Seeders**:
