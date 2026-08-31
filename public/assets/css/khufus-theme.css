@@ -1,4 +1,103 @@
 
+.elementor-location-popup.is-open .e-con-parent,
+.elementor-location-popup.is-active .e-con-parent {
+  min-height: 100vh !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #241810 !important;
+}
+
+.elementor-location-popup .elementor-nav-menu--main {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 24px !important;
+}
+
+.elementor-location-popup .elementor-item {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(28px, 3.5vw, 44px) !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+
+.elementor-location-popup .elementor-item:hover {
+  color: var(--color-sand) !important;
+  transform: translateX(6px) !important;
+}
+
+
+.elementor-location-popup {
+  display: none;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  background-color: rgba(20, 14, 10, 0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  overflow-y: auto !important;
+  padding: 120px 5% 60px 5% !important;
+  box-sizing: border-box !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+.elementor-location-popup.is-open,
+.elementor-location-popup.is-active {
+  display: flex !important;
+  flex-direction: column !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.elementor-location-popup .elementor-element-eb0157d,
+.elementor-location-popup .e-con-parent {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+}
+
+.elementor-location-popup .elementor-nav-menu--main {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.elementor-location-popup .menu-item {
+  width: 100% !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding: 12px 0 !important;
+}
+
+.elementor-location-popup .menu-item a {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(20px, 2.5vw, 32px) !important;
+  color: #f7f3ee !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  letter-spacing: 0.05em !important;
+  transition: color 0.25s ease, padding-left 0.25s ease !important;
+}
+
+.elementor-location-popup .menu-item a:hover {
+  color: #e5a93c !important;
+  padding-left: 12px !important;
+}
+
+
+.elementor-location-popup {
+  transition: opacity 0.35s ease, visibility 0.35s ease !important;
+}
+
+
 .ast-article-single,
 .ast-separate-container .ast-article-single,
 .ast-separate-container .ast-article-post,

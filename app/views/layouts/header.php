@@ -4144,3 +4144,904 @@ P88G KHUFUS FOOTER ACCORDION
   <link rel="stylesheet" href="/assets/css/khufus-theme.css">
 </head>
 <body class="home page-template-default page wp-custom-logo ast-desktop ast-separate-container elementor-default elementor-kit-48">
+<header data-elementor-type="header" data-elementor-id="48" class="elementor elementor-48 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-91c3171 e-con-full e-flex e-con e-parent" data-id="91c3171" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
+		<div class="elementor-element elementor-element-541a8a9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="541a8a9" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a10634e elementor-widget elementor-widget-heading" data-id="a10634e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/reservations">RESERVATIONS</a></h2>				</div>
+				<div class="elementor-element elementor-element-6664fe9 elementor-widget elementor-widget-heading" data-id="6664fe9" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/">BISTRO</a></h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-c1e51b4 e-con-full e-flex e-con e-child" data-id="c1e51b4" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-76a29c8 elementor-widget elementor-widget-image" data-id="76a29c8" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="/">
+							<img width="144" height="141" src="/assets/images/Logo-in-White.svg" class="attachment-large size-large wp-image-115" alt="" />								</a>
+															</div>
+				</div>
+		<div class="elementor-element elementor-element-c7ef4ce e-con-full e-flex e-con e-child" data-id="c7ef4ce" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-0f99354 elementor-widget elementor-widget-html" data-id="0f99354" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<!-- Wrapper -->
+<div class="lottie-wrapper" style="
+    position: relative;
+    height: 50px;
+    overflow: visible;
+">
+  <div id="lottie-toggle" style="
+      position: absolute;
+      right: -40px;
+      width: 90px;
+      height: 50px; /* ensure visible hit area */
+      cursor: pointer;
+      
+  "></div>
+</div>
+
+<!-- Lottie runtime -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+(function(){
+  // --- Popup ID selection ---
+  const MOBILE_POPUP_ID  = 2395; // viewport ≤ 767px
+  const DESKTOP_POPUP_ID = 166; // viewport ≥ 768px
+  const POPUP_ID = window.matchMedia("(max-width: 767px)").matches ? MOBILE_POPUP_ID : DESKTOP_POPUP_ID;
+
+  const speedFactor = 1.5;          // animation speed
+  const DEBOUNCE_MS = 100;        // your chosen debounce
+  const EARLY_UNLOCK_RATIO = 0.8; // early unlock at 70% of segment time
+  const OPEN_GRACE_MS = 140;      // short grace after opening
+
+  let forward = true;        // true = closed; next click opens
+  let busy = false;          // lock during transitions
+  let lastToggleAt = 0;      // debounce timestamp
+  let guardOn = false;       // global transition guard
+  let earlyUnlockTimer = null;
+  let openGraceUntil = 0;    // ignore outside-close briefly after opening
+
+  const toggleEl = document.getElementById("lottie-toggle");
+  if (!toggleEl) { console.error('[Lottie Toggle] Missing #lottie-toggle element.'); return; }
+
+  // --- Popup helpers ---
+  function openPopup(){
+    if (window.elementorProFrontend?.modules?.popup?.showPopup) {
+      elementorProFrontend.modules.popup.showPopup({ id: POPUP_ID });
+    }
+    openGraceUntil = Date.now() + OPEN_GRACE_MS;
+  }
+  function closePopup(){
+    if (window.elementorProFrontend?.modules?.popup?.closePopup) {
+      elementorProFrontend.modules.popup.closePopup({ id: POPUP_ID }, {}, "manual");
+    }
+  }
+
+  // ✅ PRELOAD / WARM POPUP (no visual open)
+  function preloadPopup(){
+    try {
+      const doc = window.elementorFrontend?.documentsManager?.documents?.[POPUP_ID];
+      if (doc && typeof doc.getModal === "function") {
+        doc.getModal(); // build modal instance
+      }
+
+      const popupMod = window.elementorProFrontend?.modules?.popup;
+      if (popupMod) {
+        if (typeof popupMod.getPopup === "function") popupMod.getPopup(POPUP_ID);
+        if (typeof popupMod.getModal === "function") popupMod.getModal(POPUP_ID);
+      }
+    } catch (e) {
+      // silent on purpose (best-effort)
+    }
+  }
+
+  // Robust "inside popup" check for your structure
+  function isInsideActivePopup(target){
+    if (!target) return false;
+    const sel = [
+      `.elementor-location-popup[data-elementor-id="${POPUP_ID}"]`,
+      `.elementor-${POPUP_ID}[data-elementor-type="popup"]`,
+      `.elementor[data-elementor-id="${POPUP_ID}"]`
+    ].join(',');
+    return !!target.closest(sel);
+  }
+
+  // Disable/enable ALL Elementor overlays during transition
+  function setOverlayPointer(block){
+    const overlays = document.querySelectorAll('.dialog-widget-overlay');
+    overlays.forEach(ov => ov.style.pointerEvents = block ? 'none' : '');
+  }
+
+  // Global transition guard (window + document, capture)
+  function transitionGuard(evt){
+    if (!busy) return;
+    // Allow interactions inside popup and inside the toggle
+    if (toggleEl.contains(evt.target)) return;
+    if (isInsideActivePopup(evt.target)) return;
+    evt.preventDefault();
+    evt.stopPropagation();
+    evt.stopImmediatePropagation();
+  }
+  function enableGuard(){
+    if (guardOn) return;
+    guardOn = true;
+    const types = ['mousedown','mouseup','click','touchstart','touchend','pointerdown','pointerup'];
+    types.forEach(t => {
+      window.addEventListener(t, transitionGuard, true);
+      document.addEventListener(t, transitionGuard, true);
+    });
+    setOverlayPointer(true);
+  }
+  function disableGuard(){
+    if (!guardOn) return;
+    guardOn = false;
+    const types = ['mousedown','mouseup','click','touchstart','touchend','pointerdown','pointerup'];
+    types.forEach(t => {
+      window.removeEventListener(t, transitionGuard, true);
+      document.removeEventListener(t, transitionGuard, true);
+    });
+    setOverlayPointer(false);
+  }
+
+  // Unified unlock
+  function unlock(){
+    busy = false;
+    toggleEl.style.pointerEvents = '';
+    disableGuard();
+    if (earlyUnlockTimer) {
+      clearTimeout(earlyUnlockTimer);
+      earlyUnlockTimer = null;
+    }
+  }
+
+  // Lottie setup
+  const anim = lottie.loadAnimation({
+    container: toggleEl,
+    renderer: "svg",
+    loop: false,
+    autoplay: false,
+    path: "/assets/images/Menu-Animation-Custom-8.json"
+  });
+  anim.setSpeed(speedFactor);
+
+  anim.addEventListener('data_ready', () => {
+    const total = anim.totalFrames;
+    const start = Math.floor(total * 0.1);
+    const end   = Math.floor(total * 0.65);
+    const fr    = anim.frameRate || 60;
+
+    // Draw initial closed frame
+    anim.goToAndStop(start, true);
+
+    // ✅ Warm popup once ready (reduces first-open stutter)
+    preloadPopup();
+    // extra safety: warm again after full page load (fonts/layout done)
+    window.addEventListener("load", preloadPopup, { once: true });
+
+    // Safety: full unlock on actual completion
+    anim.addEventListener('complete', unlock);
+
+    // Early unlock scheduler
+    function scheduleEarlyUnlock(){
+      if (earlyUnlockTimer) clearTimeout(earlyUnlockTimer);
+      const durationMs = (Math.abs(end - start) / fr) * 1000 / speedFactor;
+      earlyUnlockTimer = setTimeout(unlock, durationMs * EARLY_UNLOCK_RATIO);
+    }
+
+    // Toggle click
+    toggleEl.addEventListener("click", function(e){
+      e.stopImmediatePropagation();
+      const now = Date.now();
+      if (now - lastToggleAt < DEBOUNCE_MS) return;
+      lastToggleAt = now;
+      if (busy) return;
+
+      // Begin transition
+      busy = true;
+      toggleEl.style.pointerEvents = 'none';
+      enableGuard();
+
+      const segment = forward ? [start, end] : [end, start];
+      anim.playSegments(segment, true);
+
+      if (forward) openPopup();
+      else closePopup();
+
+      forward = !forward;
+      scheduleEarlyUnlock();
+    });
+
+    // Outside click to close (only when open AND idle)
+    document.addEventListener("mousedown", function(evt){
+      if (busy || forward) return;                 // only when open + not transitioning
+      if (Date.now() < openGraceUntil) return;     // grace right after opening
+      if (toggleEl.contains(evt.target)) return;   // ignore toggle
+      if (isInsideActivePopup(evt.target)) return; // ignore clicks inside the popup
+
+      // Outside: reverse + close
+      busy = true;
+      toggleEl.style.pointerEvents = 'none';
+      enableGuard();
+      anim.playSegments([end, start], true);
+      closePopup();
+      forward = true;
+
+      const durationMs = (Math.abs(end - start) / fr) * 1000 / speedFactor;
+      if (earlyUnlockTimer) clearTimeout(earlyUnlockTimer);
+      earlyUnlockTimer = setTimeout(unlock, durationMs * EARLY_UNLOCK_RATIO);
+    }, true); // capture
+
+    // Sync if Elementor closes by other means (ESC, programmatic)
+    if (typeof jQuery !== "undefined") {
+      jQuery(document).on("elementor/popup/hide", function(event, id){
+        if (String(id) === String(POPUP_ID) && !forward && !busy) {
+          busy = true;
+          toggleEl.style.pointerEvents = 'none';
+          enableGuard();
+          anim.playSegments([end, start], true);
+          forward = true;
+
+          const durationMs = (Math.abs(end - start) / fr) * 1000 / speedFactor;
+          if (earlyUnlockTimer) clearTimeout(earlyUnlockTimer);
+          earlyUnlockTimer = setTimeout(unlock, durationMs * EARLY_UNLOCK_RATIO);
+        }
+      });
+    }
+
+    // ESC safety (only when open + idle)
+    document.addEventListener("keydown", function(evt){
+      if (evt.key !== "Escape") return;
+      if (forward || busy) return;
+
+      busy = true;
+      toggleEl.style.pointerEvents = 'none';
+      enableGuard();
+      anim.playSegments([end, start], true);
+      closePopup();
+      forward = true;
+
+      const durationMs = (Math.abs(end - start) / fr) * 1000 / speedFactor;
+      if (earlyUnlockTimer) clearTimeout(earlyUnlockTimer);
+      earlyUnlockTimer = setTimeout(unlock, durationMs * EARLY_UNLOCK_RATIO);
+    });
+  });
+
+  anim.addEventListener('data_failed', () => {
+    console.error('[Lottie Toggle] Failed to load Lottie JSON.');
+  });
+})();
+</script>
+				</div>
+				</div>
+				</div>
+				</header>
+<div data-elementor-type="popup" data-elementor-id="2395" class="elementor elementor-2395 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInRight&quot;,&quot;exit_animation&quot;:&quot;slideInRight&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.299999999999999988897769753748434595763683319091796875,&quot;sizes&quot;:[]},&quot;prevent_scroll&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-eb0157d e-con-full e-flex e-con e-parent" data-id="eb0157d" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-6387a07 elementor-widget elementor-widget-html" data-id="6387a07" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<nav class="pnav-dropdown-9cf2 kh-menu-9cf2" aria-hidden="true">
+  <ul class="pnav-list-9cf2">
+
+    <li class="pnav-item-9cf2">
+      <a href="/about" class="pnav-link-9cf2">
+        ABOUT
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/experience" class="pnav-link-9cf2">
+        THE EXPERIENCE
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/menu" class="pnav-link-9cf2">
+        MENUS
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/gallery" class="pnav-link-9cf2">
+        KHUFU'S GALLERY
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/legacy" class="pnav-link-9cf2">
+        THE LEGACY
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/reservations" class="pnav-link-9cf2">
+        RESERVATIONS
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/contact" class="pnav-link-9cf2">
+        LOCATION &amp; HOURS
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/" class="pnav-link-9cf2" target="_blank" rel="noopener">
+        KHUFU'S BISTRO
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+    <li class="pnav-item-9cf2">
+      <a href="/contact" class="pnav-link-9cf2">
+        CONTACT
+        <img src="/assets/images/Chevron-Right-Khufus.svg"
+             alt="arrow" class="pnav-icon-9cf2">
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300&display=swap");
+
+/* ================== Scoped: pnav-*-9cf2 ================== */
+.pnav-dropdown-9cf2{
+  font-family:"Bricolage Grotesque", sans-serif;
+  width:100%;
+}
+
+.pnav-list-9cf2{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.pnav-item-9cf2{
+  position:relative;
+  margin:0;
+  --pnav-delay:0ms;
+}
+
+.pnav-item-9cf2:nth-child(1){ --pnav-delay:40ms; }
+.pnav-item-9cf2:nth-child(2){ --pnav-delay:80ms; }
+.pnav-item-9cf2:nth-child(3){ --pnav-delay:120ms; }
+.pnav-item-9cf2:nth-child(4){ --pnav-delay:160ms; }
+.pnav-item-9cf2:nth-child(5){ --pnav-delay:200ms; }
+.pnav-item-9cf2:nth-child(6){ --pnav-delay:240ms; }
+.pnav-item-9cf2:nth-child(7){ --pnav-delay:280ms; }
+.pnav-item-9cf2:nth-child(8){ --pnav-delay:320ms; }
+.pnav-item-9cf2:nth-child(9){ --pnav-delay:360ms; }
+
+.pnav-item-9cf2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:rgba(255,255,255,0.26);
+  opacity:0;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .35s ease, opacity .35s ease;
+}
+
+.pnav-dropdown-9cf2.pnav-root-reveal-9cf2 .pnav-item-9cf2::after{
+  opacity:1;
+  transform:scaleX(1);
+  transition-delay:var(--pnav-delay);
+}
+
+.pnav-dropdown-9cf2 a,
+.pnav-dropdown-9cf2 button{
+  outline:none !important;
+  box-shadow:none !important;
+  -webkit-tap-highlight-color:transparent;
+  background:none;
+  border:none;
+  appearance:none;
+  width:100%;
+  cursor:pointer;
+  color:#fff;
+  text-decoration:none;
+}
+
+.pnav-link-9cf2{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:18px 0 16px 0;
+  font-family:"Bricolage Grotesque", sans-serif !important;
+  font-size:16px;
+  font-weight:300 !important;
+  line-height:1.15;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  text-align:left;
+  color:rgba(255,255,255,.96);
+
+  opacity:0;
+  transform:translateY(10px);
+  transition:
+    color .3s ease,
+    transform .35s ease,
+    opacity .35s ease;
+}
+
+.pnav-dropdown-9cf2.pnav-root-reveal-9cf2 .pnav-link-9cf2{
+  opacity:1;
+  transform:translateY(0);
+  transition-delay:var(--pnav-delay);
+}
+
+.pnav-icon-9cf2{
+  flex:0 0 auto;
+  width:10px;
+  height:10px;
+  opacity:.95;
+  transition:transform .3s ease, opacity .3s ease;
+}
+
+.pnav-link-9cf2:hover,
+.pnav-link-9cf2:focus{
+  color:rgba(255,255,255,.72) !important;
+}
+
+.pnav-link-9cf2:hover .pnav-icon-9cf2,
+.pnav-link-9cf2:focus .pnav-icon-9cf2{
+  transform:translateX(3px);
+  opacity:1;
+}
+
+.pnav-dropdown-9cf2 a:focus,
+.pnav-dropdown-9cf2 button:focus,
+.pnav-dropdown-9cf2 a:active,
+.pnav-dropdown-9cf2 button:active{
+  outline:none !important;
+  color:#fff !important;
+  background:none !important;
+}
+
+@keyframes pnav-line-out-9cf2{
+  to{ transform:scaleX(0); }
+}
+
+@keyframes pnav-line-in-9cf2{
+  from{ transform:scaleX(0); }
+  to{ transform:scaleX(1); }
+}
+
+.pnav-item-9cf2.pnav-line-anim-out-9cf2::after{
+  transform-origin:right center !important;
+  animation:pnav-line-out-9cf2 .45s ease both;
+}
+
+.pnav-item-9cf2.pnav-line-anim-in-9cf2::after{
+  transform-origin:left center !important;
+  animation:pnav-line-in-9cf2 .45s ease both;
+}
+
+@media (max-width:767px){
+  .pnav-link-9cf2{
+    font-size:16px;
+    font-weight:300 !important;
+    padding:20px 0 19px 0;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-family:"Bricolage Grotesque", sans-serif !important;
+  }
+
+  .pnav-icon-9cf2{
+    width:8px;
+    height:8px;
+  }
+
+  .pnav-item-9cf2::after{
+    background:rgba(255,255,255,0.22);
+  }
+}
+</style>
+
+<script type="text/javascript">
+(() => {
+  const root = document.querySelector('.pnav-dropdown-9cf2');
+  if (!root) return;
+
+  const OUT_MS = 450;
+  const IN_MS = 450;
+  const ROOT_REVEAL = 'pnav-root-reveal-9cf2';
+  const ROOT_CLOSING = 'pnav-root-closing-9cf2';
+
+  const raf = (fn) => requestAnimationFrame(fn);
+  const qAll = (sel, parent = root) => Array.from(parent.querySelectorAll(sel));
+
+  function restartAnim(el, cls, ms){
+    if (!el) return;
+    el.classList.remove(cls);
+    void el.offsetWidth;
+    el.classList.add(cls);
+    setTimeout(() => el.classList.remove(cls), ms + 30);
+  }
+
+  qAll('.pnav-item-9cf2 > a.pnav-link-9cf2').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const li = link.closest('.pnav-item-9cf2');
+      const href = link.getAttribute('href');
+      const target = link.getAttribute('target');
+
+      if (!href || href === '#') return;
+
+      e.preventDefault();
+
+      restartAnim(li, 'pnav-line-anim-out-9cf2', OUT_MS);
+      setTimeout(() => restartAnim(li, 'pnav-line-anim-in-9cf2', IN_MS), OUT_MS);
+
+      setTimeout(() => {
+        if (target === '_blank') {
+          window.open(href, '_blank', 'noopener');
+        } else {
+          window.location.href = href;
+        }
+      }, OUT_MS + 100);
+    }, { capture:true });
+  });
+
+  function pnavOpen(){
+    root.classList.remove(ROOT_CLOSING);
+    raf(() => {
+      root.classList.add(ROOT_REVEAL);
+      root.setAttribute('aria-hidden', 'false');
+    });
+  }
+
+  function pnavClose(){
+    root.classList.add(ROOT_CLOSING);
+    root.classList.remove(ROOT_REVEAL);
+    setTimeout(() => {
+      root.classList.remove(ROOT_CLOSING);
+      root.setAttribute('aria-hidden', 'true');
+    }, 650);
+  }
+
+  window.pnavOpen = pnavOpen;
+  window.pnavClose = pnavClose;
+
+  new IntersectionObserver((entries) => {
+    entries.forEach((ent) => {
+      if (ent.isIntersecting) pnavOpen();
+    });
+  }, { threshold:0.2 }).observe(root);
+})();
+</script>				</div>
+				</div>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="166" class="elementor elementor-166 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;slideInDown&quot;,&quot;exit_animation&quot;:&quot;slideInDown&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.299999999999999988897769753748434595763683319091796875,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-a57fe6c e-con-full e-flex e-con e-parent" data-id="a57fe6c" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-4ce0183 e-con-full popup-stagger e-flex e-con e-child" data-id="4ce0183" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-e40b100 e-con-full stagger-item e-flex e-con e-child" data-id="e40b100" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-4ad8b70 e-con-full menu-overlay e-flex e-con e-child" data-id="4ad8b70" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-b160004 elementor-widget elementor-widget-heading" data-id="b160004" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/about">ABOUT</a></h2>				</div>
+				<div class="elementor-element elementor-element-17045e6 elementor-widget elementor-widget-heading" data-id="17045e6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/experience">THE EXPERIENCE</a></h2>				</div>
+				<div class="elementor-element elementor-element-c6fb75b elementor-widget elementor-widget-heading" data-id="c6fb75b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/menu">MENUS</a></h2>				</div>
+				<div class="elementor-element elementor-element-447f271 elementor-widget elementor-widget-heading" data-id="447f271" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/gallery">KHUFU'S GALLERY</a></h2>				</div>
+				<div class="elementor-element elementor-element-098433b elementor-widget elementor-widget-heading" data-id="098433b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/legacy">THE LEGACY</a></h2>				</div>
+				<div class="elementor-element elementor-element-730cc60 elementor-widget elementor-widget-heading" data-id="730cc60" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/reservations">RESERVATIONS</a></h2>				</div>
+				<div class="elementor-element elementor-element-edbba27 elementor-widget elementor-widget-heading" data-id="edbba27" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/contact">LOCATION &amp; HOURS</a></h2>				</div>
+				<div class="elementor-element elementor-element-e9b8b41 elementor-widget elementor-widget-heading" data-id="e9b8b41" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/">KHUFU'S BISTRO</a></h2>				</div>
+				<div class="elementor-element elementor-element-39e8d07 elementor-widget elementor-widget-heading" data-id="39e8d07" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/contact">CONTACT</a></h2>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-1980e35 e-con-full stagger-item e-flex e-con e-child" data-id="1980e35" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-b0721a6 elementor-widget elementor-widget-image" data-id="b0721a6" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="1024" height="674" src="/assets/images/Reservations-Image-e1776860891702-1024x674.webp" class="attachment-large size-large wp-image-2579" alt="" srcset="/assets/images/Reservations-Image-e1776860891702-1024x674.webp 1024w, /assets/images/Reservations-Image-e1776860891702-300x197.webp 300w, /assets/images/Reservations-Image-e1776860891702-768x505.webp 768w, /assets/images/Reservations-Image-e1776860891702-1536x1011.webp 1536w, /assets/images/Reservations-Image-e1776860891702.webp 1976w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+				<div class="elementor-element elementor-element-f6c66dc elementor-widget elementor-widget-heading" data-id="f6c66dc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/reservations">RESERVATIONS</a></h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-0700956 e-con-full stagger-item e-flex e-con e-child" data-id="0700956" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-fc50da0 elementor-widget elementor-widget-image" data-id="fc50da0" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="1024" height="683" src="/assets/images/Lifestyle-Shots-Image-e1776860814909-1024x683.webp" class="attachment-large size-large wp-image-2578" alt="" srcset="/assets/images/Lifestyle-Shots-Image-e1776860814909-1024x683.webp 1024w, /assets/images/Lifestyle-Shots-Image-e1776860814909-300x200.webp 300w, /assets/images/Lifestyle-Shots-Image-e1776860814909-768x512.webp 768w, /assets/images/Lifestyle-Shots-Image-e1776860814909-1536x1024.webp 1536w, /assets/images/Lifestyle-Shots-Image-e1776860814909.webp 1956w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+				<div class="elementor-element elementor-element-7a231cf elementor-widget elementor-widget-heading" data-id="7a231cf" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/gallery">LIFESTYLE SHOTS</a></h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-a990b19 e-con-full stagger-item e-flex e-con e-child" data-id="a990b19" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-8c53044 elementor-widget elementor-widget-image" data-id="8c53044" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img width="1024" height="684" src="/assets/images/Menus-Food-Image-1024x684.webp" class="attachment-large size-large wp-image-186" alt="" srcset="/assets/images/Menus-Food-Image-1024x684.webp 1024w, /assets/images/Menus-Food-Image-300x200.webp 300w, /assets/images/Menus-Food-Image-768x513.webp 768w, /assets/images/Menus-Food-Image-1536x1027.webp 1536w, /assets/images/Menus-Food-Image.webp 1616w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+				<div class="elementor-element elementor-element-5c66350 elementor-widget elementor-widget-heading" data-id="5c66350" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/menu">MENUS</a></h2>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-81ea57b e-con-full e-flex e-con e-child" data-id="81ea57b" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-a72a980 animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="a72a980" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:0.5}" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="https://maps.app.goo.gl/Y8u743YQLnqs7jWm9">GET DIRECTIONS</a></h2>				</div>
+				<div class="elementor-element elementor-element-3548666 elementor-widget elementor-widget-html" data-id="3548666" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<script type="text/javascript">
+/**
+ * Aura Popup Nav – Premium Smooth v2
+ * - Keeps text stagger feel (unchanged)
+ * - Images start shortly AFTER text begins (no huge gap)
+ * - Images: super smooth fade-up (slow opacity ramp, long settle)
+ * - No arrow, underline only
+ * - No flash, iOS-safe, portable (no Elementor IDs)
+ *
+ * Requires:
+ *  - .popup-stagger
+ *  - .stagger-item
+ */
+(function () {
+  function getOS() {
+    var ua = navigator.userAgent || '';
+    var plat = navigator.platform || '';
+    var uaData = navigator.userAgentData;
+    var isIOS = /iPad|iPhone|iPod/i.test(ua) || (plat === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isWin = /Windows/i.test(ua) || (uaData && /Windows/i.test(uaData.platform || ''));
+    return isIOS ? 'ios' : (isWin ? 'windows' : 'other');
+  }
+  var IS_IOS = (getOS() === 'ios');
+
+  const WRAP_SEL = '.popup-stagger';
+  const COL_SEL  = '.stagger-item';
+
+  const TEXT_SEL = '.elementor-widget-heading';
+  const IMG_SEL  = '.elementor-widget-image';
+
+  // --- TEXT (keep your feel) ---
+  const START_DELAY   = 160;
+  const TEXT_DURATION = 560;
+  const TEXT_GAP      = 42;
+  const TEXT_DIST     = 10;
+  const TEXT_EASING   = 'cubic-bezier(.14, .85, .2, 1)';
+
+  // --- IMAGES (premium) ---
+  // Start images shortly after text begins (NOT after it ends)
+  const IMAGES_START_AFTER_TEXT_BEGINS = 160; // ms after text start (tight + cohesive)
+  const IMG_DURATION = 1900;                 // longer = smoother
+  const IMG_DIST     = 28;                   // smaller travel = less “sharp”
+  const IMG_EASING   = 'cubic-bezier(.08, .94, .12, 1)'; // very soft
+  const IMG_CASCADE  = 70;                   // subtle stagger between the 3 image columns
+
+  // Optional: labels under images (company names) feel slightly after image begins
+  const LABEL_DELAY_AFTER_IMAGE = 220;
+  const LABEL_DURATION = 900;
+  const LABEL_DIST     = 12;
+  const LABEL_EASING   = 'cubic-bezier(.10, .90, .18, 1)';
+
+  const seen = new WeakMap();
+
+  function isOpen(modal) {
+    const aria = modal.getAttribute('aria-hidden');
+    if (aria === 'false') return true;
+    const s = getComputedStyle(modal);
+    return s.display !== 'none' && s.visibility !== 'hidden' && s.opacity !== '0';
+  }
+
+  function qsa(root, sel) { return Array.from(root.querySelectorAll(sel)); }
+
+  function setInitial(el, dist) {
+    el.style.opacity = '0';
+    el.style.willChange = 'transform, opacity';
+    el.style.backfaceVisibility = 'hidden';
+    if (IS_IOS) el.style.webkitFontSmoothing = 'antialiased';
+    el.style.transform = IS_IOS
+      ? `translate3d(0, ${dist}px, 0)`
+      : `translateY(${dist}px) translateZ(0)`;
+  }
+
+  function prep(modal) {
+    const wrap = modal.querySelector(WRAP_SEL);
+    if (!wrap) return;
+
+    // Cancel and hard-set initial states immediately (prevents flash)
+    qsa(wrap, `${IMG_SEL}, ${TEXT_SEL}`).forEach(el => {
+      try { el.getAnimations().forEach(a => a.cancel()); } catch(e){}
+      const dist = el.matches(IMG_SEL) ? IMG_DIST : TEXT_DIST;
+      setInitial(el, dist);
+    });
+
+    // Lock initial state before first paint of animations (critical for Safari)
+    void modal.offsetHeight;
+  }
+
+  function animate(el, frames, opts) {
+    const anim = el.animate(frames, {
+      duration: opts.duration,
+      delay: opts.delay,
+      easing: opts.easing,
+      fill: IS_IOS ? 'forwards' : 'both'
+    });
+
+    anim.onfinish = () => {
+      el.style.opacity = '1';
+      el.style.transform = IS_IOS ? 'translate3d(0,0,0)' : 'translateY(0) translateZ(0)';
+      el.style.willChange = '';
+      el.style.backfaceVisibility = '';
+      try {
+        if (IS_IOS) { anim.commitStyles(); anim.cancel(); }
+        else el.getAnimations().forEach(a => a.cancel());
+      } catch(e){}
+    };
+  }
+
+  function arm(modal) {
+    const wrap = modal.querySelector(WRAP_SEL);
+    if (!wrap) return;
+
+    const cols = qsa(wrap, COL_SEL);
+    if (!cols.length) return;
+
+    prep(modal);
+
+    const textCol = cols[0];
+    const imgCols = cols.slice(1);
+
+    // 1) TEXT stagger (unchanged feel)
+    const textItems = qsa(textCol, TEXT_SEL);
+    const textBase  = START_DELAY;
+
+    textItems.forEach((el, i) => {
+      animate(
+        el,
+        [
+          { opacity: 0, transform: IS_IOS ? `translate3d(0, ${TEXT_DIST}px, 0)` : `translateY(${TEXT_DIST}px) translateZ(0)` },
+          { opacity: 1, transform: IS_IOS ? 'translate3d(0,0,0)' : 'translateY(0) translateZ(0)' }
+        ],
+        {
+          duration: TEXT_DURATION,
+          delay: textBase + (i * TEXT_GAP),
+          easing: TEXT_EASING
+        }
+      );
+    });
+
+    // 2) IMAGES (premium) start shortly after text begins
+    const imagesBase = textBase + IMAGES_START_AFTER_TEXT_BEGINS;
+
+    imgCols.forEach((col, idx) => {
+      const colDelay = imagesBase + (idx * IMG_CASCADE);
+
+      const img = col.querySelector(IMG_SEL);
+      const label = col.querySelector(TEXT_SEL); // company name under image (heading widget)
+
+      if (img) {
+        // Premium curve: slow opacity ramp (no “sudden reveal”)
+        animate(
+          img,
+          [
+            { opacity: 0,    transform: IS_IOS ? `translate3d(0, ${IMG_DIST}px, 0)` : `translateY(${IMG_DIST}px) translateZ(0)` },
+            { opacity: 0.12, transform: IS_IOS ? `translate3d(0, ${Math.round(IMG_DIST*0.70)}px, 0)` : `translateY(${Math.round(IMG_DIST*0.70)}px) translateZ(0)` },
+            { opacity: 0.35, transform: IS_IOS ? `translate3d(0, ${Math.round(IMG_DIST*0.35)}px, 0)` : `translateY(${Math.round(IMG_DIST*0.35)}px) translateZ(0)` },
+            { opacity: 1,    transform: IS_IOS ? 'translate3d(0,0,0)' : 'translateY(0) translateZ(0)' }
+          ],
+          {
+            duration: IMG_DURATION,
+            delay: colDelay,
+            easing: IMG_EASING
+          }
+        );
+      }
+
+      if (label) {
+        animate(
+          label,
+          [
+            { opacity: 0, transform: IS_IOS ? `translate3d(0, ${LABEL_DIST}px, 0)` : `translateY(${LABEL_DIST}px) translateZ(0)` },
+            { opacity: 1, transform: IS_IOS ? 'translate3d(0,0,0)' : 'translateY(0) translateZ(0)' }
+          ],
+          {
+            duration: LABEL_DURATION,
+            delay: colDelay + LABEL_DELAY_AFTER_IMAGE,
+            easing: LABEL_EASING
+          }
+        );
+      }
+    });
+  }
+
+  function disarm(modal) {
+    const wrap = modal.querySelector(WRAP_SEL);
+    if (!wrap) return;
+
+    qsa(wrap, `${IMG_SEL}, ${TEXT_SEL}`).forEach(el => {
+      try { el.getAnimations().forEach(a => a.cancel()); } catch(e){}
+      el.style.removeProperty('opacity');
+      el.style.removeProperty('transform');
+      el.style.removeProperty('will-change');
+      el.style.removeProperty('backface-visibility');
+      el.style.removeProperty('-webkit-font-smoothing');
+    });
+  }
+
+  function handle(modal) {
+    const open = isOpen(modal);
+    const prev = seen.get(modal);
+
+    if (open && prev !== true) {
+      seen.set(modal, true);
+      // Two RAFs gives Elementor a chance to finish layout without adding “big delay”
+      requestAnimationFrame(() => requestAnimationFrame(() => arm(modal)));
+    } else if (!open && prev !== false) {
+      seen.set(modal, false);
+      disarm(modal);
+    }
+  }
+
+  const observer = new MutationObserver(() => {
+    document.querySelectorAll('.elementor-popup-modal').forEach(handle);
+  });
+
+  observer.observe(document.documentElement, {
+    subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ['aria-hidden','style','class']
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.elementor-popup-modal').forEach(handle);
+  });
+})();
+</script>
+
+<style>
+/* Pre-hide: keep this subtle so it doesn't feel like it “jumps” from far away */
+.elementor-popup-modal[aria-hidden="false"] .popup-stagger .elementor-widget-image,
+.elementor-popup-modal[aria-hidden="false"] .popup-stagger .elementor-widget-heading,
+.elementor-popup-modal:not([aria-hidden="true"]) .popup-stagger .elementor-widget-image,
+.elementor-popup-modal:not([aria-hidden="true"]) .popup-stagger .elementor-widget-heading{
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+
+/* Hover underline only */
+.elementor-popup-modal .popup-stagger .elementor-widget-heading a{
+  position: relative;
+  color: #fff !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.elementor-popup-modal .popup-stagger .elementor-widget-heading a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:1px;
+  height:1.5px;
+  width:100%;
+  background:#fff;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .42s cubic-bezier(.14, .85, .2, 1);
+  will-change:transform;
+}
+
+.elementor-popup-modal .popup-stagger .elementor-widget-heading a:hover::after{
+  transform:scaleX(1);
+}
+</style>
+				</div>
+				<div class="elementor-element elementor-element-bd457c9 animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="bd457c9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:0.5}" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">31/08/2026 7:37 PM</h2>				</div>
+				</div>
+				</div>
+				</div>

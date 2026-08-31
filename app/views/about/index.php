@@ -4910,7 +4910,7 @@ RESPONSIVE
 </section>
 
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
 
   const section = document.getElementById("khAboutHero");
@@ -5662,7 +5662,7 @@ MOBILE VERSION
   </div>
 </section>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
 
   /* =========================
@@ -6383,7 +6383,7 @@ RESPONSIVE
   </div>
 </section>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khCurtainMV');
   if(!section) return;
@@ -7785,7 +7785,7 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
   </section>
 </div>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
   const pin = document.getElementById('khTimelinePin');
   const section = document.getElementById('khTimelineSec');
@@ -8756,7 +8756,7 @@ MOBILE VERSION
   </div>
 </section>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
 
   /* =========================
@@ -9479,7 +9479,7 @@ RESPONSIVE
   </div>
 </section>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
   const elements = document.querySelectorAll('#khFinalSec .kh-final-animate');
   if(!elements.length) return;
@@ -9642,7 +9642,7 @@ RESPONSIVE
 
 </h1>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 (function(){
   var title=document.getElementById("khxHeroTitle");
   if(!title) return;
@@ -9752,7 +9752,7 @@ RESPONSIVE
 }
 </style>
 
-<script type="cc6ea8b926bc5e848c87ab8c-text/javascript">
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
     var reserveBtn = document.querySelector('.mnq-landing-reserve-btn');
     if (!reserveBtn) return;

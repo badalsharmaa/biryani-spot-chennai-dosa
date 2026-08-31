@@ -1523,7 +1523,7 @@ RESPONSIVE
 </section>
 
 
-<script type="452c02b030265ccf76befa14-text/javascript">
+<script type="text/javascript">
 (function(){
 
   const section = document.getElementById("khGalleryHero");
@@ -1699,9 +1699,9 @@ RESPONSIVE
   </div>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" type="452c02b030265ccf76befa14-text/javascript"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" type="text/javascript"></script>
 
-<script type="452c02b030265ccf76befa14-text/javascript">
+<script type="text/javascript">
 (function(){
 
   var mapEl = document.getElementById("kh-map");

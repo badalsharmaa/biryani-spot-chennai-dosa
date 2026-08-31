@@ -3487,7 +3487,7 @@ RESPONSIVE
 </section>
 
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 (function(){
 
   const section = document.getElementById("khExpApproach");
@@ -3506,7 +3506,7 @@ RESPONSIVE
 })();
 </script>
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 (function(){
 
   const scriptEl = document.getElementById("khExpScript");
@@ -4259,7 +4259,7 @@ MOBILE VERSION
   </div>
 </section>
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 (function(){
 
   /* =========================
@@ -5234,7 +5234,7 @@ RESPONSIVE
   </div>
 </section>
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 (function(){
   const elements = document.querySelectorAll('#khFinalSec .kh-final-animate');
   if(elements.length){
@@ -6176,7 +6176,7 @@ INTRO IS SLIDE 1
   </div>
 </section>
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 (function(){
   /* =========================
   DESKTOP CAROUSEL
@@ -6485,7 +6485,7 @@ INTRO IS SLIDE 1
 
 </h1>
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 (function(){
   var title=document.getElementById("khxHeroTitle");
   if(!title) return;
@@ -6595,7 +6595,7 @@ INTRO IS SLIDE 1
 }
 </style>
 
-<script type="cffa98c85d31a82c7c2d5d25-text/javascript">
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
     var reserveBtn = document.querySelector('.mnq-landing-reserve-btn');
     if (!reserveBtn) return;

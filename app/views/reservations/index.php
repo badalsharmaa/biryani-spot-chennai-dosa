@@ -1519,7 +1519,7 @@ class="post-2737 page type-page status-publish ast-article-single" id="post-2737
   </div>
 </section>
 
-<script type="8fb19862d361b737fdc93f22-text/javascript">
+<script type="text/javascript">
 (function(){
   const faq = document.getElementById('khFaq');
   if(!faq) return;

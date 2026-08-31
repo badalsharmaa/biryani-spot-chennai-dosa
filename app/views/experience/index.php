@@ -4266,7 +4266,7 @@ RESPONSIVE
 </section>
 
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
 
   const section = document.getElementById("khExpApproach");
@@ -4285,7 +4285,7 @@ RESPONSIVE
 })();
 </script>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
 
   const scriptEl = document.getElementById("khExpScript");
@@ -5229,7 +5229,7 @@ INTRO IS SLIDE 1
   </div>
 </section>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
   /* =========================
   DESKTOP CAROUSEL
@@ -5853,7 +5853,7 @@ ALIGNED WITH CURRENT SYSTEM
   </div>
 </section>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khViewSec');
   const bg = document.getElementById('khViewBg');
@@ -6546,7 +6546,7 @@ IMAGE COLOR INTERACTION
   </div>
 </section>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khRhythmSec');
   if(!section) return;
@@ -7741,7 +7741,7 @@ MOBILE SIMPLIFIED CARD STACK
   </section>
 </div>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khRitualSelector');
   if(section){
@@ -8342,7 +8342,7 @@ MOBILE SIMPLIFIED CARD STACK
 }
 </style>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khCtaReveal');
   if(!section) return;
@@ -8572,7 +8572,7 @@ MOBILE SIMPLIFIED CARD STACK
 
 </h1>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 (function(){
   var title=document.getElementById("khxHeroTitle");
   if(!title) return;
@@ -8682,7 +8682,7 @@ MOBILE SIMPLIFIED CARD STACK
 }
 </style>
 
-<script type="7206a9dd9d2a23c4f7c39384-text/javascript">
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
     var reserveBtn = document.querySelector('.mnq-landing-reserve-btn');
     if (!reserveBtn) return;

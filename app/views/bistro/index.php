@@ -3241,7 +3241,7 @@ MOBILE — STRONGER PRESENCE
   </span>
 </h1>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 (function(){
   var title=document.getElementById("khfHeroTitle");
   if(!title) return;
@@ -3391,7 +3391,7 @@ a.mnq-landing-reserve-btn.is-hidden-on-scroll {
 }
 </style>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
     var reserveBtn = document.querySelector('.mnq-landing-reserve-btn');
     if (!reserveBtn) return;
@@ -3634,7 +3634,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 </style>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 (function(){
 
     function toggleDisclaimerOnScroll(){
@@ -4032,7 +4032,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </div>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 (function(){
   var section = document.querySelector('.kh-arch-section');
   if (!section || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -4521,7 +4521,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 </style>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.khufusbistro-accordion__item');
 
@@ -4679,7 +4679,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 </style>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 (function(){
   const root = document.getElementById('khxGallery');
   const track = document.getElementById('khxTrack');
@@ -5987,7 +5987,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 </style>
 
-<script type="1dc9fae1d50432fb69204d95-text/javascript">
+<script type="text/javascript">
 (function(){
   function initKhfEditorialTabs(scope){
     const root = scope && scope.querySelector ? scope.querySelector('#khfEditorialTabs') : document.getElementById('khfEditorialTabs');

@@ -4287,7 +4287,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 
 </h1>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   var title=document.getElementById("khfHeroTitle");
   if(!title) return;
@@ -4543,7 +4543,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function () {
   function initMnqReserveButton() {
     document.querySelectorAll('.mnq-reserve-wrapper').forEach(function (wrapper) {
@@ -5021,7 +5021,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khfWhySec');
   if(!section) return;
@@ -5814,7 +5814,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   const root = document.getElementById('expRight');
   if(!root) return;
@@ -6247,7 +6247,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   const root = document.getElementById('khxGallery');
   const track = document.getElementById('khxTrack');
@@ -7490,7 +7490,7 @@ Mostafa Seif</div>
   }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   const slider = document.getElementById('monarqPolaroidSliderV2');
   if (!slider) return;
@@ -8713,7 +8713,7 @@ RESPONSIVE
   </div>
 </section>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   const desktopSection = document.getElementById('khHomeStorySec');
   const mobileSection = document.getElementById('khHomeStoryMobile');
@@ -9189,7 +9189,7 @@ RESPONSIVE
 }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   const section = document.getElementById('khCtaReveal');
   if(!section) return;
@@ -9470,7 +9470,7 @@ RESPONSIVE
 
 </h1>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 (function(){
   var title=document.getElementById("khxHeroTitle");
   if(!title) return;
@@ -9580,7 +9580,7 @@ RESPONSIVE
 }
 </style>
 
-<script type="3c4a508c150dd2c8e74c9838-text/javascript">
+<script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
     var reserveBtn = document.querySelector('.mnq-landing-reserve-btn');
     if (!reserveBtn) return;
