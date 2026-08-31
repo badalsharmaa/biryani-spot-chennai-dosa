@@ -16,6 +16,7 @@
 ---
 
 ## 🛠️ 2. Core Technical Decisions & Architecture
+- **System Design Foundation**: Follows [`guideline/SYSTEM_DESIGN.md`](./guideline/SYSTEM_DESIGN.md) (MVC architecture, relational MySQL schema, request lifecycle, CSRF/XSS armor, Alpine.js client layer).
 - **Backend**: PHP 8.2+ using clean MVC separation (`Controllers/`, `Models/`, `views/`).
 - **Database**: MySQL 8.0+ on production with SQLite fallback for local development via PDO multi-driver wrapper (`config/database.php`).
 - **Frontend**: Tailwind CSS + Semantic HTML5 + Lightweight vanilla JS / Alpine.js.
@@ -29,6 +30,7 @@
 
 ## 📂 3. Sources of Truth & Project Map
 - **Guideline Documentation**: Located in [`guideline/`](./guideline/)
+  - `guideline/SYSTEM_DESIGN.md`: **Core System Design & Technical Architecture Blueprint**.
   - `guideline/PERSONA.md`: Brand identity, customer personas, location schedules.
   - `guideline/VISUAL_GUIDELINES.md`: Design system & visual rules (custom styling).
   - `guideline/TECH_STACK.md`: PHP + MySQL relational architecture.
@@ -52,10 +54,9 @@
   - Extracted 100% of data from all 4 locations (Dublin, Milpitas, Livermore, Concord) with 426 menu items across 32 categories.
   - Downloaded all high-res photography, banners, flyers, and brand icons.
   - Reorganized all scraped data into `old_website_data/`.
-  - Created the 5 core guideline files (`PERSONA.md`, `VISUAL_GUIDELINES.md`, `TECH_STACK.md`, `FEATURES_AND_REQUIREMENTS.md`, `AI_RULES.md`).
-  - Switched and tailored technical architecture to **PHP 8.2+ & MySQL 8.0+ PDO**.
-  - Merged `PRODUCTION_DEPLOYMENT_AI_GUIDE.md` for enterprise server deployment standards.
-  - Organized all 7 guideline files into `guideline/`.
+  - Created pre-development guideline files in `guideline/`.
+  - Established **Enterprise System Design (`guideline/SYSTEM_DESIGN.md`)**.
+  - Built Knowledge Graph Indexing in `graphify-out/` (95 nodes, 87 relations).
   - Initialized `MEMORY.md` at root for long-term AI memory persistence.
 
 ---
