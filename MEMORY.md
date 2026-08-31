@@ -75,6 +75,25 @@
 
 ---
 
+
+### Session 4 — August 31, 2026 (100% Exact Raw Elementor DOM & CSS Architecture)
+- Rebuilt entire PHP view layer directly from `scratch/khufus_raw/*.html` to ensure 100% pixel-perfect fidelity matching `khufus.com`.
+- Downloaded and linked all 51 compiled Elementor, Astra, and widget stylesheets locally in `public/assets/css/elementor/`.
+- Downloaded all runtime dependencies (`jquery.min.js`, `frontend-modules.min.js`, `frontend.min.js`, `webpack.runtime.min.js`) locally in `public/assets/js/elementor/`.
+- Generated 1:1 identical PHP views for:
+  - `app/views/layouts/header.php` and `footer.php`
+  - `app/views/home/index.php`
+  - `app/views/reservations/index.php` (with exact `#khFaq` accordion engine)
+  - `app/views/experience/index.php`
+  - `app/views/legacy/index.php`
+  - `app/views/menu/index.php`
+  - `app/views/locations/index.php`
+  - `app/views/about/index.php`
+  - `app/views/gallery/index.php`
+  - `app/views/bistro/index.php`
+- Applied container reset in `khufus-theme.css` to allow full viewport width bleed.
+- Validated with DevTools screenshots across all pages on `http://127.0.0.1:8899/`.
+
 ## 🎯 5. Immediate Next Steps & Backlog
 1. [ ] **Database Schema & Seeders**:
    - Create `database/schema.sql` (MySQL table definitions for locations, schedules, categories, menu items, catering leads, contact messages).
