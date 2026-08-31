@@ -25,6 +25,7 @@
   - Apache `.htaccess` clean URL rewriting without `.php` extensions.
   - Google Consent Mode v2 by default (`ad_storage: denied`) with interactive cookie banner.
   - Honeypot anti-spam protection on all forms.
+- **Knowledge Graph Search**: Knowledge graph indexing in `graphify-out/` (95 nodes, 87 relations) for high-speed concept navigation and file search.
 
 ---
 
@@ -48,16 +49,19 @@
 
 ## 📜 4. Chronological Session History
 
-### Session 1 — August 31, 2026
+### Session 1 — August 31, 2026 (Foundation & Scaffolding Phase)
 - **Accomplishments**:
   - Researched live site `https://biryanispotchennaidosa.com/` and bypassed Cloudflare bot checks via Chrome DevTools MCP.
   - Extracted 100% of data from all 4 locations (Dublin, Milpitas, Livermore, Concord) with 426 menu items across 32 categories.
   - Downloaded all high-res photography, banners, flyers, and brand icons.
   - Reorganized all scraped data into `old_website_data/`.
-  - Created pre-development guideline files in `guideline/`.
-  - Established **Enterprise System Design (`guideline/SYSTEM_DESIGN.md`)**.
+  - Created pre-development guideline files in `guideline/` (`PERSONA.md`, `VISUAL_GUIDELINES.md`, `TECH_STACK.md`, `FEATURES_AND_REQUIREMENTS.md`, `AI_RULES.md`).
+  - Switched and tailored technical architecture to **PHP 8.2+ & MySQL 8.0+ PDO**.
+  - Merged and tailored `PRODUCTION_DEPLOYMENT_AI_GUIDE.md` for enterprise server deployment standards.
+  - Researched and established full **Enterprise System Design (`guideline/SYSTEM_DESIGN.md`)**.
   - Built Knowledge Graph Indexing in `graphify-out/` (95 nodes, 87 relations).
-  - Initialized `MEMORY.md` at root for long-term AI memory persistence.
+  - Maintained `MEMORY.md` at root for long-term AI memory persistence.
+  - Git repository initialized and all milestones committed with clean version history.
 
 ---
 
