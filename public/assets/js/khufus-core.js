@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initPreloader();
   initHeader();
   initLottieMenu();
+  initReserveDropdown();
   initParallax();
+  initRecognitionDeck();
   init3DGallery();
   initPolaroidSlider();
   initBistroAccordion();
@@ -115,7 +117,136 @@ function initLottieMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   4. PARALLAX & BIRD MOTION CONTROLLER
+   4. RESERVE YOUR TABLE GLASS DROPDOWN
+   -------------------------------------------------------------------------- */
+function initReserveDropdown() {
+  const wrappers = document.querySelectorAll(".mnq-reserve-wrapper");
+  wrappers.forEach(wrapper => {
+    const btn = wrapper.querySelector(".mnq-landing-reserve-btn");
+    if (!btn) return;
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      wrapper.classList.toggle("active");
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".mnq-reserve-wrapper")) {
+      wrappers.forEach(w => w.classList.remove("active"));
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   5. GLOBAL RECOGNITION 3D CARD SHUFFLE DECK
+   -------------------------------------------------------------------------- */
+function initRecognitionDeck() {
+  const root = document.getElementById("expRight");
+  if (!root) return;
+
+  const slides = [
+    {
+      title: "MENA’S 50 BEST, NO. 1",
+      text: "Best Restaurant for three consecutive years, rising in MENA’s 50 Best from No. 5 in 2024 to No. 4 in 2025 and No. 1 in 2026.",
+      image: "/assets/images/award-1.webp"
+    },
+    {
+      title: "RESY ONE TO WATCH, 2025",
+      text: "Winner of the Resy One To Watch Award 2025, recognized by The World’s 50 Best for a destination experience with real momentum.",
+      image: "/assets/images/award-2.webp"
+    },
+    {
+      title: "LA LISTE, HIDDEN GEM",
+      text: "Selected by La Liste as a Hidden Gem of the culinary world, spotlighting our kitchens for originality, craft, and a strong sense of place.",
+      image: "/assets/images/award-3.webp"
+    },
+    {
+      title: "LA LISTE, BEST REGIONAL RESTAURANT",
+      text: "Named Best Regional Restaurant by La Liste in 2025, recognizing our dining rooms as one of the continent’s most exceptional culinary destinations.",
+      image: "/assets/images/award-4.webp"
+    }
+  ];
+
+  const media = root.querySelector(".exp-media");
+  const cards = Array.from(root.querySelectorAll(".exp-card"));
+  const titleEl = root.querySelector("#expTitle");
+  const textEl = root.querySelector("#expText");
+  const copyEl = root.querySelector("#expCopy");
+  const counterBtn = root.querySelector("#expCounter");
+  const counterVal = root.querySelector("#expCounterVal");
+
+  let order = [cards[0], cards[1], cards[2]];
+  let index = 0;
+  let locked = false;
+
+  function getSlots() {
+    return [
+      { x: "0px", y: "0px", a: "1", z: "3" },
+      { x: "-56px", y: "-22px", a: ".98", z: "2" },
+      { x: "-112px", y: "-44px", a: ".92", z: "1" }
+    ];
+  }
+
+  function applySlot(card, slot) {
+    if (!card) return;
+    card.style.setProperty("--x", slot.x);
+    card.style.setProperty("--y", slot.y);
+    card.style.setProperty("--a", slot.a);
+    card.style.setProperty("--z", slot.z);
+  }
+
+  function applyOrder(o) {
+    const slots = getSlots();
+    applySlot(o[0], slots[0]);
+    applySlot(o[1], slots[1]);
+    applySlot(o[2], slots[2]);
+  }
+
+  function updateCounter(i) {
+    if (counterVal) counterVal.textContent = `${i + 1}/${slides.length}`;
+  }
+
+  function goNext() {
+    if (locked) return;
+    locked = true;
+
+    const nextIndex = (index + 1) % slides.length;
+    updateCounter(nextIndex);
+
+    const nextOrder = [order[1], order[2], order[0]];
+
+    if (copyEl) {
+      copyEl.classList.add("is-leaving");
+      setTimeout(() => {
+        if (titleEl) titleEl.textContent = slides[nextIndex].title;
+        if (textEl) textEl.textContent = slides[nextIndex].text;
+        copyEl.classList.remove("is-leaving");
+        copyEl.classList.add("is-entering");
+        requestAnimationFrame(() => copyEl.classList.remove("is-entering"));
+      }, 210);
+    }
+
+    if (media) media.classList.add("is-animating");
+    applyOrder(nextOrder);
+
+    setTimeout(() => {
+      if (media) media.classList.remove("is-animating");
+      order = nextOrder;
+      index = nextIndex;
+      locked = false;
+    }, 550);
+  }
+
+  if (counterBtn) counterBtn.addEventListener("click", goNext);
+  if (media) media.addEventListener("click", goNext);
+
+  applyOrder(order);
+  updateCounter(0);
+}
+
+/* --------------------------------------------------------------------------
+   6. PARALLAX & BIRD MOTION CONTROLLER
    -------------------------------------------------------------------------- */
 function initParallax() {
   const whyPanels = document.querySelectorAll(".khf-why-panel");
@@ -173,7 +304,7 @@ function initParallax() {
 }
 
 /* --------------------------------------------------------------------------
-   5. 3D PERSPECTIVE CYLINDRICAL GALLERY
+   7. 3D PERSPECTIVE CYLINDRICAL GALLERY
    -------------------------------------------------------------------------- */
 function init3DGallery() {
   const viewport = document.getElementById("khxViewport");
@@ -247,7 +378,7 @@ function init3DGallery() {
 }
 
 /* --------------------------------------------------------------------------
-   6. POLAROID SLIDER V2 CONTROLLER
+   8. POLAROID SLIDER V2 CONTROLLER
    -------------------------------------------------------------------------- */
 function initPolaroidSlider() {
   const slider = document.getElementById("monarqPolaroidSliderV2");
@@ -321,7 +452,7 @@ function initPolaroidSlider() {
 }
 
 /* --------------------------------------------------------------------------
-   7. BISTRO EXPANDING ACCORDION CONTROLLER
+   9. BISTRO EXPANDING ACCORDION CONTROLLER
    -------------------------------------------------------------------------- */
 function initBistroAccordion() {
   const accordionItems = document.querySelectorAll(".khufusbistro-accordion__item");

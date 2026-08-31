@@ -23,8 +23,18 @@ require_once __DIR__ . "/../layouts/header.php";
     </p>
 
     <div class="khf-hero-actions">
-      <a href="/reservations" class="khf-btn-luxury khf-btn-gold">Reserve Your Table</a>
-      <a href="/menu" class="khf-btn-luxury">Explore Unified Menu</a>
+      <!-- Reserve Your Table Glass Dropdown -->
+      <div class="mnq-reserve-wrapper">
+        <button type="button" class="mnq-landing-reserve-btn">
+          Reserve Your Table
+        </button>
+        <div class="mnq-reserve-dropdown">
+          <a href="/reservations" class="mnq-reserve-option">Lunch &amp; Dinner Dining</a>
+          <a href="/bistro" class="mnq-reserve-option">Evening Bistro Experience</a>
+        </div>
+      </div>
+
+      <a href="/menu" class="khf-btn-luxury" style="margin-left: 20px;">Explore Unified Menu</a>
     </div>
   </div>
 </section>
@@ -137,11 +147,84 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     5. HORIZONTAL EXPANDING ACCORDION (BISTRO & GASTRONOMY TABS)
+     5. GLOBAL RECOGNITION (SECTION 03 FROM KHUFUS.COM)
+     ========================================================================= -->
+<section class="kh-recognition-sec">
+  <div class="kh-rec-grid">
+
+    <!-- Left Copy -->
+    <div class="kh-rec-copy-only">
+      <div class="kh-rec-copy-top-only">
+        <div class="kh-rec-number-only">03</div>
+        <div class="kh-rec-kicker-only">GLOBAL RECOGNITION</div>
+        <h2 class="kh-rec-title-only">
+          A PLACE THE WORLD<br>
+          TOOK NOTE OF
+          <span class="kh-rec-script-only">Recognition With Substance</span>
+        </h2>
+        <p class="kh-rec-text-only">
+          In a setting shaped by millennia, permanence remains the clearest measure. Khufu’s has earned recognition among the region’s leading restaurants, not as a passing headline, but as a reflection of narrative, precision, and a dining experience rooted in place.
+        </p>
+        
+        <div style="margin-top: 28px;">
+          <div class="mnq-reserve-wrapper">
+            <button type="button" class="mnq-landing-reserve-btn" style="color: var(--color-espresso) !important;">
+              Reserve Your Table
+            </button>
+            <div class="mnq-reserve-dropdown">
+              <a href="/reservations" class="mnq-reserve-option">Lunch &amp; Dinner Dining</a>
+              <a href="/bistro" class="mnq-reserve-option">Evening Bistro Experience</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kh-rec-copy-bottom-only">
+        <div class="kh-rec-divider-only"></div>
+        <p class="kh-rec-note-only">
+          From the Bay Area to global stages, our table has entered a wider conversation while remaining grounded in its own identity.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right 3D Card Stack -->
+    <div class="exp-right" id="expRight">
+      <div class="exp-media" aria-label="Recognition images">
+        <figure class="exp-card" style="--x: 0px; --y: 0px; --a: 1; --z: 3;">
+          <img src="/assets/images/award-1.webp" alt="Award Recognition 1" loading="lazy">
+        </figure>
+        <figure class="exp-card" style="--x: -56px; --y: -22px; --a: .98; --z: 2;">
+          <img src="/assets/images/award-2.webp" alt="Award Recognition 2" loading="lazy">
+        </figure>
+        <figure class="exp-card" style="--x: -112px; --y: -44px; --a: .92; --z: 1;">
+          <img src="/assets/images/award-3.webp" alt="Award Recognition 3" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="exp-panel" aria-live="polite">
+        <div class="exp-copy" id="expCopy">
+          <h3 class="exp-title" id="expTitle">MENA’S 50 BEST, NO. 1</h3>
+          <p class="exp-text" id="expText">
+            Best Restaurant in the region for three consecutive years, recognized for unwavering consistency, artisanal craft, and cultural gravitas.
+          </p>
+        </div>
+
+        <button class="exp-counter" type="button" id="expCounter" aria-label="Next award slide">
+          <span id="expCounterVal">1/4</span>
+          <span class="exp-counter-chevron" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================================
+     6. HORIZONTAL EXPANDING ACCORDION (BISTRO & GASTRONOMY TABS)
      ========================================================================= -->
 <section class="khufusbistro-accordion-sec">
   <div class="khufusbistro-accordion-header-block">
-    <div class="khufusbistro-accordion-number">03</div>
+    <div class="khufusbistro-accordion-number">04</div>
     <div class="khufusbistro-accordion-kicker">Atmosphere & Expression</div>
     <h2 class="khufusbistro-accordion-main-title">
       The Dining Chapters
@@ -217,11 +300,11 @@ require_once __DIR__ . "/../layouts/header.php";
 </div>
 
 <!-- =========================================================================
-     6. 3D PERSPECTIVE CYLINDRICAL GALLERY
+     7. 3D PERSPECTIVE CYLINDRICAL GALLERY
      ========================================================================= -->
 <section class="khx-gallery" id="khxGallery">
   <div class="khx-header-stage">
-    <div class="khx-number">04</div>
+    <div class="khx-number">05</div>
     <div class="khx-kicker">Through The Lens</div>
     <h2 class="khx-title">
       The Biryani Spot Experience
@@ -241,20 +324,20 @@ require_once __DIR__ . "/../layouts/header.php";
         <img src="/assets/images/gallery-3.webp" alt="Signature Dish 3">
       </a>
       <a class="khx-item" href="/gallery">
-        <img src="/assets/images/why-card-2.webp" alt="Signature Dish 4">
+        <img src="/assets/images/gallery-4.webp" alt="Signature Dish 4">
       </a>
       <a class="khx-item" href="/gallery">
-        <img src="/assets/images/why-card-3.webp" alt="Signature Dish 5">
+        <img src="/assets/images/gallery-5.webp" alt="Signature Dish 5">
       </a>
       <a class="khx-item" href="/gallery">
-        <img src="/assets/images/gallery-1.webp" alt="Signature Dish 6">
+        <img src="/assets/images/gallery-6.webp" alt="Signature Dish 6">
       </a>
     </div>
   </div>
 </section>
 
 <!-- =========================================================================
-     7. POLAROID SLIDER V2 (CHEF & GASTRONOMY)
+     8. POLAROID SLIDER V2 (CHEF & GASTRONOMY)
      ========================================================================= -->
 <section class="monarq-polaroid-slider-v2" id="monarqPolaroidSliderV2">
   <div class="mps5-shell">
@@ -275,7 +358,7 @@ require_once __DIR__ . "/../layouts/header.php";
 
     <!-- Center: Content -->
     <div class="mps5-center">
-      <div class="mps5-number">05</div>
+      <div class="mps5-number">06</div>
       <div class="mps5-kicker">Meet The Master Chef</div>
       <h2 class="mps5-title">
         Meet Chef Mostafa Seif
@@ -307,7 +390,7 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     8. STORY & AMBIENT PARALLAX COLLAGE
+     9. STORY & AMBIENT PARALLAX COLLAGE
      ========================================================================= -->
 <section class="kh-home-story-sec" id="khHomeStorySec">
   <div class="kh-home-story-wrap">
@@ -315,7 +398,7 @@ require_once __DIR__ . "/../layouts/header.php";
 
       <!-- Copy -->
       <div class="kh-home-story-copy">
-        <div class="kh-home-story-number">08</div>
+        <div class="kh-home-story-number">07</div>
         <div class="kh-home-story-kicker">Experience It By Evening</div>
         <h2 class="kh-home-story-title">
           The Experience<br>
@@ -326,7 +409,19 @@ require_once __DIR__ . "/../layouts/header.php";
         <p class="kh-home-story-text">
           As daylight begins to fade, the setting shifts into a more intimate expression. Light softens, the pace changes, and the aromas of simmering handis become even more immersive.
         </p>
-        <a href="/experience" class="kh-home-story-cta">Continue To Dining Experience</a>
+        
+        <div style="margin-top: 24px;">
+          <div class="mnq-reserve-wrapper">
+            <button type="button" class="mnq-landing-reserve-btn" style="color: var(--color-espresso) !important;">
+              Reserve Your Table
+            </button>
+            <div class="mnq-reserve-dropdown">
+              <a href="/reservations" class="mnq-reserve-option">Lunch &amp; Dinner Dining</a>
+              <a href="/bistro" class="mnq-reserve-option">Evening Bistro Experience</a>
+            </div>
+          </div>
+        </div>
+
         <div class="kh-home-story-divider" style="width: 80px; height: 1px; background: rgba(61,41,28,0.15); margin: 24px 0 16px;"></div>
         <p style="font-size: 11px; color: rgba(61,41,28,0.6);">
           An evening celebration of elevated Indian dining across Dublin, Milpitas, Livermore, and Concord.
@@ -359,7 +454,7 @@ require_once __DIR__ . "/../layouts/header.php";
 </section>
 
 <!-- =========================================================================
-     9. ARCHITECTURAL PILLAR CTA REVEAL
+     10. ARCHITECTURAL PILLAR CTA REVEAL
      ========================================================================= -->
 <section class="kh-cta-reveal" id="khCtaReveal">
   <div class="kh-cta-inner">
@@ -371,7 +466,19 @@ require_once __DIR__ . "/../layouts/header.php";
     <p class="kh-cta-body">
       From the first arrival to the final pause, every detail is deliberate, allowing authentic tradition to feel present rather than performed. Reserve your table and step into a dining journey where flavor leads, and everything else follows.
     </p>
-    <a href="/reservations" class="kh-cta-btn">Reserve Your Table</a>
+    
+    <div style="margin-top: 30px;">
+      <div class="mnq-reserve-wrapper">
+        <button type="button" class="mnq-landing-reserve-btn" style="font-size: 16px !important; letter-spacing: 0.14em !important;">
+          Reserve Your Table
+        </button>
+        <div class="mnq-reserve-dropdown">
+          <a href="/reservations" class="mnq-reserve-option">Lunch &amp; Dinner Dining</a>
+          <a href="/bistro" class="mnq-reserve-option">Evening Bistro Experience</a>
+        </div>
+      </div>
+    </div>
+
     <div class="kh-cta-ornament"></div>
   </div>
 </section>
