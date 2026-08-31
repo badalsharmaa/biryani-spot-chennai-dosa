@@ -1,0 +1,458 @@
+.elementor-1068 .elementor-element.elementor-element-0111a11{--display:flex;--min-height:100svh;--flex-direction:column;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:center;--align-items:center;--overlay-opacity:0.06;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1068 .elementor-element.elementor-element-0111a11:not(.elementor-motion-effects-element-type-background), .elementor-1068 .elementor-element.elementor-element-0111a11 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#5C472B;}.elementor-1068 .elementor-element.elementor-element-0111a11::before, .elementor-1068 .elementor-element.elementor-element-0111a11 > .elementor-background-video-container::before, .elementor-1068 .elementor-element.elementor-element-0111a11 > .e-con-inner > .elementor-background-video-container::before, .elementor-1068 .elementor-element.elementor-element-0111a11 > .elementor-background-slideshow::before, .elementor-1068 .elementor-element.elementor-element-0111a11 > .e-con-inner > .elementor-background-slideshow::before, .elementor-1068 .elementor-element.elementor-element-0111a11 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-image:url("https://khufus.com/wp-content/uploads/2026/02/Nav-Menu-Artwork.svg");--background-overlay:'';background-position:bottom center;background-repeat:no-repeat;background-size:contain;}.elementor-1068 .elementor-element.elementor-element-1cc9f68{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1068 .elementor-element.elementor-element-1cc9f68:not(.elementor-motion-effects-element-type-background), .elementor-1068 .elementor-element.elementor-element-1cc9f68 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#5C472B;}:root{--page-title-display:none;}@media(max-width:767px){.elementor-1068 .elementor-element.elementor-element-0111a11{--justify-content:flex-end;--align-items:flex-start;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--padding-top:0px;--padding-bottom:15px;--padding-left:0px;--padding-right:0px;}}/* Start custom CSS for shortcode, class: .elementor-element-d829637 *//* =========================
+KHUFUS FONT LOAD
+========================= */
+
+@font-face{
+  font-family:"IvyOraDisplay";
+  src:url("https://khufus.com/wp-content/uploads/2026/02/IvyOraDisplay-Regular.woff2") format("woff2");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"GoldenHopes";
+  src:url("https://khufus.com/wp-content/uploads/2026/02/GoldenHopes.woff2") format("woff2");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"BricolageGrotesque";
+  src:url("https://khufus.com/wp-content/uploads/2026/02/BricolageGrotesque-VariableFont_opszwdthwght.ttf") format("truetype");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+
+/* =========================
+FEATURED SECTION TYPOGRAPHY
+========================= */
+
+.kh-featured-widget{
+  color:#ffffff !important;
+  font-family:"BricolageGrotesque", sans-serif !important;
+}
+
+/* TITLES — full white */
+.kh-featured-title,
+.kh-featured-title-line{
+  font-family:"IvyOraDisplay", serif !important;
+  font-weight:400 !important;
+  color:#ffffff !important;
+  line-height:.98 !important;
+  letter-spacing:.015em !important;
+  text-transform:uppercase !important;
+}
+
+/* ACCENT SCRIPT — slightly softer */
+.kh-featured-mobile-label,
+.kh-featured-label{
+  font-family:"GoldenHopes", cursive !important;
+  color:rgba(255,255,255,.75) !important;
+}
+
+/* META — secondary */
+.kh-featured-meta,
+.kh-featured-menu-label,
+.kh-featured-date{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:400 !important;
+  color:rgba(255,255,255,.7) !important;
+}
+
+/* DESCRIPTION — tertiary */
+.kh-featured-desc{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:300 !important;
+  font-size:13px !important;
+  line-height:1.78 !important;
+  color:rgba(255,255,255,.6) !important;
+}
+
+/* CTA */
+.kh-featured-more,
+.kh-featured-more span{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:300 !important;
+  font-size:13px !important;
+  color:#ffffff !important;
+}
+
+/* ICON */
+.kh-featured-more-arrow{
+  color:#ffffff !important;
+}
+
+/* STAR / DIVIDER */
+.kh-featured-star{
+  background-color:rgba(255,255,255,.35) !important;
+}
+
+/* =========================
+MOBILE TYPOGRAPHY FIX
+FEATURED TITLE = 32px
+========================= */
+
+@media (max-width: 767px){
+
+  .kh-featured-title,
+  .kh-featured-title-line{
+    font-size:32px !important;
+    line-height:1.05 !important;
+  }
+
+}
+
+/* =========================
+MOBILE PARAGRAPH REFINEMENT
+========================= */
+
+@media (max-width: 767px){
+
+  .kh-featured-desc{
+    font-size:12px !important;
+    line-height:1.65 !important;
+  }
+
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-0111a11 *//* =========================
+FOOTER BACKGROUND COLOR
+========================= */
+
+.elementor-element-36f35bf{
+  background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}
+
+.elementor-element-268babb{
+    background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}
+
+@media (max-width:768px){
+  .kh-featured-widget .kh-featured-title,
+  .kh-featured-widget .kh-featured-title *,
+  .kh-featured-widget .kh-featured-title-line{
+    font-size:28px !important;
+    line-height:1.04 !important;
+    letter-spacing:.035em !important;
+  }
+}/* End custom CSS */
+/* Start custom CSS for shortcode, class: .elementor-element-d68f540 *//* =========================
+DESKTOP — REDUCE GAP BETWEEN
+"BREAKFAST MENU" AND BOOK
+========================= */
+@media (min-width:1024px){
+
+  /* kill space BEFORE the book */
+  .kh-menu-tabs .kh-book-stage{
+    margin-top:-10px !important; /* key fix */
+    padding-top:0 !important;
+  }
+
+  /* sometimes the frame itself adds space */
+  .kh-menu-tabs .kh-book-frame{
+    margin-top:0 !important;
+    padding-top:0 !important;
+  }
+
+}
+
+/* =========================
+KHUFUS MENU SECTION — FINAL TYPOGRAPHY / COLOR OVERRIDE
+HEADER TEXT = WHITE
+BOOK INNER TEXT = #5C472B
+DETAIL / SUPPORTING OUTER TEXT = #E3D1B5 FAMILY
+ONLY TOP BOOK META ("BREAKFAST MENU" / "SPREAD 1 / 1") = WHITE
+========================= */
+
+/* BASE */
+.kh-menu-tabs{
+  color:#E3D1B5 !important;
+}
+
+/* =========================
+1) HEADER / ACCORDION TOP TEXT = WHITE
+========================= */
+.kh-menu-tabs .kh-menu-trigger,
+.kh-menu-tabs .kh-menu-trigger *{
+  color:#ffffff !important;
+}
+
+.kh-menu-tabs .kh-menu-title{
+  font-family:"IvyOraDisplay", serif !important;
+  font-weight:400 !important;
+  color:#ffffff !important;
+  line-height:.95 !important;
+  letter-spacing:.02em !important;
+  text-transform:uppercase !important;
+}
+
+.kh-menu-tabs .kh-menu-cta,
+.kh-menu-tabs .kh-menu-cta-text,
+.kh-menu-tabs .kh-menu-cta-text span,
+.kh-menu-tabs .kh-menu-cta-label,
+.kh-menu-tabs .kh-menu-cta-wrap,
+.kh-menu-tabs .kh-menu-cta-icon,
+.kh-menu-tabs .kh-menu-cta-line{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  color:#ffffff !important;
+}
+
+.kh-menu-tabs .kh-menu-cta{
+  font-weight:400 !important;
+}
+
+.kh-menu-tabs .kh-menu-cta-label{
+  font-weight:500 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+
+.kh-menu-tabs .kh-menu-cta-text > span:last-child{
+  font-weight:300 !important;
+  color:rgba(255,255,255,.82) !important;
+}
+
+.kh-menu-tabs .kh-menu-cta-star{
+  background-color:rgba(255,255,255,.38) !important;
+}
+
+.kh-menu-tabs .kh-menu-cta-line{
+  background-color:rgba(255,255,255,.32) !important;
+}
+
+/* =========================
+2) DETAIL SIDE INTRO / PLACEHOLDER
+OUTSIDE BOOK CONTENT
+========================= */
+.kh-menu-tabs .kh-detail-stage,
+.kh-menu-tabs .kh-detail-card,
+.kh-menu-tabs .kh-detail-box{
+  color:#E3D1B5 !important;
+}
+
+.kh-menu-tabs .kh-detail-placeholder-title{
+  font-family:"IvyOraDisplay", serif !important;
+  font-weight:400 !important;
+  color:#E3D1B5 !important;
+  line-height:.98 !important;
+  letter-spacing:.015em !important;
+  text-transform:uppercase !important;
+}
+
+.kh-menu-tabs .kh-detail-kicker,
+.kh-menu-tabs .kh-detail-kicker *,
+.kh-menu-tabs .kh-detail-placeholder-subtitle,
+.kh-menu-tabs .kh-detail-placeholder-subtitle *,
+.kh-menu-tabs .kh-detail-placeholder-text,
+.kh-menu-tabs .kh-detail-placeholder-text *{
+  font-family:"BricolageGrotesque", sans-serif !important;
+}
+
+.kh-menu-tabs .kh-detail-kicker,
+.kh-menu-tabs .kh-detail-kicker *{
+  font-weight:500 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  color:rgba(227,209,181,.84) !important;
+  -webkit-text-fill-color:rgba(227,209,181,.84) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+.kh-menu-tabs .kh-detail-placeholder-subtitle,
+.kh-menu-tabs .kh-detail-placeholder-subtitle *{
+  font-weight:400 !important;
+  color:rgba(227,209,181,.92) !important;
+  -webkit-text-fill-color:rgba(227,209,181,.92) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+.kh-menu-tabs .kh-detail-placeholder-text,
+.kh-menu-tabs .kh-detail-placeholder-text *{
+  font-weight:300 !important;
+  line-height:1.75 !important;
+  color:rgba(227,209,181,.72) !important;
+  -webkit-text-fill-color:rgba(227,209,181,.72) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* =========================
+3) TOP OF BOOK ONLY
+"BREAKFAST MENU" / "SPREAD 1 / 1" = WHITE
+========================= */
+.kh-menu-tabs .kh-book .kh-book-head .kh-book-kicker,
+.kh-menu-tabs .kh-book .kh-book-head .kh-book-kicker *,
+.kh-menu-tabs .kh-book .kh-book-head .kh-book-progress,
+.kh-menu-tabs .kh-book .kh-book-head .kh-book-progress *{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* =========================
+4) INSIDE BOOK TOPLINE = BROWN
+"MORNING PLATES" / "PAGE 01"
+========================= */
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-topline .kh-page-label,
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-topline .kh-page-label *,
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-topline .kh-page-no,
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-topline .kh-page-no *{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  color:rgba(92,71,43,.78) !important;
+  -webkit-text-fill-color:rgba(92,71,43,.78) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* =========================
+5) INSIDE BOOK TITLES + SUBTITLES = BROWN FAMILY
+========================= */
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-title{
+  font-family:"IvyOraDisplay", serif !important;
+  font-weight:400 !important;
+  color:#5C472B !important;
+  -webkit-text-fill-color:#5C472B !important;
+  line-height:.98 !important;
+  letter-spacing:.015em !important;
+  text-transform:uppercase !important;
+  font-size:18px !important;
+}
+
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-subtitle,
+.kh-menu-tabs .kh-book .kh-book-page .kh-page-subtitle *{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:300 !important;
+  color:rgba(92,71,43,.72) !important;
+  -webkit-text-fill-color:rgba(92,71,43,.72) !important;
+  line-height:1.7 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+/* =========================
+6) MENU ENTRIES = BROWN
+========================= */
+.kh-menu-tabs .kh-book .kh-menu-entry-title{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:500 !important;
+  color:#5C472B !important;
+  -webkit-text-fill-color:#5C472B !important;
+}
+
+.kh-menu-tabs .kh-book .kh-menu-entry-desc{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:300 !important;
+  color:rgba(92,71,43,.72) !important;
+  -webkit-text-fill-color:rgba(92,71,43,.72) !important;
+  line-height:1.65 !important;
+}
+
+.kh-menu-tabs .kh-book .kh-menu-entry-price{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  font-weight:400 !important;
+  color:#5C472B !important;
+  -webkit-text-fill-color:#5C472B !important;
+}
+
+/* =========================
+7) DETAIL CARD AFTER ITEM CLICK
+TITLE / PRICE / DESCRIPTION = WHITE
+========================= */
+.kh-menu-tabs .kh-detail-stage .kh-detail-title,
+.kh-menu-tabs .kh-detail-stage .kh-detail-title *{
+  font-family:"IvyOraDisplay", serif !important;
+  font-weight:400 !important;
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  line-height:.98 !important;
+  letter-spacing:.015em !important;
+  text-transform:uppercase !important;
+}
+
+.kh-menu-tabs .kh-detail-stage .kh-detail-price,
+.kh-menu-tabs .kh-detail-stage .kh-detail-price *,
+.kh-menu-tabs .kh-detail-stage .kh-detail-description,
+.kh-menu-tabs .kh-detail-stage .kh-detail-description *{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+.kh-menu-tabs .kh-detail-stage .kh-detail-description{
+  line-height:1.72 !important;
+}
+
+/* =========================
+8) BOOK NAV
+========================= */
+.kh-menu-tabs .kh-book-nav,
+.kh-menu-tabs .kh-book-nav-text,
+.kh-menu-tabs .kh-book-arrow,
+.kh-menu-tabs .kh-book-arrow-glyph{
+  font-family:"BricolageGrotesque", sans-serif !important;
+  color:#E3D1B5 !important;
+  border-color:rgba(227,209,181,.32) !important;
+}
+
+/* =========================
+9) OPTIONAL TINY REFINEMENTS
+========================= */
+.kh-menu-tabs .kh-book .kh-menu-entry:hover .kh-menu-entry-title{
+  color:#3F2C1F !important;
+  -webkit-text-fill-color:#3F2C1F !important;
+}
+
+.kh-menu-tabs .kh-book .kh-menu-entry:hover .kh-menu-entry-price{
+  color:#3F2C1F !important;
+  -webkit-text-fill-color:#3F2C1F !important;
+}
+
+/* =========================
+10) EXPLORE ICON + CIRCLE BORDER
+SANDY WHITE
+========================= */
+.kh-menu-tabs .kh-menu-cta-icon{
+  color:#E3D1B5 !important;
+  -webkit-text-fill-color:#E3D1B5 !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+  filter:none !important;
+  background:none !important;
+  box-shadow:none !important;
+}
+
+.kh-menu-tabs .kh-menu-cta-icon,
+.kh-menu-tabs .kh-menu-cta-icon::before,
+.kh-menu-tabs .kh-menu-cta-icon::after{
+  border-color:rgba(227,209,181,.55) !important;
+}
+
+.kh-menu-tabs .kh-menu-cta,
+.kh-menu-tabs .kh-menu-cta-wrap,
+.kh-menu-tabs .kh-menu-trigger .kh-menu-cta-icon{
+  border-color:transparent !important;
+}
+
+.kh-menu-tabs .kh-menu-cta-icon{
+  border:1px solid rgba(227,209,181,.55) !important;
+  border-radius:999px !important;
+  background-color:rgba(255,255,255,.04) !important;
+}
+
+.kh-menu-tabs .kh-menu-trigger:hover .kh-menu-cta-icon,
+.kh-menu-tabs .kh-menu-trigger[aria-expanded="true"] .kh-menu-cta-icon{
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  border-color:rgba(255,255,255,.72) !important;
+  background-color:rgba(255,255,255,.08) !important;
+}/* End custom CSS */

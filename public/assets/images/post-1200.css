@@ -1,0 +1,50 @@
+.elementor-1200 .elementor-element.elementor-element-4206063{--display:flex;--min-height:100svh;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1200 .elementor-element.elementor-element-798687e{--display:flex;--min-height:100vh;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1200 .elementor-element.elementor-element-2fd28e0{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1200 .elementor-element.elementor-element-46f5671{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1200 .elementor-element.elementor-element-46f5671:not(.elementor-motion-effects-element-type-background), .elementor-1200 .elementor-element.elementor-element-46f5671 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#EBE2D7;}.elementor-1200 .elementor-element.elementor-element-682ea3c{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1200 .elementor-element.elementor-element-da9dcb6{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;--z-index:9999999999;}.elementor-1200 .elementor-element.elementor-element-2163e23{--display:flex;--min-height:100svh;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:center;--overlay-opacity:1;--padding-top:40px;--padding-bottom:40px;--padding-left:40px;--padding-right:40px;}.elementor-1200 .elementor-element.elementor-element-2163e23::before, .elementor-1200 .elementor-element.elementor-element-2163e23 > .elementor-background-video-container::before, .elementor-1200 .elementor-element.elementor-element-2163e23 > .e-con-inner > .elementor-background-video-container::before, .elementor-1200 .elementor-element.elementor-element-2163e23 > .elementor-background-slideshow::before, .elementor-1200 .elementor-element.elementor-element-2163e23 > .e-con-inner > .elementor-background-slideshow::before, .elementor-1200 .elementor-element.elementor-element-2163e23 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:transparent;--background-overlay:'';background-image:linear-gradient(180deg, #9B7C672E 67%, #DAB79F 100%);}.elementor-1200 .elementor-element.elementor-element-2163e23:not(.elementor-motion-effects-element-type-background), .elementor-1200 .elementor-element.elementor-element-2163e23 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background:url("https://khufus.com/wp-content/uploads/2026/02/Landing-Painted-Photo-of-the-Pyramids-Variant-2.webp") 50% 50%;background-size:cover;}.elementor-1200 .elementor-element.elementor-element-f0c7e51{--spacer-size:1px;}.elementor-widget-text-editor{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );color:var( --e-global-color-text );}.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:var( --e-global-color-primary );}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap, .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-1200 .elementor-element.elementor-element-08468f1{margin:0px 0px calc(var(--kit-widget-spacing, 0px) + -20px) 0px;text-align:center;font-family:"Bricolage", Sans-serif;font-size:16px;font-weight:400;color:#FFFFFF;}.elementor-1200 .elementor-element.elementor-element-7101705.elementor-element{--align-self:center;}:root{--page-title-display:none;}@media(max-width:767px){.elementor-1200 .elementor-element.elementor-element-798687e{--min-height:0vh;}.elementor-1200 .elementor-element.elementor-element-2163e23{--justify-content:space-between;--padding-top:30px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}.elementor-1200 .elementor-element.elementor-element-f0c7e51{--spacer-size:1px;}}/* Start custom CSS for container, class: .elementor-element-da9dcb6 *//* =========================
+KHUFUS FOOTER BG FIX
+========================= */
+
+/* desktop footer wrapper */
+footer.elementor-location-footer .elementor-element-36f35bf{
+  background-color:#3D291C !important;
+  border-top:none !important;
+}
+
+/* mobile footer wrapper */
+footer.elementor-location-footer .elementor-element-268babb{
+  background-color:#3D291C !important;
+  border-top:none !important;
+}
+
+/* kill any top border / divider on footer containers without touching bg pattern */
+footer.elementor-location-footer,
+footer.elementor-location-footer > .elementor,
+footer.elementor-location-footer .e-con,
+footer.elementor-location-footer .elementor-element{
+  border-top:none !important;
+}
+
+/* if Elementor injected background image/overlay/pattern, keep it visible */
+footer.elementor-location-footer .elementor-element-36f35bf,
+footer.elementor-location-footer .elementor-element-268babb{
+  background-blend-mode:normal !important;
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-2163e23 *//* MOBILE: darken ONLY the background video */
+@media (max-width: 768px){
+
+  
+
+  /* overlay lives on the video container, so it darkens ONLY the video */
+  .elementor-32 .elementor-element-edafbc4 .elementor-background-video-container::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.28); /* subtle: 0.18–0.35 */
+    pointer-events: none;
+  }
+
+}/* End custom CSS */
+/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Bricolage';
+	font-display: auto;
+	src: url('https://khufus.com/wp-content/uploads/2026/02/BricolageGrotesque-VariableFont_opszwdthwght.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

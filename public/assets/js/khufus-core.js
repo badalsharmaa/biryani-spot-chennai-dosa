@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   initLottieMenu();
   initReserveDropdown();
+  initScrollReveals();
   initParallax();
   initRecognitionDeck();
   init3DGallery();
@@ -43,7 +44,7 @@ function initPreloader() {
     skipBtn.addEventListener("click", dismissIntro);
   }
 
-  setTimeout(dismissIntro, 2400);
+  setTimeout(dismissIntro, 2000);
 }
 
 /* --------------------------------------------------------------------------
@@ -119,7 +120,29 @@ function initLottieMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   4. RESERVE YOUR TABLE GLASS DROPDOWN
+   4. SCROLL REVEAL OBSERVER (PREVENTS ANY BLANK SECTIONS)
+   -------------------------------------------------------------------------- */
+function initScrollReveals() {
+  const revealElements = document.querySelectorAll(".kh-animate, .kh-exp-reveal, .kh-home-story-animate, [data-reveal]");
+  
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in", "show");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "150px 0px" });
+
+    revealElements.forEach(el => observer.observe(el));
+  } else {
+    revealElements.forEach(el => el.classList.add("is-in", "show"));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. RESERVE YOUR TABLE GLASS DROPDOWN
    -------------------------------------------------------------------------- */
 function initReserveDropdown() {
   const wrappers = document.querySelectorAll(".mnq-reserve-wrapper");
@@ -141,7 +164,7 @@ function initReserveDropdown() {
 }
 
 /* --------------------------------------------------------------------------
-   5. GLOBAL RECOGNITION 3D CARD SHUFFLE DECK
+   6. GLOBAL RECOGNITION 3D CARD SHUFFLE DECK
    -------------------------------------------------------------------------- */
 function initRecognitionDeck() {
   const root = document.getElementById("expRight");
@@ -164,8 +187,8 @@ function initRecognitionDeck() {
       image: "/assets/images/award-3.webp"
     },
     {
-      title: "LA LISTE, BEST REGIONAL RESTAURANT",
-      text: "Named Best Regional Restaurant by La Liste in 2025, recognizing our dining rooms as one of the continent’s most exceptional culinary destinations.",
+      title: "LA LISTE, BEST IN AFRICA",
+      text: "Named Best Restaurant in Africa by La Liste in 2025, recognizing our dining rooms as one of the continent’s most exceptional culinary destinations.",
       image: "/assets/images/award-4.webp"
     }
   ];
@@ -248,7 +271,7 @@ function initRecognitionDeck() {
 }
 
 /* --------------------------------------------------------------------------
-   6. PARALLAX & BIRD MOTION CONTROLLER
+   7. PARALLAX & BIRD MOTION CONTROLLER
    -------------------------------------------------------------------------- */
 function initParallax() {
   const whyPanels = document.querySelectorAll(".khf-why-panel");
@@ -306,7 +329,7 @@ function initParallax() {
 }
 
 /* --------------------------------------------------------------------------
-   7. 3D PERSPECTIVE CYLINDRICAL GALLERY
+   8. 3D PERSPECTIVE CYLINDRICAL GALLERY
    -------------------------------------------------------------------------- */
 function init3DGallery() {
   const viewport = document.getElementById("khxViewport");
@@ -380,7 +403,7 @@ function init3DGallery() {
 }
 
 /* --------------------------------------------------------------------------
-   8. POLAROID SLIDER V2 CONTROLLER
+   9. POLAROID SLIDER V2 CONTROLLER (EXACT 3 SLIDES)
    -------------------------------------------------------------------------- */
 function initPolaroidSlider() {
   const slider = document.getElementById("monarqPolaroidSliderV2");
@@ -388,44 +411,48 @@ function initPolaroidSlider() {
 
   const slides = [
     {
-      title: "Chef Mostafa Seif",
-      kicker: "Meet The Master Chef",
+      number: "05",
+      kicker: "Meet The Chef",
       headline: "Meet Chef Mostafa Seif",
       script: "Innovation Meets Tradition",
-      text: "Winner of Top Chef Middle East and recipient of Two Knives at The Best Chef Awards, Chef Mostafa crafts culinary mastery rooted in regional heritage.",
-      note: "Every spice blend and slow-cooked creation is prepared with artisanal precision and generational passion.",
-      image: "/assets/images/chef-mostafa.webp"
+      text: "Winner of Top Chef Middle East 2018 and recipient of Two Knives at The Best Chef Awards 2025, Chef Mostafa Seif is renowned for crafting elevated culinary masterpieces rooted in generational heritage.",
+      note: "Together with our team, Chef Mostafa shapes dining experiences driven by discipline, creativity, and deep passion.",
+      image: "/assets/images/polaroid-chef.webp",
+      photoTitle: "Chef Mostafa Seif"
     },
     {
-      title: "Signature Dum Biryani",
-      kicker: "Dum Pukht Mastery",
-      headline: "Artisanal Hyderabadi Biryani",
-      script: "Sealed With Fragrance & Fire",
-      text: "Slow-cooked in sealed handis over gentle embers, allowing basmati grains, tender meats, and whole spices to harmonize into perfection.",
-      note: "Served with house-crafted cooling Mirchi Ka Salan and whipped onion raita.",
-      image: "/assets/images/gallery-1.webp"
+      number: "06",
+      kicker: "Our Visionary",
+      headline: "Giovanni Bolandrini",
+      script: "Style, Vision, Hospitality",
+      text: "Born and raised in Italy, Giovanni Bolandrini brings an auteur’s eye to luxury hospitality, curating environments where architecture, light, and cuisine coalesce into lasting impressions.",
+      note: "Recognized among leading pioneers in modern dining, Giovanni continues to guide our spaces with clarity and restraint.",
+      image: "/assets/images/polaroid-visionary.webp",
+      photoTitle: "Giovanni Bolandrini"
     },
     {
-      title: "Chennai Crispy Dosa",
-      kicker: "Fermented Perfection",
-      headline: "Golden Heritage Dosas",
-      script: "Crisped On Cast Iron",
-      text: "Naturally fermented for 24 hours to achieve golden crispness and airy lace edges, filled with spiced masala potatoes and served with tri-color chutneys.",
-      note: "Traditional South Indian tiffin elevated for an unforgettable dining experience.",
-      image: "/assets/images/gallery-2.webp"
+      number: "07",
+      kicker: "Hospitality Culture",
+      headline: "Presence, Not Performance",
+      script: "A Practiced Rhythm",
+      text: "Behind the atmosphere is a team shaped by discipline, quiet attention, and an unforced sense of hospitality that welcomes every guest into a calm sanctuary.",
+      note: "What guests remember is not just a single course, but the lingering consistency of how the entire evening felt.",
+      image: "/assets/images/polaroid-team.webp",
+      photoTitle: "The Team"
     }
   ];
 
   let currentIndex = 0;
   const photoLayer = document.getElementById("mps5ImageCurrent");
   const photoTitle = document.getElementById("mps5PhotoTitle");
-  const titleEl = document.querySelector(".mps5-title");
-  const kickerEl = document.querySelector(".mps5-kicker");
-  const textEl = document.querySelector(".mps5-text");
-  const noteEl = document.querySelector(".mps5-note");
-  const indexBtns = document.querySelectorAll(".mps5-index");
-  const prevBtn = document.querySelector(".mps5-prev");
-  const nextBtn = document.querySelector(".mps5-next");
+  const numberEl = slider.querySelector(".mps5-number");
+  const kickerEl = slider.querySelector(".mps5-kicker");
+  const titleEl = slider.querySelector(".mps5-title");
+  const textEl = slider.querySelector(".mps5-text");
+  const noteEl = slider.querySelector(".mps5-note");
+  const indexBtns = slider.querySelectorAll(".mps5-index");
+  const prevBtn = slider.querySelector(".mps5-prev");
+  const nextBtn = slider.querySelector(".mps5-next");
 
   function showSlide(index) {
     if (index < 0) index = slides.length - 1;
@@ -433,8 +460,9 @@ function initPolaroidSlider() {
     currentIndex = index;
     const slide = slides[currentIndex];
 
-    if (photoLayer) photoLayer.style.backgroundImage = `url(${slide.image})`;
-    if (photoTitle) photoTitle.textContent = slide.title;
+    if (photoLayer) photoLayer.style.backgroundImage = `url('${slide.image}')`;
+    if (photoTitle) photoTitle.textContent = slide.photoTitle;
+    if (numberEl) numberEl.textContent = slide.number;
     if (kickerEl) kickerEl.textContent = slide.kicker;
     if (titleEl) titleEl.innerHTML = `${slide.headline}<span class="mps5-script">${slide.script}</span>`;
     if (textEl) textEl.textContent = slide.text;
@@ -451,10 +479,12 @@ function initPolaroidSlider() {
   indexBtns.forEach((btn, idx) => {
     btn.addEventListener("click", () => showSlide(idx));
   });
+
+  showSlide(0);
 }
 
 /* --------------------------------------------------------------------------
-   9. BISTRO EXPANDING ACCORDION CONTROLLER
+   10. BISTRO EXPANDING ACCORDION CONTROLLER
    -------------------------------------------------------------------------- */
 function initBistroAccordion() {
   const accordionItems = document.querySelectorAll(".khufusbistro-accordion__item");
@@ -473,9 +503,8 @@ function initBistroAccordion() {
   });
 }
 
-
 /* --------------------------------------------------------------------------
-   10. FAQ ACCORDION CONTROLLER (EXACT KHUFUS FAQ ENGINE)
+   11. FAQ ACCORDION CONTROLLER (EXACT KHUFUS FAQ ENGINE)
    -------------------------------------------------------------------------- */
 function initFaqAccordion() {
   const items = document.querySelectorAll(".kh-faq-item");
@@ -504,7 +533,7 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   11. MENU TABS CONTROLLER
+   12. MENU TABS CONTROLLER
    -------------------------------------------------------------------------- */
 function initMenuTabs() {
   const tabs = document.querySelectorAll(".kh-menu-tab-btn");

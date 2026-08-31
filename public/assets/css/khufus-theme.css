@@ -1,3 +1,46 @@
+
+.ast-article-single,
+.ast-separate-container .ast-article-single,
+.ast-separate-container .ast-article-post,
+.ast-plain-container.ast-no-sidebar #primary {
+  background: transparent !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ast-container,
+.site-content .ast-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  background-color: #241810 !important;
+}
+
+.ast-separate-container #content,
+.ast-separate-container .site-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+.elementor {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 /* ==========================================================================
    KHUFU'S LUXURY ELEVATED DINING DESIGN SYSTEM & MASTER STYLESHEET
    Replicated and tailored for Biryani Spot Chennai Dosa

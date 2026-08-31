@@ -1,0 +1,26 @@
+.elementor-2737 .elementor-element.elementor-element-11ade01{--display:flex;--min-height:100svh;--flex-direction:column;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:center;--align-items:center;--overlay-opacity:0.06;--padding-top:80px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-2737 .elementor-element.elementor-element-11ade01:not(.elementor-motion-effects-element-type-background), .elementor-2737 .elementor-element.elementor-element-11ade01 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#5C472B;}.elementor-2737 .elementor-element.elementor-element-11ade01::before, .elementor-2737 .elementor-element.elementor-element-11ade01 > .elementor-background-video-container::before, .elementor-2737 .elementor-element.elementor-element-11ade01 > .e-con-inner > .elementor-background-video-container::before, .elementor-2737 .elementor-element.elementor-element-11ade01 > .elementor-background-slideshow::before, .elementor-2737 .elementor-element.elementor-element-11ade01 > .e-con-inner > .elementor-background-slideshow::before, .elementor-2737 .elementor-element.elementor-element-11ade01 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-image:url("https://khufus.com/wp-content/uploads/2026/02/Nav-Menu-Artwork.svg");--background-overlay:'';background-position:bottom center;background-repeat:no-repeat;background-size:contain;}.elementor-2737 .elementor-element.elementor-element-d3ad848{--display:flex;--min-height:100svh;--flex-direction:column;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:center;--align-items:center;--overlay-opacity:0.06;border-style:solid;--border-style:solid;border-width:2px 0px 0px 0px;--border-top-width:2px;--border-right-width:0px;--border-bottom-width:0px;--border-left-width:0px;border-color:#FFFFFF26;--border-color:#FFFFFF26;--padding-top:60px;--padding-bottom:60px;--padding-left:60px;--padding-right:60px;}.elementor-2737 .elementor-element.elementor-element-d3ad848:not(.elementor-motion-effects-element-type-background), .elementor-2737 .elementor-element.elementor-element-d3ad848 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#5C472B;}.elementor-2737 .elementor-element.elementor-element-d3ad848::before, .elementor-2737 .elementor-element.elementor-element-d3ad848 > .elementor-background-video-container::before, .elementor-2737 .elementor-element.elementor-element-d3ad848 > .e-con-inner > .elementor-background-video-container::before, .elementor-2737 .elementor-element.elementor-element-d3ad848 > .elementor-background-slideshow::before, .elementor-2737 .elementor-element.elementor-element-d3ad848 > .e-con-inner > .elementor-background-slideshow::before, .elementor-2737 .elementor-element.elementor-element-d3ad848 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{--background-overlay:'';}:root{--page-title-display:none;}@media(max-width:767px){.elementor-2737 .elementor-element.elementor-element-11ade01{--justify-content:flex-start;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--padding-top:110px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-2737 .elementor-element.elementor-element-b449f2d{margin:0px 0px calc(var(--kit-widget-spacing, 0px) + 0px) 0px;}.elementor-2737 .elementor-element.elementor-element-d3ad848{--justify-content:flex-end;--align-items:flex-start;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );border-width:2px 0px 2px 0px;--border-top-width:2px;--border-right-width:0px;--border-bottom-width:2px;--border-left-width:0px;--padding-top:50px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}}/* Start custom CSS for container, class: .elementor-element-11ade01 *//* =========================
+FOOTER BACKGROUND COLOR
+========================= */
+
+.elementor-element-36f35bf{
+  background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}
+
+.elementor-element-268babb{
+    background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-d3ad848 *//* =========================
+FOOTER BACKGROUND COLOR
+========================= */
+
+.elementor-element-36f35bf{
+  background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}
+
+.elementor-element-268babb{
+    background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}/* End custom CSS */

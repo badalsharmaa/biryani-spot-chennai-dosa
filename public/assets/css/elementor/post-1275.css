@@ -1,0 +1,15 @@
+.elementor-1275 .elementor-element.elementor-element-4df4290{--display:flex;--min-height:100svh;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--overlay-opacity:0.07;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-1275 .elementor-element.elementor-element-4df4290::before, .elementor-1275 .elementor-element.elementor-element-4df4290 > .elementor-background-video-container::before, .elementor-1275 .elementor-element.elementor-element-4df4290 > .e-con-inner > .elementor-background-video-container::before, .elementor-1275 .elementor-element.elementor-element-4df4290 > .elementor-background-slideshow::before, .elementor-1275 .elementor-element.elementor-element-4df4290 > .e-con-inner > .elementor-background-slideshow::before, .elementor-1275 .elementor-element.elementor-element-4df4290 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{--background-overlay:'';}.elementor-1275 .elementor-element.elementor-element-076dcb5{--display:flex;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}:root{--page-title-display:none;}/* Start custom CSS for container, class: .elementor-element-4df4290 *//* =========================
+FOOTER BACKGROUND COLOR
+========================= */
+
+.elementor-element-36f35bf{
+  background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}
+
+
+
+.elementor-element-268babb{
+    background-color:#5C472B !important;
+  background-image:none !important; /* kills any gradient/image */
+}/* End custom CSS */
