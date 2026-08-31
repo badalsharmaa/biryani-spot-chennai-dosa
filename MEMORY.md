@@ -63,23 +63,35 @@
   - Maintained `MEMORY.md` at root for long-term AI memory persistence.
   - Git repository initialized and all milestones committed with clean version history.
 
+### Session 2 — August 31, 2026 (Khufu's Luxury Design System Extraction & Clone)
+- **Accomplishments**:
+  - Researched and reverse-engineered visual layout, animations, typography, and color palette of `https://khufus.com`.
+  - Extracted and downloaded custom font assets (`IvyOraDisplay`, `GoldenHopes`, `BricolageGrotesque`).
+  - Extracted and downloaded high-resolution images, SVG vector masks (`tree-var-icon.svg`, `plants-icon.svg`, `pottery-icon.svg`, `khufus-pattern.svg`, `vase.svg`), and background looping video (`hero-video.mp4`).
+  - Implemented complete master CSS design system (`public/assets/css/khufus-theme.css`) with luxury serif typography, 3D perspective transformations, and responsive breakpoints.
+  - Implemented JavaScript controller (`public/assets/js/khufus-core.js`) for the word-by-word preloader intro overlay, transparent luxury header, fullscreen popup overlay drawer, parallax scroll engine, 3D perspective curved momentum gallery, and Polaroid Slider v2.
+  - Built PHP MVC architecture:
+    - Master layout (`app/views/layouts/header.php` and `app/views/layouts/footer.php`)
+    - Full featured homepage (`app/views/home/index.php`)
+    - Unified Menu Explorer with 426 dishes across 32 categories (`app/views/menu/index.php`)
+    - 4 Operating Locations & Hours Explorer (`app/views/locations/index.php`)
+    - Reservations, Table Booking & Catering Inquiry (`app/views/reservations/index.php`)
+    - Heritage & Craft (`app/views/about/index.php`)
+    - Front controller router (`public/index.php`)
+  - Verified live execution on local PHP server (`http://127.0.0.1:8899/`) with zero console errors and 60fps animations.
+  - Committed all milestone files cleanly to git version control.
+
 ---
 
 ## 🎯 5. Immediate Next Steps & Backlog
-1. [ ] **Database Setup**:
+1. [ ] **Database Persistence**:
    - Create `database/schema.sql` (MySQL table definitions for locations, schedules, categories, menu items, catering leads, contact messages).
    - Create `database/seed_data.php` to populate MySQL directly from `old_website_data/data/`.
-2. [ ] **Backend Framework & Routing**:
-   - Setup `config/database.php` and `config/app.php`.
-   - Setup front controller `public/index.php` and clean Apache `.htaccess` rewrite rules.
-3. [ ] **Views & Layouts**:
-   - Global `header.php` with responsive navbar and multi-location switcher.
-   - Global `footer.php` with hours, contact info, and Google Maps links.
-   - Homepage (`views/home/index.php`) with Hero Banner, Signature Biryanis/Dosas, and Location cards.
-4. [ ] **Interactive Menu Explorer**:
-   - Categorized menu with instant search, dietary filter pills, and ToastTab direct order links.
-5. [ ] **Catering & Contact Forms**:
-   - Dynamic form with honeypot spam protection, CSRF validation, and database storage.
+2. [ ] **Backend Database Controller Layer**:
+   - Connect dynamic PDO queries for the menu and location switchers.
+   - Wire up dynamic reservation and catering lead submission with honeypot validation and PDO transactions.
+3. [ ] **ToastTab Deep Links**:
+   - Enhance the Unified Menu explorer with direct-to-cart ToastTab URLs for each of the 4 locations.
 
 ---
 *Update this memory file at the conclusion of each development milestone.*
