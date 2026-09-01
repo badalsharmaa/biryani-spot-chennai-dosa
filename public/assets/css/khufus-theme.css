@@ -707,8 +707,9 @@ button {
    -------------------------------------------------------------------------- */
 .khf-why-sec {
   width: 100%;
-  padding: 100px 48px;
-  background-color: var(--color-cream);
+  padding: 80px 48px 120px;
+  background: transparent !important;
+  background-color: transparent !important;
   overflow: hidden;
 }
 

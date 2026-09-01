@@ -544,9 +544,7 @@ canvas {
   transition:transform 1.2s cubic-bezier(.22,.61,.36,1);
 }
 
-.khf-why-panel--1 img{
-  filter:grayscale(.78) saturate(.45);
-}
+.khf-why-panel--1 img{ filter:none; }
 
 .khf-why-overlay{
   position:absolute;
@@ -4618,15 +4616,34 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 				<div class="elementor-element elementor-element-f43e364 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-heading" data-id="f43e364" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><b><i>Dining</i></b> at the<br> Edge of History</h2>				</div>
 				<div class="elementor-element elementor-element-1880893 elementor-widget elementor-widget-text-editor" data-id="1880893" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="text-editor.default">
-									<p>Set beneath an ancient skyline, interpreted through a modern lens. A New Standard in Elevated Egyptian Dining</p>								</div>
+									<p>Rooted in centuries of royal South Indian culinary heritage, crafted for the modern table across the Bay Area.</p>								</div>
 				</div>
 		<div class="elementor-element elementor-element-a3f25bc e-con-full e-flex e-con e-child" data-id="a3f25bc" data-element_type="container" data-e-type="container" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:4,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}">
 				<div class="elementor-element elementor-element-c99d141 elementor-widget elementor-widget-html" data-id="c99d141" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<section class="khf-why-sec" id="khfWhySec">
+					
+<style id="custom-why-sec-gradient">
+  .elementor-1536 .elementor-element.elementor-element-a38dd6e,
+  .elementor-1536 .elementor-element.elementor-element-a38dd6e:not(.elementor-motion-effects-element-type-background),
+  .elementor-1536 .elementor-element.elementor-element-a38dd6e > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 30%, #5C472B 70%, #241810 100%) !important;
+    background-color: transparent !important;
+  }
+  .khf-why-sec {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .khf-why-panel--1 img {
+    filter: none !important;
+  }
+</style>
+
+<section class="khf-why-sec" id="khfWhySec">
   <div class="khf-why-grid">
 
     <article class="khf-why-panel khf-why-panel--1" data-speed="0.25">
-      <img decoding="async" src="/assets/images/Pyramids-Backdrop.webp">
+      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_25.jpg" alt="Royal Dum Biryani">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4650,7 +4667,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--2" data-speed="0.35">
-      <img decoding="async" src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_crispy_dosa_12.jpg">
+      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_09.jpg" alt="South Indian Thali & Tiffin">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4674,7 +4691,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--3" data-speed="0.28">
-      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken65_appetizer_07.jpg">
+      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken65_appetizer_76.jpg" alt="Chettinad Spices & Starters">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4727,9 +4744,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   transition:transform 1.2s cubic-bezier(.22,.61,.36,1);
 }
 
-.khf-why-panel--1 img{
-  filter:grayscale(.78) saturate(.45);
-}
+.khf-why-panel--1 img{ filter:none; }
 
 .khf-why-overlay{
   position:absolute;
