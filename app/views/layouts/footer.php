@@ -461,5 +461,6 @@ P88G KHUFUS FOOTER ACCORDION
 				</div>
 				</footer>
 <script src="/assets/js/khufus-core.js"></script>
+<?php require_once __DIR__ . '/drawer.php'; ?>
 </body>
 </html>

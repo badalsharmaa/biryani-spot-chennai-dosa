@@ -1,6 +1,11 @@
 .DS_Store
+*/.DS_Store
 node_modules/
+.env
 .env.local
 *.log
-*.png
+/screenshot_*.png
+/cloned_*.png
+/khufus_fullpage.png
+scratch/*.png
 

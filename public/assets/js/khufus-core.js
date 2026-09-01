@@ -67,68 +67,7 @@ function initHeader() {
    3. LOTTIE MENU CONTROLLER (EXACT KHUFUS POPUP ENGINE)
    -------------------------------------------------------------------------- */
 function initLottieMenu() {
-  const toggleEl = document.getElementById("lottie-toggle") || document.querySelector("[data-id='d39f727']");
-  const overlay = document.querySelector(".elementor-location-popup") || document.getElementById("khufusMenuOverlay");
-  if (!toggleEl || !overlay) return;
-
-  let anim = null;
-  let isOpen = false;
-
-  if (window.lottie && toggleEl.children.length === 0) {
-    anim = lottie.loadAnimation({
-      container: toggleEl,
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      path: "/assets/js/lottie-burger.json"
-    });
-
-    anim.addEventListener("data_ready", () => {
-      const total = anim.totalFrames;
-      const start = Math.floor(total * 0.1);
-      anim.goToAndStop(start, true);
-    });
-  }
-
-  function toggleMenu() {
-    isOpen = !isOpen;
-    if (isOpen) {
-      overlay.style.setProperty("display", "flex", "important");
-      overlay.style.setProperty("opacity", "1", "important");
-      overlay.style.setProperty("visibility", "visible", "important");
-      overlay.classList.add("is-open", "is-active");
-      document.body.style.overflow = "hidden";
-    } else {
-      overlay.style.setProperty("opacity", "0", "important");
-      overlay.classList.remove("is-open", "is-active");
-      setTimeout(() => {
-        if (!isOpen) overlay.style.setProperty("display", "none", "important");
-      }, 300);
-      document.body.style.overflow = "";
-    }
-
-    if (anim) {
-      const total = anim.totalFrames;
-      const start = Math.floor(total * 0.1);
-      const end = Math.floor(total * 0.65);
-      anim.playSegments(isOpen ? [start, end] : [end, start], true);
-    }
-  }
-
-  toggleEl.addEventListener("click", toggleMenu);
-
-  const closeBtns = overlay.querySelectorAll(".dialog-close-button, .elementor-element-d39f727, a");
-  closeBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (isOpen) toggleMenu();
-    });
-  });
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && isOpen) {
-      toggleMenu();
-    }
-  });
+  // Handled cleanly and exclusively by BiryaniDrawer in layouts/drawer.php
 }
 
 /* --------------------------------------------------------------------------
