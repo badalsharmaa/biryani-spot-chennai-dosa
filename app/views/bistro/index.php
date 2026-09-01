@@ -3417,8 +3417,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-800a825 e-con-full e-flex e-con e-parent" data-id="800a825" data-element_type="container" data-e-type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-				<div class="elementor-element elementor-element-c3f22c3 elementor-widget elementor-widget-image" data-id="c3f22c3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img decoding="async" width="1024" height="847" src="/assets/images/Birds-for-Dark-1024x847.webp" class="attachment-large size-large wp-image-883" alt="" srcset="/assets/images/Birds-for-Dark-1024x847.webp 1024w, /assets/images/Birds-for-Dark-300x248.webp 300w, /assets/images/Birds-for-Dark-768x635.webp 768w, /assets/images/Birds-for-Dark.webp 1291w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+															<img decoding="async" width="1024" height="847" src="/assets/images/ornaments/crest-biryani-dosa.svg" class="attachment-large size-large wp-image-883" alt="Biryani Spot Chennai Dosa Royal Crest" />															</div>
 				<div class="elementor-element elementor-element-b276c9f elementor-widget elementor-widget-html" data-id="b276c9f" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<div class="mnq-ai-disclaimer" id="mnqAiDisclaimer">
   <div class="mnq-ai-disclaimer-inner" tabindex="0">
@@ -4017,11 +4016,11 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="kh-semicircle"></div>
 
   <div class="kh-bird-left">
-    <img decoding="async" src="/assets/images/Birds-for-Dark.webp">
+    <img decoding="async" src="/assets/images/ornaments/crest-biryani-dosa.svg" alt="Royal Peacocks & Dum Handi Crest">
   </div>
 
   <div class="kh-bird-right">
-    <img decoding="async" src="/assets/images/Birds-for-Light.webp">
+    <img decoding="async" src="/assets/images/ornaments/crest-biryani-dosa.svg" alt="Royal Peacocks & Dum Handi Crest">
   </div>
 
   <div class="kh-arch-wrap">

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="40" viewBox="0 0 400 40" fill="none">
+  <defs>
+    <linearGradient id="lineGradLeft" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineGradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left & Right Tapering Rules -->
+  <line x1="20" y1="20" x2="155" y2="20" stroke="url(#lineGradLeft)" stroke-width="0.8"/>
+  <line x1="245" y1="20" x2="380" y2="20" stroke="url(#lineGradRight)" stroke-width="0.8"/>
+
+  <!-- Left & Right Diamond Pips -->
+  <path d="M20 20 L24 17 L28 20 L24 23 Z" fill="#C59B27"/>
+  <path d="M380 20 L376 17 L372 20 L376 23 Z" fill="#C59B27"/>
+
+  <!-- Left Cardamom / Mango Scroll -->
+  <path d="M155 20 C165 14, 175 14, 185 20 C175 22, 165 24, 155 20Z" fill="#D4AF37" stroke="#C59B27" stroke-width="0.5"/>
+  <circle cx="160" cy="20" r="1.5" fill="#FFF8E7"/>
+
+  <!-- Right Cardamom / Mango Scroll -->
+  <path d="M245 20 C235 14, 225 14, 215 20 C225 22, 235 24, 245 20Z" fill="#D4AF37" stroke="#C59B27" stroke-width="0.5"/>
+  <circle cx="240" cy="20" r="1.5" fill="#FFF8E7"/>
+
+  <!-- Central Star Anise Bloom (200, 20) -->
+  <g transform="translate(200, 20)">
+    <path d="M0 -14 C1.5 -7, 4 -4, 10 0 C4 4, 1.5 7, 0 14 C-1.5 7, -4 4, -10 0 C-4 -4, -1.5 -7, 0 -14Z" fill="#C59B27" stroke="#D4AF37" stroke-width="0.6"/>
+    <path d="M-8 -8 C-4 -4, -2 -2, 0 0 C2 -2, 4 -4, 8 -8 C4 -4, 2 -2, 0 0 C-2 2, -4 4, -8 8 C-4 4, -2 2, 0 0 C2 -2, 4 -4, 8 8" stroke="#FFF8E7" stroke-width="0.6" fill="none"/>
+    <circle cx="0" cy="0" r="3" fill="#D4AF37"/>
+    <circle cx="0" cy="0" r="1.2" fill="#FFF8E7"/>
+  </g>
+</svg>
