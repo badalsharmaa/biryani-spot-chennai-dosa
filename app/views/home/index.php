@@ -4622,11 +4622,12 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 				<div class="elementor-element elementor-element-c99d141 elementor-widget elementor-widget-html" data-id="c99d141" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					
 <style id="custom-why-sec-gradient">
-  .elementor-1536 .elementor-element.elementor-element-a38dd6e,
-  .elementor-1536 .elementor-element.elementor-element-a38dd6e:not(.elementor-motion-effects-element-type-background),
-  .elementor-1536 .elementor-element.elementor-element-a38dd6e > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-    background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 30%, #5C472B 70%, #241810 100%) !important;
-    background-color: transparent !important;
+  /* Section 2 & 3: Why Cards Container - Solid #DAB79F */
+  div.elementor-element-a38dd6e,
+  .elementor-element.elementor-element-a38dd6e,
+  [data-id="a38dd6e"] {
+    background-color: #DAB79F !important;
+    background: #DAB79F !important;
   }
   .khf-why-sec {
     background: transparent !important;
@@ -4636,6 +4637,27 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   }
   .khf-why-panel--1 img {
     filter: none !important;
+  }
+
+  /* Section 03: Recognition Section - starts with #DAB79F above, transitions to white #FFFFFF from half section */
+  div.elementor-element-e58559a,
+  .elementor-element.elementor-element-e58559a,
+  [data-id="e58559a"] {
+    background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 35%, #FFFFFF 75%, #FFFFFF 100%) !important;
+    background-color: transparent !important;
+  }
+
+  /* Polaroid Slider & 3D Gallery Sections below: White canvas */
+  div.elementor-element-69bf7a3,
+  div.elementor-element-b408a9f,
+  div.elementor-element-cf05877,
+  div.elementor-element-c6d4a00,
+  [data-id="69bf7a3"],
+  [data-id="b408a9f"],
+  [data-id="cf05877"],
+  [data-id="c6d4a00"] {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
   }
 </style>
 
@@ -5128,7 +5150,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 				</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-e58559a e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="e58559a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+		<div class="elementor-element elementor-element-e58559a e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="e58559a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}" style="background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 35%, #FFFFFF 75%, #FFFFFF 100%) !important;">
 		<div class="elementor-element elementor-element-887c4e8 e-con-full e-flex e-con e-child" data-id="887c4e8" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-0b8b6a2 elementor-widget elementor-widget-html" data-id="0b8b6a2" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:2,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="html.default">
 					<div class="kh-rec-copy-only">
@@ -5136,20 +5158,17 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     <div class="kh-rec-number-only">03</div>
 
     <div class="kh-rec-kicker-only">
-      GLOBAL RECOGNITION
+      BAY AREA RECOGNITION
     </div>
 
     <h2 class="kh-rec-title-only">
-      A PLACE THE WORLD<br>
-      TOOK NOTE OF
-      <span class="kh-rec-script-only">Recognition With Substance</span>
+      A TASTE THE BAY AREA<br>
+      FELL IN LOVE WITH
+      <span class="kh-rec-script-only">Celebrated Across 4 Locations</span>
     </h2>
 
     <p class="kh-rec-text-only">
-      In a setting shaped by millennia, permanence remains the clearest
-      measure. Khufu’s has earned recognition among the region’s leading
-      restaurants, not as a passing headline, but as a reflection of narrative,
-      precision, and a dining experience rooted in place.
+      From Dublin and Livermore to Milpitas and Concord, Biryani Spot &amp; Chennai Dosa has earned acclaim as the Bay Area's premier destination for authentic Hyderabadi Dum Biryanis and crispy Chennai Dosas—crafted with traditional stone-ground masalas, fragrant basmati, and 100% halal meats.
     </p>
     
     <a href="/menu" class="kh-home-story-cta">
@@ -5161,8 +5180,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     <div class="kh-rec-divider-only"></div>
 
     <p class="kh-rec-note-only">
-      From Cairo to global stages, the table has entered a wider conversation while
-      remaining grounded in its own identity.
+      Over 4,500+ five-star guest reviews across Silicon Valley and the East Bay celebrating authentic spice, warmth, and culinary heritage.
     </p>
   </div>
 </div>
@@ -5829,31 +5847,31 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   if(!root) return;
 
   const slideImages = {
-    mena50Best: "/assets/images/IMG-12-scaled.webp",
-    resyOneToWatch: "/assets/images/2-scaled.webp",
-    laListeHiddenGem: "/assets/images/1-scaled.webp",
-    laListeBestAfrica: "/assets/images/3-scaled.webp"
+    mena50Best: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_22.jpg",
+    resyOneToWatch: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_09.jpg",
+    laListeHiddenGem: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken65_appetizer_76.jpg",
+    laListeBestAfrica: "/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_interior_dining_01.jpg"
   };
 
   const slides = [
     {
-      title: "MENA’S 50 BEST, NO. 1",
-      text: "Best Restaurant in Egypt for three consecutive years, rising in MENA’s 50 Best from No. 5 in 2024 to No. 4 in 2025 and No. 1 in 2026.",
+      title: "4.4★ ON GOOGLE REVIEWS",
+      text: "Celebrated across Dublin, Milpitas, Livermore, and Concord with over 4,500+ verified ratings praising our authentic Dum Biryanis and crispy tiffins.",
       imageKey: "mena50Best"
     },
     {
-      title: "RESY ONE TO WATCH, 2025",
-      text: "Winner of the Resy One To Watch Award 2025, recognized by The World’s 50 Best for a destination experience with real momentum.",
+      title: "TOP BAY AREA BIRYANI DESTINATION",
+      text: "Recognized as a premier Silicon Valley hotspot for authentic Hyderabadi Dum cooking, slow-cooked in traditional dough-sealed handis.",
       imageKey: "resyOneToWatch"
     },
     {
-      title: "LA LISTE, HIDDEN GEM",
-      text: "Selected by La Liste as a Hidden Gem of the Mediterranean, spotlighting Khufu’s for originality, craft, and a strong sense of place.",
+      title: "AUTHENTIC CHENNAI DOSA CRAFT",
+      text: "Naturally fermented stone-ground batter swirled paper-thin on smoking cast-iron tawas and roasted with pure golden ghee.",
       imageKey: "laListeHiddenGem"
     },
     {
-      title: "LA LISTE, BEST IN AFRICA",
-      text: "Named Best Restaurant in Africa by La Liste in 2025, recognizing Khufu’s as one of the continent’s most exceptional dining destinations.",
+      title: "PREMIER CATERING PARTNER",
+      text: "Trusted for corporate events, tech campus catering, and grand family celebrations across the entire San Francisco Bay Area.",
       imageKey: "laListeBestAfrica"
     }
   ];
@@ -6038,7 +6056,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 				<div class="elementor-element elementor-element-4b64694 elementor-widget elementor-widget-heading" data-id="4b64694" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default">THE <i><b>KHUFU'S</i></b> EXPERIENCE</h2>				</div>
 				<div class="elementor-element elementor-element-cf1e2a3 elementor-widget elementor-widget-text-editor" data-id="cf1e2a3" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="text-editor.default">
-									<p data-start="150" data-end="391">Set within the Giza Plateau, with the Great Pyramid standing in quiet authority, Khufu’s offers more than a view, it offers alignment. Architecture, light, and landscape converge into a dining experience shaped by precision and restraint. The cuisine draws from heritage without excess, refined and contemporary in its expression. Service moves with calm confidence, allowing the setting to breathe. At Khufu’s, the table does not compete with its surroundings, it belongs to them.</p>								</div>
+									<p>Across Dublin, Livermore, Milpitas, and Concord, Biryani Spot Chennai Dosa brings the authentic warmth of South Indian hospitality to life. Every steaming handi of dum biryani and golden, paper-thin dosa is crafted with time-honored techniques, freshly roasted spices, and the finest halal meats.</p>								</div>
 				</div>
 		<div class="elementor-element elementor-element-ff2153c e-con-full e-flex e-con e-child" data-id="ff2153c" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-a5f6430 elementor-widget elementor-widget-html" data-id="a5f6430" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:2,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="html.default">
@@ -6053,13 +6071,13 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </div>
 
     <h2 class="khx-mobile-title">
-      The Khufu’s
+      The Culinary
       <br>Experience
       <span class="khx-mobile-script">moments held in frame</span>
     </h2>
 
     <p class="khx-mobile-text">
-      A visual passage through Khufu’s, where atmosphere, detail, and setting come together in moments shaped by precision and presence.
+      A visual passage through Biryani Spot Chennai Dosa, where atmosphere, craft, and royal flavors come together in moments shared around the table.
     </p>
   </div>
 

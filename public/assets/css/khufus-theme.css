@@ -2651,3 +2651,18 @@ button {
     padding: 24px;
   }
 }
+
+
+/* Final Section 03 Gradient Rules */
+div.elementor-element-a38dd6e, [data-id="a38dd6e"] {
+  background-color: #DAB79F !important;
+  background: #DAB79F !important;
+}
+div.elementor-element-e58559a, [data-id="e58559a"] {
+  background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 35%, #FFFFFF 75%, #FFFFFF 100%) !important;
+  background-color: transparent !important;
+}
+div.elementor-element-69bf7a3, div.elementor-element-b408a9f, [data-id="69bf7a3"], [data-id="b408a9f"] {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+}
