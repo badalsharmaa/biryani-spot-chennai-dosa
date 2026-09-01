@@ -4,15 +4,15 @@
 		<div class="elementor-element elementor-element-7356d96 e-con-full e-flex e-con e-child" data-id="7356d96" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-43b9cfc e-con-full e-flex e-con e-child" data-id="43b9cfc" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-062b4c7 elementor-widget elementor-widget-heading" data-id="062b4c7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">DINE AT KHUFU'S</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">BIRYANI SPOT CHENNAI DOSA</h2>				</div>
 				<div class="elementor-element elementor-element-aa1cd35 elementor-widget elementor-widget-heading" data-id="aa1cd35" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">By the Pyramids</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Dublin • Milpitas • Livermore • Concord</h2>				</div>
 				<div class="elementor-element elementor-element-2214d15 elementor-widget elementor-widget-text-editor" data-id="2214d15" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 									<p>Contact Information &#8211; <em><strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e980878f86a982819c8f9c9ac78a8684">[email&#160;protected]</a></strong></em></p>								</div>
 				</div>
 		<div class="elementor-element elementor-element-b7d1d9f e-con-full e-flex e-con e-child" data-id="b7d1d9f" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-03cc9a3 elementor-widget elementor-widget-image" data-id="03cc9a3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="144" height="141" src="/assets/images/Logo-in-White.svg" class="attachment-large size-large wp-image-115" alt="" />															</div>
+															<img width="144" height="141" src="/assets/images/ornaments/logo.webp" class="attachment-large size-large wp-image-115" alt="Biryani Spot Chennai Dosa" />															</div>
 				<div class="elementor-element elementor-element-11b6d61 elementor-widget elementor-widget-image" data-id="11b6d61" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" />															</div>
 				</div>
@@ -22,11 +22,11 @@
 		<div class="elementor-element elementor-element-d7561bf e-con-full e-flex e-con e-child" data-id="d7561bf" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-7ccc40a e-con-full e-flex e-con e-child" data-id="7ccc40a" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-0c4274a elementor-widget elementor-widget-text-editor" data-id="0c4274a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>A Table Set in Time</p>								</div>
+									<p>Authentic Dum Biryani</p>								</div>
 				<div class="elementor-element elementor-element-c43abfb elementor-widget elementor-widget-text-editor" data-id="c43abfb" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>By the <em><strong>Great Pyramids of Giza</strong></em></p>								</div>
+									<p>Slow-Cooked with <em><strong>Whole Royal Spices</strong></em></p>								</div>
 				<div class="elementor-element elementor-element-62385f9 elementor-widget elementor-widget-text-editor" data-id="62385f9" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Framed by ancient stone and open horizon, Khufu’s offers an experience defined by clarity and restraint. Each evening unfolds with precision, where heritage is refined rather than repeated.</p>								</div>
+									<p>Slow-steamed in sealed clay pots with fragrant basmati, pure saffron, star anise, and fresh herbs. An unforgettable culinary tradition perfected over generations.</p>								</div>
 				<div class="elementor-element elementor-element-5df994e elementor-widget elementor-widget-html" data-id="5df994e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<a href="/reservations" class="khf-bricolage-btn">
   Reserve Your Table
@@ -83,11 +83,11 @@
 				</div>
 		<div class="elementor-element elementor-element-808b459 e-con-full e-flex e-con e-child" data-id="808b459" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-6bf929f elementor-widget elementor-widget-text-editor" data-id="6bf929f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>With Intention</p>								</div>
+									<p>Crispy Golden Dosas</p>								</div>
 				<div class="elementor-element elementor-element-3285dbb elementor-widget elementor-widget-text-editor" data-id="3285dbb" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Contemporary <em><strong>Culinary Expression</strong></em></p>								</div>
+									<p>Fermented Batter & <em><strong>Pure Ghee Roast</strong></em></p>								</div>
 				<div class="elementor-element elementor-element-c981970 elementor-widget elementor-widget-text-editor" data-id="c981970" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Our menu draws from memory without being confined to it. Seasonal ingredients and disciplined technique shape a cuisine guided by clarity rather than excess, rooted in quiet refinement.</p>								</div>
+									<p>Naturally fermented stone-ground rice and lentil batter swirled thin on smoking cast-iron tawas, served piping hot with trio of chutneys and aromatic sambar.</p>								</div>
 				<div class="elementor-element elementor-element-bca537f elementor-widget elementor-widget-html" data-id="bca537f" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<a href="/menu" class="khf-bricolage-btn">
   Explore The Menu
@@ -96,27 +96,27 @@
 				</div>
 		<div class="elementor-element elementor-element-bd456d8 e-con-full e-flex e-con e-child" data-id="bd456d8" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-d35a32f elementor-widget elementor-widget-text-editor" data-id="d35a32f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>At the Plateau</p>								</div>
+									<p>4 Bay Area Locations</p>								</div>
 				<div class="elementor-element elementor-element-53b5190 elementor-widget elementor-widget-text-editor" data-id="53b5190" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Inside the <em><strong>Archaeological Grounds</strong></em></p>								</div>
+									<p>Serving <em><strong>Northern California</strong></em></p>								</div>
 				<div class="elementor-element elementor-element-fd20970 elementor-widget elementor-widget-text-editor" data-id="fd20970" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<div class="flex flex-col text-sm pb-25"><article class="text-token-text-primary w-full focus:outline-none [--shadow-height:45px] has-data-writing-block:pointer-events-none has-data-writing-block:-mt-(--shadow-height) has-data-writing-block:pt-(--shadow-height) [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]" dir="auto" tabindex="-1" data-turn-id="request-WEB:fde8de28-4be6-447f-a474-dd7882afe2fe-23" data-testid="conversation-turn-28" data-scroll-anchor="true" data-turn="assistant"><div class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @w-sm/main:[--thread-content-margin:--spacing(6)] @w-lg/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"><div class="[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn" tabindex="-1"><div class="flex max-w-full flex-col grow"><div class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1" dir="auto" data-message-author-role="assistant" data-message-id="90c99771-fbdd-4a9c-a47b-2b334abcd7b7" data-message-model-slug="gpt-5-2"><div class="flex w-full flex-col gap-1 empty:hidden first:pt-[1px]"><div class="markdown prose dark:prose-invert w-full wrap-break-word dark markdown-new-styling"><p data-start="10" data-end="219" data-is-last-node="" data-is-only-node="">Situated within the historic grounds, Khufu’s is reached through the visitor entrance. Guests are encouraged to allow time for entry procedures. Beyond the gate, the experience begins in view of stone and sky.</p></div></div></div></div></div></div></article></div>								</div>
+									<div class="flex flex-col text-sm pb-25"><article class="text-token-text-primary w-full focus:outline-none [--shadow-height:45px] has-data-writing-block:pointer-events-none has-data-writing-block:-mt-(--shadow-height) has-data-writing-block:pt-(--shadow-height) [&amp;:has([data-writing-block])&gt;*]:pointer-events-auto scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]" dir="auto" tabindex="-1" data-turn-id="request-WEB:fde8de28-4be6-447f-a474-dd7882afe2fe-23" data-testid="conversation-turn-28" data-scroll-anchor="true" data-turn="assistant"><div class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @w-sm/main:[--thread-content-margin:--spacing(6)] @w-lg/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"><div class="[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn" tabindex="-1"><div class="flex max-w-full flex-col grow"><div class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1" dir="auto" data-message-author-role="assistant" data-message-id="90c99771-fbdd-4a9c-a47b-2b334abcd7b7" data-message-model-slug="gpt-5-2"><div class="flex w-full flex-col gap-1 empty:hidden first:pt-[1px]"><div class="markdown prose dark:prose-invert w-full wrap-break-word dark markdown-new-styling"><p data-start="10" data-end="219" data-is-last-node="" data-is-only-node="">Visit our full-service dining rooms in Dublin, Milpitas, and Livermore, or enjoy quick casual dining at Chennai Dosa Express in Concord.</p></div></div></div></div></div></div></article></div>								</div>
 				<div class="elementor-element elementor-element-2c0d61b elementor-widget elementor-widget-html" data-id="2c0d61b" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<a href="/experience" class="khf-bricolage-btn">
-  Plan Your Visit
+  Find Locations
 </a>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-686080c e-con-full e-flex e-con e-child" data-id="686080c" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-a50b78a elementor-widget elementor-widget-text-editor" data-id="a50b78a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>In the Collection</p>								</div>
+									<p>Catering & Events</p>								</div>
 				<div class="elementor-element elementor-element-1f8b85f elementor-widget elementor-widget-text-editor" data-id="1f8b85f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Part of the <em><strong>Pier88 Group</strong></em></p>								</div>
+									<p>Live Dosa & <em><strong>Biryani Catering</strong></em></p>								</div>
 				<div class="elementor-element elementor-element-62b8d65 elementor-widget elementor-widget-text-editor" data-id="62b8d65" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									<p>Khufu’s stands within a curated portfolio of destination-led concepts. Each venue is shaped by atmosphere, intention, and a distinct sense of place, forming a collection defined by clarity and restraint.</p>								</div>
+									<p>From intimate family celebrations to large corporate gatherings across Silicon Valley, we deliver unforgettable South Indian feast experiences.</p>								</div>
 				<div class="elementor-element elementor-element-3e12b27 elementor-widget elementor-widget-html" data-id="3e12b27" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<a href="https://pier88group.com" class="khf-bricolage-btn">
-  Explore The Group
+					<a href="/reservations" class="khf-bricolage-btn">
+  Inquire For Catering
 </a>
 				</div>
 				</div>
@@ -124,18 +124,18 @@
 		<div class="elementor-element elementor-element-5280847 e-con-full e-flex e-con e-child" data-id="5280847" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-c014441 e-con-full e-flex e-con e-child" data-id="c014441" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-71fd22e elementor-widget elementor-widget-text-editor" data-id="71fd22e" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									© 2026 KHUFU&#8217;S. All Rights Reserved. Powered By <a href="https://www.monarqeg.com" class="khufus-link" style="font-weight: 600">MONARQ.</a>								</div>
+									© 2026 Biryani Spot Chennai Dosa. All Rights Reserved.								</div>
 				</div>
 		<div class="elementor-element elementor-element-50bfa5d e-con-full e-flex e-con e-child" data-id="50bfa5d" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-ecaa298 elementor-shape-square e-grid-align-right elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="ecaa298" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
 							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
 							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-f161655" href="https://www.facebook.com/Khufusrestaurant/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-f161655" href="https://www.facebook.com" target="_blank">
 						<span class="elementor-screen-only">Facebook-f</span>
 						<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>					</a>
 				</span>
 							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-c352f51" href="https://www.instagram.com/khufusrestaurant/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-c352f51" href="https://www.instagram.com" target="_blank">
 						<span class="elementor-screen-only">Instagram</span>
 						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
 				</span>
@@ -156,9 +156,9 @@
 		<div class="elementor-element elementor-element-3201f7b e-con-full e-flex e-con e-child" data-id="3201f7b" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-4bd117c e-con-full e-flex e-con e-child" data-id="4bd117c" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2306406 elementor-widget elementor-widget-heading" data-id="2306406" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">DINE AT KHUFU'S</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">BIRYANI SPOT CHENNAI DOSA</h2>				</div>
 				<div class="elementor-element elementor-element-32052de elementor-widget elementor-widget-heading" data-id="32052de" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">By the Pyramids</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Dublin • Milpitas • Livermore • Concord</h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-368a8e2 e-con-full e-flex e-con e-child" data-id="368a8e2" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-1518cc5 elementor-widget elementor-widget-image" data-id="1518cc5" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
@@ -174,16 +174,16 @@
     <!-- A TABLE SET IN TIME -->
     <li class="p88g-footer-menu-item">
       <a href="/reservations" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-1')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
-        <span>A Table Set in Time</span>
+        <span>Authentic Dum Biryani</span>
         <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
       </a>
       <div id="p88g-footer-content-1" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
           <div class="p88g-footer-subtitle">
-            By the <strong><em>Great Pyramids of Giza</em></strong>
+            Slow-Cooked with <strong><em>Whole Royal Spices</em></strong>
           </div>
           <p class="p88g-footer-submenu-paragraph">
-            Framed by ancient stone and open horizon, Khufu’s offers an experience defined by clarity and restraint. Each evening unfolds with precision, where heritage is refined rather than repeated.
+            Slow-steamed in sealed clay pots with fragrant basmati, pure saffron, star anise, and fresh herbs. An unforgettable culinary tradition perfected over generations.
           </p>
           <a href="/reservations" class="khf-bricolage-btn">Reserve Your Table</a>
         </div>
@@ -193,16 +193,16 @@
     <!-- WITH INTENTION -->
     <li class="p88g-footer-menu-item">
       <a href="/menu" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-2')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
-        <span>With Intention</span>
+        <span>Crispy Golden Dosas</span>
         <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
       </a>
       <div id="p88g-footer-content-2" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
           <div class="p88g-footer-subtitle">
-            Contemporary <strong><em>Culinary Expression</em></strong>
+            Fermented Batter & <strong><em>Pure Ghee Roast</em></strong>
           </div>
           <p class="p88g-footer-submenu-paragraph">
-            Our menu draws from memory without being confined to it. Seasonal ingredients and disciplined technique shape a cuisine guided by clarity rather than excess, rooted in quiet refinement.
+            Naturally fermented stone-ground rice and lentil batter swirled thin on smoking cast-iron tawas, served piping hot with trio of chutneys and aromatic sambar.
           </p>
           <a href="/menu" class="khf-bricolage-btn">Explore The Menu</a>
         </div>
@@ -212,37 +212,37 @@
     <!-- AT THE PLATEAU -->
     <li class="p88g-footer-menu-item">
       <a href="/experience" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-3')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
-        <span>At the Plateau</span>
+        <span>4 Bay Area Locations</span>
         <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
       </a>
       <div id="p88g-footer-content-3" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
           <div class="p88g-footer-subtitle">
-            Inside the <strong><em>Archaeological Grounds</em></strong>
+            Serving <strong><em>Northern California</em></strong>
           </div>
           <p class="p88g-footer-submenu-paragraph">
-            Situated within the historic grounds, Khufu’s is reached through the visitor entrance. Guests are encouraged to allow time for entry procedures. Beyond the gate, the experience begins in view of stone and sky.
+            Visit our full-service dining rooms in Dublin, Milpitas, and Livermore, or enjoy quick casual dining at Chennai Dosa Express in Concord.
           </p>
-          <a href="/experience" class="khf-bricolage-btn">Plan Your Visit</a>
+          <a href="/experience" class="khf-bricolage-btn">Find Locations</a>
         </div>
       </div>
     </li>
 
     <!-- IN THE COLLECTION -->
     <li class="p88g-footer-menu-item">
-      <a href="https://pier88group.com" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-4')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
-        <span>In the Collection</span>
+      <a href="/reservations" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-4')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
+        <span>Catering & Events</span>
         <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
       </a>
       <div id="p88g-footer-content-4" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
           <div class="p88g-footer-subtitle">
-            Part of the <strong><em>Pier88 Group</em></strong>
+            Live Dosa & <strong><em>Biryani Catering</em></strong>
           </div>
           <p class="p88g-footer-submenu-paragraph">
-            Khufu’s stands within a curated portfolio of destination-led concepts. Each venue is shaped by atmosphere, intention, and a distinct sense of place, forming a collection defined by clarity and restraint.
+            From intimate family celebrations to large corporate gatherings across Silicon Valley, we deliver unforgettable South Indian feast experiences.
           </p>
-          <a href="https://pier88group.com" class="khf-bricolage-btn" target="_blank" rel="noopener">Explore The Group</a>
+          <a href="/reservations" class="khf-bricolage-btn" target="_blank" rel="noopener">Inquire For Catering</a>
         </div>
       </div>
     </li>
@@ -436,12 +436,12 @@ P88G KHUFUS FOOTER ACCORDION
 				<div class="elementor-element elementor-element-c8e1dbe e-grid-align-mobile-left elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="c8e1dbe" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
 							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
 							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-23519db" href="https://www.facebook.com/Khufusrestaurant/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-23519db" href="https://www.facebook.com" target="_blank">
 						<span class="elementor-screen-only">Facebook-f</span>
 						<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>					</a>
 				</span>
 							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-065a80d" href="https://www.instagram.com/khufusrestaurant/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-065a80d" href="https://www.instagram.com" target="_blank">
 						<span class="elementor-screen-only">Instagram</span>
 						<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
 				</span>
@@ -456,7 +456,7 @@ P88G KHUFUS FOOTER ACCORDION
 				</div>
 		<div class="elementor-element elementor-element-b692012 e-con-full e-flex e-con e-child" data-id="b692012" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-1dd33f4 elementor-widget elementor-widget-text-editor" data-id="1dd33f4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
-									© 2026 KHUFU&#8217;S. All Rights Reserved. Powered By <a href="https://www.monarqeg.com" class="khufus-link" style="font-weight: 600">MONARQ.</a>								</div>
+									© 2026 Biryani Spot Chennai Dosa. All Rights Reserved.								</div>
 				</div>
 				</div>
 				</footer>

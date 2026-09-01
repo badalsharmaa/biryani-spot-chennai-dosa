@@ -1762,7 +1762,7 @@ INTERACTIVE PANEL STAGE
 .kh-rhythm-media--1{
   background-image:
     linear-gradient(180deg, rgba(12,10,8,.34) 0%, rgba(18,14,10,.58) 48%, rgba(20,16,12,.78) 100%),
-    url('/assets/images/Experience-Landing-Image.webp');
+    url('/assets/images/google_maps/dublin/biryani_specials/dublin_dum_biryani_43.jpg');
 }
 
 .kh-rhythm-media--2{
@@ -6040,7 +6040,7 @@ INTERACTIVE PANEL STAGE
 .kh-rhythm-media--1{
   background-image:
     linear-gradient(180deg, rgba(12,10,8,.34) 0%, rgba(18,14,10,.58) 48%, rgba(20,16,12,.78) 100%),
-    url('/assets/images/Experience-Landing-Image.webp');
+    url('/assets/images/google_maps/dublin/biryani_specials/dublin_dum_biryani_43.jpg');
 }
 
 .kh-rhythm-media--2{

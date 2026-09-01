@@ -1898,7 +1898,7 @@ RESPONSIVE
   <div class="kh-oh-inner">
 
     <div class="kh-oh-header">
-      <h3 class="kh-oh-title">Opening Hours</h3>
+      <h3 class="kh-oh-title">Store Hours &amp; Contact</h3>
       <span class="kh-oh-line"></span>
     </div>
 
@@ -2101,7 +2101,7 @@ RESPONSIVE
   <div class="kh-ct-inner">
 
     <div class="kh-ct-header">
-      <h3 class="kh-ct-title">Get in Touch</h3>
+      <h3 class="kh-ct-title">Call or Order Online</h3>
       <span class="kh-ct-line"></span>
     </div>
 

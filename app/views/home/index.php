@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Biryani Spot Chennai Dosa | Elevated Dining";
+$pageTitle = "Biryani Spot Chennai Dosa | Authentic South Indian Heritage";
 require_once __DIR__ . "/../layouts/header.php";
 ?>
 
@@ -4255,18 +4255,18 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 }
 </style>
 
-<h1 class="khf-hero-title" id="khfHeroTitle" aria-label="Where the setting becomes part of the table">
+<h1 class="khf-hero-title" id="khfHeroTitle" aria-label="The Royal Art of Dum Biryani & Crispy Dosas">
 
   <!-- Desktop -->
   <span class="khf-desktop" aria-hidden="true">
     <span class="khf-line">
       <span class="khf-line-inner">
-        WHERE THE SETTING
+        THE ROYAL ART OF
       </span>
     </span>
     <span class="khf-line">
       <span class="khf-line-inner">
-        BECOMES PART OF THE <em>TABLE</em>
+        DUM BIRYANI & <em>CRISPY DOSAS</em>
       </span>
     </span>
   </span>
@@ -4275,12 +4275,12 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   <span class="khf-mobile" aria-hidden="true">
     <span class="khf-line">
       <span class="khf-line-inner">
-        WHERE THE
+        THE ROYAL ART
       </span>
     </span>
     <span class="khf-line">
       <span class="khf-line-inner">
-        <em>SETTING</em> LEADS
+        OF <em>DUM BIRYANI</em>
       </span>
     </span>
   </span>
@@ -4363,8 +4363,8 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   </button>
 
   <div class="mnq-reserve-dropdown">
-    <a href="/reservations" class="mnq-reserve-option">Breakfast & Lunch</a>
-    <a href="/reservations" class="mnq-reserve-option" target="_blank" rel="noopener">Dinner - Bistro</a>
+    <a href="/menu" class="mnq-reserve-option">Breakfast & Lunch</a>
+    <a href="/menu" class="mnq-reserve-option" target="_blank" rel="noopener">Dinner - Bistro</a>
   </div>
 </div>
 
@@ -4634,16 +4634,14 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 
           <div class="khf-why-head">
             <h3 class="khf-why-title">
-              Setting
-              <span class="khf-why-script">Where Place Defines Presence</span>
+              Dum Pukht
+              <span class="khf-why-script">Slow-Steamed Royal Heritage</span>
             </h3>
           </div>
 
           <div class="khf-why-reveal">
             <p>
-              Its legacy is felt less as history retold and more as presence
-              carried forward. Place, memory, and cultural gravity give the
-              restaurant a sense of continuity that feels quietly enduring.
+              Fragrant aged basmati rice layered with whole roasted spices, sealed with whole wheat dough in traditional clay handis to lock in rich aroma and authentic flavor.
             </p>
             <a href="/legacy" class="khf-why-btn">Discover More</a>
           </div>
@@ -4652,7 +4650,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--2" data-speed="0.35">
-      <img decoding="async" src="/assets/images/DSC04524-scaled.webp">
+      <img decoding="async" src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_crispy_dosa_12.jpg">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4660,16 +4658,14 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 
           <div class="khf-why-head">
             <h3 class="khf-why-title">
-              Composition
-              <span class="khf-why-script">Every Detail Holds Intention</span>
+              Dosa Craft
+              <span class="khf-why-script">The Cast-Iron Tawa Mastery</span>
             </h3>
           </div>
 
           <div class="khf-why-reveal">
             <p>
-              Behind the restaurant is a point of view shaped with restraint.
-              Intention, authorship, and perspective come together in a language
-              that reveals how Khufu's came to feel singular from the start.
+              Naturally fermented stone-ground rice and lentil batter swirled paper-thin on smoking cast-iron griddles and roasted with pure golden ghee, served with our fresh chutney trio.
             </p>
             <a href="/about" class="khf-why-btn">Explore The Craft</a>
           </div>
@@ -4678,7 +4674,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--3" data-speed="0.28">
-      <img decoding="async" src="/assets/images/Khufus-Cap-Back.webp">
+      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken65_appetizer_07.jpg">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4686,16 +4682,14 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 
           <div class="khf-why-head">
             <h3 class="khf-why-title">
-              Atmosphere
-              <span class="khf-why-script">A Rhythm That Settles In</span>
+              Chettinad Spices
+              <span class="khf-why-script">Freshly Ground Spice Alchemy</span>
             </h3>
           </div>
 
           <div class="khf-why-reveal">
             <p>
-              The experience unfolds in measured layers rather than all at once.
-              Atmosphere, detail, and emotion arrive gradually, creating a rhythm
-              that lingers beyond the moment itself, shaped through elevated Egyptian  dining.
+              Hand-pounded coriander seeds, black peppercorns, star anise, and fiery Guntur red chillies roasted daily to produce authentic South Indian curries and sizzling appetizers.
             </p>
             <a href="/experience" class="khf-why-btn">Feel The Experience</a>
           </div>
@@ -5143,7 +5137,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
       precision, and a dining experience rooted in place.
     </p>
     
-    <a href="/reservations" class="kh-home-story-cta">
+    <a href="/menu" class="kh-home-story-cta">
       Reserve Your Table
     </a>
   </div>
@@ -8828,7 +8822,7 @@ RESPONSIVE
       </div>
 
       <div class="kh-cta-actions" id="khCtaActions">
-        <a href="/reservations" class="kh-cta-btn" aria-label="Reserve your table">Reserve Your Table</a>
+        <a href="/menu" class="kh-cta-btn" aria-label="Reserve your table">Reserve Your Table</a>
       </div>
 
       <div class="kh-cta-ornament" aria-hidden="true"></div>
@@ -9506,7 +9500,7 @@ RESPONSIVE
 				<div class="elementor-element elementor-element-c6e810b elementor-widget elementor-widget-text-editor" data-id="c6e810b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 									<p>Please rotate your device for the full experience</p>								</div>
 				<div class="elementor-element elementor-element-9923e3e elementor-widget elementor-widget-html" data-id="9923e3e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<a href="/reservations" class="mnq-landing-reserve-btn">
+					<a href="/menu" class="mnq-landing-reserve-btn">
   Reserve Your Table
 </a>
 

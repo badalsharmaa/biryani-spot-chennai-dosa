@@ -1420,39 +1420,36 @@ class="post-2737 page type-page status-publish ast-article-single" id="post-2737
 
         <div class="kh-faq-item is-open">
           <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">Do I Need A Reservation?</span>
+            <span class="kh-faq-question-text">Is all the meat served 100% Halal?</span>
             <span class="kh-faq-icon" aria-hidden="true"></span>
           </button>
           <div class="kh-faq-answer">
             <div class="kh-faq-answer-inner">
-              <p>Reservations are not required; however, the restaurant is consistently busy, particularly during peak periods and high season. To guarantee a table and avoid disappointment, we strongly recommend making a reservation in advance. Walk-in guests are always welcome, but availability cannot be guaranteed, and the restaurant is often fully booked.</p>
+              <p>Yes, absolutely. All our chicken, goat, and lamb are 100% certified Halal, prepared fresh daily across our Dublin, Milpitas, Livermore, and Concord locations.</p>
             </div>
           </div>
         </div>
 
         <div class="kh-faq-item">
           <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">Can Dietary Needs Be Accommodated?</span>
+            <span class="kh-faq-question-text">What is the difference between Dum Biryani and Vijayawada Biryani?</span>
             <span class="kh-faq-icon" aria-hidden="true"></span>
           </button>
           <div class="kh-faq-answer">
             <div class="kh-faq-answer-inner">
-              <p>We do offer vegetarian options within our menu. For specific allergies, intolerances, or dietary requirements, guests are kindly asked to contact us in advance, as accommodation may vary depending on the request and kitchen capabilities. Please note that dishes cannot be prepared without garlic or onion, as these ingredients form part of the foundational seasoning and preparation across our kitchen.</p>
+              <p>Our Hyderabadi Dum Biryani is cooked on slow charcoal dum with basmati rice, saffron, and marinated meats sealed in clay handis. Our Vijayawada Biryani features spiced rice topped with a spicy, wok-tossed boneless chicken gravy cooked in traditional Andhra style.</p>
             </div>
           </div>
         </div>
 
         <div class="kh-faq-item">
           <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">Is The Restaurant Easy To Access?</span>
+            <span class="kh-faq-question-text">Do you offer Gluten-Free and Vegan options?</span>
             <span class="kh-faq-icon" aria-hidden="true"></span>
           </button>
           <div class="kh-faq-answer">
             <div class="kh-faq-answer-inner">
-              <p>Yes, our venue is easily accessible; however, entry is only permitted through the <a href="https://maps.app.goo.gl/fJoA56eRypNrGNL2A" target="_blank" rel="noopener">Fayoum Gate entrance</a> to the Giza Plateau. Guests may arrive by private car or taxi and should proceed directly to the Visitor Center.</p>
-              <p>Upon arrival, vehicles can be parked in the designated parking area, or guests may be dropped off at the Visitor Center entrance. From there, guests are required to obtain a Giza Plateau entry ticket at the ticketing windows before continuing onward.</p>
-              <p>Once inside the site, a shuttle bus service is available and will take guests directly to Khufu’s.</p>
-              <p>To make arrival smoother and reduce waiting time, we recommend purchasing Giza Plateau tickets online in advance via the <a href="https://egymonuments.com/locations/details/Pyramids" target="_blank" rel="noopener">official booking platform</a>.</p>
+              <p>Yes! All our traditional Dosas, Idlis, and Medu Vadas are naturally gluten-free as they are crafted from fermented rice and urad dal batter. We also offer extensive vegan curries like Chana Masala, Dal Tadka, and Vegetable Biryani.</p>
             </div>
           </div>
         </div>
@@ -1463,58 +1460,41 @@ class="post-2737 page type-page status-publish ast-article-single" id="post-2737
 
         <div class="kh-faq-item">
           <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">Is There A Dress Code?</span>
+            <span class="kh-faq-question-text">Can I place large catering orders for weddings or corporate events?</span>
             <span class="kh-faq-icon" aria-hidden="true"></span>
           </button>
           <div class="kh-faq-answer">
             <div class="kh-faq-answer-inner">
-              <p>There is no formal dress code; however, we encourage guests to dress in a manner that reflects the atmosphere of the restaurant and the cultural significance of its surroundings. As Khufu’s is located within an archaeological setting, we kindly ask guests to dress respectfully and modestly. Smart casual attire is recommended to complement the dining experience and setting.</p>
+              <p>Yes, we cater corporate lunches, family celebrations, and weddings across Silicon Valley and the East Bay with live Dosa stations, hot Biryani handis, and custom South Indian buffet spreads.</p>
             </div>
           </div>
         </div>
 
         <div class="kh-faq-item">
           <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">Are Children Welcome?</span>
+            <span class="kh-faq-question-text">How do I order for takeout or delivery?</span>
             <span class="kh-faq-icon" aria-hidden="true"></span>
           </button>
           <div class="kh-faq-answer">
             <div class="kh-faq-answer-inner">
-              <p>Children are welcome at the restaurant. As we are a fine dining destination designed around a calm and refined atmosphere, we kindly ask that children remain under the supervision of their parents at all times. To ensure an enjoyable experience for all guests, we request that noise levels and movement around the restaurant are kept to a minimum. In cases where children become disruptive to the dining environment, families may be kindly asked to step outside briefly until the child has settled.</p>
+              <p>You can order directly online through our official ToastTab links for Dublin, Milpitas, Livermore, and Concord with real-time pickup and delivery tracking.</p>
             </div>
           </div>
         </div>
 
         <div class="kh-faq-item">
           <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">Is There A Minimum Charge?</span>
+            <span class="kh-faq-question-text">What are your operating hours across the 4 locations?</span>
             <span class="kh-faq-icon" aria-hidden="true"></span>
           </button>
           <div class="kh-faq-answer">
             <div class="kh-faq-answer-inner">
-              <p>There is no official minimum charge at Khufu’s. However, guests may wish to note that the average spend for breakfast is approximately EGP 1,500++ per person. For lunch, a curated set menu is available, starting from EGP 1,950++ per person. Prices are exclusive of applicable taxes and service charges.</p>
-              <p>Please note that we operate as a full dining restaurant. Guests are therefore kindly expected to dine when seated within the restaurant. Those wishing to enjoy drinks only are welcome to do so within the designated bar area, subject to availability.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="kh-faq-item">
-          <button class="kh-faq-question" type="button">
-            <span class="kh-faq-question-text">How Do I Make An Inquiry?</span>
-            <span class="kh-faq-icon" aria-hidden="true"></span>
-          </button>
-          <div class="kh-faq-answer">
-            <div class="kh-faq-answer-inner">
-              <p>For any questions, special requests, or general inquiries, guests may contact us through our <a href="/contact/#khSeqContact">enquiry form</a>. Simply submit your details and message, and a member of our team will respond as soon as possible.</p>
+              <p>Dublin, Milpitas, and Livermore are open daily from 11:00 AM to 10:00 PM. Chennai Dosa Express in Concord is open daily from 11:00 AM to 9:30 PM.</p>
             </div>
           </div>
         </div>
 
       </div>
-    </div>
-
-    <div class="kh-faq-foot">
-      Reservations / Private Dining / Guest Enquiries
     </div>
   </div>
 </section>

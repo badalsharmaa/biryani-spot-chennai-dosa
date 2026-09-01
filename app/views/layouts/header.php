@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= htmlspecialchars($pageTitle ?? "Biryani Spot Chennai Dosa | Elevated Dining") ?></title>
+  <title><?= htmlspecialchars($pageTitle ?? "Biryani Spot Chennai Dosa | Authentic South Indian Dining") ?></title>
   <link rel="icon" type="image/svg+xml" href="/assets/images/logo-white.svg">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <style id="wp-img-auto-sizes-contain-inline-css">
@@ -1884,8 +1884,8 @@ canvas {
     align-self:flex-end;
     margin-bottom:-2px;
     background-color:rgba(52,40,24,0.88);
-    -webkit-mask:url("/assets/images/Logo-in-White.svg") no-repeat center center / contain;
-    mask:url("/assets/images/Logo-in-White.svg") no-repeat center center / contain;
+    -webkit-mask:url("/assets/images/ornaments/crest-biryani-dosa.svg") no-repeat center center / contain;
+    mask:url("/assets/images/ornaments/crest-biryani-dosa.svg") no-repeat center center / contain;
     opacity:.75;
   }
 
@@ -4150,12 +4150,12 @@ P88G KHUFUS FOOTER ACCORDION
 				<div class="elementor-element elementor-element-a10634e elementor-widget elementor-widget-heading" data-id="a10634e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/reservations">RESERVATIONS</a></h2>				</div>
 				<div class="elementor-element elementor-element-6664fe9 elementor-widget elementor-widget-heading" data-id="6664fe9" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default"><a href="/">BISTRO</a></h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/menu">THE MENU</a></h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-c1e51b4 e-con-full e-flex e-con e-child" data-id="c1e51b4" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-76a29c8 elementor-widget elementor-widget-image" data-id="76a29c8" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 																<a href="/">
-							<img width="144" height="141" src="/assets/images/Logo-in-White.svg" class="attachment-large size-large wp-image-115" alt="" />								</a>
+							<img width="144" height="141" src="/assets/images/ornaments/logo.webp" class="attachment-large size-large wp-image-115" alt="Biryani Spot Chennai Dosa Logo" />								</a>
 															</div>
 				</div>
 		<div class="elementor-element elementor-element-c7ef4ce e-con-full e-flex e-con e-child" data-id="c7ef4ce" data-element_type="container" data-e-type="container">
@@ -4740,7 +4740,7 @@ P88G KHUFUS FOOTER ACCORDION
 				<div class="elementor-element elementor-element-c6fb75b elementor-widget elementor-widget-heading" data-id="c6fb75b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/menu">MENUS</a></h2>				</div>
 				<div class="elementor-element elementor-element-447f271 elementor-widget elementor-widget-heading" data-id="447f271" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default"><a href="/gallery">KHUFU'S GALLERY</a></h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/gallery">GALLERY &amp; AMBIANCE</a></h2>				</div>
 				<div class="elementor-element elementor-element-098433b elementor-widget elementor-widget-heading" data-id="098433b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/legacy">THE LEGACY</a></h2>				</div>
 				<div class="elementor-element elementor-element-730cc60 elementor-widget elementor-widget-heading" data-id="730cc60" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
@@ -4748,33 +4748,33 @@ P88G KHUFUS FOOTER ACCORDION
 				<div class="elementor-element elementor-element-edbba27 elementor-widget elementor-widget-heading" data-id="edbba27" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/contact">LOCATION &amp; HOURS</a></h2>				</div>
 				<div class="elementor-element elementor-element-e9b8b41 elementor-widget elementor-widget-heading" data-id="e9b8b41" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default"><a href="/">KHUFU'S BISTRO</a></h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/locations">OUR 4 LOCATIONS</a></h2>				</div>
 				<div class="elementor-element elementor-element-39e8d07 elementor-widget elementor-widget-heading" data-id="39e8d07" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/contact">CONTACT</a></h2>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-1980e35 e-con-full stagger-item e-flex e-con e-child" data-id="1980e35" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-b0721a6 elementor-widget elementor-widget-image" data-id="b0721a6" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="1024" height="674" src="/assets/images/Reservations-Image-e1776860891702-1024x674.webp" class="attachment-large size-large wp-image-2579" alt="" srcset="/assets/images/Reservations-Image-e1776860891702-1024x674.webp 1024w, /assets/images/Reservations-Image-e1776860891702-300x197.webp 300w, /assets/images/Reservations-Image-e1776860891702-768x505.webp 768w, /assets/images/Reservations-Image-e1776860891702-1536x1011.webp 1536w, /assets/images/Reservations-Image-e1776860891702.webp 1976w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+															<img width="1024" height="674" src="/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_interior_dining_01.jpg" class="attachment-large size-large wp-image-2579" alt="" srcset="/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_interior_dining_01.jpg 1024w, /assets/images/Reservations-Image-e1776860891702-300x197.webp 300w, /assets/images/Reservations-Image-e1776860891702-768x505.webp 768w, /assets/images/Reservations-Image-e1776860891702-1536x1011.webp 1536w, /assets/images/Reservations-Image-e1776860891702.webp 1976w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
 				<div class="elementor-element elementor-element-f6c66dc elementor-widget elementor-widget-heading" data-id="f6c66dc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/reservations">RESERVATIONS</a></h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-0700956 e-con-full stagger-item e-flex e-con e-child" data-id="0700956" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-fc50da0 elementor-widget elementor-widget-image" data-id="fc50da0" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="1024" height="683" src="/assets/images/Lifestyle-Shots-Image-e1776860814909-1024x683.webp" class="attachment-large size-large wp-image-2578" alt="" srcset="/assets/images/Lifestyle-Shots-Image-e1776860814909-1024x683.webp 1024w, /assets/images/Lifestyle-Shots-Image-e1776860814909-300x200.webp 300w, /assets/images/Lifestyle-Shots-Image-e1776860814909-768x512.webp 768w, /assets/images/Lifestyle-Shots-Image-e1776860814909-1536x1024.webp 1536w, /assets/images/Lifestyle-Shots-Image-e1776860814909.webp 1956w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+															<img width="1024" height="683" src="/assets/images/google_maps/milpitas/dosas_and_tiffin/milpitas_crispy_dosa_04.jpg" class="attachment-large size-large wp-image-2578" alt="" srcset="/assets/images/google_maps/milpitas/dosas_and_tiffin/milpitas_crispy_dosa_04.jpg 1024w, /assets/images/Lifestyle-Shots-Image-e1776860814909-300x200.webp 300w, /assets/images/Lifestyle-Shots-Image-e1776860814909-768x512.webp 768w, /assets/images/Lifestyle-Shots-Image-e1776860814909-1536x1024.webp 1536w, /assets/images/Lifestyle-Shots-Image-e1776860814909.webp 1956w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
 				<div class="elementor-element elementor-element-7a231cf elementor-widget elementor-widget-heading" data-id="7a231cf" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/gallery">LIFESTYLE SHOTS</a></h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-a990b19 e-con-full stagger-item e-flex e-con e-child" data-id="a990b19" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-8c53044 elementor-widget elementor-widget-image" data-id="8c53044" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="1024" height="684" src="/assets/images/Menus-Food-Image-1024x684.webp" class="attachment-large size-large wp-image-186" alt="" srcset="/assets/images/Menus-Food-Image-1024x684.webp 1024w, /assets/images/Menus-Food-Image-300x200.webp 300w, /assets/images/Menus-Food-Image-768x513.webp 768w, /assets/images/Menus-Food-Image-1536x1027.webp 1536w, /assets/images/Menus-Food-Image.webp 1616w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+															<img width="1024" height="684" src="/assets/images/google_maps/dublin/biryani_specials/dublin_dum_biryani_43.jpg" class="attachment-large size-large wp-image-186" alt="" srcset="/assets/images/google_maps/dublin/biryani_specials/dublin_dum_biryani_43.jpg 1024w, /assets/images/Menus-Food-Image-300x200.webp 300w, /assets/images/Menus-Food-Image-768x513.webp 768w, /assets/images/Menus-Food-Image-1536x1027.webp 1536w, /assets/images/Menus-Food-Image.webp 1616w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
 				<div class="elementor-element elementor-element-5c66350 elementor-widget elementor-widget-heading" data-id="5c66350" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default"><a href="/menu">MENUS</a></h2>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-81ea57b e-con-full e-flex e-con e-child" data-id="81ea57b" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-a72a980 animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-id="a72a980" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:0.5}" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default"><a href="https://maps.app.goo.gl/Y8u743YQLnqs7jWm9">GET DIRECTIONS</a></h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default"><a href="https://maps.app.goo.gl/dhsuEo67NAWSQFsa7">GET DIRECTIONS</a></h2>				</div>
 				<div class="elementor-element elementor-element-3548666 elementor-widget elementor-widget-html" data-id="3548666" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<script type="text/javascript">
 /**

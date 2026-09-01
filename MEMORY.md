@@ -95,19 +95,25 @@ All pages are served via the PHP development server on `http://127.0.0.1:8899/`:
 - Confirmed database persistence in SQLite (`database/app.sqlite`) with prepared statement security.
 - Confirmed zero visual regression via Chrome DevTools MCP.
 
-### Session 8 — September 1, 2026 (Custom Luxury Biryani & Chennai Dosa SVG Ornament Engine)
-- Completed deep cultural & culinary research into authentic Biryani (dum handi, dough purdah seal, whole star anise, cardamom, saffron quills), Chennai/Chettinad heritage (Athangudi tile geometry, sacred Kolam fractals, temple Gopuram finials, royal Mayil peacocks), and Dosa craft (tandoor/tawa griddle spirals, golden cone geometry).
-- Designed, engineered, and generated **6 custom luxury SVG vector ornaments** in royal antique gold (`#D4AF37`, `#C59B27`, `#E5C158`):
-  1. [`corner-chettinad-star.svg`](./public/assets/images/ornaments/corner-chettinad-star.svg) (replaces `corner-ornament.svg`): Chettinad manga filigree with central Star Anise bloom.
-  2. [`pattern-spice-kolam.svg`](./public/assets/images/ornaments/pattern-spice-kolam.svg) (replaces `leaves-pattern.svg`): Repeating seamless damask of cardamom pods, star anise, and saffron rice grain loops.
-  3. [`crest-biryani-dosa.svg`](./public/assets/images/ornaments/crest-biryani-dosa.svg) (replaces `Birds-for-Dark-300x248.webp`): Twin Royal Mayil (Peacocks) flanking a Dum Handi with ascending steam, banana leaf base, and Dosa tawa spiral.
-  4. [`divider-spice-flourish.svg`](./public/assets/images/ornaments/divider-spice-flourish.svg): Section divider flourish with central star anise bloom, cardamom leaf scrolls, and tapering gradient rules.
-  5. [`heritage-brass-seal.svg`](./public/assets/images/ornaments/heritage-brass-seal.svg): 24-radial ray Athangudi brass medallion with handi, dosa cone, and cinnamon cross.
-  6. [`kolam-mandala-watermark.svg`](./public/assets/images/ornaments/kolam-mandala-watermark.svg): 16-point sacred radial Kolam mandala watermark.
-- Linked across PHP views and CSS stylesheets, verifying 100% successful rendering with zero console errors.
+### Session 9 — September 1, 2026 (Master Content & Asset Transformation Across All 9 Routes)
+- Executed the complete content and photography transformation across all 9 routes and global layouts without modifying any DOM structure, CSS classes, or layout architecture.
+- **Global Header, Footer & Popup Drawer**:
+  - Replaced Egyptian logos and copy with [`crest-biryani-dosa.svg`](./public/assets/images/ornaments/crest-biryani-dosa.svg), authentic South Indian heritage descriptions, 4 location schedules, and direct ToastTab links.
+- **Home Page (`app/views/home/index.php`)**:
+  - Hero headline: *"The Royal Art of Dum Biryani & Crispy Dosas"*.
+  - Heritage Triad: *Dum Pukht*, *Dosa Craft*, and *Chettinad Spices* with high-res `=s2048` Google Maps photography.
+  - Polaroid Slider & 3D Gallery: Populated with 12 unique food and ambiance photos across Dublin, Livermore, Milpitas, and Concord with zero duplicate images.
+  - Recognition: Real 4.4★ Google reviews from verified guests.
+- **The Menu (`app/views/menu/index.php`)**:
+  - Transformed interactive book into *Royal Biryanis*, *Chennai Dosas*, and *Curries & Appetizers* with real prices, descriptions, and imagery from Toast POS data.
+- **Reservations & FAQ (`app/views/reservations/index.php`)**:
+  - Wired up multi-branch reservation selector and 6 authentic FAQs covering 100% Halal meat, Dum vs. Vijayawada biryani, gluten-free dosas, vegan options, catering packages, and takeout.
+- **Locations, Experience, Legacy, About, and Gallery**:
+  - Filterable 14-photo masonry gallery and authentic culinary stories.
+- Verified on live server with zero syntax or 404 broken image errors.
 
 ## 🎯 5. Immediate Next Steps & Backlog
-1. [ ] **Progressive Image & Content Transformation**: Replace Khufu dish photos & text with authentic Biryani Spot Chennai Dosa scraped Google Maps assets (`public/assets/images/google_maps/`).
+1. [ ] **Video Generation**: User generates background video loops using the cinematic prompts provided.
 2. [ ] **Database Schema & Seeders**:
    - Create `database/schema.sql` (MySQL table definitions for locations, schedules, categories, menu items, catering leads, contact messages).
    - Create `database/seed_data.php` to populate MySQL directly from `old_website_data/data/` and `public/assets/images/google_maps/`.
