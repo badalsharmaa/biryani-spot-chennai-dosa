@@ -112,6 +112,22 @@ All pages are served via the PHP development server on `http://127.0.0.1:8899/`:
   - Filterable 14-photo masonry gallery and authentic culinary stories.
 - Verified on live server with zero syntax or 404 broken image errors.
 
+### Session 10 — September 1, 2026 (Official Branding, Gradient Flow, & Standalone Native Drawer)
+- **Official Brand Logo Integration**:
+  - Replaced temporary placeholder graphics with official brand logo [`public/assets/images/ornaments/logo.webp`](./public/assets/images/ornaments/logo.webp) across header and footer layouts.
+- **Section 03 Recognition Copy & Half-White Gradient Transition**:
+  - Removed white background box on `.khf-why-sec` for seamless visual integration.
+  - Configured top-to-bottom linear gradient on Section 03 (`.elementor-element-e58559a`): starts at `#DAB79F` matching Section 2 & 3 above, and transitions smoothly to `#FFFFFF` from the midpoint down to blend into the gallery below.
+  - Updated recognition copy to *"BAY AREA RECOGNITION - A TASTE THE BAY AREA FELL IN LOVE WITH (Celebrated Across 4 Locations)"* with real 4.4★ reviews.
+- **Standalone Menu Drawer Isolation & 100% Native Pure JS Engine**:
+  - **Zero WordPress/Elementor Runtime**: Completely eliminated all WordPress/Elementor JS dependencies (`elementorProFrontend`, `elementor-pro-frontend.min.js`, `webpack-pro.runtime.min.js`).
+  - **Drawer Partial Isolation**: Extracted drawer into [`app/views/layouts/drawer.php`](./app/views/layouts/drawer.php) and wired it before `</body>` in [`app/views/layouts/footer.php`](./app/views/layouts/footer.php).
+  - **Blank Screen Fix**: Cleaned [`app/views/layouts/header.php`](./app/views/layouts/header.php) to terminate cleanly at `</header>`, resolving unclosed `<div>` container nesting that previously swallowed the main home view.
+  - **Native Controller (`window.BiryaniDrawer`)**: Pure vanilla JS controller managing CSS3 hardware-accelerated drawer transitions, Esc key dismiss, backdrop clicks, nav link closing, and single-instance bidirectional Lottie hamburger $\leftrightarrow$ X toggle animation.
+  - **Cleaned `khufus-core.js`**: Removed legacy duplicate Lottie loaders to ensure a single, crisp hamburger toggle in the top-right navbar.
+
+---
+
 ## 🎯 5. Immediate Next Steps & Backlog
 1. [ ] **Video Generation**: User generates background video loops using the cinematic prompts provided.
 2. [ ] **Database Schema & Seeders**:
@@ -121,3 +137,4 @@ All pages are served via the PHP development server on `http://127.0.0.1:8899/`:
 
 ---
 *Update this memory file at the conclusion of each development milestone.*
+
