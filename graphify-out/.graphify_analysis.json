@@ -1,0 +1,979 @@
+{
+  "communities": {
+    "0": [
+      "public_assets_js_elementor_frontend_modules_min",
+      "public_assets_js_elementor_frontend_modules_min_addeditorlisteners",
+      "public_assets_js_elementor_frontend_modules_min_applycssvariables",
+      "public_assets_js_elementor_frontend_modules_min_bindevents",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_a11ysetpaginationtabindex",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_a11ysetslideariahidden",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_addclasstoswipercontainer",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_applyoffsetsettings",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_bindevents",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_forceslidertoshownextslidewhenonlast",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getchangeableproperties",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getdefaultelements",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getdefaultsettings",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getoffsetwidth",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getpaginationbullets",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getspacebetween",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getswipersettings",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_getswiperwrappertranformxvalue",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_handleelementhandlers",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_initswiper",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_ondirectionarrowkeydown",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_oneditsettingschange",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_onelementchange",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_onfocusdisableautoplay",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_oninit",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_unbindevents",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_updatespacebetween",
+      "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase_updateswiperoption",
+      "public_assets_js_elementor_frontend_modules_min_construct",
+      "public_assets_js_elementor_frontend_modules_min_constructor",
+      "public_assets_js_elementor_frontend_modules_min_f",
+      "public_assets_js_elementor_frontend_modules_min_findelement",
+      "public_assets_js_elementor_frontend_modules_min_formatsection",
+      "public_assets_js_elementor_frontend_modules_min_get",
+      "public_assets_js_elementor_frontend_modules_min_getall",
+      "public_assets_js_elementor_frontend_modules_min_getcurrentdevicesetting",
+      "public_assets_js_elementor_frontend_modules_min_getdefaultelements",
+      "public_assets_js_elementor_frontend_modules_min_geteditorlisteners",
+      "public_assets_js_elementor_frontend_modules_min_geteditsettings",
+      "public_assets_js_elementor_frontend_modules_min_getelementsettings",
+      "public_assets_js_elementor_frontend_modules_min_getelementtype",
+      "public_assets_js_elementor_frontend_modules_min_getelementviewportpercentage",
+      "public_assets_js_elementor_frontend_modules_min_getid",
+      "public_assets_js_elementor_frontend_modules_min_getmodelcid",
+      "public_assets_js_elementor_frontend_modules_min_getpagescrollpercentage",
+      "public_assets_js_elementor_frontend_modules_min_getuniquehandlerid",
+      "public_assets_js_elementor_frontend_modules_min_getwidgettype",
+      "public_assets_js_elementor_frontend_modules_min_initeditorlisteners",
+      "public_assets_js_elementor_frontend_modules_min_initelements",
+      "public_assets_js_elementor_frontend_modules_min_iselementinthecurrentdocument",
+      "public_assets_js_elementor_frontend_modules_min_ondestroy",
+      "public_assets_js_elementor_frontend_modules_min_oninit",
+      "public_assets_js_elementor_frontend_modules_min_register",
+      "public_assets_js_elementor_frontend_modules_min_removeeditorlisteners",
+      "public_assets_js_elementor_frontend_modules_min_reset",
+      "public_assets_js_elementor_frontend_modules_min_resetcssvariables",
+      "public_assets_js_elementor_frontend_modules_min_run",
+      "public_assets_js_elementor_frontend_modules_min_scrollobserver",
+      "public_assets_js_elementor_frontend_modules_min_stretch",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_bindevents",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_unbindevents",
+      "public_assets_js_elementor_frontend_modules_min_swiperhandlerbase",
+      "public_assets_js_elementor_frontend_modules_min_swiperhandlerbase_getinitialslide",
+      "public_assets_js_elementor_frontend_modules_min_swiperhandlerbase_getslidescount",
+      "public_assets_js_elementor_frontend_modules_min_swiperhandlerbase_handlekenburns",
+      "public_assets_js_elementor_frontend_modules_min_swiperhandlerbase_togglepauseonhover"
+    ],
+    "1": [
+      "public_assets_js_elementor_jquery_migrate_min",
+      "public_assets_js_elementor_jquery_migrate_min_a",
+      "public_assets_js_elementor_jquery_migrate_min_c",
+      "public_assets_js_elementor_jquery_migrate_min_e",
+      "public_assets_js_elementor_jquery_migrate_min_i",
+      "public_assets_js_elementor_jquery_migrate_min_r",
+      "public_assets_js_elementor_jquery_migrate_min_t",
+      "public_assets_js_elementor_jquery_migrate_min_u",
+      "public_assets_js_elementor_jquery_migrate_min_x",
+      "public_assets_js_elementor_jquery_min",
+      "public_assets_js_elementor_jquery_min_a",
+      "public_assets_js_elementor_jquery_min_ae",
+      "public_assets_js_elementor_jquery_min_at",
+      "public_assets_js_elementor_jquery_min_b",
+      "public_assets_js_elementor_jquery_min_be",
+      "public_assets_js_elementor_jquery_min_c",
+      "public_assets_js_elementor_jquery_min_ct",
+      "public_assets_js_elementor_jquery_min_dt",
+      "public_assets_js_elementor_jquery_min_e",
+      "public_assets_js_elementor_jquery_min_ee",
+      "public_assets_js_elementor_jquery_min_f",
+      "public_assets_js_elementor_jquery_min_fe",
+      "public_assets_js_elementor_jquery_min_g",
+      "public_assets_js_elementor_jquery_min_ge",
+      "public_assets_js_elementor_jquery_min_gt",
+      "public_assets_js_elementor_jquery_min_he",
+      "public_assets_js_elementor_jquery_min_ht",
+      "public_assets_js_elementor_jquery_min_i",
+      "public_assets_js_elementor_jquery_min_ie",
+      "public_assets_js_elementor_jquery_min_it",
+      "public_assets_js_elementor_jquery_min_j",
+      "public_assets_js_elementor_jquery_min_k",
+      "public_assets_js_elementor_jquery_min_kt",
+      "public_assets_js_elementor_jquery_min_l",
+      "public_assets_js_elementor_jquery_min_le",
+      "public_assets_js_elementor_jquery_min_m",
+      "public_assets_js_elementor_jquery_min_n",
+      "public_assets_js_elementor_jquery_min_ne",
+      "public_assets_js_elementor_jquery_min_o",
+      "public_assets_js_elementor_jquery_min_ot",
+      "public_assets_js_elementor_jquery_min_p",
+      "public_assets_js_elementor_jquery_min_pt",
+      "public_assets_js_elementor_jquery_min_q",
+      "public_assets_js_elementor_jquery_min_qe",
+      "public_assets_js_elementor_jquery_min_re",
+      "public_assets_js_elementor_jquery_min_rt",
+      "public_assets_js_elementor_jquery_min_se",
+      "public_assets_js_elementor_jquery_min_t",
+      "public_assets_js_elementor_jquery_min_te",
+      "public_assets_js_elementor_jquery_min_tt",
+      "public_assets_js_elementor_jquery_min_u",
+      "public_assets_js_elementor_jquery_min_ut",
+      "public_assets_js_elementor_jquery_min_v",
+      "public_assets_js_elementor_jquery_min_vt",
+      "public_assets_js_elementor_jquery_min_vt_l",
+      "public_assets_js_elementor_jquery_min_w",
+      "public_assets_js_elementor_jquery_min_we",
+      "public_assets_js_elementor_jquery_min_x",
+      "public_assets_js_elementor_jquery_min_y",
+      "public_assets_js_elementor_jquery_min_ye",
+      "public_assets_js_elementor_jquery_min_yt",
+      "public_assets_js_elementor_jquery_min_z",
+      "public_assets_js_elementor_jquery_min_ze"
+    ],
+    "2": [
+      "app_controllers_basecontroller_basecontroller_render",
+      "app_core_app",
+      "app_core_app_app",
+      "app_core_app_app_boot",
+      "app_core_app_app_config",
+      "app_core_app_app_request",
+      "app_core_app_app_router",
+      "app_core_app_app_run",
+      "app_core_autoloader",
+      "app_core_autoloader_autoloader",
+      "app_core_autoloader_autoloader_addnamespace",
+      "app_core_autoloader_autoloader_loadclass",
+      "app_core_autoloader_autoloader_register",
+      "app_core_router",
+      "app_core_router_php_self",
+      "app_core_router_router",
+      "app_core_router_router_addroute",
+      "app_core_router_router_dispatch",
+      "app_core_router_router_get",
+      "app_core_router_router_post",
+      "app_helpers_asset",
+      "app_helpers_asset_asset",
+      "app_helpers_asset_asset_url",
+      "app_models_location",
+      "app_models_location_location",
+      "app_models_location_location_construct",
+      "app_models_location_location_fromarray",
+      "app_models_location_php_self",
+      "app_repositories_locationrepository",
+      "app_repositories_locationrepository_locationrepository",
+      "app_repositories_locationrepository_locationrepository_all",
+      "app_repositories_locationrepository_locationrepository_find",
+      "app_repositories_locationrepository_locationrepository_getprimary",
+      "app_services_seoservice",
+      "app_services_seoservice_seoservice",
+      "app_services_seoservice_seoservice_generatemeta",
+      "app_services_seoservice_seoservice_generaterestaurantschema"
+    ],
+    "3": [
+      "app_controllers_locationcontroller",
+      "app_controllers_locationcontroller_locationcontroller",
+      "app_controllers_locationcontroller_locationcontroller_index",
+      "app_controllers_locationcontroller_locationcontroller_submitinquiry",
+      "app_controllers_reservationcontroller",
+      "app_core_database",
+      "app_core_database_database",
+      "app_core_database_database_getconnection",
+      "app_core_database_php_pdo",
+      "app_helpers_validator",
+      "app_helpers_validator_validator",
+      "app_helpers_validator_validator_email",
+      "app_helpers_validator_validator_phone",
+      "app_helpers_validator_validator_sanitize",
+      "app_models_contactinquiry",
+      "app_models_contactinquiry_contactinquiry",
+      "app_models_contactinquiry_contactinquiry_construct",
+      "app_models_reservation",
+      "app_models_reservation_reservation",
+      "app_models_reservation_reservation_construct",
+      "app_repositories_leadrepository",
+      "app_repositories_leadrepository_leadrepository",
+      "app_repositories_leadrepository_leadrepository_construct",
+      "app_repositories_leadrepository_leadrepository_ensuretables",
+      "app_repositories_leadrepository_leadrepository_saveinquiry",
+      "app_repositories_leadrepository_leadrepository_savereservation",
+      "app_services_reservationservice",
+      "app_services_reservationservice_reservationservice",
+      "app_services_reservationservice_reservationservice_construct",
+      "app_services_reservationservice_reservationservice_createreservation",
+      "pdo",
+      "pdoexception"
+    ],
+    "4": [
+      "old_website_data_scripts_process_and_download",
+      "old_website_data_scripts_process_and_download_apollostate",
+      "old_website_data_scripts_process_and_download_assets_dir",
+      "old_website_data_scripts_process_and_download_assetstodownload",
+      "old_website_data_scripts_process_and_download_brandandtheme",
+      "old_website_data_scripts_process_and_download_concorddata",
+      "old_website_data_scripts_process_and_download_data_dir",
+      "old_website_data_scripts_process_and_download_downloadfile",
+      "old_website_data_scripts_process_and_download_dublindata",
+      "old_website_data_scripts_process_and_download_fs",
+      "old_website_data_scripts_process_and_download_https",
+      "old_website_data_scripts_process_and_download_livermoredata",
+      "old_website_data_scripts_process_and_download_locationentities",
+      "old_website_data_scripts_process_and_download_locations",
+      "old_website_data_scripts_process_and_download_menusbylocation",
+      "old_website_data_scripts_process_and_download_milpitasdata",
+      "old_website_data_scripts_process_and_download_pagescontent",
+      "old_website_data_scripts_process_and_download_path",
+      "old_website_data_scripts_process_and_download_root_dir",
+      "old_website_data_scripts_process_and_download_rundownloads",
+      "old_website_data_scripts_process_and_download_totalunifieditems",
+      "old_website_data_scripts_process_and_download_unifiedcategories",
+      "old_website_data_scripts_process_and_download_unifiedmenu"
+    ],
+    "5": [
+      "public_assets_js_khufus_core",
+      "public_assets_js_khufus_core_init3dgallery",
+      "public_assets_js_khufus_core_init3dgallery_render",
+      "public_assets_js_khufus_core_init3dgallery_updateitems",
+      "public_assets_js_khufus_core_initbistroaccordion",
+      "public_assets_js_khufus_core_initfaqaccordion",
+      "public_assets_js_khufus_core_initheader",
+      "public_assets_js_khufus_core_initlottiemenu",
+      "public_assets_js_khufus_core_initmenutabs",
+      "public_assets_js_khufus_core_initparallax",
+      "public_assets_js_khufus_core_initparallax_onscroll",
+      "public_assets_js_khufus_core_initpolaroidslider",
+      "public_assets_js_khufus_core_initpolaroidslider_showslide",
+      "public_assets_js_khufus_core_initpreloader",
+      "public_assets_js_khufus_core_initpreloader_dismissintro",
+      "public_assets_js_khufus_core_initrecognitiondeck",
+      "public_assets_js_khufus_core_initrecognitiondeck_applyorder",
+      "public_assets_js_khufus_core_initrecognitiondeck_applyslot",
+      "public_assets_js_khufus_core_initrecognitiondeck_getslots",
+      "public_assets_js_khufus_core_initrecognitiondeck_gonext",
+      "public_assets_js_khufus_core_initrecognitiondeck_updatecounter",
+      "public_assets_js_khufus_core_initreservedropdown",
+      "public_assets_js_khufus_core_initscrollreveals"
+    ],
+    "6": [
+      "doc:PRODUCTION_DEPLOYMENT_AI_GUIDE.md",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#1. Force HTTPS and canonical non-www dom",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#2. Whitelist static assets & metadata fi",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#3. Protect sensitive files from direct b",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#4. Universal clean URL routing to index.",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#A. Web Server Gateway (`public_html/.hta",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#B. Environment Configuration (`public_ht",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Daily Automated MySQL Database Dump at 2",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Disable directory browsing",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Hourly Google Ads offline conversion upl",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#In `<head>` of `includes/header.php` (BE",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Lead Attribution Deduplication on Forms ",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#Project: Biryani Spot Chennai Dosa",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\u23f0 6. Server Crontab Automations",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\u2699\ufe0f 2. Core Server Configuration Files",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83c\udf6a 4. Privacy, Google Consent Mode v2 & A",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83c\udfaf High-Level Deployment Goals",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\udcc1 1. Standard Server Directory Structure",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\uddc4\ufe0f 3. Database Engine & Schema Migration",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\ude80 AI Instruction Manual: Enterprise PHP ",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83d\udee1\ufe0f 5. Lead Qualification & Spam Protecti",
+      "section:PRODUCTION_DEPLOYMENT_AI_GUIDE.md#\ud83e\uddea 7. Post-Deployment Verification Protoc"
+    ],
+    "7": [
+      "public_assets_js_elementor_frontend_min",
+      "public_assets_js_elementor_frontend_min_2121",
+      "public_assets_js_elementor_frontend_min_2258",
+      "public_assets_js_elementor_frontend_min_2450",
+      "public_assets_js_elementor_frontend_min_2647",
+      "public_assets_js_elementor_frontend_min_3039",
+      "public_assets_js_elementor_frontend_min_3268",
+      "public_assets_js_elementor_frontend_min_3323",
+      "public_assets_js_elementor_frontend_min_3e3",
+      "public_assets_js_elementor_frontend_min_4409",
+      "public_assets_js_elementor_frontend_min_4906",
+      "public_assets_js_elementor_frontend_min_4992",
+      "public_assets_js_elementor_frontend_min_5481",
+      "public_assets_js_elementor_frontend_min_6275",
+      "public_assets_js_elementor_frontend_min_6550",
+      "public_assets_js_elementor_frontend_min_6784",
+      "public_assets_js_elementor_frontend_min_739",
+      "public_assets_js_elementor_frontend_min_7937",
+      "public_assets_js_elementor_frontend_min_8098",
+      "public_assets_js_elementor_frontend_min_820"
+    ],
+    "8": [
+      "app_models_menuitem",
+      "app_models_menuitem_menuitem",
+      "app_models_menuitem_menuitem_construct",
+      "app_models_menuitem_menuitem_fromarray",
+      "app_models_menuitem_php_self",
+      "app_repositories_menurepository",
+      "app_repositories_menurepository_menurepository",
+      "app_repositories_menurepository_menurepository_all",
+      "app_repositories_menurepository_menurepository_filterbycategory",
+      "app_repositories_menurepository_menurepository_getcategories",
+      "app_services_menuservice",
+      "app_services_menuservice_menuservice",
+      "app_services_menuservice_menuservice_construct",
+      "app_services_menuservice_menuservice_getcategories",
+      "app_services_menuservice_menuservice_getmenubycategory",
+      "app_services_menuservice_menuservice_getunifiedmenu"
+    ],
+    "9": [
+      "app_controllers_aboutcontroller",
+      "app_controllers_aboutcontroller_aboutcontroller",
+      "app_controllers_aboutcontroller_aboutcontroller_index",
+      "app_controllers_basecontroller_basecontroller",
+      "app_controllers_basecontroller_basecontroller_json",
+      "app_controllers_bistrocontroller",
+      "app_controllers_bistrocontroller_bistrocontroller",
+      "app_controllers_bistrocontroller_bistrocontroller_index",
+      "app_controllers_homecontroller",
+      "app_controllers_homecontroller_homecontroller",
+      "app_controllers_homecontroller_homecontroller_index",
+      "app_controllers_legacycontroller",
+      "app_controllers_legacycontroller_legacycontroller",
+      "app_controllers_legacycontroller_legacycontroller_index",
+      "public_index"
+    ],
+    "10": [
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_getstretchactivevalue",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_getstretchcontainer",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_getstretchedclass",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_getstretchelementconfig",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_getstretchelementforconfig",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_getstretchsettingname",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_initstretch",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_isactive",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_isstretchsettingenabled",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_onelementchange",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_oninit",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_onkitchangestretchcontainerchange",
+      "public_assets_js_elementor_frontend_modules_min_stretchedelement_stretch"
+    ],
+    "11": [
+      "public_assets_js_elementor_frontend_modules_min_argsobject",
+      "public_assets_js_elementor_frontend_modules_min_argsobject_constructor",
+      "public_assets_js_elementor_frontend_modules_min_argsobject_getinstancetype",
+      "public_assets_js_elementor_frontend_modules_min_argsobject_requireargument",
+      "public_assets_js_elementor_frontend_modules_min_argsobject_requireargumentconstructor",
+      "public_assets_js_elementor_frontend_modules_min_argsobject_requireargumentinstance",
+      "public_assets_js_elementor_frontend_modules_min_argsobject_requireargumenttype",
+      "public_assets_js_elementor_frontend_modules_min_forcemethodimplementation",
+      "public_assets_js_elementor_frontend_modules_min_forcemethodimplementation_constructor",
+      "public_assets_js_elementor_frontend_modules_min_instancetype",
+      "public_assets_js_elementor_frontend_modules_min_instancetype_constructor",
+      "public_assets_js_elementor_frontend_modules_min_instancetype_getinstancetype",
+      "public_assets_js_elementor_frontend_modules_min_instancetype_symbol_hasinstance"
+    ],
+    "12": [
+      "scratch_deep_organize_assets",
+      "scratch_deep_organize_assets_dataset",
+      "scratch_deep_organize_assets_downloadimage",
+      "scratch_deep_organize_assets_fs",
+      "scratch_deep_organize_assets_globalseenurls",
+      "scratch_deep_organize_assets_https",
+      "scratch_deep_organize_assets_milpitasphotos",
+      "scratch_deep_organize_assets_output_base",
+      "scratch_deep_organize_assets_path",
+      "scratch_deep_organize_assets_run",
+      "scratch_deep_organize_assets_step103",
+      "scratch_deep_organize_assets_step109",
+      "scratch_deep_organize_assets_step117"
+    ],
+    "13": [
+      "app_core_request",
+      "app_core_request_request",
+      "app_core_request_request_construct",
+      "app_core_request_request_getbody",
+      "app_core_request_request_getmethod",
+      "app_core_request_request_getquery",
+      "app_core_request_request_geturi",
+      "app_core_request_request_isajax",
+      "app_core_request_request_ispost",
+      "app_core_request_request_sanitize",
+      "app_middleware_middlewareinterface",
+      "app_middleware_middlewareinterface_handle"
+    ],
+    "14": [
+      "doc:FEATURES_AND_REQUIREMENTS.md",
+      "section:FEATURES_AND_REQUIREMENTS.md#1. Primary Objectives",
+      "section:FEATURES_AND_REQUIREMENTS.md#2. Core Pages & Feature Specifications",
+      "section:FEATURES_AND_REQUIREMENTS.md#3. User Journeys",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf5b 4. Catering & Events Page (`/catering`",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf7d\ufe0f 2. Interactive Menu Page (`/menu` & `",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udf81 6. Gift Cards Page (`/gift-cards`)",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83c\udfe0 1. Home Page (`/`)",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udccb FEATURES & PRODUCT REQUIREMENTS (PRD)",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udccd 3. Locations & Hours Page (`/locations",
+      "section:FEATURES_AND_REQUIREMENTS.md#\ud83d\udcde 5. Contact & Feedback Page (`/contact`"
+    ],
+    "15": [
+      "doc:PERSONA.md",
+      "section:PERSONA.md#1. Brand Identity & Overview",
+      "section:PERSONA.md#2. Brand Voice, Tone & Messaging",
+      "section:PERSONA.md#3. Target Audience & Customer Personas",
+      "section:PERSONA.md#4. Restaurant Locations & Operational In",
+      "section:PERSONA.md#5. Payment Methods & Services Accepted",
+      "section:PERSONA.md#Location 1: Dublin",
+      "section:PERSONA.md#Location 2: Milpitas",
+      "section:PERSONA.md#Location 3: Livermore",
+      "section:PERSONA.md#Location 4: Concord (Chennai Dosa Expres",
+      "section:PERSONA.md#\ud83d\udc64 PERSONA & PRODUCT CONTEXT"
+    ],
+    "16": [
+      "scratch_build_authentic_menu",
+      "scratch_build_authentic_menu_booksjsonescaped",
+      "scratch_build_authentic_menu_featureditems",
+      "scratch_build_authentic_menu_featuredjsonescaped",
+      "scratch_build_authentic_menu_fs",
+      "scratch_build_authentic_menu_menu_view_path",
+      "scratch_build_authentic_menu_menubooks",
+      "scratch_build_authentic_menu_menuviewcontent",
+      "scratch_build_authentic_menu_path",
+      "scratch_build_authentic_menu_rawunified",
+      "scratch_build_authentic_menu_unified_menu_path"
+    ],
+    "17": [
+      "app_controllers_basecontroller",
+      "app_core_response",
+      "app_core_response_response",
+      "app_core_response_response_html",
+      "app_core_response_response_json",
+      "app_core_response_response_redirect",
+      "app_core_view",
+      "app_core_view_view",
+      "app_core_view_view_render",
+      "app_core_view_view_setviewspath"
+    ],
+    "18": [
+      "scratch_transform_all_views",
+      "scratch_transform_all_views_footerpath",
+      "scratch_transform_all_views_fs",
+      "scratch_transform_all_views_headerpath",
+      "scratch_transform_all_views_homepath",
+      "scratch_transform_all_views_locpath",
+      "scratch_transform_all_views_path",
+      "scratch_transform_all_views_respath",
+      "scratch_transform_all_views_updatefile",
+      "scratch_transform_all_views_views_dir"
+    ],
+    "19": [
+      "scratch_fix_why_section_gradient",
+      "scratch_fix_why_section_gradient_fs",
+      "scratch_fix_why_section_gradient_home_view",
+      "scratch_fix_why_section_gradient_homecontent",
+      "scratch_fix_why_section_gradient_khufus_theme_css",
+      "scratch_fix_why_section_gradient_path",
+      "scratch_fix_why_section_gradient_post_1536_css",
+      "scratch_fix_why_section_gradient_postcss",
+      "scratch_fix_why_section_gradient_themecss"
+    ],
+    "20": [
+      "scratch_separate_drawer_partial",
+      "scratch_separate_drawer_partial_drawer_path",
+      "scratch_separate_drawer_partial_footer_path",
+      "scratch_separate_drawer_partial_footercontent",
+      "scratch_separate_drawer_partial_fs",
+      "scratch_separate_drawer_partial_header_path",
+      "scratch_separate_drawer_partial_headercontent",
+      "scratch_separate_drawer_partial_headerendidx",
+      "scratch_separate_drawer_partial_path"
+    ],
+    "21": [
+      "scratch_transform_remaining_views",
+      "scratch_transform_remaining_views_aboutpath",
+      "scratch_transform_remaining_views_exppath",
+      "scratch_transform_remaining_views_fs",
+      "scratch_transform_remaining_views_gallerypath",
+      "scratch_transform_remaining_views_legpath",
+      "scratch_transform_remaining_views_path",
+      "scratch_transform_remaining_views_updatefile",
+      "scratch_transform_remaining_views_views_dir"
+    ],
+    "22": [
+      "app_middleware_csrfprotection",
+      "app_middleware_csrfprotection_csrfprotection",
+      "app_middleware_csrfprotection_csrfprotection_gettoken",
+      "app_middleware_csrfprotection_csrfprotection_handle",
+      "app_middleware_securityheaders",
+      "app_middleware_securityheaders_securityheaders",
+      "app_middleware_securityheaders_securityheaders_handle",
+      "middlewareinterface"
+    ],
+    "23": [
+      "doc:MEMORY.md",
+      "section:MEMORY.md#Session 1 \u2014 August 31, 2026",
+      "section:MEMORY.md#\ud83c\udfaf 5. Immediate Next Steps & Backlog",
+      "section:MEMORY.md#\ud83d\udcc2 3. Sources of Truth & Project Map",
+      "section:MEMORY.md#\ud83d\udccc 1. Project Overview & Fundamental Cont",
+      "section:MEMORY.md#\ud83d\udcdc 4. Chronological Session History",
+      "section:MEMORY.md#\ud83d\udee0\ufe0f 2. Core Technical Decisions & Archite",
+      "section:MEMORY.md#\ud83e\udde0 AI Long-Term Memory & Context Ledger"
+    ],
+    "24": [
+      "scratch_download_google_maps_assets",
+      "scratch_download_google_maps_assets_downloadimage",
+      "scratch_download_google_maps_assets_fs",
+      "scratch_download_google_maps_assets_https",
+      "scratch_download_google_maps_assets_locationsdata",
+      "scratch_download_google_maps_assets_main",
+      "scratch_download_google_maps_assets_output_base",
+      "scratch_download_google_maps_assets_path"
+    ],
+    "25": [
+      "scratch_finalize_section_03_gradient",
+      "scratch_finalize_section_03_gradient_fs",
+      "scratch_finalize_section_03_gradient_home_view",
+      "scratch_finalize_section_03_gradient_homecontent",
+      "scratch_finalize_section_03_gradient_khufus_theme_css",
+      "scratch_finalize_section_03_gradient_path",
+      "scratch_finalize_section_03_gradient_post_1536_css",
+      "scratch_finalize_section_03_gradient_themecss"
+    ],
+    "26": [
+      "scratch_fix_section_03_recognition",
+      "scratch_fix_section_03_recognition_content",
+      "scratch_fix_section_03_recognition_fs",
+      "scratch_fix_section_03_recognition_home_view",
+      "scratch_fix_section_03_recognition_khufus_theme_css",
+      "scratch_fix_section_03_recognition_path",
+      "scratch_fix_section_03_recognition_post_1536_css",
+      "scratch_fix_section_03_recognition_postcss"
+    ],
+    "27": [
+      "doc:TECH_STACK.md",
+      "section:TECH_STACK.md#1. Core Framework & Technologies",
+      "section:TECH_STACK.md#2. Directory Structure Conventions",
+      "section:TECH_STACK.md#3. Database Architecture (MySQL)",
+      "section:TECH_STACK.md#4. Security & Performance Best Practices",
+      "section:TECH_STACK.md#Key Relational Tables:",
+      "section:TECH_STACK.md#\ud83d\udee0\ufe0f TECH STACK & SYSTEM ARCHITECTURE (PHP"
+    ],
+    "28": [
+      "public_assets_js_elementor_frontend_modules_min_default",
+      "public_assets_js_elementor_frontend_modules_min_default_getdefaultelements",
+      "public_assets_js_elementor_frontend_modules_min_default_getdefaultsettings",
+      "public_assets_js_elementor_frontend_modules_min_default_getdocumentsettings",
+      "public_assets_js_elementor_frontend_modules_min_default_oninit",
+      "public_assets_js_elementor_frontend_modules_min_default_onsettingschange",
+      "public_assets_js_elementor_frontend_modules_min_default_runelementshandlers"
+    ],
+    "29": [
+      "doc:AI_RULES.md",
+      "section:AI_RULES.md#1. Core Principles",
+      "section:AI_RULES.md#2. Component Design & Styling Rules",
+      "section:AI_RULES.md#3. Data & State Management Guidelines",
+      "section:AI_RULES.md#4. What NOT to Do \ud83d\udeab",
+      "section:AI_RULES.md#\ud83e\udd16 AI CODING STANDARDS & WORKFLOW RULES ("
+    ],
+    "30": [
+      "scratch_update_reservations_faq",
+      "scratch_update_reservations_faq_content",
+      "scratch_update_reservations_faq_fs",
+      "scratch_update_reservations_faq_oldfaqgrid",
+      "scratch_update_reservations_faq_path",
+      "scratch_update_reservations_faq_res_path"
+    ],
+    "31": [
+      "app_controllers_menucontroller",
+      "app_controllers_menucontroller_menucontroller",
+      "app_controllers_menucontroller_menucontroller_api",
+      "app_controllers_menucontroller_menucontroller_construct",
+      "app_controllers_menucontroller_menucontroller_index"
+    ],
+    "32": [
+      "doc:DEVELOPMENT_TRACKER.md",
+      "section:DEVELOPMENT_TRACKER.md#\ud83d\udcc2 Project Directory Structure",
+      "section:DEVELOPMENT_TRACKER.md#\ud83d\udcc8 Development Roadmap & Status",
+      "section:DEVELOPMENT_TRACKER.md#\ud83d\udccb Biryani Spot Chennai Dosa \u2014 AI Develop",
+      "section:DEVELOPMENT_TRACKER.md#\ud83e\udded Quick Context for AI Agents & Develope"
+    ],
+    "33": [
+      "scratch_clean_header_duplicates",
+      "scratch_clean_header_duplicates_content",
+      "scratch_clean_header_duplicates_fs",
+      "scratch_clean_header_duplicates_header_path",
+      "scratch_clean_header_duplicates_path"
+    ],
+    "34": [
+      "scratch_finalize_header_drawer",
+      "scratch_finalize_header_drawer_content",
+      "scratch_finalize_header_drawer_fs",
+      "scratch_finalize_header_drawer_header_view",
+      "scratch_finalize_header_drawer_path"
+    ],
+    "35": [
+      "scratch_fix_drawer_card2_photo",
+      "scratch_fix_drawer_card2_photo_content",
+      "scratch_fix_drawer_card2_photo_fs",
+      "scratch_fix_drawer_card2_photo_header_view",
+      "scratch_fix_drawer_card2_photo_path"
+    ],
+    "36": [
+      "scratch_fix_drawer_idempotent",
+      "scratch_fix_drawer_idempotent_content",
+      "scratch_fix_drawer_idempotent_drawer_path",
+      "scratch_fix_drawer_idempotent_fs",
+      "scratch_fix_drawer_idempotent_path"
+    ],
+    "37": [
+      "scratch_fix_drawer_timing",
+      "scratch_fix_drawer_timing_content",
+      "scratch_fix_drawer_timing_fs",
+      "scratch_fix_drawer_timing_header_view",
+      "scratch_fix_drawer_timing_path"
+    ],
+    "38": [
+      "scratch_fix_header_drawer",
+      "scratch_fix_header_drawer_content",
+      "scratch_fix_header_drawer_fs",
+      "scratch_fix_header_drawer_header_view",
+      "scratch_fix_header_drawer_path"
+    ],
+    "39": [
+      "scratch_fix_khufus_core_lottie",
+      "scratch_fix_khufus_core_lottie_content",
+      "scratch_fix_khufus_core_lottie_core_path",
+      "scratch_fix_khufus_core_lottie_fs",
+      "scratch_fix_khufus_core_lottie_path"
+    ],
+    "40": [
+      "scratch_fix_lottie_inner",
+      "scratch_fix_lottie_inner_content",
+      "scratch_fix_lottie_inner_drawer_path",
+      "scratch_fix_lottie_inner_fs",
+      "scratch_fix_lottie_inner_path"
+    ],
+    "41": [
+      "scratch_generate_ornaments",
+      "scratch_generate_ornaments_fs",
+      "scratch_generate_ornaments_images_dir",
+      "scratch_generate_ornaments_ornaments_dir",
+      "scratch_generate_ornaments_path"
+    ],
+    "42": [
+      "scratch_update_drawer_visibility",
+      "scratch_update_drawer_visibility_content",
+      "scratch_update_drawer_visibility_drawer_path",
+      "scratch_update_drawer_visibility_fs",
+      "scratch_update_drawer_visibility_path"
+    ],
+    "43": [
+      "scratch_update_exp_slider_and_gradient",
+      "scratch_update_exp_slider_and_gradient_content",
+      "scratch_update_exp_slider_and_gradient_fs",
+      "scratch_update_exp_slider_and_gradient_home_view",
+      "scratch_update_exp_slider_and_gradient_path"
+    ],
+    "44": [
+      "scratch_update_home_hero",
+      "scratch_update_home_hero_content",
+      "scratch_update_home_hero_fs",
+      "scratch_update_home_hero_home_view_path",
+      "scratch_update_home_hero_path"
+    ],
+    "45": [
+      "scratch_update_menu_ssr",
+      "scratch_update_menu_ssr_content",
+      "scratch_update_menu_ssr_fs",
+      "scratch_update_menu_ssr_menu_view_path",
+      "scratch_update_menu_ssr_path"
+    ],
+    "46": [
+      "scratch_update_why_triad_photos",
+      "scratch_update_why_triad_photos_content",
+      "scratch_update_why_triad_photos_fs",
+      "scratch_update_why_triad_photos_home_view",
+      "scratch_update_why_triad_photos_path"
+    ],
+    "47": [
+      "app_controllers_reservationcontroller_reservationcontroller",
+      "app_controllers_reservationcontroller_reservationcontroller_construct",
+      "app_controllers_reservationcontroller_reservationcontroller_index",
+      "app_controllers_reservationcontroller_reservationcontroller_store"
+    ],
+    "48": [
+      "app_helpers_str",
+      "app_helpers_str_str",
+      "app_helpers_str_str_limit",
+      "app_helpers_str_str_slug"
+    ],
+    "49": [
+      "scratch_update_memory_master",
+      "scratch_update_memory_master_fs",
+      "scratch_update_memory_master_memory_path",
+      "scratch_update_memory_master_path"
+    ],
+    "50": [
+      "app_controllers_experiencecontroller",
+      "app_controllers_experiencecontroller_experiencecontroller",
+      "app_controllers_experiencecontroller_experiencecontroller_index"
+    ],
+    "51": [
+      "app_controllers_gallerycontroller",
+      "app_controllers_gallerycontroller_gallerycontroller",
+      "app_controllers_gallerycontroller_gallerycontroller_index"
+    ],
+    "52": [
+      "scratch_build_views",
+      "scratch_build_views_download_and_replace_assets",
+      "scratch_build_views_extract_body_elementor"
+    ],
+    "53": [
+      "doc:VISUAL_GUIDELINES.md",
+      "section:VISUAL_GUIDELINES.md#\ud83c\udfa8 VISUAL GUIDELINES & DESIGN SYSTEM"
+    ],
+    "54": [
+      "public_assets_js_elementor_webpack_pro_runtime_min",
+      "public_assets_js_elementor_webpack_pro_runtime_min_webpack_require"
+    ],
+    "55": [
+      "public_assets_js_elementor_webpack_runtime_min",
+      "public_assets_js_elementor_webpack_runtime_min_webpack_require"
+    ],
+    "56": [
+      "scratch_build_clean",
+      "scratch_build_clean_download_and_replace_assets"
+    ],
+    "57": [
+      "app_views_about_index"
+    ],
+    "58": [
+      "app_views_bistro_index"
+    ],
+    "59": [
+      "app_views_experience_index"
+    ],
+    "60": [
+      "app_views_gallery_index"
+    ],
+    "61": [
+      "app_views_home_index"
+    ],
+    "62": [
+      "app_views_layouts_drawer"
+    ],
+    "63": [
+      "app_views_layouts_footer"
+    ],
+    "64": [
+      "app_views_layouts_header"
+    ],
+    "65": [
+      "app_views_legacy_index"
+    ],
+    "66": [
+      "app_views_locations_index"
+    ],
+    "67": [
+      "app_views_menu_index"
+    ],
+    "68": [
+      "app_views_reservations_index"
+    ],
+    "69": [
+      "config_app"
+    ],
+    "70": [
+      "config_database"
+    ],
+    "71": [
+      "config_locations"
+    ],
+    "72": [
+      "config_seo"
+    ]
+  },
+  "cohesion": {
+    "0": 0.052917232021709636,
+    "1": 0.07168458781362007,
+    "2": 0.07057057057057058,
+    "3": 0.09274193548387097,
+    "4": 0.09090909090909091,
+    "5": 0.1067193675889328,
+    "6": 0.09090909090909091,
+    "7": 0.1,
+    "8": 0.15,
+    "9": 0.1619047619047619,
+    "10": 0.3076923076923077,
+    "11": 0.19230769230769232,
+    "12": 0.16666666666666666,
+    "13": 0.18181818181818182,
+    "14": 0.18181818181818182,
+    "15": 0.18181818181818182,
+    "16": 0.18181818181818182,
+    "17": 0.2,
+    "18": 0.2,
+    "19": 0.2222222222222222,
+    "20": 0.2222222222222222,
+    "21": 0.2222222222222222,
+    "22": 0.25,
+    "23": 0.25,
+    "24": 0.2857142857142857,
+    "25": 0.25,
+    "26": 0.25,
+    "27": 0.2857142857142857,
+    "28": 0.3333333333333333,
+    "29": 0.3333333333333333,
+    "30": 0.3333333333333333,
+    "31": 0.4,
+    "32": 0.4,
+    "33": 0.4,
+    "34": 0.4,
+    "35": 0.4,
+    "36": 0.4,
+    "37": 0.4,
+    "38": 0.4,
+    "39": 0.4,
+    "40": 0.4,
+    "41": 0.4,
+    "42": 0.4,
+    "43": 0.4,
+    "44": 0.4,
+    "45": 0.4,
+    "46": 0.4,
+    "47": 0.5,
+    "48": 0.5,
+    "49": 0.5,
+    "50": 0.6666666666666666,
+    "51": 0.6666666666666666,
+    "52": 0.6666666666666666,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_core_request_request",
+      "label": "Request",
+      "degree": 40
+    },
+    {
+      "id": "public_assets_js_elementor_frontend_modules_min_carouselhandlerbase",
+      "label": "CarouselHandlerBase",
+      "degree": 25
+    },
+    {
+      "id": "app_core_app_app",
+      "label": "App",
+      "degree": 16
+    },
+    {
+      "id": "public_assets_js_elementor_frontend_modules_min_stretchedelement",
+      "label": "StretchedElement",
+      "degree": 16
+    },
+    {
+      "id": "public_assets_js_elementor_jquery_min_e",
+      "label": "$e()",
+      "degree": 13
+    },
+    {
+      "id": "app_controllers_basecontroller_basecontroller",
+      "label": "BaseController",
+      "degree": 12
+    },
+    {
+      "id": "public_assets_js_elementor_jquery_min_re",
+      "label": "re()",
+      "degree": 12
+    },
+    {
+      "id": "app_repositories_leadrepository_leadrepository",
+      "label": "LeadRepository",
+      "degree": 10
+    },
+    {
+      "id": "public_assets_js_elementor_frontend_modules_min_getelementsettings",
+      "label": "getElementSettings()",
+      "degree": 10
+    },
+    {
+      "id": "public_assets_js_elementor_jquery_min_ne",
+      "label": "ne()",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ExperienceController",
+      "target": "BaseController",
+      "source_files": [
+        "app/Controllers/ExperienceController.php",
+        "app/Controllers/BaseController.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "GalleryController",
+      "target": "BaseController",
+      "source_files": [
+        "app/Controllers/GalleryController.php",
+        "app/Controllers/BaseController.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "LocationController",
+      "target": "BaseController",
+      "source_files": [
+        "app/Controllers/LocationController.php",
+        "app/Controllers/BaseController.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "MenuController",
+      "target": "BaseController",
+      "source_files": [
+        "app/Controllers/MenuController.php",
+        "app/Controllers/BaseController.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ReservationController",
+      "target": "BaseController",
+      "source_files": [
+        "app/Controllers/ReservationController.php",
+        "app/Controllers/BaseController.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

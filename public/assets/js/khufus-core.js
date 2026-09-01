@@ -48,19 +48,10 @@ function initPreloader() {
 }
 
 /* --------------------------------------------------------------------------
-   2. HEADER CONTROLLER
+   2. HEADER CONTROLLER (HERO TOP ONLY - NO SCROLL FOLLOWING)
    -------------------------------------------------------------------------- */
 function initHeader() {
-  const header = document.querySelector(".khf-header");
-  if (!header) return;
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-      header.classList.add("is-scrolled");
-    } else {
-      header.classList.remove("is-scrolled");
-    }
-  }, { passive: true });
+  // Header stays at the top of the hero section only and does not follow on scroll
 }
 
 /* --------------------------------------------------------------------------
@@ -363,33 +354,33 @@ function initPolaroidSlider() {
   const slides = [
     {
       number: "05",
-      kicker: "Meet The Chef",
-      headline: "Meet Chef Mostafa Seif",
-      script: "Innovation Meets Tradition",
-      text: "Winner of Top Chef Middle East 2018 and recipient of Two Knives at The Best Chef Awards 2025, Chef Mostafa Seif is renowned for crafting elevated culinary masterpieces rooted in generational heritage.",
-      note: "Together with our team, Chef Mostafa shapes dining experiences driven by discipline, creativity, and deep passion.",
-      image: "/assets/images/polaroid-chef.webp",
-      photoTitle: "Chef Mostafa Seif"
+      kicker: "Culinary Heritage",
+      headline: "The Dum Pukht Tradition",
+      script: "Slow-Steamed Perfection",
+      text: "Every handi of our Hyderabadi Dum Biryani is layered with fragrant aged basmati, tender marinated halal meat, saffron-infused milk, and caramelized onions, slow-steamed under a sealed dough crust to lock in aroma and flavor.",
+      note: "A celebrated royal recipe passed down through generations, crafted daily across Dublin, Milpitas, Livermore, and Concord.",
+      image: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_creamy_butter_chicken_delight.jpg",
+      photoTitle: "Hyderabadi Dum Biryani"
     },
     {
       number: "06",
-      kicker: "Our Visionary",
-      headline: "Giovanni Bolandrini",
-      script: "Style, Vision, Hospitality",
-      text: "Born and raised in Italy, Giovanni Bolandrini brings an auteur’s eye to luxury hospitality, curating environments where architecture, light, and cuisine coalesce into lasting impressions.",
-      note: "Recognized among leading pioneers in modern dining, Giovanni continues to guide our spaces with clarity and restraint.",
-      image: "/assets/images/polaroid-visionary.webp",
-      photoTitle: "Giovanni Bolandrini"
+      kicker: "Tiffin Artistry",
+      headline: "Stone-Ground Dosa Craft",
+      script: "Golden, Crisp & Pure Ghee",
+      text: "Our authentic Chennai dosa batter is stone-ground from premium lentils and rice, then naturally fermented for 18 hours. Ladled paper-thin onto scorching cast-iron tawas and roasted with pure ghee for an unbeatable crunch.",
+      note: "Served steaming hot with freshly ground coconut chutney, spicy tomato chutney, and rich vegetable sambar.",
+      image: "/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg",
+      photoTitle: "Crispy Chennai Dosa"
     },
     {
       number: "07",
-      kicker: "Hospitality Culture",
-      headline: "Presence, Not Performance",
-      script: "A Practiced Rhythm",
-      text: "Behind the atmosphere is a team shaped by discipline, quiet attention, and an unforced sense of hospitality that welcomes every guest into a calm sanctuary.",
-      note: "What guests remember is not just a single course, but the lingering consistency of how the entire evening felt.",
-      image: "/assets/images/polaroid-team.webp",
-      photoTitle: "The Team"
+      kicker: "Our Story",
+      headline: "Warmth, Spice & Family",
+      script: "4 Bay Area Locations",
+      text: "Founded on a passion for honest, authentic Indian flavors, Biryani Spot Chennai Dosa has become a beloved gathering place across the Bay Area for families, friends, and food enthusiasts.",
+      note: "From daily comfort lunches to grand weekend celebrations, every guest is welcomed with heartfelt Indian hospitality.",
+      image: "/assets/images/google_maps/milpitas/store_interior_and_vibe/milpitas_restaurant_main_dining_hall_booths.jpg",
+      photoTitle: "Warm Dining Ambiance"
     }
   ];
 
@@ -411,7 +402,7 @@ function initPolaroidSlider() {
     currentIndex = index;
     const slide = slides[currentIndex];
 
-    if (photoLayer) photoLayer.style.backgroundImage = `url('${slide.image}')`;
+    if (photoLayer) photoLayer.style.backgroundImage = slide.image ? `url('${slide.image}')` : 'none';
     if (photoTitle) photoTitle.textContent = slide.photoTitle;
     if (numberEl) numberEl.textContent = slide.number;
     if (kickerEl) kickerEl.textContent = slide.kicker;

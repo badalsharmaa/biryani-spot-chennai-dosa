@@ -3221,16 +3221,14 @@ KHUFUS — EXPERIENCE HERO (ALIGNED WITH ABOUT)
   background:
   linear-gradient(
     180deg,
-    rgba(20,15,10,.35) 0%,
-    rgba(40,30,20,.55) 25%,
-    rgba(60,45,30,.75) 50%,
-    rgba(80,60,40,.92) 75%,
-    rgba(92,71,43,1) 100%
+    rgba(20,10,5,.35) 0%,
+    rgba(20,10,5,.55) 25%,
+    rgba(30,15,10,.75) 50%,
+    rgba(30,18,12,.90) 75%,
+    rgba(30,18,12,1) 100%
   ),
-  url("/assets/images/Legacy-Image.webp")
+  url("/assets/ai_ganerated/images/lagacy_page_hero_section.png")
   center center / cover no-repeat;
-
-  filter:grayscale(60%);
 }
 
 

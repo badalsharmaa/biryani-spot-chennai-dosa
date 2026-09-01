@@ -134,14 +134,45 @@ All pages run locally via `php -S 127.0.0.1:8899 -t public` and are verified wit
 - Fixed unclosed `<div>` nesting in `header.php` to permanently eliminate blank screen issues.
 - Removed all legacy WordPress/Elementor runtime JS engines (`elementorProFrontend`, `elementor-pro-frontend.min.js`, `webpack-pro.runtime.min.js`).
 
+### Session 11 (Hero Video, Full-Color Assets, White Backgrounds & Polaroid Story Fixes)
+- **Hero Background Video**: Replaced legacy placeholder video links with native local video [`/assets/ai_ganerated/video/video1.mp4`](./public/assets/ai_ganerated/video/video1.mp4) across desktop, tablet, and mobile viewports.
+- **Background Color Unification (`#FFFFFF`)**: Replaced all legacy `#F8F4EE` / `#F6F1EA` / `#FAF7F2` / `#F4EFEA` beige backgrounds across Section 4 (`.khx-gallery`), Section 5 (`.monarq-polaroid-slider-v2`), and Section 6 (`.kh-home-story-sec`) with pure `#FFFFFF` in both `khufus-theme.css` and `home/index.php`.
+- **Polaroid Slider Overhaul (`#monarqPolaroidSliderV2`)**:
+  - Overhauled both `khufus-core.js` and `home/index.php` slider controllers to eliminate old Khufu's Chef text.
+  - Linked authentic, distinct Google Maps photography for all 3 slides with zero image repetition:
+    - **05 CULINARY HERITAGE**: *The Dum Pukht Tradition* (`dublin_creamy_butter_chicken_delight.jpg` - steaming dum biryani handi).
+    - **06 TIFFIN ARTISTRY**: *Stone-Ground Dosa Craft* (`dublin_hyderabadi_chicken_dum_biryani_pot.jpg` - crispy golden Chennai dosas on banana leaf with chutneys & potato masala).
+    - **07 OUR STORY**: *Warmth, Spice & Family* (`milpitas_restaurant_main_dining_hall_booths.jpg` - warm dining room spread).
+- **Section 6 Parallax Collage (`#khHomeStorySec`)**:
+  - Converted empty containers into responsive semantic `<img>` tags (`.kh-home-story-img` & `.kh-home-story-mobile-img`) with `object-fit: cover`.
+  - Removed obsolete `filter: saturate(0);` styles to display all food photography in rich, vibrant color.
+  - Populated with distinct, non-repeating dishes: Column 1 (`livermore_kashmiri_mutton_curry_pot.jpg`), Column 2 (`concord_mutton_rogan_josh_slow_simmered.jpg`), Column 3 (`dublin_tandoori_mixed_grill_platter.jpg`), and Floating Arch (`concord_crispy_andhra_chicken_65.jpg`).
+
+### Session 12 (Hero Visibility Filter ~25% Transparency #E2C4AF, Gap Removal above Grand Feasts & Fixed Header on Scroll)
+- **Hero Visibility & ~25% Filter Transparency**: Tuned the contrast gradient overlay to ~25% subtle transparency (`linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(226, 196, 175, 0.15) 50%, rgba(226, 196, 175, 0.55) 85%, #E2C4AF 100%)`), allowing the authentic video footage to shine through vibrantly while maintaining crystal-clear white headline text and a smooth transition into Section 2 (`#E2C4AF`).
+- **Elimination of #302014 Block above Grand Feasts**: Removed the `margin-bottom: 80px` gap on Polaroid slider container (`.elementor-element-b408a9f`) and `margin-top` on Grand Feasts container (`.elementor-element-cf05877`), unifying backgrounds to `#FFFFFF` for a seamless flow.
+- **Header at Hero Top Only & Rendering Fix**: Anchored the header at the top of the hero section on the homepage (`body.home header.elementor-48`) while keeping normal document flow on inner pages (`body.page-inner`). Added cache-busting parameters (`?v=<?= time() ?>`) to `khufus-theme.css` and `khufus-core.js` to ensure browsers immediately render the latest header styling without stale cache conflicts. Verified all 4 core elements (RESERVATIONS, THE MENU, Logo, and Lottie toggle) are rendering cleanly with crisp typography and contrast shadows.
+- **Custom AI Backgrounds across Pages & Footer**:
+  - **Footer** (Global across all pages): Assigned [footer.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/footer.png) aligned to `right bottom` with 100% filter/overlay removal and seamless `#2b1c13` background integration, rendering the hand-drawn culinary art clearly in the bottom-right corner.
+  - **Contact & Locations** (`/contact`, `/locations`): Assigned [contact_page_hero_section.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/contact_page_hero_section.png) with warm atmospheric lighting.
+  - **Gallery** (`/gallery`): Assigned [gallery_page_hero_section.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/gallery_page_hero_section.png) featuring architectural arched doorways and subtle depth.
+  - **Legacy & Story** (`/legacy`, `/about`): Assigned [lagacy_page_hero_section.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/lagacy_page_hero_section.png) highlighting traditional Indian heritage aesthetics.
+  - **Menu Page** (`/menu`): Assigned [menu_page.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/menu_page.png) with Khufu's 3-column featured interactive slider.
+  - **Transparent Header & Full-Bleed Hero Alignment**: Configured `body.page-hero-layout` in `header.php` and `khufus-theme.css` to ensure all hero pages render a seamless transparent header overlay with zero top margin gaps.
+
 ---
 
 ## 🎯 7. Immediate Next Steps & Backlog
-1. [ ] **Video Generation**: Generate cinematic background video loops for the hero header using the prompts below.
-2. [ ] **MySQL Database Schema & Seeder**:
+1. [x] **Hero Video Integration**: Native `video1.mp4` running in hero container with ~25% subtle transparency `#E2C4AF` filter overlay and crisp typography.
+2. [x] **Asset Population & De-Duplication**: Sections 4, 5, and 6 populated with verified non-repeating authentic photography.
+3. [x] **Background Color Polish & Gap Removal**: Clean `#FFFFFF` styling applied across lower homepage sections with 0px gap above Grand Feasts & Catering.
+4. [x] **Hero-Only Header**: Header anchored cleanly at the top of the hero banner without scroll-following.
+5. [x] **Header Rendering & Cache Busting**: Verified DOM rendering and added dynamic timestamp cache-busters.
+6. [x] **Menu Page Overhaul**: Fully functional luxury menu catalog with 426 dishes, instant search, category tabs, location pills, and dietary filters.
+5. [ ] **MySQL Database Schema & Seeder**:
    - Create `database/schema.sql` (MySQL table definitions for locations, schedules, categories, menu items, catering leads, contact messages).
    - Create `database/seed_data.php` to populate MySQL directly from `old_website_data/data/` and `public/assets/images/google_maps/`.
-3. [ ] **ToastTab Direct Cart Links**: Wire up per-location ordering deep links in the Unified Menu explorer.
+6. [ ] **ToastTab Direct Cart Links**: Wire up per-location ordering deep links in the Unified Menu explorer.
 
 ---
 
@@ -149,4 +180,4 @@ All pages run locally via `php -S 127.0.0.1:8899 -t public` and are verified wit
 
 When generating video assets for the hero banner (`public/assets/images/hero-video.mp4`):
 - **Biryani Steam Prompt**: *"Cinematic ultra slow motion 4k macro shot of fragrant Hyderabadi dum biryani being opened from a sealed clay handi, warm aromatic steam rising, glowing saffron rice grains, fresh mint and caramelized onions, dark moody luxury restaurant lighting, 60fps loop"*.
-- **Dosa Pour Prompt**: *"Cinematic slow motion shot of fermented golden dosa batter swirled onto a smoking hot cast-iron tawa, pure ghee drizzled with golden sizzle, folding into an ultra-crispy paper dosa, warm ambient lighting, 60fps loop"*.
+- **Dosa Pour Prompt**: *"Cinematic slow motion shot of fermented golden dosa batter swirled onto a smoking hot cast-iron tawas, pure ghee drizzled with golden sizzle, folding into an ultra-crispy paper dosa, warm ambient lighting, 60fps loop"*.

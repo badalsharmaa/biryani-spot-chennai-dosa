@@ -1299,15 +1299,14 @@ USING EXPERIENCE HERO LAYOUT
   background:
   linear-gradient(
     180deg,
-    rgba(92,71,43,0.35) 0%,
-    rgba(92,71,43,0.55) 25%,
-    rgba(92,71,43,0.75) 50%,
-    rgba(92,71,43,0.9) 75%,
-    rgba(92,71,43,1) 100%
+    rgba(20,10,5,0.35) 0%,
+    rgba(20,10,5,0.55) 25%,
+    rgba(20,10,5,0.75) 50%,
+    rgba(20,10,5,0.9) 75%,
+    rgba(30,18,12,1) 100%
   ),
-  url("/assets/images/Image-of-Desert.webp")
+  url("/assets/ai_ganerated/images/contact_page_hero_section.png")
   center center / cover no-repeat;
-
 }
 
 .kh-gallery-hero-inner{

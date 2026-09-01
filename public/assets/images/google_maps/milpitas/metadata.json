@@ -1,0 +1,22 @@
+{
+  "title": " Google Maps ",
+  "place_name": "Biryani & Dosa grill (fast food)",
+  "brand_title": "Biryani & Dosa Grill (Milpitas)",
+  "address": "380 S Main St, Milpitas, CA 95035",
+  "phone": "(669) 264-7920",
+  "rating": "4.3",
+  "reviews_count": "11+ reviews",
+  "maps_url": "https://maps.app.goo.gl/4Y4uwgkYr8jHpFqq8",
+  "resolved_url": "https://www.google.com/maps/place/Biryani+%26+Dosa+grill+(+fast+food+)/@37.425358,-121.905063,17z/data=!4m6!3m5!1s0x808fc9c79c15e257:0xa1165c48f82a5375!8m2!3d37.425358!4d-121.905063!16s%2Fg%2F11n9cghzxd",
+  "coordinates": {
+    "lat": 37.425358,
+    "lng": -121.905063
+  },
+  "total_images_found": 2,
+  "total_videos_found": 0,
+  "images": [
+    "https://lh3.googleusercontent.com/ogw/default-user",
+    "https://streetviewpixels-pa.googleapis.com/?cb_client"
+  ],
+  "videos": []
+}

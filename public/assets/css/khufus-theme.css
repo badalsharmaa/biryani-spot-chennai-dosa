@@ -860,7 +860,7 @@ button {
   position: relative;
   width: 100%;
   padding: 100px 0;
-  background-color: #F6F1EA;
+  background-color: #FFFFFF;
   overflow: hidden;
 }
 
@@ -956,7 +956,7 @@ button {
 .monarq-polaroid-slider-v2 {
   width: 100%;
   padding: 100px 48px;
-  background-color: var(--color-cream);
+  background-color: #FFFFFF;
   position: relative;
   overflow: hidden;
 }
@@ -1159,7 +1159,7 @@ button {
 .kh-home-story-sec {
   width: 100%;
   padding: 100px 48px;
-  background-color: #F4EFEA;
+  background-color: #FFFFFF;
   position: relative;
   overflow: hidden;
 }
@@ -1333,25 +1333,18 @@ button {
    -------------------------------------------------------------------------- */
 .kh-cta-reveal {
   position: relative;
-  width: 100%;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-cream);
-  padding: 100px 48px;
-  text-align: center;
-  overflow: hidden;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .kh-cta-inner {
   position: relative;
-  max-width: 860px;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
 }
 
 .kh-cta-kicker {
@@ -2653,16 +2646,275 @@ button {
 }
 
 
-/* Final Section 03 Gradient Rules */
+/* Final Section 03 & Section 02 Gradient Rules with #E2C4AF */
 div.elementor-element-a38dd6e, [data-id="a38dd6e"] {
-  background-color: #DAB79F !important;
-  background: #DAB79F !important;
+  background-color: #E2C4AF !important;
+  background: #E2C4AF !important;
 }
 div.elementor-element-e58559a, [data-id="e58559a"] {
-  background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 35%, #FFFFFF 75%, #FFFFFF 100%) !important;
+  background: linear-gradient(180deg, #E2C4AF 0%, #E2C4AF 35%, #FFFFFF 75%, #FFFFFF 100%) !important;
   background-color: transparent !important;
 }
-div.elementor-element-69bf7a3, div.elementor-element-b408a9f, [data-id="69bf7a3"], [data-id="b408a9f"] {
+div.elementor-element-69bf7a3,
+div.elementor-element-b408a9f,
+div.elementor-element-cf05877,
+div.elementor-element-c6d4a00,
+[data-id="69bf7a3"],
+[data-id="b408a9f"],
+[data-id="cf05877"],
+[data-id="c6d4a00"] {
   background-color: #FFFFFF !important;
   background: #FFFFFF !important;
 }
+
+/* Remove empty full-width gap above Grand Feasts & Catering */
+div.elementor-element-b408a9f,
+.elementor-element.elementor-element-b408a9f,
+[data-id="b408a9f"] {
+  margin-bottom: 0 !important;
+  --margin-bottom: 0px !important;
+}
+
+div.elementor-element-cf05877,
+.elementor-element.elementor-element-cf05877,
+[data-id="cf05877"] {
+  margin-top: 0 !important;
+  --margin-top: 0px !important;
+}
+
+/* Header Positioned on Hero Section Top Only (Transparent Header for Hero Pages) */
+body.home header.elementor-48,
+body.home .elementor-location-header,
+body.home .elementor-48 .elementor-element.elementor-element-91c3171,
+body.home .elementor-location-header .elementor-element-91c3171,
+body.page-hero-layout header.elementor-48,
+body.page-hero-layout .elementor-location-header,
+body.page-hero-layout .elementor-48 .elementor-element.elementor-element-91c3171,
+body.page-hero-layout .elementor-location-header .elementor-element-91c3171 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 100000000 !important;
+  pointer-events: auto !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+body:not(.home):not(.page-hero-layout) header.elementor-48,
+body:not(.home):not(.page-hero-layout) .elementor-location-header,
+body:not(.home):not(.page-hero-layout) .elementor-48 .elementor-element.elementor-element-91c3171,
+body:not(.home):not(.page-hero-layout) .elementor-location-header .elementor-element-91c3171,
+body.page-inner:not(.page-hero-layout) header.elementor-48,
+body.page-inner:not(.page-hero-layout) .elementor-location-header,
+body.page-inner:not(.page-hero-layout) .elementor-48 .elementor-element.elementor-element-91c3171,
+body.page-inner:not(.page-hero-layout) .elementor-location-header .elementor-element-91c3171 {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background-color: #1e120c !important;
+  background: #1e120c !important;
+}
+
+body.page-inner:not(.page-hero-layout) #page,
+body.page-inner:not(.page-hero-layout) #content,
+body.page-inner:not(.page-hero-layout) .site-content,
+body.page-inner:not(.page-hero-layout) #primary,
+body.page-inner:not(.page-hero-layout) #main {
+  padding-top: 16px !important;
+}
+
+body.page-hero-layout #page,
+body.page-hero-layout #content,
+body.page-hero-layout .site-content,
+body.page-hero-layout #primary,
+body.page-hero-layout #main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-91c3171 {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 24px 48px !important;
+  box-sizing: border-box !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-541a8a9 {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 28px !important;
+  flex-wrap: nowrap !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-a10634e .elementor-heading-title a,
+.elementor-48 .elementor-element.elementor-element-6664fe9 .elementor-heading-title a {
+  color: #FFFFFF !important;
+  font-family: 'Cinzel', serif !important;
+  font-size: 15px !important;
+  letter-spacing: 2.2px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.95) !important;
+  white-space: nowrap !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-a10634e .elementor-heading-title a:hover,
+.elementor-48 .elementor-element.elementor-element-6664fe9 .elementor-heading-title a:hover {
+  opacity: 0.8 !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-76a29c8 img {
+  width: 52px !important;
+  height: auto !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+#lottie-toggle {
+  z-index: 100000001 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
+}
+
+/* Seamless Section 7 & Footer Integration */
+#primary,
+#main,
+.ast-container,
+.entry-content {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.elementor-element.elementor-element-c6d4a00,
+[data-id="c6d4a00"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer.elementor-58,
+.elementor-location-footer,
+.elementor-58 .elementor-element.elementor-element-36f35bf,
+.elementor-58 .elementor-element.elementor-element-ae1d7ac {
+  margin-top: 0 !important;
+  background-color: #2b1c13 !important;
+  background-image: url("/assets/ai_ganerated/images/footer.png") !important;
+  background-position: right bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.elementor-58 .elementor-element.elementor-element-36f35bf::before,
+.elementor-58 .elementor-element.elementor-element-36f35bf::after,
+.elementor-58 .elementor-element.elementor-element-ae1d7ac::before,
+.elementor-58 .elementor-element.elementor-element-ae1d7ac::after {
+  display: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+}
+
+/* Eliminate top gap and brown bar above hero */
+header.entry-header,
+.entry-header {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+#page,
+#content,
+.site-content,
+#primary,
+#main,
+.site-main,
+article.post-1536,
+.entry-content,
+.elementor-1536 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.elementor-1536 .elementor-element.elementor-element-78802e6 {
+  margin-top: 0 !important;
+  top: 0 !important;
+}
+
+/* ==========================================================================
+   HERO SECTION OVERLAY FILTER & TEXT CONTRAST (~25% SUBTLE TRANSPARENCY)
+   ========================================================================== */
+.elementor-1536 .elementor-element.elementor-element-78802e6,
+.elementor-1536 .elementor-element.elementor-element-d554e4d,
+.elementor-element.elementor-element-78802e6,
+.elementor-element.elementor-element-d554e4d {
+  position: relative !important;
+}
+
+/* Subtle ~25% transparency overlay with smooth #E2C4AF blend at bottom */
+.elementor-1536 .elementor-element.elementor-element-78802e6::before,
+.elementor-1536 .elementor-element.elementor-element-78802e6 > .elementor-background-video-container::before,
+.elementor-1536 .elementor-element.elementor-element-d554e4d::before,
+.elementor-1536 .elementor-element.elementor-element-d554e4d > .elementor-background-video-container::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(226, 196, 175, 0.15) 50%, rgba(226, 196, 175, 0.55) 85%, #E2C4AF 100%) !important;
+  background-color: transparent !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+/* Remove dark radial vignette */
+.elementor-1536 .elementor-element.elementor-element-78802e6 > .elementor-background-video-container::after,
+.elementor-1536 .elementor-element.elementor-element-d554e4d > .elementor-background-video-container::after {
+  display: none !important;
+  content: none !important;
+}
+
+.elementor-background-video-container {
+  z-index: 0 !important;
+}
+
+.elementor-background-video-container video {
+  filter: none !important;
+}
+
+/* Hero Title & CTA Crisp Visibility */
+.khf-hero-title {
+  position: relative !important;
+  z-index: 10 !important;
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+.khf-hero-title em {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+.mnq-reserve-wrapper {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.mnq-landing-reserve-btn {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8) !important;
+}
+

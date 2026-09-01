@@ -1789,7 +1789,7 @@ canvas {
     width:100%;
     aspect-ratio:46 / 43;
     height:auto;
-    background:#d4d1cd;
+    background:#15120f;
     overflow:hidden;
     border-radius:0;
     box-shadow:inset 0 0 0 1px rgba(52,40,24,0.05);
@@ -1859,14 +1859,12 @@ canvas {
 
   .mps5-photo-mark{
     flex:0 0 auto;
-    width:50px;
-    height:40px;
+    width:42px;
+    height:42px;
     align-self:flex-end;
     margin-bottom:-2px;
-    background-color:rgba(52,40,24,0.88);
-    -webkit-mask:url("/assets/images/Logo-in-White.svg") no-repeat center center / contain;
-    mask:url("/assets/images/Logo-in-White.svg") no-repeat center center / contain;
-    opacity:.75;
+    background:url("/assets/images/ornaments/logo.webp") no-repeat center center / contain;
+    opacity:.9;
   }
 
   .mps5-inner{
@@ -2815,19 +2813,18 @@ RIGHT VISUAL
   background-size:cover;
   background-position:center;
   transform:scale(1.02);
-  filter:saturate(0);
 }
 
 .kh-home-story-img--1{
-  background-image:url("/assets/images/IMG1.webp");
+  background-image:url("/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg");
 }
 
 .kh-home-story-img--2{
-  background-image:url("/assets/images/IMG2.webp");
+  background-image:url("/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg");
 }
 
 .kh-home-story-img--3{
-  background-image:url("/assets/images/IMG3.webp");
+  background-image:url("/assets/images/google_maps/concord/curries_and_appetizers/concord_tandoori_mixed_grill_platter.jpg");
 }
 
 .kh-home-story-float{
@@ -2847,8 +2844,8 @@ RIGHT VISUAL
   position:absolute;
   inset:0;
   background-color:rgba(247,243,238,.92);
-  -webkit-mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 10px) / 42% auto;
-  mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 10px) / 42% auto;
+  -webkit-mask:url("/assets/images/ornaments/heritage-brass-seal.svg") no-repeat center calc(50% + 10px) / 42% auto;
+  mask:url("/assets/images/ornaments/heritage-brass-seal.svg") no-repeat center calc(50% + 10px) / 42% auto;
   pointer-events:none;
   z-index:2;
 }
@@ -3066,7 +3063,6 @@ MOBILE VERSION
   background-size:cover;
   background-position:center;
   transform:scale(1.02);
-  filter:saturate(0);
 }
 
 .kh-home-story-mobile-img--1{
@@ -3098,8 +3094,8 @@ MOBILE VERSION
   position:absolute;
   inset:0;
   background-color:rgba(247,243,238,.92);
-  -webkit-mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 8px) / 42% auto;
-  mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 8px) / 42% auto;
+  -webkit-mask:url("/assets/images/ornaments/heritage-brass-seal.svg") no-repeat center calc(50% + 8px) / 42% auto;
+  mask:url("/assets/images/ornaments/heritage-brass-seal.svg") no-repeat center calc(50% + 8px) / 42% auto;
   pointer-events:none;
   z-index:2;
 }
@@ -4142,9 +4138,11 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 
 	
 			<div data-elementor-type="wp-page" data-elementor-id="1536" class="elementor elementor-1536" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-78802e6 e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="78802e6" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/khufus.com\/wp-content\/uploads\/2026\/02\/Lander-Video-Pyramids-Camel-Compressed.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-78802e6 e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="78802e6" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;\/assets\/ai_ganerated\/video\/video1.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
 		<div class="elementor-background-video-container">
-							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop></video>
+							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop src="/assets/ai_ganerated/video/video1.mp4">
+								<source src="/assets/ai_ganerated/video/video1.mp4" type="video/mp4">
+							</video>
 					</div>		<div class="elementor-element elementor-element-665773d elementor-widget elementor-widget-spacer" data-id="665773d" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
 							<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>
@@ -4622,12 +4620,12 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 				<div class="elementor-element elementor-element-c99d141 elementor-widget elementor-widget-html" data-id="c99d141" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					
 <style id="custom-why-sec-gradient">
-  /* Section 2 & 3: Why Cards Container - Solid #DAB79F */
+  /* Section 2 & 3: Why Cards Container - Solid #E2C4AF */
   div.elementor-element-a38dd6e,
   .elementor-element.elementor-element-a38dd6e,
   [data-id="a38dd6e"] {
-    background-color: #DAB79F !important;
-    background: #DAB79F !important;
+    background-color: #E2C4AF !important;
+    background: #E2C4AF !important;
   }
   .khf-why-sec {
     background: transparent !important;
@@ -4639,11 +4637,11 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     filter: none !important;
   }
 
-  /* Section 03: Recognition Section - starts with #DAB79F above, transitions to white #FFFFFF from half section */
+  /* Section 03: Recognition Section - starts with #E2C4AF above, transitions to white #FFFFFF from half section */
   div.elementor-element-e58559a,
   .elementor-element.elementor-element-e58559a,
   [data-id="e58559a"] {
-    background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 35%, #FFFFFF 75%, #FFFFFF 100%) !important;
+    background: linear-gradient(180deg, #E2C4AF 0%, #E2C4AF 35%, #FFFFFF 75%, #FFFFFF 100%) !important;
     background-color: transparent !important;
   }
 
@@ -4659,13 +4657,28 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     background-color: #FFFFFF !important;
     background: #FFFFFF !important;
   }
+
+  /* Remove 80px empty brown gap above Grand Feasts & Catering */
+  div.elementor-element-b408a9f,
+  .elementor-element.elementor-element-b408a9f,
+  [data-id="b408a9f"] {
+    margin-bottom: 0 !important;
+    --margin-bottom: 0px !important;
+  }
+
+  div.elementor-element-cf05877,
+  .elementor-element.elementor-element-cf05877,
+  [data-id="cf05877"] {
+    margin-top: 0 !important;
+    --margin-top: 0px !important;
+  }
 </style>
 
 <section class="khf-why-sec" id="khfWhySec">
   <div class="khf-why-grid">
 
     <article class="khf-why-panel khf-why-panel--1" data-speed="0.25">
-      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_25.jpg" alt="Royal Dum Biryani">
+      <img decoding="async" src="/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Royal Dum Biryani">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4689,7 +4702,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--2" data-speed="0.35">
-      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_09.jpg" alt="South Indian Thali & Tiffin">
+      <img decoding="async" src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_medu_vada_sambar_chutney_combo.jpg" alt="South Indian Thali & Tiffin">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4713,7 +4726,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--3" data-speed="0.28">
-      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken65_appetizer_76.jpg" alt="Chettinad Spices & Starters">
+      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_fiery_curry_leaf_chicken_fry.jpg" alt="Chettinad Spices & Starters">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -5150,7 +5163,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 				</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-e58559a e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="e58559a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}" style="background: linear-gradient(180deg, #DAB79F 0%, #DAB79F 35%, #FFFFFF 75%, #FFFFFF 100%) !important;">
+		<div class="elementor-element elementor-element-e58559a e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="e58559a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}" style="background: linear-gradient(180deg, #E2C4AF 0%, #E2C4AF 35%, #FFFFFF 75%, #FFFFFF 100%) !important;">
 		<div class="elementor-element elementor-element-887c4e8 e-con-full e-flex e-con e-child" data-id="887c4e8" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-0b8b6a2 elementor-widget elementor-widget-html" data-id="0b8b6a2" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:2,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="html.default">
 					<div class="kh-rec-copy-only">
@@ -5444,7 +5457,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   <div class="exp-footnote-mobile" aria-hidden="true">
     <div class="exp-footnote-line"></div>
     <p class="exp-footnote-text">
-      From Cairo to global stages, Khufu’s carries elevated Egyptian dining into a wider conversation while remaining grounded in its own identity.
+      Across the Bay Area, Biryani Spot Chennai Dosa carries authentic South Indian culinary tradition into every dining experience.
     </p>
   </div>
 </div>
@@ -5847,10 +5860,10 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   if(!root) return;
 
   const slideImages = {
-    mena50Best: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_22.jpg",
-    resyOneToWatch: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_special_curry_platter_09.jpg",
-    laListeHiddenGem: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken65_appetizer_76.jpg",
-    laListeBestAfrica: "/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_interior_dining_01.jpg"
+    mena50Best: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_royal_maharaja_thali_platter.jpg",
+    resyOneToWatch: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_rogan_josh_slow_simmered.jpg",
+    laListeHiddenGem: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_fiery_curry_leaf_chicken_fry.jpg",
+    laListeBestAfrica: "/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_restaurant_main_dining_hall_booths.jpg"
   };
 
   const slides = [
@@ -6054,7 +6067,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 		<div class="elementor-element elementor-element-69bf7a3 e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="69bf7a3" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-5598d27 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="5598d27" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-4b64694 elementor-widget elementor-widget-heading" data-id="4b64694" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">THE <i><b>KHUFU'S</i></b> EXPERIENCE</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">THE <i><b>BIRYANI SPOT</i></b> EXPERIENCE</h2>				</div>
 				<div class="elementor-element elementor-element-cf1e2a3 elementor-widget elementor-widget-text-editor" data-id="cf1e2a3" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="text-editor.default">
 									<p>Across Dublin, Livermore, Milpitas, and Concord, Biryani Spot Chennai Dosa brings the authentic warmth of South Indian hospitality to life. Every steaming handi of dum biryani and golden, paper-thin dosa is crafted with time-honored techniques, freshly roasted spices, and the finest halal meats.</p>								</div>
 				</div>
@@ -6284,11 +6297,15 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   const TARGET_URL = '/gallery';
 
   const IMAGES = [
-  "/assets/images/DSC04514-scaled.webp",   // wide / atmosphere
-  "/assets/images/DSC04524-scaled.webp",   // similar tone but different framing
-  "/assets/images/DSC06023.webp",          // detail / tighter shot
-  "/assets/images/DSC3237_VSCO-scaled.webp" // mood / darker contrast
-];
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_crab_masala_roast.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_creamy_butter_chicken_delight.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_tikka_masala_sizzler.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_garlic_naan_tandoori_bread.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_kashmiri_mutton_curry_pot.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_chettinad_black_pepper.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dum_biryani_thali_curry_combo.jpg"
+  ];
 
   function buildSet(){
     const frag = document.createDocumentFragment();
@@ -6611,8 +6628,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
         </div>
 
         <div class="mps5-meta-row">
-          <div class="mps5-photo-title" id="mps5PhotoTitle">Chef
-Mostafa Seif</div>
+          <div class="mps5-photo-title" id="mps5PhotoTitle">Hyderabadi Dum Biryani</div>
           <div class="mps5-photo-mark" aria-hidden="true"></div>
         </div>
       </div>
@@ -6655,8 +6671,7 @@ Mostafa Seif</div>
         </div>
 
         <div class="mps5-meta-row">
-          <div class="mps5-photo-title" id="mps5MobilePhotoTitle">Chef
-Mostafa Seif</div>
+          <div class="mps5-photo-title" id="mps5MobilePhotoTitle">Hyderabadi Dum Biryani</div>
           <div class="mps5-photo-mark" aria-hidden="true"></div>
         </div>
       </div>
@@ -6793,7 +6808,7 @@ Mostafa Seif</div>
     width:100%;
     aspect-ratio:46 / 43;
     height:auto;
-    background:#d4d1cd;
+    background:#15120f;
     overflow:hidden;
     border-radius:0;
     box-shadow:inset 0 0 0 1px rgba(52,40,24,0.05);
@@ -6863,14 +6878,12 @@ Mostafa Seif</div>
 
   .mps5-photo-mark{
     flex:0 0 auto;
-    width:50px;
-    height:40px;
+    width:42px;
+    height:42px;
     align-self:flex-end;
     margin-bottom:-2px;
-    background-color:rgba(52,40,24,0.88);
-    -webkit-mask:url("/assets/images/Logo-in-White.svg") no-repeat center center / contain;
-    mask:url("/assets/images/Logo-in-White.svg") no-repeat center center / contain;
-    opacity:.75;
+    background:url("/assets/images/ornaments/logo.webp") no-repeat center center / contain;
+    opacity:.9;
   }
 
   .mps5-inner{
@@ -7525,39 +7538,39 @@ Mostafa Seif</div>
   const slides = [
     {
       number: '05',
-      kicker: 'Meet The Chef',
-      title: 'Meet Chef<br>Mostafa Seif',
-      mobileTitle: 'Meet Chef<br>Mostafa Seif',
-      script: 'Innovation Meets Tradition',
-      text: 'Winner of Top Chef Middle East 2018 and recipient of Two Knives at The Best Chef Awards 2025, Chef Mostafa Seif is one of the leading voices in new Egyptian cuisine, blending traditional flavours with contemporary flair.',
-      mobileText: 'Top Chef Middle East 2018 winner and recipient of Two Knives at The Best Chef Awards 2025, Chef Mostafa Seif brings a contemporary voice to Egyptian cuisine.',
-      note: 'Together, Giovanni Bolandrini and Chef Mostafa Seif have shaped a menu driven by passion, creativity, and a deep love for gastronomy.',
-      image: '/assets/images/Chef-Image-Updated.webp',
-      photoTitle: 'Chef Mostafa Seif'
+      kicker: 'Culinary Heritage',
+      title: 'The Dum Pukht<br>Tradition',
+      mobileTitle: 'The Dum Pukht<br>Tradition',
+      script: 'Slow-Steamed Perfection',
+      text: 'Every handi of our Hyderabadi Dum Biryani is layered with fragrant aged basmati, tender marinated halal meat, saffron-infused milk, and caramelized onions, slow-steamed under a sealed dough crust to lock in aroma and flavor.',
+      mobileText: 'Layered with aged basmati, marinated halal meat, saffron, and roasted spices, slow-steamed in sealed handis.',
+      note: 'A celebrated royal recipe passed down through generations, crafted daily across Dublin, Milpitas, Livermore, and Concord.',
+      image: '/assets/images/google_maps/dublin/curries_and_appetizers/dublin_creamy_butter_chicken_delight.jpg',
+      photoTitle: 'Hyderabadi Dum Biryani'
     },
     {
       number: '06',
-      kicker: 'Our Visionary',
-      title: 'Giovanni<br>Bolandrini',
-      mobileTitle: 'Giovanni<br>Bolandrini',
-      script: 'Style, Vision, Hospitality',
-      text: 'Born and raised in Italy, Giovanni Bolandrini first made his name in fashion, from styling world-class celebrities to owning one of London’s most renowned boutiques. In 2008, he founded Pier88 Group, bringing that same vision to hospitality and exceptional dining experiences.',
-      mobileText: 'From fashion and celebrity styling to founding Pier88 Group in 2008, Giovanni Bolandrini brings a distinctive vision to luxury hospitality.',
-      note: 'Recognized by Forbes Middle East among the 20 Leaders Behind Luxury Dining in the Middle East, Giovanni continues to shape Khufu’s with a distinctive sense of style, place, and experience.',
-      image: '/assets/images/Giovanni-Bolandrini.webp',
-      photoTitle: 'Giovanni Bolandrini'
+      kicker: 'Tiffin Artistry',
+      title: 'Stone-Ground<br>Dosa Craft',
+      mobileTitle: 'Stone-Ground<br>Dosa Craft',
+      script: 'Golden, Crisp & Pure Ghee',
+      text: 'Our authentic Chennai dosa batter is stone-ground from premium lentils and rice, then naturally fermented for 18 hours. Ladled paper-thin onto scorching cast-iron tawas and roasted with pure ghee for an unbeatable crunch.',
+      mobileText: 'Naturally fermented 18-hour batter, stone-ground and roasted on scorching cast-iron tawas with pure ghee.',
+      note: 'Served steaming hot with freshly ground coconut chutney, spicy tomato chutney, and rich vegetable sambar.',
+      image: '/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg',
+      photoTitle: 'Crispy Chennai Dosa'
     },
     {
       number: '07',
-      kicker: 'Hospitality Culture',
-      title: 'Presence,<br>Not Performance',
-      mobileTitle: 'Presence,<br>Not Performance',
-      script: 'A Practiced Rhythm',
-      text: 'Behind the atmosphere is a team shaped by attentiveness, calm, and discipline, where hospitality is felt in pacing, gesture, and care long before it is spoken or explained.',
-      mobileText: 'A team defined by attentiveness, calm, and discipline, where hospitality is felt in every gesture, pace, and detail.',
-      note: 'What guests remember is often not a single moment, but the consistency of how the entire experience made them feel.',
-      image: '/assets/images/The-Team-1.webp',
-      photoTitle: 'The Team'
+      kicker: 'Our Story',
+      title: 'Warmth,<br>Spice & Family',
+      mobileTitle: 'Warmth,<br>Spice & Family',
+      script: '4 Bay Area Locations',
+      text: 'Founded on a passion for honest, authentic Indian flavors, Biryani Spot Chennai Dosa has become a beloved gathering place across the Bay Area for families, friends, and food enthusiasts.',
+      mobileText: 'A beloved gathering place across the Bay Area for families and food enthusiasts celebrating South Indian flavors.',
+      note: 'From daily comfort lunches to grand weekend celebrations, every guest is welcomed with heartfelt Indian hospitality.',
+      image: '/assets/images/google_maps/milpitas/store_interior_and_vibe/milpitas_restaurant_main_dining_hall_booths.jpg',
+      photoTitle: 'Warm Dining Ambiance'
     }
   ];
 
@@ -7650,12 +7663,11 @@ Mostafa Seif</div>
     probe.style.height = 'auto';
     probe.style.opacity = '1';
     probe.style.transform = 'none';
-    probe.style.visibility = 'hidden';
     probe.style.pointerEvents = 'none';
+    probe.style.visibility = 'hidden';
+    probe.innerHTML = markup(slides[current], true);
 
     mobileCopyStage.appendChild(probe);
-
-    let tallest = 0;
     slides.forEach((slide) => {
       probe.innerHTML = markup(slide, true);
       tallest = Math.max(tallest, probe.scrollHeight);
@@ -7687,13 +7699,13 @@ Mostafa Seif</div>
   function setInitial(){
     const slide = slides[current];
 
-    currentImage.style.backgroundImage = `url('${slide.image}')`;
+    currentImage.style.backgroundImage = slide.image ? `url('${slide.image}')` : 'none';
     currentContent.innerHTML = markup(slide, false);
     currentContent.className = 'mps5-content is-active is-current';
     nextContent.className = 'mps5-content';
     nextContent.innerHTML = '';
 
-    mobileCurrentImage.style.backgroundImage = `url('${slide.image}')`;
+    mobileCurrentImage.style.backgroundImage = slide.image ? `url('${slide.image}')` : 'none';
     mobileCurrentContent.innerHTML = markup(slide, true);
     mobileCurrentContent.className = 'mps5-mobile-copy is-active is-current';
     mobileNextContent.className = 'mps5-mobile-copy';
@@ -7734,7 +7746,7 @@ Mostafa Seif</div>
     mobileCurrentContent.classList.add('fade-out');
     mobileNextContent.classList.add('fade-in');
 
-    nextImage.style.backgroundImage = `url('${newSlide.image}')`;
+    nextImage.style.backgroundImage = newSlide.image ? `url('${newSlide.image}')` : 'none';
     if(direction === 'prev'){
       nextImage.className = 'mps5-photo-layer from-left';
       currentImage.className = 'mps5-photo-layer is-active to-right';
@@ -7746,7 +7758,7 @@ Mostafa Seif</div>
       nextImage.classList.add('animate-in');
     });
 
-    mobileNextImage.style.backgroundImage = `url('${newSlide.image}')`;
+    mobileNextImage.style.backgroundImage = newSlide.image ? `url('${newSlide.image}')` : 'none';
     if(direction === 'prev'){
       mobileNextImage.className = 'mps5-photo-layer from-left';
       mobileCurrentImage.className = 'mps5-photo-layer is-active to-right';
@@ -7763,11 +7775,11 @@ Mostafa Seif</div>
     mobileNavButtons.forEach((btn, i) => btn.classList.toggle('is-active', i === index));
 
     setTimeout(() => {
-      currentImage.style.backgroundImage = `url('${newSlide.image}')`;
+      currentImage.style.backgroundImage = newSlide.image ? `url('${newSlide.image}')` : 'none';
       currentImage.className = 'mps5-photo-layer is-active';
       nextImage.className = 'mps5-photo-layer';
 
-      mobileCurrentImage.style.backgroundImage = `url('${newSlide.image}')`;
+      mobileCurrentImage.style.backgroundImage = newSlide.image ? `url('${newSlide.image}')` : 'none';
       mobileCurrentImage.className = 'mps5-photo-layer is-active';
       mobileNextImage.className = 'mps5-photo-layer';
 
@@ -7954,8 +7966,8 @@ Mostafa Seif</div>
   height:100px;
   background-color:#6A4C36;
   opacity:0;
-  -webkit-mask:url("/assets/images/Khufus-Pattern.svg") no-repeat left top / contain;
-  mask:url("/assets/images/Khufus-Pattern.svg") no-repeat left top / contain;
+  -webkit-mask:url("/assets/images/ornaments/pattern-spice-kolam.svg") no-repeat left top / contain;
+  mask:url("/assets/images/ornaments/pattern-spice-kolam.svg") no-repeat left top / contain;
   pointer-events:none;
   z-index:3;
   transform:translateY(36px);
@@ -8175,24 +8187,16 @@ RIGHT VISUAL
 }
 
 .kh-home-story-img{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  display:block !important;
   transform:scale(1.02);
-  filter:saturate(0);
+  transition:transform .6s ease;
 }
 
-.kh-home-story-img--1{
-  background-image:url("/assets/images/IMG1.webp");
-}
-
-.kh-home-story-img--2{
-  background-image:url("/assets/images/IMG2.webp");
-}
-
-.kh-home-story-img--3{
-  background-image:url("/assets/images/IMG3.webp");
+.kh-home-story-col:hover .kh-home-story-img{
+  transform:scale(1.06);
 }
 
 .kh-home-story-float{
@@ -8205,17 +8209,15 @@ RIGHT VISUAL
   overflow:hidden;
   background:transparent;
   z-index:4;
+  box-shadow:0 18px 36px rgba(0,0,0,0.16);
+  border:3px solid rgba(255,255,255,0.7);
 }
 
-.kh-home-story-float::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-color:rgba(247,243,238,.92);
-  -webkit-mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 10px) / 42% auto;
-  mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 10px) / 42% auto;
-  pointer-events:none;
-  z-index:2;
+.kh-home-story-float-img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  display:block !important;
 }
 
 .kh-home-story-card{
@@ -8426,24 +8428,11 @@ MOBILE VERSION
 }
 
 .kh-home-story-mobile-img{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  display:block !important;
   transform:scale(1.02);
-  filter:saturate(0);
-}
-
-.kh-home-story-mobile-img--1{
-  background-image:url("/assets/images/IMG1.webp");
-}
-
-.kh-home-story-mobile-img--2{
-  background-image:url("/assets/images/IMG2.webp");
-}
-
-.kh-home-story-mobile-img--3{
-  background-image:url("/assets/images/IMG3.webp");
 }
 
 .kh-home-story-mobile-float{
@@ -8456,17 +8445,15 @@ MOBILE VERSION
   overflow:hidden;
   background:transparent;
   z-index:4;
+  box-shadow:0 12px 24px rgba(0,0,0,0.16);
+  border:2px solid rgba(255,255,255,0.7);
 }
 
-.kh-home-story-mobile-float::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-color:rgba(247,243,238,.92);
-  -webkit-mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 8px) / 42% auto;
-  mask:url("/assets/images/Vase.svg") no-repeat center calc(50% + 8px) / 42% auto;
-  pointer-events:none;
-  z-index:2;
+.kh-home-story-mobile-float-img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  display:block !important;
 }
 
 .kh-home-story-mobile-card{
@@ -8607,22 +8594,22 @@ RESPONSIVE
             <div class="kh-home-story-number kh-home-story-animate">08</div>
 
             <div class="kh-home-story-kicker kh-home-story-animate kh-home-story-delay1">
-              Experience It By Evening
+              Grand Feasts &amp; Catering
             </div>
 
             <h2 class="kh-home-story-title kh-home-story-animate kh-home-story-delay2">
-              The Experience<br>
-              Evolves With<br>
-              The Light
-              <span class="kh-home-story-script">a softer, deeper atmosphere</span>
+              The Feast<br>
+              Brought To<br>
+              Your Table
+              <span class="kh-home-story-script">authentic south indian hospitality</span>
             </h2>
 
             <p class="kh-home-story-text kh-home-story-animate kh-home-story-delay3">
-              As daylight begins to fade, the setting shifts into a more intimate expression. Light softens, the pace changes, and the atmosphere becomes more immersive and composed.
+              Whether dining in our warm, welcoming restaurants or catering private celebrations, weddings, and corporate gatherings across the Bay Area, our chefs bring the full banquet experience to life.
             </p>
             
-            <a href="/" class="kh-home-story-cta kh-home-story-animate kh-home-story-delay3" target="_blank" rel="noopener">
-              Continue To Khufu’s Bistro
+            <a href="/menu" class="kh-home-story-cta kh-home-story-animate kh-home-story-delay3">
+              Explore Menus &amp; Locations
             </a>
 
           </div>
@@ -8633,7 +8620,7 @@ RESPONSIVE
           <div class="kh-home-story-divider kh-home-story-animate kh-home-story-delay3"></div>
 
           <p class="kh-home-story-note kh-home-story-animate kh-home-story-delay4">
-            The experience continues into Khufu’s Bistro, an evening expression of elevated Egyptian dining.
+            Custom catering packages, live dosa stations, and royal dum biryani handis crafted for all special gatherings.
           </p>
 
         </div>
@@ -8646,23 +8633,25 @@ RESPONSIVE
         <div class="kh-home-story-columns" id="khHomeStoryColumns">
 
           <div class="kh-home-story-col kh-home-story-col--1" data-speed="0.18">
-            <div class="kh-home-story-img kh-home-story-img--1"></div>
+            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg" class="kh-home-story-img" alt="Royal Kashmiri Mutton Curry" loading="lazy">
           </div>
 
           <div class="kh-home-story-col kh-home-story-col--2" data-speed="0.32">
-            <div class="kh-home-story-img kh-home-story-img--2"></div>
+            <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg" class="kh-home-story-img" alt="Royal Saffron Dum Biryani" loading="lazy">
           </div>
 
           <div class="kh-home-story-col kh-home-story-col--3" data-speed="0.22">
-            <div class="kh-home-story-img kh-home-story-img--3"></div>
+            <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg" class="kh-home-story-img" alt="Tandoori Sizzler Platter" loading="lazy">
           </div>
 
-          <div class="kh-home-story-float kh-home-story-animate kh-home-story-delay3"></div>
+          <div class="kh-home-story-float kh-home-story-animate kh-home-story-delay3">
+            <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_andhra_chicken_65.jpg" class="kh-home-story-float-img" alt="Crispy Andhra Chicken 65" loading="lazy">
+          </div>
 
           <div class="kh-home-story-card kh-home-story-animate kh-home-story-delay4">
-            <div class="kh-home-story-card-label">Evening Atmosphere</div>
+            <div class="kh-home-story-card-label">Evening Dining &amp; Catering</div>
             <p>
-              As the light softens, the experience becomes more intimate, where presence, setting, and rhythm begin to unfold differently.
+              Freshly prepared to order across all 4 locations in Dublin, Milpitas, Livermore, and Concord.
             </p>
           </div>
 
@@ -8686,18 +8675,18 @@ RESPONSIVE
       </div>
 
       <h2 class="kh-home-story-mobile-title">
-        The Experience
-        <br>Evolves With
-        <br>The Light
-        <span class="kh-home-story-mobile-script">a softer, deeper atmosphere</span>
+        The Feast
+        <br>Brought To
+        <br>Your Table
+        <span class="kh-home-story-mobile-script">authentic south indian hospitality</span>
       </h2>
 
       <p class="kh-home-story-mobile-text">
-        As daylight begins to fade, the setting shifts into a more intimate expression. Light softens, the pace changes, and the atmosphere becomes more immersive and composed.
+        Whether dining in our warm, welcoming restaurants or catering private celebrations across the Bay Area, our chefs bring the full banquet experience to life.
       </p>
 
-      <a href="/" class="kh-home-story-cta kh-home-story-mobile-cta" target="_blank" rel="noopener">
-        Continue To Khufu’s Bistro
+      <a href="/menu" class="kh-home-story-cta kh-home-story-mobile-cta">
+        Explore Menus &amp; Locations
       </a>
     </div>
 
@@ -8706,23 +8695,25 @@ RESPONSIVE
       <div class="kh-home-story-mobile-columns" id="khHomeStoryMobileColumns">
 
         <div class="kh-home-story-mobile-col kh-home-story-mobile-col--1" data-speed="0.18">
-          <div class="kh-home-story-mobile-img kh-home-story-mobile-img--1"></div>
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg" class="kh-home-story-mobile-img" alt="Royal Kashmiri Mutton Curry" loading="lazy">
         </div>
 
         <div class="kh-home-story-mobile-col kh-home-story-mobile-col--2" data-speed="0.32">
-          <div class="kh-home-story-mobile-img kh-home-story-mobile-img--2"></div>
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg" class="kh-home-story-mobile-img" alt="Royal Saffron Dum Biryani" loading="lazy">
         </div>
 
         <div class="kh-home-story-mobile-col kh-home-story-mobile-col--3" data-speed="0.22">
-          <div class="kh-home-story-mobile-img kh-home-story-mobile-img--3"></div>
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg" class="kh-home-story-mobile-img" alt="Tandoori Sizzler Platter" loading="lazy">
         </div>
 
-        <div class="kh-home-story-mobile-float"></div>
+        <div class="kh-home-story-mobile-float">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_andhra_chicken_65.jpg" class="kh-home-story-mobile-float-img" alt="Crispy Andhra Chicken 65" loading="lazy">
+        </div>
 
         <div class="kh-home-story-mobile-card">
-          <div class="kh-home-story-mobile-card-label">Evening Atmosphere</div>
+          <div class="kh-home-story-mobile-card-label">Evening Dining &amp; Catering</div>
           <p>
-            As the light softens, the experience becomes more intimate, where presence, setting, and rhythm begin to unfold differently.
+            Freshly prepared to order across all 4 locations in Dublin, Milpitas, Livermore, and Concord.
           </p>
         </div>
 
@@ -8733,7 +8724,7 @@ RESPONSIVE
     <div class="kh-home-story-mobile-bottom">
       <div class="kh-home-story-mobile-divider"></div>
       <p class="kh-home-story-mobile-note">
-        The experience continues into Khufu’s Bistro, an evening expression of elevated Egyptian dining.
+        Custom catering packages, live dosa stations, and royal dum biryani handis crafted for all special occasions.
       </p>
     </div>
 
@@ -8840,22 +8831,22 @@ RESPONSIVE
       </div>
 
       <h2 class="kh-cta-title">
-        Dine With <span class="kh-cta-hi">The Pyramid</span> In View,<br>
-        In A Moment <span class="kh-cta-hi">Composed</span> For You
+        Dine With <span class="kh-cta-hi">Authentic Flavor</span> In Mind,<br>
+        In A Moment <span class="kh-cta-hi">Crafted</span> For You
       </h2>
 
       <p class="kh-cta-body">
-        Set within the Giza Plateau, Khufu’s is an experience shaped by restraint, precision, and place.
-        From the first arrival to the final pause, every detail is deliberate, allowing heritage to feel present rather than performed.
-        Reserve your table and step into a day where the setting leads, and everything else follows.
+        Across Dublin, Milpitas, Livermore, and Concord, Biryani Spot Chennai Dosa is an experience shaped by authenticity, spice mastery, and heartfelt warmth.
+        From our slow-steamed Hyderabadi Dum Biryanis to our golden crispy Chennai Dosas, every dish is an homage to South Indian tradition.
+        Reserve your table or order online to experience royal Indian dining.
       </p>
 
       <div class="kh-cta-meta">
-        Atmosphere / Presence / Reservation
+        Heritage / Spice Mastery / Royal Feasts
       </div>
 
       <div class="kh-cta-actions" id="khCtaActions">
-        <a href="/menu" class="kh-cta-btn" aria-label="Reserve your table">Reserve Your Table</a>
+        <a href="/reservations" class="kh-cta-btn" aria-label="Reserve your table">Reserve Your Table</a>
       </div>
 
       <div class="kh-cta-ornament" aria-hidden="true"></div>
@@ -8897,13 +8888,25 @@ RESPONSIVE
 
 .kh-cta-reveal{
   position:relative;
-  height:240vh;
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  height:auto !important;
+  min-height:auto !important;
+  background:#1e120c !important;
 }
 
 .kh-cta-sticky{
-  position:sticky;
+  position:relative !important;
   top:0;
-  height:100vh;
+  left:0;
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  min-height:auto !important;
+  margin:0 !important;
+  padding:100px 0 50px !important;
   overflow:hidden;
   background:var(--kh-start-bg);
   display:flex;
@@ -8936,9 +8939,10 @@ RESPONSIVE
 }
 
 .kh-cta-inner{
-  width:min(980px, 88vw);
-  margin:0 auto;
-  padding:72px 0 48px;
+  width:100% !important;
+  max-width:1200px !important;
+  margin:0 auto !important;
+  padding:0 40px !important;
   position:relative;
   z-index:2;
   display:flex;
@@ -8946,10 +8950,10 @@ RESPONSIVE
   align-items:center;
   justify-content:center;
   text-align:center;
-  min-height:100vh;
-  transform:translate3d(0,0,0) scale(0.94);
+  min-height:auto !important;
+  box-sizing:border-box !important;
+  transform:translate3d(0,0,0);
   transform-origin:center center;
-  will-change:transform;
 }
 
 .kh-cta-kicker{
@@ -8964,12 +8968,14 @@ RESPONSIVE
 }
 
 .kh-cta-title{
-  margin:0;
+  margin:0 auto;
+  width:100% !important;
+  max-width:1100px !important;
   font-family:"IvyOraDisplay",serif;
-  font-size:clamp(28px, 3vw, 46px);
+  font-size:clamp(36px, 4.4vw, 68px);
   font-weight:300;
-  line-height:.98;
-  letter-spacing:.018em;
+  line-height:1.06;
+  letter-spacing:.02em;
   text-transform:uppercase;
   color:var(--kh-pre-white-shift);
   will-change:color;
@@ -8982,39 +8988,38 @@ RESPONSIVE
 }
 
 .kh-cta-body{
-  margin:18px 0 0;
-  max-width:72ch;
+  margin:24px auto 0;
+  width:100% !important;
+  max-width:880px !important;
   font-family:"Bricolage Grotesque",sans-serif;
-  font-size:14px;
+  font-size:clamp(15px, 1.15vw, 18px);
   font-weight:300;
-  line-height:1.85;
+  line-height:1.8;
   letter-spacing:.01em;
   color:var(--kh-pre-white-shift);
   will-change:color;
 }
 
 .kh-cta-meta{
-  margin:18px auto 0;
+  margin:24px auto 0;
+  width:100% !important;
+  max-width:880px !important;
   font-family:"Bricolage Grotesque",sans-serif;
-  font-size:10px;
-  letter-spacing:.24em;
+  font-size:12px;
+  letter-spacing:.3em;
   text-transform:uppercase;
   color:var(--kh-pre-white-shift);
   will-change:color;
 }
 
 .kh-cta-actions{
-  margin-top:34px;
+  margin-top:28px;
   display:flex;
   justify-content:center;
   gap:14px;
   flex-wrap:wrap;
-  opacity:0;
-  transform:translate3d(0,26px,0);
-  transition:
-    opacity .55s cubic-bezier(.22,1,.36,1),
-    transform .55s cubic-bezier(.22,1,.36,1);
-  will-change:opacity, transform;
+  opacity:1;
+  transform:none;
 }
 
 .kh-cta-actions.is-visible{
@@ -9063,8 +9068,8 @@ RESPONSIVE
   height:25px;
   margin:50px auto 0;
   background-color:rgba(61,41,28,.5);
-  -webkit-mask:url("/assets/images/Khufus-Hieroglyphics.svg") center center / contain no-repeat;
-  mask:url("/assets/images/Khufus-Hieroglyphics.svg") center center / contain no-repeat;
+  -webkit-mask:url("/assets/images/ornaments/divider-spice-flourish.svg") center center / contain no-repeat;
+  mask:url("/assets/images/ornaments/divider-spice-flourish.svg") center center / contain no-repeat;
   opacity:0;
   transform:translate3d(0,12px,0);
   transition:
@@ -9254,27 +9259,29 @@ RESPONSIVE
   let eased = 0;
   let rafId = 0;
 
-  const desktopBodyText = `Set within the Giza Plateau, Khufu’s is an experience shaped by restraint, precision, and place.
-        From the first arrival to the final pause, every detail is deliberate, allowing heritage to feel present rather than performed.
-        Reserve your table and step into a day where the setting leads, and everything else follows.`;
+  const desktopBodyText = `Across Dublin, Milpitas, Livermore, and Concord, Biryani Spot Chennai Dosa is an experience shaped by authenticity, spice mastery, and heartfelt warmth.
+        From our slow-steamed Hyderabadi Dum Biryanis to our golden crispy Chennai Dosas, every dish is an homage to South Indian tradition.
+        Reserve your table or order online to experience royal Indian dining.`;
 
-  const mobileBodyText = `Reserve your table for an evening shaped by atmosphere, presence, and a view unlike any other.`;
+  const mobileBodyText = `Reserve your table for an authentic South Indian dining experience across our 4 Bay Area locations.`;
 
   function getProgress(){
     const rect = section.getBoundingClientRect();
     const vh = window.innerHeight || 800;
-    const total = section.offsetHeight - vh;
-    const traveled = -rect.top;
+    const start = vh * 0.85;
+    const end = vh * 0.25;
+    const traveled = start - rect.top;
+    const total = start - end;
     return clamp01(traveled / (total || 1));
   }
 
   function syncMobileCopy(){
     if(window.innerWidth <= 767){
-      title.innerHTML = `Dine In A Moment Composed For You`;
+      title.innerHTML = `Dine In A Moment Crafted For You`;
       body.textContent = mobileBodyText;
     }else{
-      title.innerHTML = `Dine With <span class="kh-cta-hi">The Pyramid</span> In View,<br>
-        In A Moment <span class="kh-cta-hi">Composed</span> For You`;
+      title.innerHTML = `Dine With <span class="kh-cta-hi">Authentic Flavor</span> In Mind,<br>
+        In A Moment <span class="kh-cta-hi">Crafted</span> For You`;
       body.textContent = desktopBodyText;
     }
   }
@@ -9292,7 +9299,9 @@ RESPONSIVE
     const rbg = Math.round(lerp(startRGB.r, endRGB.r, curve));
     const gbg = Math.round(lerp(startRGB.g, endRGB.g, curve));
     const bbg = Math.round(lerp(startRGB.b, endRGB.b, curve));
-    sticky.style.backgroundColor = `rgb(${rbg}, ${gbg}, ${bbg})`;
+    const currentBg = `rgb(${rbg}, ${gbg}, ${bbg})`;
+    sticky.style.setProperty('background-color', currentBg, 'important');
+    section.style.setProperty('background-color', currentBg, 'important');
 
     const textProgress = clamp01((curve - 0.08) / 0.18);
 
@@ -9355,9 +9364,11 @@ RESPONSIVE
 })();
 </script>				</div>
 				</div>
-		<div class="elementor-element elementor-element-d554e4d e-con-full elementor-hidden-desktop elementor-hidden-mobile e-flex e-con e-parent" data-id="d554e4d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/khufus.com\/wp-content\/uploads\/2026\/02\/Lander-Video-Pyramids-Camel-Compressed.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-d554e4d e-con-full elementor-hidden-desktop elementor-hidden-mobile e-flex e-con e-parent" data-id="d554e4d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;\/assets\/ai_ganerated\/video\/video1.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
 		<div class="elementor-background-video-container">
-							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop></video>
+							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop src="/assets/ai_ganerated/video/video1.mp4">
+								<source src="/assets/ai_ganerated/video/video1.mp4" type="video/mp4">
+							</video>
 					</div>		<div class="elementor-element elementor-element-5400291 elementor-widget elementor-widget-spacer" data-id="5400291" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
 							<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>

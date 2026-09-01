@@ -1,0 +1,22 @@
+{
+  "title": " Google Maps ",
+  "place_name": "Chennai Dosa Express",
+  "brand_title": "Chennai Dosa Express (Concord)",
+  "address": "3540 Clayton Rd, Concord, CA 94519",
+  "phone": "(925) 494-4470",
+  "rating": "4.5",
+  "reviews_count": "62+ reviews",
+  "maps_url": "https://maps.app.goo.gl/QobMvzwaeL3tYDxV6",
+  "resolved_url": "https://www.google.com/maps/place/Chennai+Dosa+Express/@37.970283,-122.0114187,17z/data=!4m6!3m5!1s0x808561002a7be8f7:0x6f6016cde491cc51!8m2!3d37.970283!4d-122.0114187!16s%2Fg%2F11w98wfd1n",
+  "coordinates": {
+    "lat": 37.970283,
+    "lng": -122.0114187
+  },
+  "total_images_found": 2,
+  "total_videos_found": 0,
+  "images": [
+    "https://lh3.googleusercontent.com/ogw/default-user",
+    "https://streetviewpixels-pa.googleapis.com/?cb_client"
+  ],
+  "videos": []
+}

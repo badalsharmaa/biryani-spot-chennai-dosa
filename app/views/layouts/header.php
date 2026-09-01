@@ -4141,12 +4141,23 @@ P88G KHUFUS FOOTER ACCORDION
   transform:scaleX(1);
 }
 </style>
-  <link rel="stylesheet" href="/assets/css/khufus-theme.css">
+  <link rel="stylesheet" href="/assets/css/khufus-theme.css?v=<?= time() ?>">
 
 
 
-</head>
-<body class="home page-template-default page wp-custom-logo ast-desktop ast-separate-container elementor-default elementor-kit-48">
+<?php
+$currentUri = $_SERVER['REQUEST_URI'] ?? '/';
+$path = parse_url($currentUri, PHP_URL_PATH);
+$pathClean = rtrim($path, '/');
+$isHome = ($pathClean === '' || $pathClean === '/');
+$isHeroPage = $isHome || in_array($pathClean, ['/menu', '/contact', '/locations', '/gallery', '/legacy', '/about', '/experience', '/bistro']);
+
+$bodyClass = ($isHome ? 'home ' : 'page-inner ') . 
+             ($isHeroPage ? 'page-hero-layout ' : '') . 
+             ($pathClean === '/menu' ? 'page-menu ' : '') .
+             'page-template-default page wp-custom-logo ast-desktop ast-separate-container elementor-default elementor-kit-48';
+?>
+<body class="<?= htmlspecialchars($bodyClass) ?>">
 <header data-elementor-type="header" data-elementor-id="48" class="elementor elementor-48 elementor-location-header" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-91c3171 e-con-full e-flex e-con e-parent" data-id="91c3171" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
 		<div class="elementor-element elementor-element-541a8a9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="541a8a9" data-element_type="container" data-e-type="container">
