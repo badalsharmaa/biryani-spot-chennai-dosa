@@ -160,6 +160,9 @@ All pages run locally via `php -S 127.0.0.1:8899 -t public` and are verified wit
   - **Menu Page** (`/menu`): Assigned [menu_page.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/menu_page.png) with Khufu's 3-column featured interactive slider.
   - **Transparent Header & Full-Bleed Hero Alignment**: Configured `body.page-hero-layout` in `header.php` and `khufus-theme.css` to ensure all hero pages render a seamless transparent header overlay with zero top margin gaps.
 
+### Session 13 (Header Icon / Logo Scaling)
+- **50% Header Icon Expansion**: Scaled the header logo / icon size by 50% (from `52px` to `78px` width/height) in [`public/assets/css/khufus-theme.css`](./public/assets/css/khufus-theme.css) for enhanced visual weight and branding balance across hero and inner pages.
+
 ---
 
 ## 🎯 7. Immediate Next Steps & Backlog
