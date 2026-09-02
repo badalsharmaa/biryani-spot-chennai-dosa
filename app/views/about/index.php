@@ -3227,23 +3227,40 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
     const vh = window.innerHeight || 800;
     const colH = column.clientHeight || (vh - 120);
 
-    // Pixels scrolled into the pin container
     const traveled = -rect.top;
 
-    if (traveled <= 0) {
-      // Approaching or at top of timeline
+    if (rect.top > 0) {
+      // 1. Approaching: sits absolute at top of track
+      section.style.position = 'absolute';
+      section.style.top = '0px';
+      section.style.bottom = 'auto';
+      section.style.left = '0px';
+      section.style.width = '100%';
+      section.style.height = '100vh';
       easedY = 0;
       list.style.transform = 'translate3d(0, 0px, 0)';
       progress.style.height = '0px';
-    } else if (traveled >= maxTranslate) {
-      // Completed internal translation: hold Chapter 5 fully in view for duration of holdBuffer
-      easedY += (maxTranslate - easedY) * 0.16;
-      list.style.transform = `translate3d(0, ${-easedY.toFixed(2)}px, 0)`;
+    } else if (rect.bottom < vh) {
+      // 3. Completed: sits absolute at bottom of track
+      section.style.position = 'absolute';
+      section.style.top = 'auto';
+      section.style.bottom = '0px';
+      section.style.left = '0px';
+      section.style.width = '100%';
+      section.style.height = '100vh';
+      list.style.transform = `translate3d(0, ${-maxTranslate}px, 0)`;
       progress.style.height = colH + 'px';
     } else {
-      // Actively scrolling through Chapters 1 through 5
-      const targetY = traveled;
-      easedY += (targetY - easedY) * 0.16;
+      // 2. Active inside track: fixed in viewport
+      section.style.position = 'fixed';
+      section.style.top = '0px';
+      section.style.bottom = 'auto';
+      section.style.left = '0px';
+      section.style.width = '100%';
+      section.style.height = '100vh';
+
+      const targetY = Math.min(Math.max(traveled, 0), maxTranslate);
+      easedY += (targetY - easedY) * 0.18;
       list.style.transform = `translate3d(0, ${-easedY.toFixed(2)}px, 0)`;
       const p = maxTranslate > 0 ? clamp01(easedY / maxTranslate) : 0;
       progress.style.height = (p * colH).toFixed(1) + 'px';

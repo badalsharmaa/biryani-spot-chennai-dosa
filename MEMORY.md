@@ -235,10 +235,8 @@ biryani_spot_chennai_dosa/
 - **Changes**:
   - Removed duplicate ~4,500 lines of legacy WordPress Elementor blocks at the top of `app/views/about/index.php`, eliminating element ID collisions (`#khTimelinePin`, `#khTimelineSec`, `#khCurtainMV`) and eradicating the stray full-width overlapping brown boxes.
   - Set `.kh-tl-opposite` and `.kh-tl-opposite-icon` to `display: none !important;`, removing all SVG mask placeholder brown squares between Chapters 4 and 5.
-  - Eliminated conflicting `@media (max-width: 1180px)` overrides that reset `.kh-timeline-sec` to `position: relative` on standard desktop screens.
-  - Engineered smooth in-section scroll hold pinning for **"An Experience That Unfolds In Chapters"**:
-    - Uses continuous `requestAnimationFrame` tick tracking to translate the chapter list smoothly through Chapters 1 to 5.
-    - Locks Chapter 5 fully in view for an intentional reading hold buffer (`viewportH * 0.85`) before releasing smoothly and scrolling into Section 5.
+  - Replaced CSS `position: sticky` with robust JS-driven `position: fixed` / `position: absolute` switching during RAF tick loop, ensuring zero premature unsticking or body background exposure regardless of ancestor `overflow` rules.
+  - Thoroughly tested and verified across all scroll stages (Chapters 1 to 5 + exit transition) via Chrome DevTools screenshot verification.
 - **Files**:
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 
