@@ -2658,35 +2658,172 @@ div.elementor-element-e58559a, [data-id="e58559a"] {
 div.elementor-element-69bf7a3,
 div.elementor-element-b408a9f,
 div.elementor-element-cf05877,
-div.elementor-element-c6d4a00,
 [data-id="69bf7a3"],
 [data-id="b408a9f"],
-[data-id="cf05877"],
-[data-id="c6d4a00"] {
+[data-id="cf05877"] {
   background-color: #FFFFFF !important;
   background: #FFFFFF !important;
 }
 
-/* Remove empty full-width gap above Grand Feasts & Catering */
-div.elementor-element-b408a9f,
-.elementor-element.elementor-element-b408a9f,
-[data-id="b408a9f"] {
+/* ==========================================================================
+   HOMEPAGE SECTION VERTICAL SPACING & RHYTHM SYSTEM
+   Standardizes all section gaps across Desktop, Tablet, and Mobile
+   ========================================================================== */
+
+/* 1. Global Section Reset: Zero out inconsistent inherited WordPress margins */
+.elementor-1536 > .e-con.e-parent,
+.elementor-1536 > .elementor-element.e-parent {
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
+  --margin-top: 0px !important;
   --margin-bottom: 0px !important;
 }
 
-div.elementor-element-cf05877,
-.elementor-element.elementor-element-cf05877,
-[data-id="cf05877"] {
+/* Section 2: Why Heritage Cards */
+.elementor-1536 .elementor-element.elementor-element-a38dd6e {
+  padding-top: 60px !important;
+  padding-bottom: 70px !important;
+}
+.elementor-1536 .elementor-element.elementor-element-a38dd6e .elementor-element-6fd8933 {
+  padding: 0 40px 24px 40px !important;
+  margin: 0 !important;
+}
+.elementor-1536 .elementor-element.elementor-element-a38dd6e .elementor-element-a3f25bc {
   margin-top: 0 !important;
-  --margin-top: 0px !important;
+  padding: 0 !important;
 }
 
-/* Header Positioned on Hero Section Top Only (Transparent Header for Hero Pages) */
-body.home header.elementor-48,
-body.home .elementor-location-header,
-body.page-hero-layout header.elementor-48,
-body.page-hero-layout .elementor-location-header {
+/* Section 3: Recognition & Awards Deck */
+.elementor-1536 .elementor-element.elementor-element-e58559a {
+  padding-top: 75px !important;
+  padding-bottom: 35px !important; /* Halved bottom gap */
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+/* Section 4: 3D Experience Carousel (THE BIRYANI SPOT EXPERIENCE) */
+.elementor-1536 .elementor-element.elementor-element-69bf7a3 {
+  padding-top: 80px !important;
+  padding-bottom: 0px !important; /* Decreased gap between Sec 4 & 5 to minimum */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.elementor-1536 .elementor-element.elementor-element-69bf7a3 .elementor-element-5598d27 {
+  padding: 0 60px 28px 60px !important;
+  margin: 0 !important;
+}
+.elementor-1536 .elementor-element.elementor-element-69bf7a3 .elementor-element-ff2153c {
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+/* Section 5: Locations (Warmth, Spice & Family) */
+.elementor-1536 .elementor-element.elementor-element-b408a9f {
+  padding-top: 0px !important; /* Decreased gap between Sec 4 & 5 to minimum */
+  padding-bottom: 0px !important; /* Decreased gap between Sec 5 & 6 to minimum */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Section 6: Grand Feasts & Catering (08 The Feast Brought To Your Table) */
+.elementor-1536 .elementor-element.elementor-element-cf05877 {
+  padding-top: 0px !important; /* Decreased gap between Sec 5 & 6 to minimum */
+  padding-bottom: 75px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Section 7: Sticky Scroll White-to-Brown Dynamic CTA Reveal */
+.elementor-1536 .elementor-element.elementor-element-c6d4a00,
+div.elementor-element-c6d4a00,
+[data-id="c6d4a00"] {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Tablet Responsive Spacing (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .elementor-1536 .elementor-element.elementor-element-a38dd6e {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-e58559a {
+    padding-top: 55px !important;
+    padding-bottom: 25px !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-69bf7a3 {
+    padding-top: 60px !important;
+    padding-bottom: 0px !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-b408a9f {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-cf05877 {
+    padding-top: 0px !important;
+    padding-bottom: 55px !important;
+  }
+}
+
+/* Mobile Responsive Spacing (<= 767px) */
+@media (max-width: 767px) {
+  .elementor-1536 .elementor-element.elementor-element-a38dd6e {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-e58559a {
+    padding-top: 45px !important;
+    padding-bottom: 20px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-69bf7a3 {
+    padding-top: 48px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-b408a9f {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .elementor-1536 .elementor-element.elementor-element-cf05877 {
+    padding-top: 0px !important;
+    padding-bottom: 45px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Reset all inherited erratic mobile negative margins */
+  .elementor-1536 .elementor-element.elementor-element-a3f25bc,
+  .elementor-1536 .elementor-element.elementor-element-0b8b6a2,
+  .elementor-1536 .elementor-element.elementor-element-1654c94,
+  .elementor-1536 .elementor-element.elementor-element-ff2153c,
+  .elementor-1536 .elementor-element.elementor-element-cf05877 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    --margin-top: 0px !important;
+    --margin-bottom: 0px !important;
+  }
+}
+
+/* ==========================================================================
+   TRANSPARENT HEADER & THREE-COLUMN BAR
+   ========================================================================== */
+header.elementor-48,
+.elementor-location-header,
+.elementor-48 .elementor-element.elementor-element-91c3171,
+.elementor-element.elementor-element-91c3171 {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -2698,6 +2835,7 @@ body.page-hero-layout .elementor-location-header {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: none !important;
+  border: none !important;
   isolation: isolate !important;
   -webkit-transform: translate3d(0, 0, 0) !important;
   transform: translate3d(0, 0, 0) !important;
@@ -2705,33 +2843,16 @@ body.page-hero-layout .elementor-location-header {
   backface-visibility: hidden !important;
 }
 
-body:not(.home):not(.page-hero-layout) header.elementor-48,
-body:not(.home):not(.page-hero-layout) .elementor-location-header,
-body.page-inner:not(.page-hero-layout) header.elementor-48,
-body.page-inner:not(.page-hero-layout) .elementor-location-header {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  width: 100% !important;
-  z-index: 1000 !important;
-  background-color: #1e120c !important;
-  background: #1e120c !important;
-  isolation: isolate !important;
-}
-
-body.page-inner:not(.page-hero-layout) #page,
-body.page-inner:not(.page-hero-layout) #content,
-body.page-inner:not(.page-hero-layout) .site-content,
-body.page-inner:not(.page-hero-layout) #primary,
-body.page-inner:not(.page-hero-layout) #main {
-  padding-top: 16px !important;
-}
-
 body.page-hero-layout #page,
 body.page-hero-layout #content,
 body.page-hero-layout .site-content,
 body.page-hero-layout #primary,
-body.page-hero-layout #main {
+body.page-hero-layout #main,
+body.home #page,
+body.home #content,
+body.home .site-content,
+body.home #primary,
+body.home #main {
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
@@ -2746,6 +2867,8 @@ body.page-hero-layout #main {
   box-sizing: border-box !important;
   width: 100% !important;
   position: relative !important;
+  background: transparent !important;
+  background-color: transparent !important;
   z-index: 100000000 !important;
   -webkit-transform: translate3d(0, 0, 0) !important;
   transform: translate3d(0, 0, 0) !important;
@@ -2798,78 +2921,131 @@ body.page-hero-layout #main {
   opacity: 0.8 !important;
 }
 
-/* Center Column: Royal Logo Emblem */
+/* Center Column: Logo (+50% Scale) */
 .elementor-48 .elementor-element.elementor-element-c1e51b4 {
   display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
   align-items: center !important;
-  flex: 1 1 0% !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
   width: auto !important;
-  min-width: max-content !important;
-  text-align: center !important;
+  margin: 0 auto !important;
   z-index: 10 !important;
   -webkit-transform: translateZ(0) !important;
   transform: translateZ(0) !important;
 }
 
 .elementor-48 .elementor-element.elementor-element-76a29c8 {
-  display: inline-block !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: auto !important;
-  margin: 0 auto !important;
 }
 
 .elementor-48 .elementor-element.elementor-element-76a29c8 a {
   display: inline-block !important;
+  line-height: 0 !important;
 }
 
 .elementor-48 .elementor-element.elementor-element-76a29c8 img {
   width: 78px !important;
   height: auto !important;
-  -webkit-filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
+  max-width: none !important;
   display: block !important;
-  margin: 0 auto !important;
-  -webkit-transform: translateZ(0) !important;
-  transform: translateZ(0) !important;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.6)) !important;
 }
 
-/* Right Column: Lottie Hamburger Toggle Button */
+/* Right Column: Lottie / Drawer Toggle firmly aligned to the right */
 .elementor-48 .elementor-element.elementor-element-c7ef4ce {
   display: flex !important;
-  flex-direction: row !important;
-  justify-content: flex-end !important;
   align-items: center !important;
+  justify-content: flex-end !important;
+  margin-left: auto !important;
   flex: 1 1 0% !important;
   width: auto !important;
-  min-width: 90px !important;
+  min-width: 60px !important;
   z-index: 10 !important;
   -webkit-transform: translateZ(0) !important;
   transform: translateZ(0) !important;
 }
 
-#lottie-toggle {
-  z-index: 100000001 !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  -webkit-filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
-  -webkit-transform: translateZ(0) !important;
-  transform: translateZ(0) !important;
+.elementor-48 .elementor-element.elementor-element-0f99354 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-@media (max-width: 768px) {
+.elementor-48 .lottie-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  position: relative !important;
+  width: 60px !important;
+  height: 50px !important;
+  margin-left: auto !important;
+  overflow: visible !important;
+}
+
+.elementor-48 #lottie-toggle {
+  position: relative !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 60px !important;
+  height: 50px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+  z-index: 100000001 !important;
+  pointer-events: auto !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
+}
+
+.elementor-48 #lottie-toggle svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+/* Mobile Header Adjustment */
+@media (max-width: 767px) {
   .elementor-48 .elementor-element.elementor-element-91c3171 {
     padding: 16px 20px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
+  
   .elementor-48 .elementor-element.elementor-element-541a8a9 {
     display: none !important;
   }
+
   .elementor-48 .elementor-element.elementor-element-c1e51b4 {
+    margin: 0 !important;
     justify-content: flex-start !important;
+    flex: 0 0 auto !important;
   }
+
   .elementor-48 .elementor-element.elementor-element-76a29c8 img {
     width: 60px !important;
+  }
+
+  .elementor-48 .elementor-element.elementor-element-c7ef4ce {
+    margin-left: auto !important;
+    justify-content: flex-end !important;
+    flex: 0 0 auto !important;
+    min-width: 50px !important;
+  }
+
+  .elementor-48 .lottie-wrapper,
+  .elementor-48 #lottie-toggle {
+    width: 50px !important;
+    height: 45px !important;
+    margin-left: auto !important;
   }
 }
 
@@ -2941,16 +3117,56 @@ article.post-1536,
 }
 
 /* ==========================================================================
-   HERO SECTION OVERLAY FILTER & TEXT CONTRAST (~25% SUBTLE TRANSPARENCY)
+   HERO SECTION OVERLAY & FULLSCREEN FILL-MODE BACKGROUND VIDEO
    ========================================================================== */
 .elementor-1536 .elementor-element.elementor-element-78802e6,
 .elementor-1536 .elementor-element.elementor-element-d554e4d,
 .elementor-element.elementor-element-78802e6,
 .elementor-element.elementor-element-d554e4d {
   position: relative !important;
+  background: #0d0a08 !important; /* Pure dark fallback — zero external images */
+  background-image: none !important;
+  min-height: 100svh !important;
+  height: 100svh !important;
+  width: 100% !important;
+  overflow: hidden !important;
 }
 
-/* Subtle ~25% transparency overlay with smooth #E2C4AF blend at bottom */
+/* Background video container */
+.elementor-background-video-container {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+  z-index: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Background video in FILL mode (covers 100% of viewport on mobile & desktop) */
+.elementor-background-video-hosted,
+.elementor-background-video-container video,
+.elementor-element video.elementor-background-video-hosted {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important; /* Overrides generic max-width: 100% for full fill */
+  max-height: none !important;
+  object-fit: cover !important; /* FILL MODE: always covers the entire section */
+  object-position: center center !important;
+  filter: none !important;
+}
+
+/* Clean subtle dark overlay top for header readability + 25% bottom gradient matching below section (#E2C4AF) */
 .elementor-1536 .elementor-element.elementor-element-78802e6::before,
 .elementor-1536 .elementor-element.elementor-element-78802e6 > .elementor-background-video-container::before,
 .elementor-1536 .elementor-element.elementor-element-d554e4d::before,
@@ -2960,7 +3176,14 @@ article.post-1536,
   inset: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(226, 196, 175, 0.15) 50%, rgba(226, 196, 175, 0.55) 85%, #E2C4AF 100%) !important;
+  background-image: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0.45) 0%, 
+    rgba(0, 0, 0, 0.08) 25%, 
+    rgba(0, 0, 0, 0) 50%, 
+    rgba(226, 196, 175, 0) 75%, 
+    rgba(226, 196, 175, 0.65) 90%, 
+    #E2C4AF 100%
+  ) !important;
   background-color: transparent !important;
   pointer-events: none !important;
   z-index: 1 !important;
@@ -2973,25 +3196,17 @@ article.post-1536,
   content: none !important;
 }
 
-.elementor-background-video-container {
-  z-index: 0 !important;
-}
-
-.elementor-background-video-container video {
-  filter: none !important;
-}
-
 /* Hero Title & CTA Crisp Visibility */
 .khf-hero-title {
   position: relative !important;
   z-index: 10 !important;
   color: #FFFFFF !important;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95) !important;
 }
 
 .khf-hero-title em {
   color: #FFFFFF !important;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95) !important;
 }
 
 .mnq-reserve-wrapper {
@@ -3002,4 +3217,5 @@ article.post-1536,
 .mnq-landing-reserve-btn {
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8) !important;
 }
+
 

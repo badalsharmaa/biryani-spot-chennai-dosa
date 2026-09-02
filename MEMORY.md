@@ -127,6 +127,75 @@ biryani_spot_chennai_dosa/
   - WebKit 3D GPU layer occlusion: Hardware-accelerated background video and overlays in the Hero section punched through 2D absolute header children in Safari's compositing pipeline.
 - **Fix**: Updated `public/assets/css/khufus-theme.css` to add `-webkit-transform: translate3d(0,0,0)`, `transform: translateZ(0)`, `isolation: isolate`, and explicit flexbox properties (`flex: 1 1 0%`, `min-width: max-content`, `width: auto`) for all 3 header columns.
 
+### 6. Home Page Redundant Styles & Egyptian Accolades Replacement
+- **Symptom**: `app/views/home/index.php` had residual duplicate Elementor/Astra inline styles and font dumps at the top of the file; Section 3 Recognition Deck displayed legacy Egyptian restaurant awards ("MENA's 50 Best, No. 1", "La Liste Best in Africa").
+- **Fix**:
+  - Removed top duplicate styles from `home/index.php`.
+  - Replaced legacy awards in `public/assets/js/khufus-core.js` and `home/index.php` with authentic Bay Area accolades ("4.4★ on Google Reviews (4,500+ ratings)", "Top Bay Area Biryani Destination", "Authentic Chennai Dosa Craft", "Premier Catering Partner").
+  - Cleaned up raw ChatGPT copy-paste markup in `app/views/layouts/footer.php`.
+  - Verified full mobile/tablet/desktop responsiveness (375px, 768px, 1440px) with zero horizontal overflow (`scrollWidth === innerWidth`).
+
+### 7. Hero Background Video Fill Mode & Transparent Header
+- **Symptom**:
+  - Top header area rendered brown block `#1e120c` in Safari / inner page routes instead of transparent.
+  - On mobile screens, the background video was letterboxed in "fit mode" (leaving brown bars on top and bottom).
+  - An old legacy pyramid painting background image was rendered behind the video container in `post-1536.css`.
+  - Hamburger menu icon had an inline `right: -40px` offset and was not pinned to the right edge.
+- **Root Cause**:
+  - `khufus-theme.css` had a fallback rule applying `background-color: #1e120c` to `body:not(.home)` header selectors, which kicked in on non-root or proxy requests.
+  - Global `video { max-width: 100%; }` constrained the 16:9 video width on portrait mobile viewports, shrinking its height to ~211px in an 812px container.
+- **Fix**:
+  - Removed all `#1e120c` and solid background rules; header is unconditionally 100% transparent and overlaid (`position: absolute`) on all viewports.
+  - Forced `video.elementor-background-video-hosted` to `max-width: none !important`, `width: 100% !important`, `height: 100% !important`, `object-fit: cover !important` (full-bleed fill mode).
+  - Removed all background images behind the video container (`background-image: none !important; background: #0d0a08 !important`).
+  - Set the bottom gradient fade to 25% height precisely matching the below Section 2 background color `#E2C4AF` (`linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.08) 25%, rgba(0,0,0,0) 50%, rgba(226,196,175,0) 75%, rgba(226,196,175,0.65) 90%, #E2C4AF 100%)`).
+  - Pinned hamburger icon firmly to the right edge across desktop, tablet, and mobile with `margin-left: auto; justify-content: flex-end;`.
+
+### 9. Standardized Homepage Section Spacing & Vertical Rhythm
+- **Symptom**: Inconsistent, erratic gaps between homepage sections caused by inherited WordPress/Elementor asymmetric paddings (e.g. `150px` bottom padding on Section 3, `120px` on Section 4) and brittle negative margins (`-80px`, `-100px`, and mobile `-250px`/`-260px`).
+- **Fix**:
+  - Zeroed out all inherited negative margins and outer gaps across parent sections.
+  - Standardized all sections to a consistent vertical rhythm in `public/assets/css/khufus-theme.css`:
+    - **Desktop**: Uniform `75px` top and `75px` bottom padding.
+    - **Tablet (768px–1024px)**: Uniform `55px` top and `55px` bottom padding.
+### 10. Final CTA Section (Section 7) Scroll Hold & Dynamic White-to-Brown Color Shift
+- **Behavior**:
+  - As the user reaches Section 7, the section enters the viewport with pure **White (`#FFFFFF`)** background and dark brown typography (`#3D291C`).
+  - The section pins in place in the viewport (`position: fixed` while scrolling through the `220vh` track).
+  - As the user scrolls through the track:
+    - Background smoothly transitions from **White (`#FFFFFF`)** to **Rich Heritage Brown (`#1e120c`)**.
+    - Typography smoothly transitions from dark brown to **Glowing White (`#FFFFFF`)**.
+    - The "Reserve Your Table" button and spice flourish ornament smoothly adapt to frosted glass and white accent.
+  - At the end of the track, the section releases smoothly into the footer.
+### 11. Halved Vertical Gaps Above Sections 05 & 08
+- **Changes**:
+  - Halved the vertical gap above **05 (Culinary Heritage / The Dum Pukht Tradition)** (Section 4):
+    - Desktop: `padding-bottom: 35px` on Section 3 + `padding-top: 35px` on Section 4 (total 70px, down from 150px).
+    - Tablet: `25px + 25px = 50px`. Mobile: `20px + 20px = 40px`.
+  - Halved the vertical gap above **08 (Grand Feasts & Catering / The Feast Brought To Your Table)** (Section 6):
+    - Desktop: `padding-bottom: 35px` on Section 5 + `padding-top: 35px` on Section 6 (total 70px, down from 150px).
+    - Tablet: `25px + 25px = 50px`. Mobile: `20px + 20px = 40px`.
+### 12. Added Spacious Top Padding Above "THE BIRYANI SPOT EXPERIENCE"
+- **Changes**:
+  - Increased top padding on Section 4 (`69bf7a3`) to provide luxurious breathing room above the heading "THE BIRYANI SPOT EXPERIENCE":
+    - **Desktop**: `padding-top: 80px`
+    - **Tablet**: `padding-top: 60px`
+    - **Mobile**: `padding-top: 48px`
+### 13. Fixed Square Container Images in Header Dropdown Menu Drawer
+- **Changes**:
+  - Transformed the 3 card images in the dropdown overlay (`#elementor-popup-modal-166`) into fixed square containers (`aspect-ratio: 1 / 1 !important; max-width: 260px`).
+  - Applied `overflow: hidden; border-radius: 8px; object-fit: cover; object-position: center;` with luxury scale animation (`1.05x`) on hover.
+  - Linked high-resolution authentic photography for **Reservations**, **Lifestyle Shots**, and **Menus**.
+### 15. Section 7 Hold Pinning & White-to-Brown Scroll Engine
+- **Changes**:
+  - Restored `.kh-cta-reveal` as a dedicated scroll track with `height: 220vh !important; position: relative !important;`.
+  - Built viewport hold/pin controller on `.kh-cta-sticky` (`height: 100vh; display: flex; align-items: center; justify-content: center;`):
+    - **Approaching**: Sits at the top of the track with **Pure White background (`#ffffff`)** and dark brown text (`#3D291C`).
+    - **Held / Pinned in Viewport** (`rect.top <= 0 && rect.bottom >= vh`): Locks to `position: fixed; top: 0; width: 100%; height: 100vh;`. As the user scrolls through the track, background dynamically shifts from **White (`#ffffff`)** to **Rich Heritage Brown (`#1e120c`)**, and typography morphs to crisp white (`#ffffff`).
+    - **Completed**: Unpins to `position: absolute; bottom: 0;` at 100% Rich Brown, naturally scrolling up to reveal the footer.
+- **Files**:
+  - [`app/views/home/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/home/index.php) (lines 8714–8741, 9050–9190).
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development
@@ -148,11 +217,11 @@ biryani_spot_chennai_dosa/
 
 ---
 
-## 📍 Bay Area Locations Reference
+## 📍 Bay Area Locations Reference (Verified against Toast POS)
 
-| Location | Address | Phone | Specialty Highlights |
+| Location | Verified Address | Phone | Toast Online Ordering URL |
 |---|---|---|---|
-| **Dublin** | 7111 Amador Valley Blvd, Dublin, CA 94568 | (925) 828-7768 | Clay Handi Biryanis, Ghee Podi Dosas, Family Booths |
-| **Livermore** | 2062 First St, Livermore, CA 94550 | (925) 447-3672 | Downtown Patio Dining, Dum Pukht Feast, Tandoor Sizzlers |
-| **Milpitas** | 350 S Main St, Milpitas, CA 95035 | (408) 263-3672 | Silicon Valley Tech Hub Catering, Executive Lunch Combos |
-| **Concord** | 1855 Willow Pass Rd, Concord, CA 94520 | (925) 687-3672 | Grand Banquet Hall, Weekend Tiffin Buffets, Party Orders |
+| **Dublin** | 4288 Dublin Blvd #111, Dublin, CA 94568 | (925) 361-5317 | `https://order.toasttab.com/online/biryani-spot-4288-dublin-blvd-111` |
+| **Livermore** | 2050 Portola Avenue, Livermore, CA 94551 | (669) 264-7920 | `https://order.toasttab.com/online/chennai-biryani-and-dosa-livermore-portal-ave` |
+| **Milpitas** | 380 South Main Street, Milpitas, CA 95035 | (669) 264-7920 | `https://order.toasttab.com/online/biryani-and-dosa-grill-milpitas-380-south-main-street` |
+| **Concord** | 3540 Clayton Road, Concord, CA 94519 | (925) 494-4470 | `https://order.toasttab.com/online/chennai-dosa` |

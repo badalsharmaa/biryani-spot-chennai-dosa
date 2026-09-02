@@ -4132,8 +4132,8 @@ P88G KHUFUS FOOTER ACCORDION
 $currentUri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($currentUri, PHP_URL_PATH);
 $pathClean = rtrim($path, '/');
-$isHome = ($pathClean === '' || $pathClean === '/');
-$isHeroPage = $isHome || in_array($pathClean, ['/menu', '/contact', '/locations', '/gallery', '/legacy', '/about', '/experience', '/bistro']);
+$isHome = ($pathClean === '' || $pathClean === '/' || $pathClean === '/index.php' || str_contains($pathClean, 'email-protection'));
+$isHeroPage = $isHome || in_array($pathClean, ['/menu', '/contact', '/locations', '/gallery', '/legacy', '/about', '/experience', '/bistro', '/reservations']);
 
 $bodyClass = ($isHome ? 'home ' : 'page-inner ') . 
              ($isHeroPage ? 'page-hero-layout ' : '') . 
@@ -4157,8 +4157,8 @@ $bodyClass = ($isHome ? 'home ' : 'page-inner ') .
 				</div>
 		<div class="elementor-element elementor-element-c7ef4ce e-con-full e-flex e-con e-child" data-id="c7ef4ce" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-0f99354 elementor-widget elementor-widget-html" data-id="0f99354" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<div class="lottie-wrapper" style="position: relative; height: 50px; overflow: visible;">
-  <div id="lottie-toggle" style="position: absolute; right: -40px; width: 90px; height: 50px; cursor: pointer;"></div>
+					<div class="lottie-wrapper">
+  <div id="lottie-toggle"></div>
 </div>
 				</div>
 				</div>

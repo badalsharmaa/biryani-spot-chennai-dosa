@@ -6,6 +6,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   initPreloader();
   initHeader();
+  initHeroVideoDeceleration();
   initLottieMenu();
   initReserveDropdown();
   initScrollReveals();
@@ -51,6 +52,62 @@ function initPreloader() {
    -------------------------------------------------------------------------- */
 function initHeader() {
   // Header stays at the top of the hero section only and does not follow on scroll
+}
+
+/* --------------------------------------------------------------------------
+   2B. HERO VIDEO SINGLE-PLAY & FINAL FRAME PAUSE CONTROLLER
+   - Plays at 100% full original speed (no slow motion / no FPS stutter)
+   - Freezes firmly on the final frame as a living background image
+   -------------------------------------------------------------------------- */
+function initHeroVideoDeceleration() {
+  const videos = document.querySelectorAll(".elementor-background-video-hosted");
+  if (!videos.length) return;
+
+  videos.forEach(video => {
+    video.loop = false;
+    video.removeAttribute("loop");
+    video.playbackRate = 1.0;
+    let hasFinished = false;
+
+    function checkVideoProgress() {
+      if (hasFinished) return;
+
+      const duration = video.duration;
+      if (!duration || isNaN(duration)) {
+        requestAnimationFrame(checkVideoProgress);
+        return;
+      }
+
+      const timeLeft = duration - video.currentTime;
+
+      // When reaching within 0.08s of the end, pause cleanly on the last frame
+      if (timeLeft <= 0.08 || video.currentTime >= duration - 0.08) {
+        video.pause();
+        hasFinished = true;
+        return;
+      }
+
+      requestAnimationFrame(checkVideoProgress);
+    }
+
+    video.addEventListener("play", () => {
+      if (hasFinished) {
+        video.pause();
+        return;
+      }
+      video.playbackRate = 1.0;
+      requestAnimationFrame(checkVideoProgress);
+    });
+
+    video.addEventListener("ended", () => {
+      video.pause();
+      hasFinished = true;
+    });
+
+    if (!video.paused) {
+      requestAnimationFrame(checkVideoProgress);
+    }
+  });
 }
 
 /* --------------------------------------------------------------------------
@@ -109,28 +166,29 @@ function initReserveDropdown() {
    -------------------------------------------------------------------------- */
 function initRecognitionDeck() {
   const root = document.getElementById("expRight");
-  if (!root) return;
+  if (!root || root.dataset.initialized === "true") return;
+  root.dataset.initialized = "true";
 
   const slides = [
     {
-      title: "MENA’S 50 BEST, NO. 1",
-      text: "Best Restaurant for three consecutive years, rising in MENA’s 50 Best from No. 5 in 2024 to No. 4 in 2025 and No. 1 in 2026.",
-      image: "/assets/images/award-1.webp"
+      title: "4.4★ ON GOOGLE REVIEWS",
+      text: "Celebrated across Dublin, Milpitas, Livermore, and Concord with over 4,500+ verified ratings praising our authentic Dum Biryanis and crispy tiffins.",
+      image: "/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg"
     },
     {
-      title: "RESY ONE TO WATCH, 2025",
-      text: "Winner of the Resy One To Watch Award 2025, recognized by The World’s 50 Best for a destination experience with real momentum.",
-      image: "/assets/images/award-2.webp"
+      title: "TOP BAY AREA BIRYANI DESTINATION",
+      text: "Recognized as a premier Silicon Valley hotspot for authentic Hyderabadi Dum cooking, slow-cooked in traditional dough-sealed handis.",
+      image: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_crab_masala_roast.jpg"
     },
     {
-      title: "LA LISTE, HIDDEN GEM",
-      text: "Selected by La Liste as a Hidden Gem of the culinary world, spotlighting our kitchens for originality, craft, and a strong sense of place.",
-      image: "/assets/images/award-3.webp"
+      title: "AUTHENTIC CHENNAI DOSA CRAFT",
+      text: "Naturally fermented stone-ground batter swirled paper-thin on smoking cast-iron tawas and roasted with pure golden ghee.",
+      image: "/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg"
     },
     {
-      title: "LA LISTE, BEST IN AFRICA",
-      text: "Named Best Restaurant in Africa by La Liste in 2025, recognizing our dining rooms as one of the continent’s most exceptional culinary destinations.",
-      image: "/assets/images/award-4.webp"
+      title: "PREMIER CATERING PARTNER",
+      text: "Trusted for corporate events, tech campus catering, and grand family celebrations across the entire San Francisco Bay Area.",
+      image: "/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_restaurant_main_dining_hall_booths.jpg"
     }
   ];
 

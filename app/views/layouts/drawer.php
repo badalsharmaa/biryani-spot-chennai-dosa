@@ -41,10 +41,10 @@
               </div>
 
               <!-- Card 1: Reservations -->
-              <div class="elementor-element elementor-element-1980e35 e-con-full stagger-item e-flex e-con e-child" data-id="1980e35" data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-b0721a6 elementor-widget elementor-widget-image" data-id="b0721a6" data-element_type="widget" data-e-type="widget">
-                  <a href="/reservations">
-                    <img width="1024" height="674" src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_order_counter_and_dining_room.jpg" alt="Dining Room Reservations" style="border-radius: 8px; width: 100%; height: 220px; object-fit: cover;" />
+              <div class="elementor-element elementor-element-1980e35 e-con-full stagger-item drawer-image-card e-flex e-con e-child" data-id="1980e35" data-element_type="container" data-e-type="container">
+                <div class="elementor-element elementor-element-b0721a6 elementor-widget elementor-widget-image drawer-square-wrapper" data-id="b0721a6" data-element_type="widget" data-e-type="widget">
+                  <a href="/reservations" class="drawer-square-link">
+                    <img width="600" height="600" src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_restaurant_main_dining_hall_booths.jpg" alt="Dining Room Reservations" class="drawer-square-img" />
                   </a>
                 </div>
                 <div class="elementor-element elementor-element-f6c66dc elementor-widget elementor-widget-heading" data-id="f6c66dc" data-element_type="widget" data-e-type="widget">
@@ -53,10 +53,10 @@
               </div>
 
               <!-- Card 2: Lifestyle Shots -->
-              <div class="elementor-element elementor-element-0700956 e-con-full stagger-item e-flex e-con e-child" data-id="0700956" data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-fc50da0 elementor-widget elementor-widget-image" data-id="fc50da0" data-element_type="widget" data-e-type="widget">
-                  <a href="/gallery">
-                    <img width="1024" height="683" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast" style="border-radius: 8px; width: 100%; height: 220px; object-fit: cover;" />
+              <div class="elementor-element elementor-element-0700956 e-con-full stagger-item drawer-image-card e-flex e-con e-child" data-id="0700956" data-element_type="container" data-e-type="container">
+                <div class="elementor-element elementor-element-fc50da0 elementor-widget elementor-widget-image drawer-square-wrapper" data-id="fc50da0" data-element_type="widget" data-e-type="widget">
+                  <a href="/gallery" class="drawer-square-link">
+                    <img width="600" height="600" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast" class="drawer-square-img" />
                   </a>
                 </div>
                 <div class="elementor-element elementor-element-09e20a0 elementor-widget elementor-widget-heading" data-id="09e20a0" data-element_type="widget" data-e-type="widget">
@@ -65,10 +65,10 @@
               </div>
 
               <!-- Card 3: Menus -->
-              <div class="elementor-element elementor-element-18dba49 e-con-full stagger-item e-flex e-con e-child" data-id="18dba49" data-element_type="container" data-e-type="container">
-                <div class="elementor-element elementor-element-59d479c elementor-widget elementor-widget-image" data-id="59d479c" data-element_type="widget" data-e-type="widget">
-                  <a href="/menu">
-                    <img width="1024" height="1536" src="/assets/images/google_maps/dublin/biryani_specials/dublin_royal_mutton_dum_biryani_pot.jpg" alt="Signature Dum Biryani" style="border-radius: 8px; width: 100%; height: 220px; object-fit: cover;" />
+              <div class="elementor-element elementor-element-18dba49 e-con-full stagger-item drawer-image-card e-flex e-con e-child" data-id="18dba49" data-element_type="container" data-e-type="container">
+                <div class="elementor-element elementor-element-59d479c elementor-widget elementor-widget-image drawer-square-wrapper" data-id="59d479c" data-element_type="widget" data-e-type="widget">
+                  <a href="/menu" class="drawer-square-link">
+                    <img width="600" height="600" src="/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Signature Dum Biryani" class="drawer-square-img" />
                   </a>
                 </div>
                 <div class="elementor-element elementor-element-9e0c5aa elementor-widget elementor-widget-heading" data-id="9e0c5aa" data-element_type="widget" data-e-type="widget">
@@ -207,17 +207,48 @@
     font-weight: 300 !important;
   }
 
-  #elementor-popup-modal-166 .elementor-widget-image img {
-    border-radius: 8px !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-    transition: transform 0.4s ease, filter 0.4s ease !important;
-    width: 100% !important;
-    height: 220px !important;
-    object-fit: cover !important;
+  /* Fixed Square Container Styling for Drawer Images */
+  #elementor-popup-modal-166 .drawer-image-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
+  #elementor-popup-modal-166 .drawer-square-wrapper,
+  #elementor-popup-modal-166 .elementor-widget-image {
+    width: 100% !important;
+    max-width: 260px !important;
+    margin: 0 auto 12px auto !important;
+  }
+
+  #elementor-popup-modal-166 .drawer-square-link,
+  #elementor-popup-modal-166 .elementor-widget-image a {
+    display: block !important;
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    background: #1e120c !important;
+  }
+
+  #elementor-popup-modal-166 .elementor-widget-image img,
+  #elementor-popup-modal-166 .drawer-square-img {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 8px !important;
+    display: block !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease !important;
+  }
+
+  #elementor-popup-modal-166 .drawer-square-link:hover img,
   #elementor-popup-modal-166 .stagger-item:hover .elementor-widget-image img {
-    transform: scale(1.03) !important;
+    transform: scale(1.05) !important;
   }
 
   @media (max-width: 900px) {
