@@ -196,6 +196,29 @@ biryani_spot_chennai_dosa/
 - **Files**:
   - [`app/views/home/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/home/index.php) (lines 8714–8741, 9050–9190).
 
+### 16. Multi-Step Interactive Reservation Booking Flow (`/reservations`)
+- **Changes**:
+  - Designed and built a 5-step sequential reservation booking interface inspired by `contact.html` with real-time step progress indicator and interactive location, date, time, party size, and contact details.
+  - Connected front-end booking submission to `POST /api/reservations` $\rightarrow$ `ReservationController::store()` $\rightarrow$ `ReservationService::createReservation()` $\rightarrow$ `LeadRepository::saveReservation()` with SQLite database persistence.
+  - Added expandable FAQ accordion answering questions regarding group bookings, dietary preferences, Halal certifications, and location timings.
+- **Files**:
+  - [`app/views/reservations/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/reservations/index.php)
+
+### 17. Experience Page Audit, Content & Asset Overhaul (`/experience`)
+- **Changes**:
+  - Fixed PHP built-in CLI static file router in `public/index.php` and added `HEAD` HTTP method support in `app/Core/Router.php`.
+  - Synchronized and integrated local photography from `old_website_data` (`banners/hero_banner.webp`, `dishes/traditional_thali.webp`, `dishes/indian_thali_curries.webp`, `dishes/curries_and_naan.webp`, `dishes/catering_spread.webp`).
+  - Replaced legacy Egyptian placeholder copy with authentic South Indian & Chettinad culinary craftsmanship:
+    - **Hero Section**: Story of stone-ground masalas, cast-iron tawas, and slow dum cooking across Dublin, Milpitas, Livermore, and Concord.
+    - **Chapter Two (4-Slide Carousel)**: Stone-ground masalas, sealed handi dum cooking, naturally fermented crispy dosas, and coastal tandoor feasts.
+    - **Chapter Three & Four**: Warm dining room atmosphere, slow dum patience, and authentic Chettinad hospitality.
+    - **Chapter Five (Movements)**: Atmosphere, Kitchen, and Table culinary movements.
+    - **Final CTA Section**: Unified design implementation with Home page's scroll-driven pinning and white-to-brown color morphing transition engine while retaining authentic Experience page content ("*The Experience Is Best Understood In Person*", "*quietly unforgettable*", Rose divider mask, and action links to `/reservations` and `/menu`).
+- **Files**:
+  - [`app/views/experience/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/experience/index.php)
+  - [`app/Core/Router.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/Core/Router.php)
+  - [`public/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/index.php)
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development

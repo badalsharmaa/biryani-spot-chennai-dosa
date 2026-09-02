@@ -273,7 +273,7 @@ KHUFUS — EXPERIENCE HERO (ALIGNED WITH ABOUT)
     rgba(80,60,40,.92) 75%,
     rgba(92,71,43,1) 100%
   ),
-  url("/assets/images/Experience-Image-2.webp")
+  url("/assets/images/banners/hero_banner.webp")
   center top / cover no-repeat;
 
   filter:grayscale(40%);
@@ -755,10 +755,10 @@ UNCHANGED
   pointer-events:none;
 }
 
-.kh-exp-desktop-media--1{background:url('/assets/images/Slide-1-Entrance.webp') center center / cover no-repeat;}
-.kh-exp-desktop-media--2{background:url('/assets/images/Slide-2-Entry.webp') center center / cover no-repeat;}
-.kh-exp-desktop-media--3{background:url('/assets/images/Slide-3-Menu.webp') center center / cover no-repeat;}
-.kh-exp-desktop-media--4{background:url('/assets/images/Slide-4-Food.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--1{background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--2{background:url('/assets/images/banners/hero_banner.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--3{background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--4{background:url('/assets/images/dishes/curries_and_naan.webp') center center / cover no-repeat;}
 
 .kh-exp-desktop-content{
   padding:34px 30px 28px;
@@ -1053,10 +1053,10 @@ FULL REWRITE
   pointer-events:none;
 }
 
-.kh-exp-mobile-media--1{background:url('/assets/images/Slide-1-Entrance.webp') center center / cover no-repeat;}
-.kh-exp-mobile-media--2{background:url('/assets/images/Slide-2-Entry.webp') center center / cover no-repeat;}
-.kh-exp-mobile-media--3{background:url('/assets/images/Slide-3-Menu.webp') center center / cover no-repeat;}
-.kh-exp-mobile-media--4{background:url('/assets/images/Slide-4-Food.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--1{background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--2{background:url('/assets/images/banners/hero_banner.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--3{background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--4{background:url('/assets/images/dishes/curries_and_naan.webp') center center / cover no-repeat;}
 
 .kh-exp-mobile-content{
   padding:20px 18px 20px;
@@ -1246,7 +1246,7 @@ ALIGNED WITH CURRENT SYSTEM
     rgba(60,45,30,.68) 60%,
     rgba(36,26,18,.92) 100%
   ),
-  url('/assets/images/About-Middle-Section.webp') center bottom / cover no-repeat;
+  url('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_bhature_chole_combo_platter.jpg') center bottom / cover no-repeat;
   filter:grayscale(80%) sepia(12%);
   will-change:transform;
   transform:translate3d(0,0,0) scale(1.08);
@@ -1604,7 +1604,7 @@ ALIGNED WITH CURRENT SYSTEM
       rgba(60,45,30,.64) 58%,
       rgba(36,26,18,.94) 100%
     ),
-    url('/assets/images/About-Middle-Section.webp') center bottom / cover no-repeat;
+    url('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_bhature_chole_combo_platter.jpg') center bottom / cover no-repeat;
   }
 }
 </style>
@@ -1757,7 +1757,7 @@ INTERACTIVE PANEL STAGE
 .kh-rhythm-media--3{
   background-image:
     linear-gradient(180deg, rgba(12,10,8,.34) 0%, rgba(18,14,10,.58) 48%, rgba(20,16,12,.78) 100%),
-    url('/assets/images/Khufus-Food-1.webp');
+    url('/assets/images/dishes/catering_spread.webp');
 }
 
 .kh-rhythm-overlay{
@@ -2494,7 +2494,7 @@ RIGHT SWITCHING PANEL
 }
 
 .kh-ritual-selector-media--1{
-  background:url('/assets/images/Gallery-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-selector-media--2{
@@ -2502,7 +2502,7 @@ RIGHT SWITCHING PANEL
 }
 
 .kh-ritual-selector-media--3{
-  background:url('/assets/images/Inside-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-selector-panel-logo{
@@ -2909,7 +2909,7 @@ MOBILE SIMPLIFIED CARD STACK
 }
 
 .kh-ritual-mobile-media--1{
-  background:url('/assets/images/Gallery-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-mobile-media--2{
@@ -2917,7 +2917,7 @@ MOBILE SIMPLIFIED CARD STACK
 }
 
 .kh-ritual-mobile-media--3{
-  background:url('/assets/images/Inside-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-mobile-logo{
@@ -3088,7 +3088,7 @@ RESPONSIVE
 
 :root{
   --kh-start-bg:#EBE2D7;
-  --kh-end-image:url("/assets/images/Cinematic-Desert-Image.webp");
+  --kh-end-image:url("/assets/images/banners/hero_banner.webp");
   --kh-sand-blend:#C98652;
   --kh-pre-white-shift:#3D291C;
 }
@@ -3230,8 +3230,8 @@ RESPONSIVE
   justify-content:center;
   gap:14px;
   flex-wrap:wrap;
-  opacity:0;
-  transform:translate3d(0,26px,0);
+  opacity:1;
+  transform:translate3d(0,0,0);
   transition:
     opacity .55s cubic-bezier(.22,1,.36,1),
     transform .55s cubic-bezier(.22,1,.36,1);
@@ -3249,10 +3249,10 @@ RESPONSIVE
   justify-content:center;
   min-width:210px;
   padding:16px 24px;
-  border:1px solid rgba(61,41,28,.5);
+  border:1px solid rgba(242,228,199,.4);
   border-radius:0 !important;
-  background:rgba(250,247,242,.68);
-  color:rgba(61,41,28,.5);
+  background:rgba(242,228,199,.12);
+  color:#FFFFFF !important;
   text-decoration:none !important;
   font-family:"Bricolage Grotesque",sans-serif;
   font-size:11px;
@@ -3260,13 +3260,29 @@ RESPONSIVE
   letter-spacing:.24em;
   text-transform:uppercase;
   box-shadow:none !important;
+  cursor:pointer;
   transition:
     transform .35s ease,
     border-color .35s ease,
     background-color .35s ease,
-    color .35s ease,
-    opacity .35s ease;
+    color .35s ease;
   will-change:color, border-color, background-color, transform;
+}
+
+.kh-cta-btn:hover{
+  transform:translateY(-2px);
+  background:rgba(242,228,199,.25) !important;
+  border-color:#F2E4C7 !important;
+}
+
+.kh-cta-btn--ghost{
+  background:transparent !important;
+  border-color:rgba(255,255,255,.3) !important;
+}
+
+.kh-cta-btn--ghost:hover{
+  background:rgba(255,255,255,.1) !important;
+  border-color:#FFFFFF !important;
 }
 
 .kh-cta-btn:hover{
@@ -3987,7 +4003,7 @@ KHUFUS — EXPERIENCE HERO (ALIGNED WITH ABOUT)
     rgba(80,60,40,.92) 75%,
     rgba(92,71,43,1) 100%
   ),
-  url("/assets/images/Experience-Image-2.webp")
+  url("/assets/images/banners/hero_banner.webp")
   center top / cover no-repeat;
 
   filter:grayscale(40%);
@@ -4210,16 +4226,16 @@ RESPONSIVE
         Approach
 
         <span class="kh-exp-script" id="khExpScript">
-          toward something monumental
+          toward authentic heritage
         </span>
 
       </h1>
 
       <p class="kh-exp-lead kh-exp-reveal">
 
-        As you move away from the city, the pyramids begin to take shape across the horizon. The setting shifts, and the pace slows.
+        Experience a fiery and aromatic South Indian style known for its complex, freshly ground spice blends (masalas), sun-dried meats, and slow-cooked dishes.
 
-        Khufus is a breakfast and lunch experience at the pyramids, designed to be approached, not rushed. Each visit is by reservation, allowing for a calm and uninterrupted arrival.
+        Biryani Spot Chennai Dosa is an authentic dining experience across Dublin, Milpitas, Livermore, and Concord, crafted to be savored with traditional South Indian hospitality.
 
       </p>
 
@@ -4238,7 +4254,7 @@ RESPONSIVE
 
       <p>
 
-        A setting defined by view, pace, and intention, where each arrival is given the space it deserves.
+        A setting defined by freshly roasted spices, slow dum cooking, and timeless South Indian hospitality.
 
       </p>
 
@@ -4276,9 +4292,9 @@ RESPONSIVE
 
   function updateScriptText(){
     if(window.innerWidth <= 900){
-      scriptEl.textContent = "toward monumentality";
+      scriptEl.textContent = "toward authenticity";
     } else {
-      scriptEl.textContent = "toward something monumental";
+      scriptEl.textContent = "toward authentic heritage";
     }
   }
 
@@ -4568,10 +4584,10 @@ UNCHANGED
   pointer-events:none;
 }
 
-.kh-exp-desktop-media--1{background:url('/assets/images/Slide-1-Entrance.webp') center center / cover no-repeat;}
-.kh-exp-desktop-media--2{background:url('/assets/images/Slide-2-Entry.webp') center center / cover no-repeat;}
-.kh-exp-desktop-media--3{background:url('/assets/images/Slide-3-Menu.webp') center center / cover no-repeat;}
-.kh-exp-desktop-media--4{background:url('/assets/images/Slide-4-Food.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--1{background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--2{background:url('/assets/images/banners/hero_banner.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--3{background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;}
+.kh-exp-desktop-media--4{background:url('/assets/images/dishes/curries_and_naan.webp') center center / cover no-repeat;}
 
 .kh-exp-desktop-content{
   padding:34px 30px 28px;
@@ -4866,10 +4882,10 @@ FULL REWRITE
   pointer-events:none;
 }
 
-.kh-exp-mobile-media--1{background:url('/assets/images/Slide-1-Entrance.webp') center center / cover no-repeat;}
-.kh-exp-mobile-media--2{background:url('/assets/images/Slide-2-Entry.webp') center center / cover no-repeat;}
-.kh-exp-mobile-media--3{background:url('/assets/images/Slide-3-Menu.webp') center center / cover no-repeat;}
-.kh-exp-mobile-media--4{background:url('/assets/images/Slide-4-Food.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--1{background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--2{background:url('/assets/images/banners/hero_banner.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--3{background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;}
+.kh-exp-mobile-media--4{background:url('/assets/images/dishes/curries_and_naan.webp') center center / cover no-repeat;}
 
 .kh-exp-mobile-content{
   padding:20px 18px 20px;
@@ -5010,18 +5026,18 @@ DESKTOP / TABLET VERSION
 
       <div class="kh-exp-desktop-head">
         <div class="kh-exp-desktop-number">02</div>
-        <div class="kh-exp-desktop-kicker">Chapter Two / The Visit</div>
+        <div class="kh-exp-desktop-kicker">Chapter Two / The Craft</div>
 
         <h2 class="kh-exp-desktop-title">
           A Sequence
           <br>Of Moments
           <br>That Define
           <br>The Visit
-          <span class="kh-exp-desktop-script">from arrival to presence</span>
+          <span class="kh-exp-desktop-script">from spices to dum handis</span>
         </h2>
 
         <p class="kh-exp-desktop-lead">
-          The experience at Khufus unfolds across distinct moments, each one shaping how the next is felt.
+          The experience at Biryani Spot Chennai Dosa unfolds across distinct flavors, each one crafted with time, spice, and devotion.
         </p>
       </div>
 
@@ -5034,13 +5050,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">01</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  The Setting
+                  The Spices
                   <span class="kh-exp-desktop-card-script">Where It Begins</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  The pyramids define the experience from the very first moment. The scale, the view, and the stillness create a setting that cannot be replicated elsewhere.
+                  Stone-ground every morning, our Chettinad masalas, roasted whole spices, and black stone flower create an aromatic foundation that cannot be rushed.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Pyramids / View / Presence</div>
+                <div class="kh-exp-desktop-card-meta">Spices / Aromatics / Heritage</div>
               </div>
             </article>
 
@@ -5049,13 +5065,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">02</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  The Arrival
-                  <span class="kh-exp-desktop-card-script">A Controlled Entry</span>
+                  The Dum Handi
+                  <span class="kh-exp-desktop-card-script">Slow-Cooked Perfection</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  Entry is calm and intentional. Each reservation is spaced to ensure a quiet, uninterrupted transition into the restaurant.
+                  Sealed with dough in traditional clay handis over gentle embers, aged basmati and certified Halal meats infuse with saffron, mint, and pure ghee.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Arrival / Pace / Privacy</div>
+                <div class="kh-exp-desktop-card-meta">Dum / Basmati / Saffron</div>
               </div>
             </article>
 
@@ -5064,13 +5080,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">03</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  The Table
-                  <span class="kh-exp-desktop-card-script">The Experience Unfolds</span>
+                  The Crispy Dosa
+                  <span class="kh-exp-desktop-card-script">Cast-Iron Craft</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  The menu is curated for a focused experience, where each dish complements the setting rather than competes with it.
+                  Naturally fermented rice and urad dal batter ladled paper-thin on seasoned cast-iron tawas, served golden and crisp with house chutneys and sambar.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Dining / Selection / Balance</div>
+                <div class="kh-exp-desktop-card-meta">Dosa / Sambar / Chutneys</div>
               </div>
             </article>
 
@@ -5079,13 +5095,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">04</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  The Atmosphere
+                  The Feast
                   <span class="kh-exp-desktop-card-script">What Stays With You</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  What remains is not just the meal, but the feeling of the place, shaped by view, pace, and presence.
+                  What remains is not just the meal, but the joy of authentic South Indian comfort, shared with family across the Bay Area.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Atmosphere / Memory / Experience</div>
+                <div class="kh-exp-desktop-card-meta">Comfort / Family / Tradition</div>
               </div>
             </article>
 
@@ -5120,18 +5136,18 @@ INTRO IS SLIDE 1
         <article class="kh-exp-mobile-card kh-exp-mobile-card--intro">
           <div class="kh-exp-mobile-intro-slide">
             <div class="kh-exp-mobile-number">02</div>
-            <div class="kh-exp-mobile-kicker">Chapter Two / The Visit</div>
+            <div class="kh-exp-mobile-kicker">Chapter Two / The Craft</div>
 
             <h2 class="kh-exp-mobile-title">
               A Sequence
               <br>Of Moments
               <br>That Define
               <br>The Visit
-              <span class="kh-exp-mobile-script">from arrival to presence</span>
+              <span class="kh-exp-mobile-script">from spices to dum handis</span>
             </h2>
 
             <p class="kh-exp-mobile-lead">
-              The experience at Khufus unfolds across distinct moments, each one shaping how the next is felt.
+              The experience at Biryani Spot Chennai Dosa unfolds across distinct flavors, each one crafted with time, spice, and devotion.
             </p>
           </div>
         </article>
@@ -5141,13 +5157,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">01</div>
             <h3 class="kh-exp-mobile-card-title">
-              The Setting
+              The Spices
               <span class="kh-exp-mobile-card-script">Where It Begins</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              The pyramids define the experience from the very first moment. The scale, the view, and the stillness create a setting that cannot be replicated elsewhere.
+              Stone-ground every morning, our Chettinad masalas, roasted whole spices, and black stone flower create an aromatic foundation that cannot be rushed.
             </p>
-            <div class="kh-exp-mobile-card-meta">Pyramids / View / Presence</div>
+            <div class="kh-exp-mobile-card-meta">Spices / Aromatics / Heritage</div>
           </div>
         </article>
 
@@ -5156,13 +5172,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">02</div>
             <h3 class="kh-exp-mobile-card-title">
-              The Arrival
-              <span class="kh-exp-mobile-card-script">A Controlled Entry</span>
+              The Dum Handi
+              <span class="kh-exp-mobile-card-script">Slow-Cooked Perfection</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              Entry is calm and intentional. Each reservation is spaced to ensure a quiet, uninterrupted transition into the restaurant.
+              Sealed with dough in traditional clay handis over gentle embers, aged basmati and certified Halal meats infuse with saffron, mint, and pure ghee.
             </p>
-            <div class="kh-exp-mobile-card-meta">Arrival / Pace / Privacy</div>
+            <div class="kh-exp-mobile-card-meta">Dum / Basmati / Saffron</div>
           </div>
         </article>
 
@@ -5171,13 +5187,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">03</div>
             <h3 class="kh-exp-mobile-card-title">
-              The Table
-              <span class="kh-exp-mobile-card-script">The Experience Unfolds</span>
+              The Crispy Dosa
+              <span class="kh-exp-mobile-card-script">Cast-Iron Craft</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              The menu is curated for a focused experience, where each dish complements the setting rather than competes with it.
+              Naturally fermented rice and urad dal batter ladled paper-thin on seasoned cast-iron tawas, served golden and crisp with house chutneys and sambar.
             </p>
-            <div class="kh-exp-mobile-card-meta">Dining / Selection / Balance</div>
+            <div class="kh-exp-mobile-card-meta">Dosa / Sambar / Chutneys</div>
           </div>
         </article>
 
@@ -5186,13 +5202,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">04</div>
             <h3 class="kh-exp-mobile-card-title">
-              The Atmosphere
+              The Feast
               <span class="kh-exp-mobile-card-script">What Stays With You</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              What remains is not just the meal, but the feeling of the place, shaped by view, pace, and presence.
+              What remains is not just the meal, but the joy of authentic South Indian comfort, shared with family across the Bay Area.
             </p>
-            <div class="kh-exp-mobile-card-meta">Atmosphere / Memory / Experience</div>
+            <div class="kh-exp-mobile-card-meta">Comfort / Family / Tradition</div>
           </div>
         </article>
 
@@ -5440,7 +5456,7 @@ ALIGNED WITH CURRENT SYSTEM
     rgba(60,45,30,.68) 60%,
     rgba(36,26,18,.92) 100%
   ),
-  url('/assets/images/About-Middle-Section.webp') center bottom / cover no-repeat;
+  url('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_bhature_chole_combo_platter.jpg') center bottom / cover no-repeat;
   filter:grayscale(80%) sepia(12%);
   will-change:transform;
   transform:translate3d(0,0,0) scale(1.08);
@@ -5798,7 +5814,7 @@ ALIGNED WITH CURRENT SYSTEM
       rgba(60,45,30,.64) 58%,
       rgba(36,26,18,.94) 100%
     ),
-    url('/assets/images/About-Middle-Section.webp') center bottom / cover no-repeat;
+    url('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_bhature_chole_combo_platter.jpg') center bottom / cover no-repeat;
   }
 }
 </style>
@@ -5820,16 +5836,16 @@ ALIGNED WITH CURRENT SYSTEM
       </h2>
 
       <p class="kh-view-text">
-        There is a pause once you’re seated, before anything begins. The view settles, the noise disappears, and the scale of where you are becomes clear.
+        There is a pause once you’re seated, before anything begins. The aromas settle, the sizzle of the tawa fills the air, and the authenticity of where you are becomes clear.
       </p>
 
-      <div class="kh-view-meta">Stillness / Awareness / Presence / Scale</div>
+      <div class="kh-view-meta">Aroma / Sizzle / Comfort / Hospitality</div>
     </div>
 
     <div class="kh-view-float-note kh-view-reveal kh-view-delay-1">
       <span class="kh-view-float-label">Spatial Note</span>
       <p>
-        Sunlight, a quiet breeze, and the pyramids. Flavour and place become one.
+        Warm ambiance, aromatic steam, and attentive service. Flavour and tradition become one.
       </p>
     </div>
 
@@ -6035,7 +6051,7 @@ INTERACTIVE PANEL STAGE
 .kh-rhythm-media--3{
   background-image:
     linear-gradient(180deg, rgba(12,10,8,.34) 0%, rgba(18,14,10,.58) 48%, rgba(20,16,12,.78) 100%),
-    url('/assets/images/Khufus-Food-1.webp');
+    url('/assets/images/dishes/catering_spread.webp');
 }
 
 .kh-rhythm-overlay{
@@ -6492,13 +6508,13 @@ IMAGE COLOR INTERACTION
         <div class="kh-rhythm-content">
           <div class="kh-rhythm-label">The Experience</div>
           <h3 class="kh-rhythm-card-title">
-            Calm by Design
+            Warm & Welcoming
           </h3>
-          <span class="kh-rhythm-card-script">Nothing feels rushed</span>
+          <span class="kh-rhythm-card-script">An Indian welcome</span>
           <p class="kh-rhythm-card-text">
-            Each visit is paced with intention. From arrival to service, everything is structured to feel effortless, allowing the guest to settle fully into the moment.
+            Each visit across Dublin, Milpitas, Livermore, and Concord is welcomed with attentive care, hot filter coffee, and fresh dishes straight from the kitchen.
           </p>
-          <div class="kh-rhythm-meta">Flow / Service / Ease</div>
+          <div class="kh-rhythm-meta">Service / Warmth / Family</div>
           <div class="kh-rhythm-mini">Tap / Hover</div>
         </div>
       </article>
@@ -6513,13 +6529,13 @@ IMAGE COLOR INTERACTION
   <div class="kh-rhythm-content">
     <div class="kh-rhythm-label">The Cuisine</div>
     <h3 class="kh-rhythm-card-title">
-      Egyptian, Redefined
+      Authentic Chettinad
     </h3>
-    <span class="kh-rhythm-card-script">The first of its kind</span>
+    <span class="kh-rhythm-card-script">True to its origins</span>
     <p class="kh-rhythm-card-text">
-      Egyptian cuisine, modernised and redefined through a contemporary lens. A first-of-its-kind dining experience where familiar flavours are elevated with new rhythm, craft, and character.
+      Authentic South Indian cuisine, crafted with stone-ground masalas and pure ghee. A culinary experience where vibrant regional flavors are celebrated with fidelity and passion.
     </p>
-    <div class="kh-rhythm-meta">Heritage / Modernity / Identity</div>
+    <div class="kh-rhythm-meta">Heritage / Spices / Tradition</div>
     <div class="kh-rhythm-mini">Tap / Hover</div>
   </div>
 </article>
@@ -6897,7 +6913,7 @@ RIGHT SWITCHING PANEL
 }
 
 .kh-ritual-selector-media--1{
-  background:url('/assets/images/Gallery-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-selector-media--2{
@@ -6905,7 +6921,7 @@ RIGHT SWITCHING PANEL
 }
 
 .kh-ritual-selector-media--3{
-  background:url('/assets/images/Inside-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-selector-panel-logo{
@@ -7312,7 +7328,7 @@ MOBILE SIMPLIFIED CARD STACK
 }
 
 .kh-ritual-mobile-media--1{
-  background:url('/assets/images/Gallery-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/traditional_thali.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-mobile-media--2{
@@ -7320,7 +7336,7 @@ MOBILE SIMPLIFIED CARD STACK
 }
 
 .kh-ritual-mobile-media--3{
-  background:url('/assets/images/Inside-Khufus.webp') center center / cover no-repeat;
+  background:url('/assets/images/dishes/indian_thali_curries.webp') center center / cover no-repeat;
 }
 
 .kh-ritual-mobile-logo{
@@ -7524,7 +7540,7 @@ RESPONSIVE
           <article class="kh-ritual-selector-panel is-active" data-index="0">
             <div class="kh-ritual-selector-panel-inner">
               <div class="kh-ritual-selector-media kh-ritual-selector-media--1"></div>
-              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Khufus Logo">
+              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
               <div class="kh-ritual-selector-contentbox">
                 <div class="kh-ritual-selector-index">01</div>
                 <div class="kh-ritual-selector-label">First Movement</div>
@@ -7558,7 +7574,7 @@ RESPONSIVE
           <article class="kh-ritual-selector-panel" data-index="1">
             <div class="kh-ritual-selector-panel-inner">
               <div class="kh-ritual-selector-media kh-ritual-selector-media--2"></div>
-              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Khufus Logo">
+              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
               <div class="kh-ritual-selector-contentbox">
                 <div class="kh-ritual-selector-index">02</div>
                 <div class="kh-ritual-selector-label">Second Movement</div>
@@ -7592,7 +7608,7 @@ RESPONSIVE
           <article class="kh-ritual-selector-panel" data-index="2">
             <div class="kh-ritual-selector-panel-inner">
               <div class="kh-ritual-selector-media kh-ritual-selector-media--3"></div>
-              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Khufus Logo">
+              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
               <div class="kh-ritual-selector-contentbox">
                 <div class="kh-ritual-selector-index">03</div>
                 <div class="kh-ritual-selector-label">Final Movement</div>
@@ -7667,7 +7683,7 @@ MOBILE SIMPLIFIED CARD STACK
         <article class="kh-ritual-mobile-card">
           <div class="kh-ritual-mobile-card-inner">
             <div class="kh-ritual-mobile-media kh-ritual-mobile-media--1"></div>
-            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Khufus Logo">
+            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
 
             <div class="kh-ritual-mobile-box">
               <div class="kh-ritual-mobile-label">Moment One</div>
@@ -7685,7 +7701,7 @@ MOBILE SIMPLIFIED CARD STACK
         <article class="kh-ritual-mobile-card">
           <div class="kh-ritual-mobile-card-inner">
             <div class="kh-ritual-mobile-media kh-ritual-mobile-media--2"></div>
-            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Khufus Logo">
+            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
 
             <div class="kh-ritual-mobile-box">
               <div class="kh-ritual-mobile-label">Moment Two</div>
@@ -7703,7 +7719,7 @@ MOBILE SIMPLIFIED CARD STACK
         <article class="kh-ritual-mobile-card">
           <div class="kh-ritual-mobile-card-inner">
             <div class="kh-ritual-mobile-media kh-ritual-mobile-media--3"></div>
-            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Khufus Logo">
+            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
 
             <div class="kh-ritual-mobile-box">
               <div class="kh-ritual-mobile-label">Moment Three</div>
@@ -7980,13 +7996,13 @@ MOBILE SIMPLIFIED CARD STACK
 </script>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-da9dcb6 e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="da9dcb6" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-1bdb3a9 elementor-widget elementor-widget-html" data-id="1bdb3a9" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-c6d4a00 e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="c6d4a00" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-3a174c9 elementor-widget elementor-widget-html" data-id="3a174c9" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<section class="kh-cta-reveal" id="khCtaReveal">
   <div class="kh-cta-sticky">
-    <div class="kh-cta-image-layer"></div>
-    <div class="kh-cta-image-overlay"></div>
-    <div class="kh-cta-bottom-blend"></div>
+
+    <div class="kh-cta-pillar kh-cta-pillar--left" aria-hidden="true"></div>
+    <div class="kh-cta-pillar kh-cta-pillar--right" aria-hidden="true"></div>
 
     <div class="kh-cta-inner">
 
@@ -8007,8 +8023,8 @@ MOBILE SIMPLIFIED CARD STACK
       </div>
 
       <div class="kh-cta-actions" id="khCtaActions">
-        <a href="/reservations" class="kh-cta-btn">Reserve Your Visit</a>
-        <a href="/contact" class="kh-cta-btn kh-cta-btn--ghost">Make an Enquiry</a>
+        <a href="/reservations" class="kh-cta-btn">Reserve Your Table</a>
+        <a href="/menu" class="kh-cta-btn kh-cta-btn--ghost">Explore Our Menu</a>
       </div>
 
       <div class="kh-cta-ornament" aria-hidden="true"></div>
@@ -8037,9 +8053,9 @@ MOBILE SIMPLIFIED CARD STACK
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500&display=swap");
 
 :root{
-  --kh-start-bg:#EBE2D7;
-  --kh-end-image:url("/assets/images/Cinematic-Desert-Image.webp");
-  --kh-sand-blend:#C98652;
+  --kh-start-bg:#ffffff;
+  --kh-end-bg:#1e120c;
+  --kh-brown-rgb:92, 71, 43;
   --kh-pre-white-shift:#3D291C;
 }
 
@@ -8049,71 +8065,73 @@ MOBILE SIMPLIFIED CARD STACK
 }
 
 .kh-cta-reveal{
-  position:relative;
-  height:230vh;
+  position:relative !important;
+  width:100% !important;
+  max-width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  height:220vh !important;
+  min-height:220vh !important;
+  background:#ffffff !important;
 }
 
 .kh-cta-sticky{
-  position:sticky;
+  position:absolute;
   top:0;
-  height:100vh;
+  left:0;
+  width:100% !important;
+  max-width:100% !important;
+  height:100vh !important;
+  min-height:100vh !important;
+  margin:0 !important;
+  padding:60px 0 !important;
   overflow:hidden;
   background:var(--kh-start-bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  will-change:background-color, transform;
 }
 
-.kh-cta-image-layer{
+.kh-cta-pillar{
   position:absolute;
-  inset:0;
-  background:var(--kh-end-image) center center / cover no-repeat;
-  opacity:0;
-  transform:scale(1.04);
-  will-change:opacity, transform;
-  z-index:0;
-}
-
-.kh-cta-image-overlay{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg, rgba(30,18,12,.10) 0%, rgba(30,18,12,.18) 42%, rgba(30,18,12,.34) 100%);
-  opacity:0;
-  will-change:opacity;
-  z-index:1;
-}
-
-.kh-cta-bottom-blend{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:26vh;
-  background:linear-gradient(
-    180deg,
-    rgba(61,41,28,0) 0%,
-    rgba(61,41,28,0.22) 28%,
-    rgba(61,41,28,0.48) 52%,
-    rgba(61,41,28,0.78) 74%,
-    rgba(61,41,28,1) 100%
-  );
-  opacity:0;
-  will-change:opacity;
-  z-index:1;
+  top:50%;
+  width:90px;
+  height:70vh;
+  transform:translateY(-50%);
   pointer-events:none;
+  z-index:1;
+  background-color:rgba(61,41,28,.08);
+  -webkit-mask:url("/assets/images/Pillar.svg") center center / contain no-repeat;
+  mask:url("/assets/images/Pillar.svg") center center / contain no-repeat;
+  opacity:.16;
+  will-change:transform, opacity, background-color;
+}
+
+.kh-cta-pillar--left{
+  left:40px;
+}
+
+.kh-cta-pillar--right{
+  right:40px;
 }
 
 .kh-cta-inner{
-  width:min(980px, 88vw);
-  margin:0 auto;
-  padding:72px 0 48px;
+  width:100% !important;
+  max-width:1200px !important;
+  margin:0 auto !important;
+  padding:0 40px !important;
   position:relative;
   z-index:2;
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
   text-align:center;
-  transform:translate3d(0,0,0) scale(0.94);
-  transform-origin:top center;
-  will-change:transform;
+  min-height:auto !important;
+  box-sizing:border-box !important;
+  transform:translate3d(0,0,0);
+  transform-origin:center center;
 }
 
 .kh-cta-kicker{
@@ -8127,65 +8145,85 @@ MOBILE SIMPLIFIED CARD STACK
   will-change:color;
 }
 
-.kh-cta-title{
-  margin:0;
-  font-family:"IvyOraDisplay",serif;
-  font-size:clamp(28px, 3vw, 46px);
-  font-weight:300;
-  line-height:.98;
-  letter-spacing:.018em;
-  text-transform:uppercase;
-  color:var(--kh-pre-white-shift);
-  will-change:color;
-}
-
 .kh-cta-script{
   display:block;
   margin-top:8px;
   font-family:"GoldenHopes",cursive;
   font-size:clamp(24px, 1.8vw, 36px);
   line-height:1;
-  color:var(--kh-pre-white-shift);
+  color:inherit;
   transform:none;
   text-transform:capitalize;
   letter-spacing:.03em;
-  will-change:color;
 }
 
 .kh-cta-divider{
   width:170px;
   height:74px;
-  margin:0 auto 0;
+  margin:10px auto 0;
   background-color:var(--kh-pre-white-shift);
   -webkit-mask:url("/assets/images/Flat-Rose-Icon.svg") center center / contain no-repeat;
   mask:url("/assets/images/Flat-Rose-Icon.svg") center center / contain no-repeat;
-  transform:rotate(0deg);
-  transform-origin:center;
-  will-change:background-color, transform;
+  will-change:background-color;
+}
+
+.kh-cta-btn--ghost{
+  background:transparent !important;
+}
+
+.kh-cta-title{
+  margin:0 auto;
+  width:100% !important;
+  max-width:1100px !important;
+  font-family:"IvyOraDisplay",serif;
+  font-size:clamp(36px, 4.4vw, 68px);
+  font-weight:300;
+  line-height:1.06;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:var(--kh-pre-white-shift);
+  will-change:color;
+}
+
+.kh-cta-hi{
+  font-style:italic;
+  font-weight:700;
+  letter-spacing:.03em;
+}
+
+.kh-cta-body{
+  margin:24px auto 0;
+  width:100% !important;
+  max-width:880px !important;
+  font-family:"Bricolage Grotesque",sans-serif;
+  font-size:clamp(15px, 1.15vw, 18px);
+  font-weight:300;
+  line-height:1.8;
+  letter-spacing:.01em;
+  color:var(--kh-pre-white-shift);
+  will-change:color;
 }
 
 .kh-cta-meta{
-  margin:18px auto 0;
+  margin:24px auto 0;
+  width:100% !important;
+  max-width:880px !important;
   font-family:"Bricolage Grotesque",sans-serif;
-  font-size:10px;
-  letter-spacing:.24em;
+  font-size:12px;
+  letter-spacing:.3em;
   text-transform:uppercase;
   color:var(--kh-pre-white-shift);
   will-change:color;
 }
 
 .kh-cta-actions{
-  margin-top:34px;
+  margin-top:28px;
   display:flex;
   justify-content:center;
   gap:14px;
   flex-wrap:wrap;
-  opacity:0;
-  transform:translate3d(0,26px,0);
-  transition:
-    opacity .55s cubic-bezier(.22,1,.36,1),
-    transform .55s cubic-bezier(.22,1,.36,1);
-  will-change:opacity, transform;
+  opacity:1;
+  transform:none;
 }
 
 .kh-cta-actions.is-visible{
@@ -8197,7 +8235,7 @@ MOBILE SIMPLIFIED CARD STACK
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-width:210px;
+  min-width:240px;
   padding:16px 24px;
   border:1px solid rgba(61,41,28,.5);
   border-radius:0 !important;
@@ -8223,8 +8261,10 @@ MOBILE SIMPLIFIED CARD STACK
   transform:translateY(-2px);
 }
 
-.kh-cta-btn--ghost{
-  background:transparent;
+.kh-cta-btn::before,
+.kh-cta-btn::after{
+  content:none !important;
+  display:none !important;
 }
 
 .kh-cta-ornament{
@@ -8232,8 +8272,8 @@ MOBILE SIMPLIFIED CARD STACK
   height:25px;
   margin:50px auto 0;
   background-color:rgba(61,41,28,.5);
-  -webkit-mask:url("/assets/images/Khufus-Hieroglyphics.svg") center center / contain no-repeat;
-  mask:url("/assets/images/Khufus-Hieroglyphics.svg") center center / contain no-repeat;
+  -webkit-mask:url("/assets/images/ornaments/divider-spice-flourish.svg") center center / contain no-repeat;
+  mask:url("/assets/images/ornaments/divider-spice-flourish.svg") center center / contain no-repeat;
   opacity:0;
   transform:translate3d(0,12px,0);
   transition:
@@ -8250,7 +8290,8 @@ MOBILE SIMPLIFIED CARD STACK
 
 @media (max-width:900px){
   .kh-cta-reveal{
-    height:210vh;
+    height:200vh !important;
+    min-height:200vh !important;
   }
 
   .kh-cta-inner{
@@ -8262,19 +8303,23 @@ MOBILE SIMPLIFIED CARD STACK
     line-height:1;
   }
 
-  .kh-cta-script{
-    font-size:clamp(20px, 5.6vw, 28px);
-    margin-top:6px;
+  .kh-cta-body{
+    font-size:13px;
+    max-width:66ch;
   }
 
-  .kh-cta-divider{
-    width:196px;
-    height:62px;
-    margin-top:6px;
+  .kh-cta-pillar{
+    width:60px;
+    height:60vh;
+    opacity:.10;
   }
 
-  .kh-cta-bottom-blend{
-    height:18vh;
+  .kh-cta-pillar--left{
+    left:16px;
+  }
+
+  .kh-cta-pillar--right{
+    right:16px;
   }
 
   .kh-cta-ornament{
@@ -8285,36 +8330,97 @@ MOBILE SIMPLIFIED CARD STACK
 }
 
 @media (max-width:767px){
+  .kh-cta-reveal{
+    height:180vh !important;
+    min-height:180vh !important;
+  }
+
   .kh-cta-inner{
     width:calc(100% - 60px);
+    max-width:calc(100% - 60px);
     padding:30px 0;
+    min-height:100vh;
+  }
+
+  .kh-cta-kicker{
+    margin:0 0 16px;
+    font-size:11px;
+    letter-spacing:.34em;
+  }
+
+  .kh-cta-title{
+    margin:0;
+    font-family:"IvyOraDisplay",serif;
+    font-size:clamp(26px, 6.5vw, 38px);
+    font-weight:300;
+    line-height:1;
+    letter-spacing:.018em;
+    text-transform:uppercase;
+    color:var(--kh-pre-white-shift);
+    max-width:320px;
+  }
+
+  .kh-cta-title br,
+  .kh-cta-title .kh-cta-hi{
+    display:none;
+  }
+
+  .kh-cta-body{
+    margin:18px 0 0;
+    max-width:320px;
+    font-size:13px;
+    line-height:1.76;
+  }
+
+  .kh-cta-meta{
+    margin:18px auto 0;
+    max-width:none;
+    font-size:10px;
+    letter-spacing:.24em;
   }
 
   .kh-cta-actions{
     width:100%;
     gap:10px;
+    margin-top:34px;
   }
 
   .kh-cta-btn{
     width:100%;
     min-width:100%;
+    font-size:11px;
   }
 
-  .kh-cta-divider{
-    width:168px;
-    height:54px;
+  .kh-cta-pillar{
+    display:block;
+    width:72px;
+    height:52vh;
+    top:50%;
+    left:50%;
+    right:auto;
+    opacity:.09;
+    z-index:1;
+    transform:translate(-50%,-50%);
+  }
+
+  .kh-cta-pillar--left{
+    left:50%;
+  }
+
+  .kh-cta-pillar--right{
+    display:none;
   }
 
   .kh-cta-ornament{
     width:64px;
     height:16px;
-    margin-top:14px;
+    margin-top:40px;
   }
 }
 
 @media (prefers-reduced-motion:reduce){
   .kh-cta-reveal{
-    height:120vh;
+    height:120vh !important;
   }
 
   .kh-cta-actions,
@@ -8330,98 +8436,172 @@ MOBILE SIMPLIFIED CARD STACK
   const section = document.getElementById('khCtaReveal');
   if(!section) return;
 
+  const sticky   = section.querySelector('.kh-cta-sticky');
   const inner    = section.querySelector('.kh-cta-inner');
-  const image    = section.querySelector('.kh-cta-image-layer');
-  const overlay  = section.querySelector('.kh-cta-image-overlay');
-  const bottomBlend = section.querySelector('.kh-cta-bottom-blend');
   const kicker   = section.querySelector('.kh-cta-kicker');
   const title    = section.querySelector('.kh-cta-title');
-  const script   = section.querySelector('.kh-cta-script');
   const divider  = section.querySelector('.kh-cta-divider');
+  const script   = section.querySelector('.kh-cta-script');
   const meta     = section.querySelector('.kh-cta-meta');
   const actions  = section.querySelector('#khCtaActions');
   const ornament = section.querySelector('.kh-cta-ornament');
   const buttons  = section.querySelectorAll('.kh-cta-btn');
+  const pillars  = section.querySelectorAll('.kh-cta-pillar');
 
-  if(!inner || !image || !overlay || !bottomBlend || !kicker || !title || !script || !divider || !meta || !actions || !ornament || !buttons.length) return;
+  if(!sticky || !inner || !kicker || !title || !meta || !actions || !ornament || !buttons.length) return;
 
   const clamp01 = (n) => Math.max(0, Math.min(1, n));
   const lerp = (a,b,t) => a + (b-a)*t;
 
+  function hexToRgb(hex){
+    const h = (hex || "").replace('#','').trim();
+    const full = h.length === 3 ? h.split('').map(x=>x+x).join('') : h;
+    const num = parseInt(full, 16);
+    return { r:(num>>16)&255, g:(num>>8)&255, b:num&255 };
+  }
+
+  const rootStyles = getComputedStyle(document.documentElement);
+  const startBg = rootStyles.getPropertyValue('--kh-start-bg').trim() || '#ffffff';
+  const endBg   = rootStyles.getPropertyValue('--kh-end-bg').trim() || '#1e120c';
+
+  const startRGB = hexToRgb(startBg);
+  const endRGB   = hexToRgb(endBg);
+
   let eased = 0;
   let rafId = 0;
 
-  function getProgress(){
-    const rect = section.getBoundingClientRect();
-    const vh = window.innerHeight || 800;
-    const total = section.offsetHeight - vh;
-    const traveled = -rect.top;
-    return clamp01(traveled / (total || 1));
+  function syncMobileCopy(){
+    if(window.innerWidth <= 767){
+      title.innerHTML = `The Experience Is Best Understood In Person <span class="kh-cta-script">quietly unforgettable</span>`;
+    }else{
+      title.innerHTML = `The Experience Is Best<br>Understood In Person <span class="kh-cta-script">quietly unforgettable</span>`;
+    }
   }
 
   function tick(){
     rafId = requestAnimationFrame(tick);
 
-    const p = getProgress();
-    eased += (p - eased) * 0.10;
+    const rect = section.getBoundingClientRect();
+    const vh = window.innerHeight || 800;
+    const maxScroll = rect.height - vh;
 
-    const curve = eased < 0.5
-      ? 2 * eased * eased
-      : 1 - Math.pow(-2 * eased + 2, 2) / 2;
+    let p = 0;
+    if (rect.top > 0) {
+      // 1. Approaching: Sits at the top of its track, Pure White background
+      p = 0;
+      sticky.style.position = 'absolute';
+      sticky.style.top = '0px';
+      sticky.style.bottom = 'auto';
+      sticky.style.left = '0px';
+      sticky.style.width = '100%';
+      sticky.style.height = '100vh';
+      sticky.style.zIndex = '2';
+    } else if (rect.bottom < vh) {
+      // 3. Finished Track: Sits at bottom of track, 100% Brown, scrolls up to reveal footer
+      p = 1;
+      sticky.style.position = 'absolute';
+      sticky.style.top = 'auto';
+      sticky.style.bottom = '0px';
+      sticky.style.left = '0px';
+      sticky.style.width = '100%';
+      sticky.style.height = '100vh';
+      sticky.style.zIndex = '2';
+    } else {
+      // 2. HELD / PINNED IN VIEWPORT: Scroll drives transition from White to Brown!
+      p = clamp01(-rect.top / (maxScroll > 0 ? maxScroll : 1));
+      sticky.style.position = 'fixed';
+      sticky.style.top = '0px';
+      sticky.style.bottom = 'auto';
+      sticky.style.left = '0px';
+      sticky.style.width = '100%';
+      sticky.style.height = '100vh';
+      sticky.style.zIndex = '99';
+    }
 
-    image.style.opacity = curve;
-    image.style.transform = `scale(${lerp(1.04, 1.0, curve)})`;
-    overlay.style.opacity = lerp(0, 1, curve);
-    bottomBlend.style.opacity = lerp(0, 1, curve);
+    // Smooth responsive interpolation
+    eased += (p - eased) * 0.12;
+    const curve = eased;
 
-    const textProgress = clamp01((curve - 0.08) / 0.18);
+    // Background color interpolation from White (#ffffff) to Brown (#1e120c)
+    const rbg = Math.round(lerp(startRGB.r, endRGB.r, curve));
+    const gbg = Math.round(lerp(startRGB.g, endRGB.g, curve));
+    const bbg = Math.round(lerp(startRGB.b, endRGB.b, curve));
+    const currentBg = `rgb(${rbg}, ${gbg}, ${bbg})`;
+    sticky.style.setProperty('background-color', currentBg, 'important');
+    section.style.setProperty('background-color', currentBg, 'important');
 
-    const startRGB = { r:61, g:41, b:28 };
-    const endRGB   = { r:255, g:255, b:255 };
+    // Text color interpolation from Dark Heritage Brown (#3D291C) to Crisp White (#ffffff)
+    const textProgress = clamp01((curve - 0.05) / 0.45);
+    const startTextRGB = { r:61, g:41, b:28 };
+    const endTextRGB   = { r:255, g:255, b:255 };
 
-    const r = Math.round(lerp(startRGB.r, endRGB.r, textProgress));
-    const g = Math.round(lerp(startRGB.g, endRGB.g, textProgress));
-    const b = Math.round(lerp(startRGB.b, endRGB.b, textProgress));
-
-    const textColor = `rgb(${r},${g},${b})`;
+    const rt = Math.round(lerp(startTextRGB.r, endTextRGB.r, textProgress));
+    const gt = Math.round(lerp(startTextRGB.g, endTextRGB.g, textProgress));
+    const bt = Math.round(lerp(startTextRGB.b, endTextRGB.b, textProgress));
+    const textColor = `rgb(${rt},${gt},${bt})`;
 
     kicker.style.color = textColor;
     title.style.color = textColor;
-    script.style.color = textColor;
+    if(divider) divider.style.backgroundColor = textColor;
+    if(script) script.style.color = textColor;
     meta.style.color = textColor;
-    divider.style.backgroundColor = textColor;
 
-    const actionProgress = clamp01((curve - 0.68) / 0.18);
-    actions.classList.toggle('is-visible', actionProgress > 0.02);
+    pillars.forEach((pillar, index) => {
+      pillar.style.backgroundColor = textColor;
+      const isMobile = window.innerWidth <= 767;
 
-    ornament.style.backgroundColor = 'rgb(255,255,255)';
-
-    buttons.forEach(btn => {
-      btn.style.color = 'rgb(255,255,255)';
-      btn.style.borderColor = `rgba(255,255,255,${lerp(0.55, 0.28, actionProgress)})`;
-      btn.style.backgroundColor = btn.classList.contains('kh-cta-btn--ghost')
-        ? `rgba(255,255,255,${lerp(0.00, 0.03, actionProgress)})`
-        : `rgba(255,255,255,${lerp(0.08, 0.12, actionProgress)})`;
+      if(isMobile){
+        const mobileY = (curve - 0.5) * 8;
+        pillar.style.transform = `translate3d(-50%, calc(-50% + ${mobileY}px), 0)`;
+        pillar.style.opacity = textProgress > 0.4 ? '0.07' : '0.09';
+      }else{
+        const drift = (curve - 0.5) * 14;
+        const x = index === 0 ? drift * -0.55 : drift * 0.55;
+        const y = drift * 0.25;
+        pillar.style.transform = `translate3d(${x}px, calc(-50% + ${y}px), 0)`;
+        pillar.style.opacity = textProgress > 0.4 ? '0.10' : '0.16';
+      }
     });
 
-    const scale = lerp(0.94, 1.04, curve);
+    const actionProgress = clamp01((curve - 0.2) / 0.5);
+    actions.classList.toggle('is-visible', actionProgress > 0.02);
+
+    ornament.style.backgroundColor = textProgress > 0.4 ? 'rgb(255,255,255)' : 'rgba(61,41,28,.5)';
+
+    buttons.forEach(btn => {
+      btn.style.color = textProgress > 0.4 ? 'rgb(255,255,255)' : 'rgba(61,41,28,.5)';
+      btn.style.borderColor = textProgress > 0.4
+        ? `rgba(255,255,255,${lerp(0.55, 0.28, actionProgress)})`
+        : 'rgba(61,41,28,.5)';
+      btn.style.backgroundColor = textProgress > 0.4
+        ? `rgba(255,255,255,${lerp(0.08, 0.12, actionProgress)})`
+        : 'rgba(250,247,242,.68)';
+    });
+
+    const isMobile = window.innerWidth <= 767;
+    const scale = isMobile ? lerp(0.96, 1.0, curve) : lerp(0.96, 1.02, curve);
     inner.style.transform = `translate3d(0,0,0) scale(${scale})`;
   }
+
+  syncMobileCopy();
+  window.addEventListener('resize', syncMobileCopy);
 
   tick();
   window.addEventListener('beforeunload', () => cancelAnimationFrame(rafId));
 })();
 </script>				</div>
 				</div>
-		<div class="elementor-element elementor-element-2163e23 e-con-full elementor-hidden-desktop elementor-hidden-mobile e-flex e-con e-parent" data-id="2163e23" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/khufus.com\/wp-content\/uploads\/2026\/02\/Lander-Video-Pyramids-Camel-Compressed.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-d554e4d e-con-full elementor-hidden-desktop elementor-hidden-mobile e-flex e-con e-parent" data-id="d554e4d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;\/assets\/ai_ganerated\/video\/video1.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
 		<div class="elementor-background-video-container">
-							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop></video>
-					</div>		<div class="elementor-element elementor-element-f0c7e51 elementor-widget elementor-widget-spacer" data-id="f0c7e51" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop src="/assets/ai_ganerated/video/video1.mp4">
+								<source src="/assets/ai_ganerated/video/video1.mp4" type="video/mp4">
+							</video>
+					</div>		<div class="elementor-element elementor-element-5400291 elementor-widget elementor-widget-spacer" data-id="5400291" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
 							<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>
 		</div>
 						</div>
-				<div class="elementor-element elementor-element-79fd52e elementor-widget elementor-widget-html" data-id="79fd52e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-dd7a7e3 elementor-widget elementor-widget-html" data-id="dd7a7e3" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<style>
 @font-face{
   font-family:"IvyOraDisplay";
@@ -8588,10 +8768,10 @@ MOBILE SIMPLIFIED CARD STACK
   waitForFont();
 })();
 </script>				</div>
-				<div class="elementor-element elementor-element-08468f1 elementor-widget elementor-widget-text-editor" data-id="08468f1" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-element elementor-element-c6e810b elementor-widget elementor-widget-text-editor" data-id="c6e810b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 									<p>Please rotate your device for the full experience</p>								</div>
-				<div class="elementor-element elementor-element-7101705 elementor-widget elementor-widget-html" data-id="7101705" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<a href="/reservations" class="mnq-landing-reserve-btn">
+				<div class="elementor-element elementor-element-9923e3e elementor-widget elementor-widget-html" data-id="9923e3e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<a href="/menu" class="mnq-landing-reserve-btn">
   Reserve Your Table
 </a>
 

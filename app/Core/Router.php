@@ -34,7 +34,7 @@ class Router
         $uri = rtrim($request->getUri(), "/") ?: "/";
 
         foreach ($this->routes as $route) {
-            if ($route["method"] !== $method && $route["method"] !== "ANY") {
+            if ($route["method"] !== $method && !($method === "HEAD" && $route["method"] === "GET") && $route["method"] !== "ANY") {
                 continue;
             }
 
