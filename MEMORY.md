@@ -229,9 +229,25 @@ biryani_spot_chennai_dosa/
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
   - [`app/views/locations/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/locations/index.php)
   - [`app/views/gallery/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/gallery/index.php)
-  - [`app/views/legacy/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/legacy/index.php)
+### 19. JS-Driven Viewport Scroll Pinning Engine (`/about`)
+- **Changes**:
+  - Resolved `position: sticky` failure caused by ancestor `overflow-x: hidden` / `overflow: hidden auto` rules on `html`/`body`/`#content`.
+  - Implemented requestAnimationFrame scroll controller on `.kh-timeline-pin` and `.kh-timeline-sec` with 3 dynamic lifecycle states:
+    - **Approaching**: Sits `position: absolute; top: 0px; left: 0px; width: 100%; height: 100vh;`.
+    - **Held in Viewport**: Locks to `position: fixed; top: 0px; left: 0px; width: 100%; height: 100vh;` while internal timeline items smoothly translate from Chapter 1 through Chapter 5.
+    - **Completed**: Unpins to `position: absolute; top: auto; bottom: 0px; left: 0px; width: 100%; height: 100vh;` with a generous hold buffer before transitioning into the next section.
+- **Files**:
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 
-### 21. About Page Global Cream Background & Dark Brown Boundary Leak Removal (`/about`)
+### 20. Timeline Background & Card Brown Gradient Removal (`/about`)
+- **Changes**:
+  - Replaced brown radial gradient backgrounds on `.kh-timeline-sec` with uniform `#F4EDE4`.
+  - Removed top-right corner brown radial gradient overlays from `.kh-tl-card-inner::before`.
+  - Disabled background sketch watermarks (`.kh-egypt-sketch { display: none !important; }`) for a pristine, clean canvas.
+- **Files**:
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+
+### 21. Global Cream Background & Dark Brown Boundary Leak Removal (`/about`)
 - **Changes**:
   - Diagnosed dark brown background leaks identified in user desktop screenshots:
     - Screenshot 1 (`7.11.43 PM.png`): Section 3 Booklet had transparent background and parent container padding that exposed the `#241810` dark brown body background.
@@ -239,13 +255,32 @@ biryani_spot_chennai_dosa/
   - Set `html`, `body.page-template-default`, `.elementor-911`, and all `.e-parent` section containers to `background-color: #F6F1EA !important; padding: 0 !important; margin: 0 !important;`.
   - Set Section 3 Booklet (`.kh-curtain-mv`) and Section 4 Timeline pin (`.kh-timeline-pin`) to `background: #F4EDE4 !important;`.
   - Thoroughly tested and verified with Chrome DevTools screenshots across both transition points.
+- **Files**:
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+
+### 22. Chapter 5 Timeline Card Unboxing & Note Rendering (`/about`)
+- **Changes**:
+  - Removed boxed card styling (`background`, `border`, `box-shadow`, `padding`) from Chapter 5 (`.kh-tl-item:nth-child(5) .kh-tl-card-inner`).
+  - Chapter 5 (*Afterglow / Memory Lingers Last*) now renders unboxed and normal directly on the canvas.
+  - Removed floating overlay card (`.kh-arch-card`, `.kh-arch-mobile-card`) from Section 5 (*05 Architecture of Emotion*).
+- **Files**:
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+
 ### 23. Section 5 Unboxed Layout & Box Shadow Removal (`/about`)
 - **Changes**:
-  - Removed `box-shadow: 0 24px 60px rgba(0,0,0,0.25)` from `.kh-arch-wrap` in `khufus-theme.css` and `about/index.php`.
-  - Removed the boxed card appearance so Section 5 renders completely open and normal on the canvas with seamless background transition.
-  - Visually tested and verified in Chrome DevTools.
+  - Removed `box-shadow: 0 24px 60px rgba(0,0,0,0.25)` from `.kh-arch-wrap` in `public/assets/css/khufus-theme.css` and `app/views/about/index.php`.
+  - Eliminated the heavy card wrapper appearance so Section 5 renders completely open, flat, and normal on the luxury cream canvas.
+  - Tested and verified in Chrome DevTools.
 - **Files**:
   - [`public/assets/css/khufus-theme.css`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/css/khufus-theme.css)
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+
+### 24. About Page Narrative Editorial & Proofreading Audit (`/about`)
+- **Changes**:
+  - Audited and aligned all page narrative with authentic Chettinad, Dum Biryani, and Dosa heritage from `old_website_data`.
+  - Proofread and verified all 6 sections (Hero, The Origin, Mission & Vision Booklet, 5-Chapter Experience Timeline, Architecture of Emotion, and Final Invitation).
+  - Verified navigation links to `/reservations`, `/menu`, and Bay Area locations (Dublin, Milpitas, Livermore, Concord).
+- **Files**:
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 
 ---
