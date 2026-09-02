@@ -2209,7 +2209,15 @@ TIMELINE ITEM
   grid-column:2;
 }
 
-.kh-tl-item:nth-child(even) .kh-tl-card-inner{
+.kh-tl-item:nth-child(even) 
+.kh-tl-item:nth-child(5) .kh-tl-card-inner{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.kh-tl-card-inner{
   margin-left:auto;
 }
 
@@ -2263,6 +2271,14 @@ TIMELINE ITEM
 .kh-tl-card{
   position:relative;
   z-index:2;
+}
+
+
+.kh-tl-item:nth-child(5) .kh-tl-card-inner{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 .kh-tl-card-inner{
@@ -2579,7 +2595,15 @@ RESPONSIVE
     transform:translateY(-22px);
   }
 
-  .kh-tl-card-inner{
+  
+.kh-tl-item:nth-child(5) .kh-tl-card-inner{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.kh-tl-card-inner{
     width:100%;
     padding:24px 22px 20px;
     margin-left:0 !important;
@@ -2829,7 +2853,15 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
     margin-left:0px;
   }
 
-  .kh-tl-card-inner{
+  
+.kh-tl-item:nth-child(5) .kh-tl-card-inner{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.kh-tl-card-inner{
     width:100%;
     padding:22px 20px 18px;
     margin-left:0 !important;
@@ -3373,7 +3405,7 @@ LEFT VISUAL
   overflow:hidden;
   background:
     linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_medu_vada_sambar_chutney_combo.jpg") center/cover no-repeat;
+    url("/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_cozy_family_dining_table_setup.jpg") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.14);
 }
 
@@ -3412,7 +3444,7 @@ LEFT VISUAL
   z-index:2;
 }
 
-.kh-arch-card{
+.kh-arch-card{ display:none !important; 
   position:absolute;
   right:46px;
   top:54px;
@@ -3663,7 +3695,7 @@ ANIMATION
     border-radius:180px 180px 0 0;
   }
 
-  .kh-arch-card{
+  .kh-arch-card{ display:none !important; 
     right:46px;
     top:34px;
   }
@@ -3783,7 +3815,7 @@ FIRST PANEL LAYOUT MATCHES ORIGINAL
   z-index:4;
 }
 
-.kh-arch-mobile-card{
+.kh-arch-mobile-card{ display:none !important; 
   position:absolute;
   width:calc(100% - 140px);
   min-width:220px;
@@ -3963,12 +3995,7 @@ DESKTOP VERSION
         <div class="kh-arch-mini kh-arch-animate kh-arch-delay2"></div>
         <div class="kh-arch-main kh-arch-animate kh-arch-delay1"></div>
 
-        <div class="kh-arch-card kh-arch-animate kh-arch-delay3">
-          <div class="kh-arch-card-label">Spatial Note</div>
-          <p>
-            The experience is guided not by spectacle, but by rhythm. Moments of movement, pause, and quiet order give the space its composure before any single detail asks to be noticed.
-          </p>
-        </div>
+<!-- Floating card removed per request; rendered normally in content area -->
       </div>
 
       <div class="kh-arch-copy">
@@ -4031,12 +4058,7 @@ MOBILE VERSION
         <div class="kh-arch-mobile-mini"></div>
         <div class="kh-arch-mobile-icon"></div>
 
-        <div class="kh-arch-mobile-card">
-          <div class="kh-arch-mobile-card-label">Spatial Note</div>
-          <p>
-            The experience is guided not by spectacle, but by rhythm. Moments of movement, pause, and quiet order give the space its composure before any single detail asks to be noticed.
-          </p>
-        </div>
+<!-- Floating card removed per request -->
       </div>
     </div>
 
