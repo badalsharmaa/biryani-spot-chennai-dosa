@@ -231,11 +231,14 @@ biryani_spot_chennai_dosa/
   - [`app/views/gallery/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/gallery/index.php)
   - [`app/views/legacy/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/legacy/index.php)
 
-### 19. About Page Timeline Section Viewport Scroll Hold Engine (`/about`)
+### 19. About Page Timeline Section Viewport Scroll Hold Engine & DOM De-duplication (`/about`)
 - **Changes**:
-  - Fixed the viewport hold/pin controller on `.kh-timeline-pin` and `.kh-timeline-sec` for the section **"An Experience That Unfolds In Chapters"**.
-  - Broadened the desktop media query from `1181px` to `768px` so all standard desktop, laptop, and tablet viewports are captured.
-  - Calculated internal scroll translation `maxTranslate` based on the 5-chapter timeline list height, adding an end-of-track reading buffer (`viewportH * 0.45`) so the section remains firmly held in place until the user finishes reading all 5 chapters before smoothly releasing into the next section.
+  - Removed duplicate ~4,500 lines of legacy WordPress Elementor blocks at the top of `app/views/about/index.php`, eliminating element ID collisions (`#khTimelinePin`, `#khTimelineSec`, `#khCurtainMV`) and eradicating the stray full-width overlapping brown boxes.
+  - Replaced all residual placeholder copy with authentic Biryani Spot Chennai Dosa culinary narratives across all 4 Northern California locations.
+  - Engineered smooth in-section scroll hold pinning for **"An Experience That Unfolds In Chapters"**:
+    - Pinned viewport on `min-width: 768px` for desktops, laptops, and tablets.
+    - Inside timeline list smoothly translates through Chapters 1 to 5 as the user scrolls.
+    - Added comfortable reading hold buffer (`viewportH * 0.45`) before smoothly unpinning and advancing to Section 5.
 - **Files**:
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 
