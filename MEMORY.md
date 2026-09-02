@@ -239,12 +239,13 @@ biryani_spot_chennai_dosa/
   - Set `html`, `body.page-template-default`, `.elementor-911`, and all `.e-parent` section containers to `background-color: #F6F1EA !important; padding: 0 !important; margin: 0 !important;`.
   - Set Section 3 Booklet (`.kh-curtain-mv`) and Section 4 Timeline pin (`.kh-timeline-pin`) to `background: #F4EDE4 !important;`.
   - Thoroughly tested and verified with Chrome DevTools screenshots across both transition points.
-### 22. Chapter 5 Timeline & Section 5 Card Removal (`/about`)
+### 23. Section 5 Unboxed Layout & Box Shadow Removal (`/about`)
 - **Changes**:
-  - Removed boxed card styling (`background`, `border`, `box-shadow`, `padding`) from Chapter 5 (`.kh-tl-item:nth-child(5) .kh-tl-card-inner`) so Chapter 5 note/text renders naturally unboxed directly on the page.
-  - Removed floating overlay card (`.kh-arch-card`, `.kh-arch-mobile-card`) from Section 5 (`05 ARCHITECTURE OF EMOTION`), allowing the visual imagery and content to display cleanly.
-  - Tested and visually verified via Chrome DevTools screenshot testing.
+  - Removed `box-shadow: 0 24px 60px rgba(0,0,0,0.25)` from `.kh-arch-wrap` in `khufus-theme.css` and `about/index.php`.
+  - Removed the boxed card appearance so Section 5 renders completely open and normal on the canvas with seamless background transition.
+  - Visually tested and verified in Chrome DevTools.
 - **Files**:
+  - [`public/assets/css/khufus-theme.css`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/css/khufus-theme.css)
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 
 ---

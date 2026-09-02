@@ -3376,6 +3376,8 @@ UNCHANGED
   height:100%;
   position:relative;
   z-index:2;
+  box-shadow:none !important;
+  border:none !important;
 }
 
 .kh-arch-grid{
