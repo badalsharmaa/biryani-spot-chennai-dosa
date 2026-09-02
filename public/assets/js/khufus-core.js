@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initParallax();
   initRecognitionDeck();
   init3DGallery();
-  initPolaroidSlider();
   initBistroAccordion();
   initFaqAccordion();
   initMenuTabs();
@@ -345,85 +344,8 @@ function init3DGallery() {
 }
 
 /* --------------------------------------------------------------------------
-   9. POLAROID SLIDER V2 CONTROLLER (EXACT 3 SLIDES)
+   9. POLAROID SLIDER V2 (Handled via home/index.php native controller)
    -------------------------------------------------------------------------- */
-function initPolaroidSlider() {
-  const slider = document.getElementById("monarqPolaroidSliderV2");
-  if (!slider) return;
-
-  const slides = [
-    {
-      number: "05",
-      kicker: "Culinary Heritage",
-      headline: "The Dum Pukht Tradition",
-      script: "Slow-Steamed Perfection",
-      text: "Every handi of our Hyderabadi Dum Biryani is layered with fragrant aged basmati, tender marinated halal meat, saffron-infused milk, and caramelized onions, slow-steamed under a sealed dough crust to lock in aroma and flavor.",
-      note: "A celebrated royal recipe passed down through generations, crafted daily across Dublin, Milpitas, Livermore, and Concord.",
-      image: "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_creamy_butter_chicken_delight.jpg",
-      photoTitle: "Hyderabadi Dum Biryani"
-    },
-    {
-      number: "06",
-      kicker: "Tiffin Artistry",
-      headline: "Stone-Ground Dosa Craft",
-      script: "Golden, Crisp & Pure Ghee",
-      text: "Our authentic Chennai dosa batter is stone-ground from premium lentils and rice, then naturally fermented for 18 hours. Ladled paper-thin onto scorching cast-iron tawas and roasted with pure ghee for an unbeatable crunch.",
-      note: "Served steaming hot with freshly ground coconut chutney, spicy tomato chutney, and rich vegetable sambar.",
-      image: "/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg",
-      photoTitle: "Crispy Chennai Dosa"
-    },
-    {
-      number: "07",
-      kicker: "Our Story",
-      headline: "Warmth, Spice & Family",
-      script: "4 Bay Area Locations",
-      text: "Founded on a passion for honest, authentic Indian flavors, Biryani Spot Chennai Dosa has become a beloved gathering place across the Bay Area for families, friends, and food enthusiasts.",
-      note: "From daily comfort lunches to grand weekend celebrations, every guest is welcomed with heartfelt Indian hospitality.",
-      image: "/assets/images/google_maps/milpitas/store_interior_and_vibe/milpitas_restaurant_main_dining_hall_booths.jpg",
-      photoTitle: "Warm Dining Ambiance"
-    }
-  ];
-
-  let currentIndex = 0;
-  const photoLayer = document.getElementById("mps5ImageCurrent");
-  const photoTitle = document.getElementById("mps5PhotoTitle");
-  const numberEl = slider.querySelector(".mps5-number");
-  const kickerEl = slider.querySelector(".mps5-kicker");
-  const titleEl = slider.querySelector(".mps5-title");
-  const textEl = slider.querySelector(".mps5-text");
-  const noteEl = slider.querySelector(".mps5-note");
-  const indexBtns = slider.querySelectorAll(".mps5-index");
-  const prevBtn = slider.querySelector(".mps5-prev");
-  const nextBtn = slider.querySelector(".mps5-next");
-
-  function showSlide(index) {
-    if (index < 0) index = slides.length - 1;
-    if (index >= slides.length) index = 0;
-    currentIndex = index;
-    const slide = slides[currentIndex];
-
-    if (photoLayer) photoLayer.style.backgroundImage = slide.image ? `url('${slide.image}')` : 'none';
-    if (photoTitle) photoTitle.textContent = slide.photoTitle;
-    if (numberEl) numberEl.textContent = slide.number;
-    if (kickerEl) kickerEl.textContent = slide.kicker;
-    if (titleEl) titleEl.innerHTML = `${slide.headline}<span class="mps5-script">${slide.script}</span>`;
-    if (textEl) textEl.textContent = slide.text;
-    if (noteEl) noteEl.textContent = slide.note;
-
-    indexBtns.forEach((btn, idx) => {
-      btn.classList.toggle("is-active", idx === currentIndex);
-    });
-  }
-
-  if (prevBtn) prevBtn.addEventListener("click", () => showSlide(currentIndex - 1));
-  if (nextBtn) nextBtn.addEventListener("click", () => showSlide(currentIndex + 1));
-
-  indexBtns.forEach((btn, idx) => {
-    btn.addEventListener("click", () => showSlide(idx));
-  });
-
-  showSlide(0);
-}
 
 /* --------------------------------------------------------------------------
    10. BISTRO EXPANDING ACCORDION CONTROLLER

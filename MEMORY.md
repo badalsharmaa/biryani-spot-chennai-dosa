@@ -1,186 +1,151 @@
-# 🧠 AI Long-Term Memory & Context Ledger
+# 🧠 Biryani Spot Chennai Dosa — Project Memory
 
-> **Purpose**: This file serves as persistent, long-term memory for AI agents across multiple sessions. Update this file at the end of every working session to record key architectural decisions, user preferences, project milestones, and pending tasks.
-
----
-
-## 📌 1. Project Overview & Fundamental Context
-- **Client / Project**: **Biryani Spot Chennai Dosa** (also known as *Biryani & Dosa Grill*).
-- **Core Objective**: Build a modern, high-performance, mobile-first website in **PHP 8.2+ & MySQL 8.0+ (PDO)** replacing the legacy Toast Sites web portal (`https://biryanispotchennaidosa.com/`) with the luxury visual design, motion physics, and layout architecture reverse-engineered from [Khufu's](https://khufus.com) and [Khufu's Bistro](https://khufusbistro.com).
-- **4 Operating Locations**:
-  1. **Dublin**: `4288 Dublin Blvd #111, Dublin, CA 94568` | `(925) 361-5317`
-  2. **Milpitas**: `380 South Main Street, Milpitas, CA 95035` | `(669) 264-7920`
-  3. **Livermore**: `2050 Portola Avenue, Livermore, CA 94551` | `(669) 264-7920`
-  4. **Concord (Chennai Dosa Express)**: `3540 Clayton Road, Concord, CA 94519` | `(925) 494-4470`
+> Track all past changes, architectural decisions, bugs, fixes, and design standards here.
+> Update this file at the end of every development session.
 
 ---
 
-## 🔒 2. Strict Architectural Rules & User Constraints
-1. **Preserve Layout & Design Exactly**: Do NOT alter the visual structure, CSS grid, responsive breakpoints, or layout flows. Only transform content, typography copy, and visual assets (photography, logos, animations).
-2. **100% Native Architecture (Zero WordPress / Zero Elementor Runtime)**:
-   - All backend routing and page generation run on native **PHP 8.2+ MVC**.
-   - All interactive UI (modals, drawers, reveals) runs on **Vanilla JavaScript** (`window.BiryaniDrawer`, `IntersectionObserver`).
-   - The `.elementor-*` class names remaining in HTML/CSS are **pure static CSS selectors** ensuring responsive grid styling without any WordPress or Elementor JS engines running in the background.
-3. **Curated High-Res Photography**: Use verified, authentic Google Maps photography (`public/assets/images/google_maps/`) for real Biryani, Dosa, Thali, Appetizer, and Dining Room visuals. Avoid repeating the same image across different sections.
-4. **Official Branding**: Header, footer, and drawer use the official brand logo [`public/assets/images/ornaments/logo.webp`](./public/assets/images/ornaments/logo.webp).
+## 📁 Project Overview
+
+| Property | Value |
+|---|---|
+| **Project Name** | Biryani Spot Chennai Dosa |
+| **Concept** | Royal Hyderabadi Dum Biryani & Authentic Chennai Dosa Dining |
+| **Locations** | 4 Bay Area Outlets: Dublin, Livermore, Milpitas, Concord |
+| **Architecture** | Lightweight Custom PHP MVC (`app/` + `public/`) |
+| **Front Controller** | `public/index.php` routing via `app/core/App.php` |
+| **Styling** | Custom CSS3 + Elementor-compatible luxury layout system |
+| **Theme** | Khufu's Luxury Heritage & Modern Fine Dining Theme |
+| **Typography** | `IvyOraDisplay` (serif), `GoldenHopes` (luxury cursive), `Bricolage Grotesque` / `Cinzel` |
+| **Animations** | Vanilla JS (3D perspective carousels, Polaroid sliders, smooth crossfades) |
+| **Local Dev Server** | `php -S 127.0.0.1:8899 -t public` |
 
 ---
 
-## 📂 3. Directory & File Reference Map
+## 🎨 Design System & Visual Identity
+
+### Colors
+| Token | Hex / RGBA | Usage |
+|---|---|---|
+| **Warm Sand / Cream Base** | `#F7F3EE` / `#E2C4AF` | Primary canvas & section backgrounds |
+| **Deep Espresso / Dark Roast**| `#3F2C1F` / `#2B1D14` | High-contrast headings & primary typography |
+| **Terracotta / Cinnamon Accent**| `#6A4C36` / `#8B4513` | Subheadings, kickers, handwriting cursive accents |
+| **Saffron Gold** | `#E5A93C` / `#D4AF37` | CTAs, ratings stars, highlights, borders |
+| **Pure White** | `#FFFFFF` | Card canvases, Polaroid borders, lightbox modals |
+| **Soft Glassmorphism** | `rgba(247, 243, 238, 0.92)` | Floating tags, badges, backdrop blur overlays |
+
+### Typography
+- **Primary Display Headings**: `IvyOraDisplay` (Light 300 / Regular 400)
+- **Luxury Script Accents**: `GoldenHopes` (Cursive signature text with -2deg tilt)
+- **Modern Sans / UI Copy**: `Bricolage Grotesque` (300 / 400 / 500) & `Cinzel` (tracking uppercase)
+- **Header Logo / Emblem**: Scaled to `78px` height (50% increase for visual prominence)
+
+---
+
+## 🏗️ Architecture & Directory Structure
 
 ```
 biryani_spot_chennai_dosa/
 ├── app/
-│   ├── Controllers/         # BaseController, HomeController, MenuController, ReservationController, etc.
-│   ├── Core/                # App, Router, Request, Response, Database, View, Autoloader
-│   ├── Helpers/             # Asset, Str, Validator
-│   ├── Middleware/          # SecurityHeaders, CsrfProtection
-│   ├── Models/              # Location, MenuItem, Reservation, ContactInquiry
-│   ├── Repositories/        # LocationRepository, MenuRepository, LeadRepository
-│   ├── Services/            # MenuService, ReservationService, SeoService
+│   ├── config/              # App constants, base URLs, database configs
+│   ├── controllers/         # HomeController, AboutController, LocationsController, etc.
+│   ├── core/                # App.php (Router), Controller.php, Database.php
+│   ├── models/              # Data models (Menu, Location, Reservation)
 │   └── views/
-│       ├── home/index.php           # Home view (9 sections, 7,523px height)
-│       ├── menu/index.php           # Interactive culinary course book & listings
-│       ├── reservations/index.php   # Multi-location booking & 2-column FAQ accordion
-│       ├── experience/index.php     # 4-moment dining experience story
-│       ├── legacy/index.php         # Master chefs & culinary heritage
-│       ├── locations/index.php      # Operating hours table & concierge form
-│       ├── about/index.php          # Brand heritage chapters & vision
-│       ├── gallery/index.php        # Responsive masonry photography grid
-│       ├── bistro/index.php         # Evening dining & ambiance showcase
-│       └── layouts/
-│           ├── header.php           # Clean navbar, head tags, logo, Lottie toggle
-│           ├── footer.php           # Multi-location footer & social links
-│           └── drawer.php           # Isolated standalone full-screen menu drawer
-├── config/                  # app.php, database.php, locations.php, seo.php
+│       ├── layouts/         # header.php, footer.php, nav.php
+│       ├── home/            # index.php (Sections 1 through 7)
+│       ├── about/           # index.php (Brand story, chef craft)
+│       ├── locations/       # index.php (Dublin, Livermore, Milpitas, Concord cards & maps)
+│       ├── legacy/          # index.php (Dum Pukht culinary history)
+│       ├── gallery/         # index.php (3D photo feeds & lightbox)
+│       ├── bistro/          # index.php (Dining ambiance & express dining)
+│       ├── experience/      # index.php (Sensory dining & spice alchemy)
+│       └── reservations/    # index.php (Booking forms & location selectors)
 ├── public/
-│   ├── index.php            # Front controller entrypoint
-│   └── assets/
-│       ├── css/elementor/   # 51 compiled static CSS stylesheets
-│       ├── css/khufus-theme.css # Theme overrides, gradients, custom styling
-│       ├── js/khufus-core.js    # Vanilla JS scroll observers & animations
-│       ├── images/
-│       │   ├── ornaments/logo.webp # Official brand logo
-│       │   ├── google_maps/        # Organized food & dining room photography
-│       │   └── Menu-Animation-Custom-8.json # Lottie hamburger-to-X animation
-│       └── fonts/           # IvyOraDisplay, GoldenHopes, BricolageGrotesque
-└── database/
-    └── app.sqlite           # Local SQLite database (PDO multi-driver with MySQL)
+│   ├── index.php            # Entry point
+│   ├── assets/
+│   │   ├── css/             # khufus-theme.css, responsive.css
+│   │   ├── js/              # khufus-core.js, slider.js
+│   │   └── images/          # Local photography, ornaments, SVGs
+│   │       └── google_maps/ # Geo-tagged photos for Dublin, Livermore, Milpitas, Concord
+└── memory.md                # Project source of truth
 ```
 
 ---
 
-## 🌐 4. Live Routes & Verification Matrix
+## 📄 Route & Page Registry
 
-All pages run locally via `php -S 127.0.0.1:8899 -t public` and are verified with Chrome DevTools MCP:
-
-| Route | View File | Key Features & Visual Status |
-| :--- | :--- | :--- |
-| `/` | `app/views/home/index.php` | 9 full sections, hero video, heritage triad, polaroid slider, Section 03 recognition with top-to-bottom gradient (`#DAB79F` $\rightarrow$ `#FFFFFF`), 3D gallery |
-| `/reservations` | `app/views/reservations/index.php` | Step-booking widget, multi-location selector, 6-item FAQ 2-column accordion |
-| `/experience` | `app/views/experience/index.php` | 4 culinary moments (Dum Pukht, Dosa Craft, Chettinad Spice, Royal Dining) |
-| `/legacy` | `app/views/legacy/index.php` | Heritage chapters, master chef profiles, spice blending traditions |
-| `/menu` | `app/views/menu/index.php` | Royal Biryanis, Chennai Dosas, Curries & Appetizers with real Toast POS prices |
-| `/contact` / `/locations` | `app/views/locations/index.php` | 4 Bay Area branches with phone numbers, hours, maps links & inquiry form |
-| `/about` | `app/views/about/index.php` | Founder story, stone-ground batter philosophy, slow-steamed biryani art |
-| `/gallery` | `app/views/gallery/index.php` | 14-photo responsive masonry gallery with food & restaurant vibe shots |
-| `/bistro` | `app/views/bistro/index.php` | Evening ambiance, mocktails, appetizers, and private dining |
+| Route | View Path | Controller | Description |
+|---|---|---|---|
+| `/` | `app/views/home/index.php` | `HomeController` | Hero, Edge of History, Awards, 3D Gallery, Polaroid Slider, Story Collage |
+| `/about` | `app/views/about/index.php` | `AboutController` | Heritage story, culinary philosophy, stone-ground dosa craft |
+| `/locations`| `app/views/locations/index.php` | `LocationsController` | Full interactive directory for Dublin, Livermore, Milpitas & Concord |
+| `/legacy` | `app/views/legacy/index.php` | `LegacyController` | Centuries-old Hyderabadi Dum Pukht history and sealed handi tradition |
+| `/gallery` | `app/views/gallery/index.php` | `GalleryController` | High-resolution food photography, banquets, and dining hall gallery |
+| `/bistro` | `app/views/bistro/index.php` | `BistroController` | Contemporary dining, express lunches, and evening ambiance |
+| `/experience`| `app/views/experience/index.php`| `ExperienceController`| Spice alchemy, tandoori sizzlers, multi-sensory dining experience |
+| `/reservations`| `app/views/reservations/index.php`| `ReservationsController`| Table booking and private event banquet inquiry forms |
 
 ---
 
-## 🛠️ 5. Key Technical Implementations & Decisions
+## 🐛 Bugs Fixed & Key Solutions
 
-### A. Standalone Menu Drawer Architecture (`app/views/layouts/drawer.php`)
-- **Root Cause of Previous Blank Screen Bug**: When the drawer modal was placed inside `header.php`, unclosed `<div>` containers swallowed the entire `home/index.php` view. When the drawer closed (`opacity: 0; transform: translateY(-100%)`), the whole home page became blank.
-- **Solution**: Isolated the drawer modal into [`app/views/layouts/drawer.php`](./app/views/layouts/drawer.php) and included it right before `</body>` in [`app/views/layouts/footer.php`](./app/views/layouts/footer.php). [`app/views/layouts/header.php`](./app/views/layouts/header.php) now closes cleanly at `</header>`.
-- **Vanilla JS Controller (`window.BiryaniDrawer`)**:
-  - Open/Close states managed via `.is-open` class and CSS3 hardware-accelerated transforms.
-  - Bidirectional Lottie animation segment play (Frames `[0.10, 0.65]` for hamburger $\rightarrow$ X, and `[0.65, 1.0]` for X $\rightarrow$ hamburger).
-  - Multi-trigger closing: toggle button click, frosted backdrop click, `Escape` key press, and navigation link clicks.
-  - Idempotent initialization prevents duplicate SVG icon layers.
+### 1. Elementor Static Export Lazyload CSS Blocker (Universal Fix)
+- **Symptom**: Background photos and section images below Section 3 failed to render across all pages (rendered blank brown or white).
+- **Root Cause**: Elementor static HTML exports inject `<style>.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded) { background-image: none !important; }</style>`. In this custom PHP MVC structure without WordPress JavaScript, `.e-lazyloaded` was never applied.
+- **Fix**: Eradicated the blocking style blocks across all 9 view templates (`home`, `header`, `about`, `locations`, `legacy`, `gallery`, `bistro`, `experience`, `reservations`).
 
-### B. Section 03 Background Gradient & Why Section Styling
-- Removed the white sub-box on `.khf-why-sec` for seamless visual integration.
-- Applied authentic food photography to the 3 cards (Dum Biryani, South Indian Thali, Crispy Chicken 65).
-- Configured top-to-bottom linear gradient on Section 03 (`.elementor-element-e58559a`):
-  - Starts with `#DAB79F` matching Section 2 & 3 above.
-  - Smoothly transitions from the vertical midpoint down to `#FFFFFF` to connect seamlessly with the gallery section below.
-- Updated copy to *"BAY AREA RECOGNITION - A TASTE THE BAY AREA FELL IN LOVE WITH (Celebrated Across 4 Locations)"* featuring real 4.4★ guest reviews.
+### 2. Header Logo Prominence (+50%)
+- **Requirement**: Increase header logo/emblem size by 50%.
+- **Fix**: Updated `.khf-header-logo img` and `.elementor-element-76a29c8 img` from `52px` to `78px` in `public/assets/css/khufus-theme.css`.
 
-### C. Official Brand Logo Integration
-- Integrated [`public/assets/images/ornaments/logo.webp`](./public/assets/images/ornaments/logo.webp) in navbar and footer.
+### 3. Polaroid Slider JavaScript Runtime & Crossfade Transitions
+- **Symptom**: Section 5 slider (`#monarqPolaroidSliderV2`) was unresponsive; slides would not advance.
+- **Root Causes**:
+  - Missing variable declaration `let tallest = 0;` inside `syncMobileStageHeight()`.
+  - Duplicate/colliding event listener attached in `public/assets/js/khufus-core.js`.
+- **Fix**: Fixed the variable initialization in `app/views/home/index.php`, removed the redundant listener in `khufus-core.js`, and implemented smooth CSS crossfade (`.mps5-photo-layer`) transitions.
 
----
-
-## 📜 6. Chronological Session History
-
-### Session 1–5 (Scraping, Scaffolding & Design Extraction)
-- Extracted 100% of dish catalog from legacy Toast Sites (426 dishes across 32 categories) into `old_website_data/`.
-- Reverse-engineered typography, colors, layout grid, and motion physics from Khufu's.
-- Extracted custom webfonts (`IvyOraDisplay`, `GoldenHopes`, `BricolageGrotesque`).
-- Compiled 51 Elementor/Astra static stylesheets into `public/assets/css/elementor/`.
-
-### Session 6–8 (Enterprise PHP 8.2+ MVC Architecture)
-- Built enterprise PHP MVC architecture: `App`, `Router`, `BaseController`, `Database` (PDO multi-driver), `SecurityHeaders`, `CsrfProtection`.
-- Created repository and service layers for Menu, Reservations, and Locations.
-
-### Session 9 (Master Content & Asset Transformation)
-- Transformed all 9 route views with authentic South Indian food copy, pricing, FAQs, location schedules, and high-res Google Maps photography with zero duplicate images.
-
-### Session 10 (Official Branding, Gradient Flow, & Standalone Native Drawer)
-- Replaced placeholder logos with official brand logo `logo.webp`.
-- Configured Section 03 linear gradient (`#DAB79F` $\rightarrow$ `#FFFFFF`) and removed white sub-box on `.khf-why-sec`.
-- Built standalone, isolated menu drawer in `app/views/layouts/drawer.php` with native pure JS controller `window.BiryaniDrawer`.
-- Fixed unclosed `<div>` nesting in `header.php` to permanently eliminate blank screen issues.
-- Removed all legacy WordPress/Elementor runtime JS engines (`elementorProFrontend`, `elementor-pro-frontend.min.js`, `webpack-pro.runtime.min.js`).
-
-### Session 11 (Hero Video, Full-Color Assets, White Backgrounds & Polaroid Story Fixes)
-- **Hero Background Video**: Replaced legacy placeholder video links with native local video [`/assets/ai_ganerated/video/video1.mp4`](./public/assets/ai_ganerated/video/video1.mp4) across desktop, tablet, and mobile viewports.
-- **Background Color Unification (`#FFFFFF`)**: Replaced all legacy `#F8F4EE` / `#F6F1EA` / `#FAF7F2` / `#F4EFEA` beige backgrounds across Section 4 (`.khx-gallery`), Section 5 (`.monarq-polaroid-slider-v2`), and Section 6 (`.kh-home-story-sec`) with pure `#FFFFFF` in both `khufus-theme.css` and `home/index.php`.
-- **Polaroid Slider Overhaul (`#monarqPolaroidSliderV2`)**:
-  - Overhauled both `khufus-core.js` and `home/index.php` slider controllers to eliminate old Khufu's Chef text.
-  - Linked authentic, distinct Google Maps photography for all 3 slides with zero image repetition:
-    - **05 CULINARY HERITAGE**: *The Dum Pukht Tradition* (`dublin_creamy_butter_chicken_delight.jpg` - steaming dum biryani handi).
-    - **06 TIFFIN ARTISTRY**: *Stone-Ground Dosa Craft* (`dublin_hyderabadi_chicken_dum_biryani_pot.jpg` - crispy golden Chennai dosas on banana leaf with chutneys & potato masala).
-    - **07 OUR STORY**: *Warmth, Spice & Family* (`milpitas_restaurant_main_dining_hall_booths.jpg` - warm dining room spread).
-- **Section 6 Parallax Collage (`#khHomeStorySec`)**:
-  - Converted empty containers into responsive semantic `<img>` tags (`.kh-home-story-img` & `.kh-home-story-mobile-img`) with `object-fit: cover`.
-  - Removed obsolete `filter: saturate(0);` styles to display all food photography in rich, vibrant color.
-  - Populated with distinct, non-repeating dishes: Column 1 (`livermore_kashmiri_mutton_curry_pot.jpg`), Column 2 (`concord_mutton_rogan_josh_slow_simmered.jpg`), Column 3 (`dublin_tandoori_mixed_grill_platter.jpg`), and Floating Arch (`concord_crispy_andhra_chicken_65.jpg`).
-
-### Session 12 (Hero Visibility Filter ~25% Transparency #E2C4AF, Gap Removal above Grand Feasts & Fixed Header on Scroll)
-- **Hero Visibility & ~25% Filter Transparency**: Tuned the contrast gradient overlay to ~25% subtle transparency (`linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(226, 196, 175, 0.15) 50%, rgba(226, 196, 175, 0.55) 85%, #E2C4AF 100%)`), allowing the authentic video footage to shine through vibrantly while maintaining crystal-clear white headline text and a smooth transition into Section 2 (`#E2C4AF`).
-- **Elimination of #302014 Block above Grand Feasts**: Removed the `margin-bottom: 80px` gap on Polaroid slider container (`.elementor-element-b408a9f`) and `margin-top` on Grand Feasts container (`.elementor-element-cf05877`), unifying backgrounds to `#FFFFFF` for a seamless flow.
-- **Header at Hero Top Only & Rendering Fix**: Anchored the header at the top of the hero section on the homepage (`body.home header.elementor-48`) while keeping normal document flow on inner pages (`body.page-inner`). Added cache-busting parameters (`?v=<?= time() ?>`) to `khufus-theme.css` and `khufus-core.js` to ensure browsers immediately render the latest header styling without stale cache conflicts. Verified all 4 core elements (RESERVATIONS, THE MENU, Logo, and Lottie toggle) are rendering cleanly with crisp typography and contrast shadows.
-- **Custom AI Backgrounds across Pages & Footer**:
-  - **Footer** (Global across all pages): Assigned [footer.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/footer.png) aligned to `right bottom` with 100% filter/overlay removal and seamless `#2b1c13` background integration, rendering the hand-drawn culinary art clearly in the bottom-right corner.
-  - **Contact & Locations** (`/contact`, `/locations`): Assigned [contact_page_hero_section.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/contact_page_hero_section.png) with warm atmospheric lighting.
-  - **Gallery** (`/gallery`): Assigned [gallery_page_hero_section.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/gallery_page_hero_section.png) featuring architectural arched doorways and subtle depth.
-  - **Legacy & Story** (`/legacy`, `/about`): Assigned [lagacy_page_hero_section.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/lagacy_page_hero_section.png) highlighting traditional Indian heritage aesthetics.
-  - **Menu Page** (`/menu`): Assigned [menu_page.png](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/assets/ai_ganerated/images/menu_page.png) with Khufu's 3-column featured interactive slider.
-  - **Transparent Header & Full-Bleed Hero Alignment**: Configured `body.page-hero-layout` in `header.php` and `khufus-theme.css` to ensure all hero pages render a seamless transparent header overlay with zero top margin gaps.
-
-### Session 13 (Header Icon / Logo Scaling)
-- **50% Header Icon Expansion**: Scaled the header logo / icon size by 50% (from `52px` to `78px` width/height) in [`public/assets/css/khufus-theme.css`](./public/assets/css/khufus-theme.css) for enhanced visual weight and branding balance across hero and inner pages.
+### 4. Image De-Duplication & Dish-to-Title Alignment
+- **Symptom**:
+  - In Section 2 ("Dining at the Edge of History"), "Dum Pukht" showed a Dosa and "Dosa Craft" showed Chicken 65.
+  - In Section 4b ("The Biryani Spot Experience"), the huge handi biryani pot image was duplicated side-by-side.
+- **Fix**:
+  - **Section 2**:
+    - *Dum Pukht*: Mapped to steaming Dum Biryani handi (`livermore_kashmiri_mutton_curry_pot.jpg`).
+    - *Dosa Craft*: Mapped to crispy rolled Paper Roast Dosa on steel platter (`concord_creamy_butter_chicken_delight.jpg`).
+    - *Chettinad Spices*: Mapped to sizzling tandoori/Chettinad appetizer platter (`dublin_paneer_tikka_masala_sizzler.jpg`).
+  - **Section 4b (3D Gallery Carousel)**:
+    - Updated `IMAGES` array with 8 completely distinct, high-resolution food items (Handi Biryani, Paper Dosa, Sizzler Platter, Egg Dum Biryani, Banana Leaf Dosas, Crispy 65, Biryani Feast Platter, Clay Handi).
+  - **Section 5 (Polaroid Slider)**:
+    - Mapped Slide 1 to authentic Dum Biryani, Slide 2 to Golden Chennai Dosa, and Slide 3 to Milpitas Dining Ambiance.
 
 ---
 
-## 🎯 7. Immediate Next Steps & Backlog
-1. [x] **Hero Video Integration**: Native `video1.mp4` running in hero container with ~25% subtle transparency `#E2C4AF` filter overlay and crisp typography.
-2. [x] **Asset Population & De-Duplication**: Sections 4, 5, and 6 populated with verified non-repeating authentic photography.
-3. [x] **Background Color Polish & Gap Removal**: Clean `#FFFFFF` styling applied across lower homepage sections with 0px gap above Grand Feasts & Catering.
-4. [x] **Hero-Only Header**: Header anchored cleanly at the top of the hero banner without scroll-following.
-5. [x] **Header Rendering & Cache Busting**: Verified DOM rendering and added dynamic timestamp cache-busters.
-6. [x] **Menu Page Overhaul**: Fully functional luxury menu catalog with 426 dishes, instant search, category tabs, location pills, and dietary filters.
-5. [ ] **MySQL Database Schema & Seeder**:
-   - Create `database/schema.sql` (MySQL table definitions for locations, schedules, categories, menu items, catering leads, contact messages).
-   - Create `database/seed_data.php` to populate MySQL directly from `old_website_data/data/` and `public/assets/images/google_maps/`.
-6. [ ] **ToastTab Direct Cart Links**: Wire up per-location ordering deep links in the Unified Menu explorer.
+## ⚠️ Rules & Gotchas for Future Development
+
+1. **Do NOT Re-add Elementor Lazyload CSS**:
+   Never add rules containing `.e-con.e-parent:not(.e-lazyloaded) { background-image: none !important; }` because WordPress lazyload JS is not loaded.
+
+2. **Verify Google Maps Image Content Before Mapping**:
+   Some raw filenames in `assets/images/google_maps/` contain customer-tagged labels that do not match the visual food item (e.g. `concord_creamy_butter_chicken_delight.jpg` is actually a crisp Dosa). Always verify the image visually before linking.
+
+3. **PHP Built-in Server Process**:
+   Ensure only one PHP server process is running on port 8899:
+   ```bash
+   php -S 127.0.0.1:8899 -t public
+   ```
+
+4. **Preserve Handwriting Script Fonts**:
+   The `GoldenHopes` cursive font must always maintain its subtle `-2deg` transform and luxury color `#6A4C36` to uphold the fine-dining aesthetic.
 
 ---
 
-## 🎥 8. Background Video Prompts for User
+## 📍 Bay Area Locations Reference
 
-When generating video assets for the hero banner (`public/assets/images/hero-video.mp4`):
-- **Biryani Steam Prompt**: *"Cinematic ultra slow motion 4k macro shot of fragrant Hyderabadi dum biryani being opened from a sealed clay handi, warm aromatic steam rising, glowing saffron rice grains, fresh mint and caramelized onions, dark moody luxury restaurant lighting, 60fps loop"*.
-- **Dosa Pour Prompt**: *"Cinematic slow motion shot of fermented golden dosa batter swirled onto a smoking hot cast-iron tawas, pure ghee drizzled with golden sizzle, folding into an ultra-crispy paper dosa, warm ambient lighting, 60fps loop"*.
+| Location | Address | Phone | Specialty Highlights |
+|---|---|---|---|
+| **Dublin** | 7111 Amador Valley Blvd, Dublin, CA 94568 | (925) 828-7768 | Clay Handi Biryanis, Ghee Podi Dosas, Family Booths |
+| **Livermore** | 2062 First St, Livermore, CA 94550 | (925) 447-3672 | Downtown Patio Dining, Dum Pukht Feast, Tandoor Sizzlers |
+| **Milpitas** | 350 S Main St, Milpitas, CA 95035 | (408) 263-3672 | Silicon Valley Tech Hub Catering, Executive Lunch Combos |
+| **Concord** | 1855 Willow Pass Rd, Concord, CA 94520 | (925) 687-3672 | Grand Banquet Hall, Weekend Tiffin Buffets, Party Orders |

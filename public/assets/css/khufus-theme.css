@@ -1004,17 +1004,17 @@ button {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.75s var(--ease-snap), opacity 0.75s var(--ease-snap);
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+  z-index: 1;
 }
 
 .mps5-photo-layer.is-active {
   opacity: 1;
   transform: scale(1);
-}
-
-.mps5-photo-layer:not(.is-active) {
-  opacity: 0;
-  transform: scale(1.05);
+  z-index: 2;
 }
 
 .mps5-meta-row {
