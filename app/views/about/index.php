@@ -3373,7 +3373,7 @@ LEFT VISUAL
   overflow:hidden;
   background:
     linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/dishes/traditional_thali.webp") center/cover no-repeat;
+    url("/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_medu_vada_sambar_chutney_combo.jpg") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.14);
 }
 
