@@ -234,11 +234,11 @@ biryani_spot_chennai_dosa/
 ### 19. About Page Timeline Section Viewport Scroll Hold Engine & DOM De-duplication (`/about`)
 - **Changes**:
   - Removed duplicate ~4,500 lines of legacy WordPress Elementor blocks at the top of `app/views/about/index.php`, eliminating element ID collisions (`#khTimelinePin`, `#khTimelineSec`, `#khCurtainMV`) and eradicating the stray full-width overlapping brown boxes.
-  - Replaced all residual placeholder copy with authentic Biryani Spot Chennai Dosa culinary narratives across all 4 Northern California locations.
+  - Set `.kh-tl-opposite` and `.kh-tl-opposite-icon` to `display: none !important;`, removing all SVG mask placeholder brown squares between Chapters 4 and 5.
+  - Eliminated conflicting `@media (max-width: 1180px)` overrides that reset `.kh-timeline-sec` to `position: relative` on standard desktop screens.
   - Engineered smooth in-section scroll hold pinning for **"An Experience That Unfolds In Chapters"**:
-    - Pinned viewport on `min-width: 768px` for desktops, laptops, and tablets.
-    - Inside timeline list smoothly translates through Chapters 1 to 5 as the user scrolls.
-    - Added comfortable reading hold buffer (`viewportH * 0.45`) before smoothly unpinning and advancing to Section 5.
+    - Uses continuous `requestAnimationFrame` tick tracking to translate the chapter list smoothly through Chapters 1 to 5.
+    - Locks Chapter 5 fully in view for an intentional reading hold buffer (`viewportH * 0.85`) before releasing smoothly and scrolling into Section 5.
 - **Files**:
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 

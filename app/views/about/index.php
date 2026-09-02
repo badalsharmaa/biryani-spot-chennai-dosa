@@ -2362,36 +2362,13 @@ TIMELINE ITEM
 OPPOSITE SIDE ICON
 ========================= */
 
-.kh-tl-opposite{
-  position:relative;
-  z-index:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:220px;
-}
+.kh-tl-opposite{ display: none !important; }
 
-.kh-tl-item:nth-child(odd) .kh-tl-opposite{
-  grid-column:2;
-}
+.kh-tl-item:nth-child(odd) .kh-tl-opposite{ display: none !important; }
 
-.kh-tl-item:nth-child(even) .kh-tl-opposite{
-  grid-column:1;
-}
+.kh-tl-item:nth-child(even) .kh-tl-opposite{ display: none !important; }
 
-.kh-tl-opposite-icon{
-  width:136px;
-  height:136px;
-  opacity:.12;
-  background-color:#6A4C36;
-  pointer-events:none;
-  -webkit-mask-repeat:no-repeat;
-  mask-repeat:no-repeat;
-  -webkit-mask-position:center;
-  mask-position:center;
-  -webkit-mask-size:contain;
-  mask-size:contain;
-}
+.kh-tl-opposite-icon{ display: none !important; }
 
 .kh-tl-opposite-icon--chapter-1{
   -webkit-mask-image:url("/assets/images/Flying-State.svg");
@@ -2487,15 +2464,8 @@ RESPONSIVE
 ========================= */
 
 @media (max-width:1180px) and (min-width:768px){
-  .kh-timeline-pin{
-    height:auto !important;
-  }
-
   .kh-timeline-sec{
-    position:relative;
-    height:auto;
-    min-height:auto;
-    padding:110px 28px;
+    padding:60px 28px;
   }
 
   .kh-timeline-wrap{
@@ -2537,10 +2507,8 @@ RESPONSIVE
   }
 
   .kh-timeline-list{
-    transform:none !important;
     padding:0;
     margin:0;
-    will-change:auto;
   }
 
   .kh-timeline-list::after{
@@ -2594,9 +2562,7 @@ RESPONSIVE
     grid-column:2 !important;
   }
 
-  .kh-tl-opposite{
-    display:none;
-  }
+  .kh-tl-opposite{ display: none !important; }
 
   .kh-tl-point{
     position:relative;
@@ -2842,9 +2808,7 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
     grid-column:2 !important;
   }
 
-  .kh-tl-opposite{
-    display:none;
-  }
+  .kh-tl-opposite{ display: none !important; }
 
   .kh-tl-point{
     position:relative;
@@ -3216,8 +3180,6 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
   if(!pin || !section || !list || !column || !progress) return;
 
   const animated = section.querySelectorAll('.kh-tl-animate');
-  const desktopMq = window.matchMedia('(min-width: 768px)');
-  const mobileMq = window.matchMedia('(max-width: 767px)');
 
   if(animated.length){
     const observer = new IntersectionObserver((entries)=>{
@@ -3227,144 +3189,75 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
         }
       });
     },{
-      threshold:0.14,
-      rootMargin:"0px 0px -8% 0px"
+      threshold: 0.1,
+      rootMargin: "0px 0px -5% 0px"
     });
-
     animated.forEach((el)=>observer.observe(el));
   }
 
   const clamp01 = (n) => Math.max(0, Math.min(1, n));
-  const lerp = (a,b,t) => a + (b-a)*t;
 
   let maxTranslate = 0;
-  let pinScrollDistance = 0;
-  let desktopEased = 0;
-  let mobileListEased = 0;
-  let mobileIntroEased = 0;
-  let mobileFadeDistance = 0;
-  let mobileBuffer = 0;
-  let rafId = 0;
-
-  function resetDesktop(){
-    list.style.transform = 'translate3d(0,0,0)';
-    progress.style.height = '0px';
-  }
-
-  function resetMobileVars(){
-    section.style.setProperty('--kh-mobile-intro-opacity', '1');
-    section.style.setProperty('--kh-mobile-intro-shift', '0px');
-    section.style.setProperty('--kh-mobile-timeline-opacity', '0');
-  }
+  let scrollTrackDistance = 0;
+  let easedY = 0;
+  let rafId = null;
 
   function measure(){
-    const viewportH = window.innerHeight || document.documentElement.clientHeight;
+    const vh = window.innerHeight || 800;
+    
+    // Total list height
+    const listH = list.scrollHeight;
+    const colH = column.clientHeight || (vh - 120);
 
-    if(desktopMq.matches){
-      const columnH = column.clientHeight || (viewportH - 120);
-      const listH = list.scrollHeight;
+    // Max translation required to bring Chapter 5 comfortably into view
+    maxTranslate = Math.max(listH - colH + 120, 0);
 
-      maxTranslate = Math.max(listH - columnH + 40, 0);
-      const holdEndBuffer = Math.round(viewportH * 0.45);
-      pinScrollDistance = maxTranslate + holdEndBuffer;
+    // Dedicated scroll track distance: translation distance + generous reading hold buffer
+    const holdBuffer = Math.round(vh * 0.85);
+    scrollTrackDistance = maxTranslate + holdBuffer;
 
-      pin.style.setProperty('height', (viewportH + pinScrollDistance) + 'px', 'important');
-
-      resetDesktop();
-      resetMobileVars();
-      return;
-    }
-
-    if(mobileMq.matches){
-      const columnH = column.clientHeight || viewportH;
-      const listH = list.scrollHeight;
-
-      mobileFadeDistance = Math.round(viewportH * 0.45);
-      maxTranslate = Math.max(listH - columnH + 40, 0);
-      mobileBuffer = Math.round(viewportH * 0.35);
-      pinScrollDistance = mobileFadeDistance + maxTranslate + mobileBuffer;
-
-      pin.style.setProperty('height', (viewportH + pinScrollDistance) + 'px', 'important');
-
-      resetDesktop();
-      resetMobileVars();
-      return;
-    }
+    // Set pin wrapper height to 1 viewport + total scroll track distance
+    pin.style.setProperty('height', (vh + scrollTrackDistance) + 'px', 'important');
   }
 
-  function getTravel(){
-    const rect = pin.getBoundingClientRect();
-    return Math.min(Math.max(-rect.top, 0), pinScrollDistance);
-  }
+  function tick(){
+    rafId = requestAnimationFrame(tick);
 
-  function renderDesktop(){
     const rect = pin.getBoundingClientRect();
+    const vh = window.innerHeight || 800;
+    const colH = column.clientHeight || (vh - 120);
+
+    // Pixels scrolled into the pin container
     const traveled = -rect.top;
-    const progressTraveled = Math.max(0, Math.min(traveled, maxTranslate));
-    const p = maxTranslate > 0 ? clamp01(progressTraveled / maxTranslate) : 0;
 
-    desktopEased += (p - desktopEased) * 0.14;
-
-    const y = lerp(0, maxTranslate, desktopEased);
-    list.style.transform = `translate3d(0, ${-y}px, 0)`;
-    progress.style.height = (desktopEased * column.clientHeight) + 'px';
-  }
-
-  function renderMobile(){
-    const traveled = getTravel();
-
-    const introTarget = mobileFadeDistance > 0 ? clamp01(traveled / mobileFadeDistance) : 0;
-    const listTarget = maxTranslate > 0 ? clamp01((traveled - mobileFadeDistance - 14) / maxTranslate) : 0;
-
-    mobileIntroEased += (introTarget - mobileIntroEased) * 0.12;
-    mobileListEased += (listTarget - mobileListEased) * 0.11;
-
-    const introOpacity = lerp(1, 0, mobileIntroEased);
-    const introShift = lerp(0, -24, mobileIntroEased);
-    const timelineVisible = introOpacity <= 0.03 ? 1 : 0;
-    const y = lerp(0, maxTranslate, mobileListEased);
-
-    section.style.setProperty('--kh-mobile-intro-opacity', introOpacity.toFixed(4));
-    section.style.setProperty('--kh-mobile-intro-shift', `${introShift.toFixed(2)}px`);
-    section.style.setProperty('--kh-mobile-timeline-opacity', String(timelineVisible));
-
-    list.style.transform = `translate3d(0, ${-y}px, 0)`;
-    progress.style.height = (mobileListEased * column.clientHeight) + 'px';
-  }
-
-  function render(){
-    if(desktopMq.matches){
-      renderDesktop();
-    }else if(mobileMq.matches){
-      renderMobile();
+    if (traveled <= 0) {
+      // Approaching or at top of timeline
+      easedY = 0;
+      list.style.transform = 'translate3d(0, 0px, 0)';
+      progress.style.height = '0px';
+    } else if (traveled >= maxTranslate) {
+      // Completed internal translation: hold Chapter 5 fully in view for duration of holdBuffer
+      easedY += (maxTranslate - easedY) * 0.16;
+      list.style.transform = `translate3d(0, ${-easedY.toFixed(2)}px, 0)`;
+      progress.style.height = colH + 'px';
+    } else {
+      // Actively scrolling through Chapters 1 through 5
+      const targetY = traveled;
+      easedY += (targetY - easedY) * 0.16;
+      list.style.transform = `translate3d(0, ${-easedY.toFixed(2)}px, 0)`;
+      const p = maxTranslate > 0 ? clamp01(easedY / maxTranslate) : 0;
+      progress.style.height = (p * colH).toFixed(1) + 'px';
     }
-
-    rafId = requestAnimationFrame(render);
   }
 
-  function onResize(){
-    desktopEased = 0;
-    mobileListEased = 0;
-    mobileIntroEased = 0;
-    measure();
-  }
-
-  if(typeof desktopMq.addEventListener === 'function'){
-    desktopMq.addEventListener('change', onResize);
-    mobileMq.addEventListener('change', onResize);
-  }else if(typeof desktopMq.addListener === 'function'){
-    desktopMq.addListener(onResize);
-    mobileMq.addListener(onResize);
-  }
-
-  window.addEventListener('resize', onResize, { passive:true });
+  window.addEventListener('resize', measure, { passive: true });
   window.addEventListener('load', measure);
 
   measure();
-  render();
+  tick();
 
   window.addEventListener('beforeunload', function(){
-    cancelAnimationFrame(rafId);
+    if(rafId) cancelAnimationFrame(rafId);
   });
 })();
 </script>				</div>
