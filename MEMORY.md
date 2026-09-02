@@ -231,6 +231,14 @@ biryani_spot_chennai_dosa/
   - [`app/views/gallery/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/gallery/index.php)
   - [`app/views/legacy/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/legacy/index.php)
 
+### 19. About Page Timeline Section Viewport Scroll Hold Engine (`/about`)
+- **Changes**:
+  - Fixed the viewport hold/pin controller on `.kh-timeline-pin` and `.kh-timeline-sec` for the section **"An Experience That Unfolds In Chapters"**.
+  - Broadened the desktop media query from `1181px` to `768px` so all standard desktop, laptop, and tablet viewports are captured.
+  - Calculated internal scroll translation `maxTranslate` based on the 5-chapter timeline list height, adding an end-of-track reading buffer (`viewportH * 0.45`) so the section remains firmly held in place until the user finishes reading all 5 chapters before smoothly releasing into the next section.
+- **Files**:
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development

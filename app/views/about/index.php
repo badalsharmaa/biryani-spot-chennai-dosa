@@ -7779,7 +7779,7 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
   if(!pin || !section || !list || !column || !progress) return;
 
   const animated = section.querySelectorAll('.kh-tl-animate');
-  const desktopMq = window.matchMedia('(min-width: 1181px)');
+  const desktopMq = window.matchMedia('(min-width: 768px)');
   const mobileMq = window.matchMedia('(max-width: 767px)');
 
   if(animated.length){
@@ -7824,27 +7824,12 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
     const viewportH = window.innerHeight || document.documentElement.clientHeight;
 
     if(desktopMq.matches){
-      const columnH = column.clientHeight;
+      const columnH = column.clientHeight || (viewportH - 120);
       const listH = list.scrollHeight;
 
-      maxTranslate = Math.max(listH - columnH, 0);
-      pinScrollDistance = maxTranslate;
-
-      pin.style.setProperty('height', (viewportH + pinScrollDistance) + 'px');
-
-      resetDesktop();
-      resetMobileVars();
-      return;
-    }
-
-    if(mobileMq.matches){
-      const columnH = column.clientHeight;
-      const listH = list.scrollHeight;
-
-      mobileFadeDistance = Math.round(viewportH * 0.46);
-      maxTranslate = Math.max(listH - columnH, 0);
-      mobileBuffer = Math.round(viewportH * 0.10);
-      pinScrollDistance = mobileFadeDistance + maxTranslate + mobileBuffer;
+      maxTranslate = Math.max(listH - columnH + 40, 0);
+      const holdEndBuffer = Math.round(viewportH * 0.45);
+      pinScrollDistance = maxTranslate + holdEndBuffer;
 
       pin.style.setProperty('height', (viewportH + pinScrollDistance) + 'px', 'important');
 
@@ -7853,9 +7838,21 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
       return;
     }
 
-    pin.style.height = 'auto';
-    resetDesktop();
-    resetMobileVars();
+    if(mobileMq.matches){
+      const columnH = column.clientHeight || viewportH;
+      const listH = list.scrollHeight;
+
+      mobileFadeDistance = Math.round(viewportH * 0.45);
+      maxTranslate = Math.max(listH - columnH + 40, 0);
+      mobileBuffer = Math.round(viewportH * 0.35);
+      pinScrollDistance = mobileFadeDistance + maxTranslate + mobileBuffer;
+
+      pin.style.setProperty('height', (viewportH + pinScrollDistance) + 'px', 'important');
+
+      resetDesktop();
+      resetMobileVars();
+      return;
+    }
   }
 
   function getTravel(){
@@ -7866,9 +7863,10 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
   function renderDesktop(){
     const rect = pin.getBoundingClientRect();
     const traveled = -rect.top;
-    const p = pinScrollDistance > 0 ? clamp01(traveled / pinScrollDistance) : 0;
+    const progressTraveled = Math.max(0, Math.min(traveled, maxTranslate));
+    const p = maxTranslate > 0 ? clamp01(progressTraveled / maxTranslate) : 0;
 
-    desktopEased += (p - desktopEased) * 0.12;
+    desktopEased += (p - desktopEased) * 0.14;
 
     const y = lerp(0, maxTranslate, desktopEased);
     list.style.transform = `translate3d(0, ${-y}px, 0)`;
