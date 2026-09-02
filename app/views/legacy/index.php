@@ -3438,7 +3438,7 @@ RESPONSIVE
 
       <p class="kh-exp-lead kh-exp-reveal">
 
-        Khufus is shaped by vision and the people behind it. From the founder’s direction to the team’s daily craft, every detail reflects a clear standard and a shared identity.
+        Biryani Spot Chennai Dosa is shaped by centuries of culinary heritage. From our founder's devotion to authentic regional recipes to our master chefs' daily craft, every dish reflects a timeless standard.
 
       </p>
 
@@ -5994,12 +5994,12 @@ DESKTOP / TABLET VERSION
           The Chefs
           <br>Who Shape
           <br>The Flavor
-          <br>Of Khufus
+          <br>Of Biryani Spot
           <span class="kh-exp-desktop-script">the hands behind the kitchen</span>
         </h2>
 
         <p class="kh-exp-desktop-lead">
-          Behind every plate is a kitchen shaped by discipline, instinct, and craft. Each chef brings a distinct point of view to the flavors, rhythm, and standard of Khufus.
+          Behind every plate is a kitchen shaped by authentic spice roasting, clay handi dum patience, and cast-iron tawa mastery.
         </p>
       </div>
 
@@ -6012,13 +6012,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">01</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  Shehab<br>El Din
-                  <span class="kh-exp-desktop-card-script">Head Chef</span>
+                  Chef<br>Kumaravel
+                  <span class="kh-exp-desktop-card-script">Executive Chef</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  Shehab El Din leads the Khufus kitchen with a point of view shaped by competition, discipline, and a deep respect for flavor. Featured on MBC Top Chef Season 6 and named Young Chef of the Year 2025, he brings precision, restraint, and momentum to every menu.
+                  Chef Kumaravel leads the Khufus kitchen with a point of view shaped by competition, discipline, and a deep respect for flavor. Featured on MBC Top Chef Season 6 and named Young Chef of the Year 2025, he brings precision, restraint, and momentum to every menu.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Leadership / Precision / Menu Direction</div>
+                <div class="kh-exp-desktop-card-meta">Chettinad Masalas / Ghee Roasting / Tradition</div>
               </div>
             </article>
 
@@ -6027,13 +6027,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">02</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  Ahmed Alwani
-                  <span class="kh-exp-desktop-card-script">Sous Chef</span>
+                  Chef Syed Farooq
+                  <span class="kh-exp-desktop-card-script">Master of Dum Pukht</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  Ahmed Alwani brings sharp technique and steady creative energy to the pass. A finalist on MBC Top Chef Season 9 and awarded Best Young Chef in Egypt in 2023, he supports the kitchen with focus, polish, and instinctive balance.
+                  Chef Syed Farooq brings sharp technique and steady creative energy to the pass. A finalist on MBC Top Chef Season 9 and awarded Best Young Chef in Egypt in 2023, he supports the kitchen with focus, polish, and instinctive balance.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Technique / Focus / Execution</div>
+                <div class="kh-exp-desktop-card-meta">Hyderabadi Dum / Clay Handis / Saffron</div>
               </div>
             </article>
 
@@ -6042,13 +6042,13 @@ DESKTOP / TABLET VERSION
               <div class="kh-exp-desktop-content">
                 <div class="kh-exp-desktop-label">03</div>
                 <h3 class="kh-exp-desktop-card-title">
-                  Yasmine Metaki
-                  <span class="kh-exp-desktop-card-script">Junior Sous Chef</span>
+                  Chef Murugan
+                  <span class="kh-exp-desktop-card-script">Junior Master of Dum Pukht</span>
                 </h3>
                 <p class="kh-exp-desktop-card-text">
-                  Yasmine Metaki adds an international foundation and careful finesse to the team. After four years of culinary training at Gasma in Spain, she brings curiosity, discipline, and refined detail to the kitchen's daily craft.
+                  Chef Murugan adds an international foundation and careful finesse to the team. After four years of culinary training at Gasma in Spain, she brings curiosity, discipline, and refined detail to the kitchen's daily craft.
                 </p>
-                <div class="kh-exp-desktop-card-meta">Training / Finesse / Craft</div>
+                <div class="kh-exp-desktop-card-meta">Cast-Iron Tawa / Fermentation / Chutneys</div>
               </div>
             </article>
 
@@ -6086,12 +6086,12 @@ INTRO IS SLIDE 1
             <div class="kh-exp-mobile-kicker">Chapter Three / The Chefs</div>
 
             <h2 class="kh-exp-mobile-title">
-              The Chefs Who Shape The Flavor Of Khufus
+              The Chefs Who Shape The Flavor Of Biryani Spot
               <span class="kh-exp-mobile-script">the hands behind the kitchen</span>
             </h2>
 
             <p class="kh-exp-mobile-lead">
-              Behind every plate is a kitchen shaped by discipline, instinct, and craft. Each chef brings a distinct point of view to the flavors, rhythm, and standard of Khufus.
+              Behind every plate is a kitchen shaped by authentic spice roasting, clay handi dum patience, and cast-iron tawa mastery.
             </p>
           </div>
         </article>
@@ -6101,13 +6101,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">01</div>
             <h3 class="kh-exp-mobile-card-title">
-              Shehab El Din
-              <span class="kh-exp-mobile-card-script">Head Chef</span>
+              Chef Kumaravel
+              <span class="kh-exp-mobile-card-script">Executive Chef</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              Shehab El Din leads Khufus with discipline, restraint, and a chef's instinct for flavor, shaped by MBC Top Chef and Young Chef of the Year 2025.
+              Chef Kumaravel leads Khufus with discipline, restraint, and a chef's instinct for flavor, shaped by MBC Top Chef and Young Chef of the Year 2025.
             </p>
-            <div class="kh-exp-mobile-card-meta">Leadership / Precision / Menu Direction</div>
+            <div class="kh-exp-mobile-card-meta">Chettinad Masalas / Ghee Roasting / Tradition</div>
           </div>
         </article>
 
@@ -6116,13 +6116,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">02</div>
             <h3 class="kh-exp-mobile-card-title">
-              Ahmed Alwani
-              <span class="kh-exp-mobile-card-script">Sous Chef</span>
+              Chef Syed Farooq
+              <span class="kh-exp-mobile-card-script">Master of Dum Pukht</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              Ahmed Alwani brings sharp technique and steady creative energy to the pass, balancing focus, polish, and instinct from MBC Top Chef to the Khufus kitchen.
+              Chef Syed Farooq brings sharp technique and steady creative energy to the pass, balancing focus, polish, and instinct from MBC Top Chef to the Khufus kitchen.
             </p>
-            <div class="kh-exp-mobile-card-meta">Technique / Focus / Execution</div>
+            <div class="kh-exp-mobile-card-meta">Hyderabadi Dum / Clay Handis / Saffron</div>
           </div>
         </article>
 
@@ -6131,13 +6131,13 @@ INTRO IS SLIDE 1
           <div class="kh-exp-mobile-content">
             <div class="kh-exp-mobile-label">03</div>
             <h3 class="kh-exp-mobile-card-title">
-              Yasmine Metaki
-              <span class="kh-exp-mobile-card-script">Junior Sous Chef</span>
+              Chef Murugan
+              <span class="kh-exp-mobile-card-script">Junior Master of Dum Pukht</span>
             </h3>
             <p class="kh-exp-mobile-card-text">
-              Yasmine Metaki brings an international foundation from Gasma in Spain, adding curiosity, discipline, and refined detail to the kitchen's daily craft.
+              Chef Murugan brings an international foundation from Gasma in Spain, adding curiosity, discipline, and refined detail to the kitchen's daily craft.
             </p>
-            <div class="kh-exp-mobile-card-meta">Training / Finesse / Craft</div>
+            <div class="kh-exp-mobile-card-meta">Cast-Iron Tawa / Fermentation / Chutneys</div>
           </div>
         </article>
 

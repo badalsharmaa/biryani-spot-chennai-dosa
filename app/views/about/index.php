@@ -2876,7 +2876,7 @@ LEFT VISUAL
   overflow:hidden;
   background:
     linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/Khufus-Kitchen.webp") center/cover no-repeat;
+    url("/assets/images/dishes/traditional_thali.webp") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.14);
 }
 
@@ -3243,7 +3243,7 @@ FIRST PANEL LAYOUT MATCHES ORIGINAL
   overflow:hidden;
   background:
     linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/Khufus-Kitchen.webp") center/cover no-repeat;
+    url("/assets/images/dishes/traditional_thali.webp") center/cover no-repeat;
   box-shadow:none;
   z-index:2;
 }
@@ -3508,7 +3508,7 @@ FIRST PANEL LAYOUT MATCHES ORIGINAL
 }
 
 .kh-final-sec::after{
-  content:"KHUFUS";
+  content:"HERITAGE";
   position:absolute;
   right:-12px;
   bottom:-14px;
@@ -3733,7 +3733,7 @@ RIGHT VISUAL STACK
   overflow:hidden;
   background:
     linear-gradient(180deg, rgba(24,18,12,.10) 0%, rgba(24,18,12,.30) 100%),
-    url("/assets/images/Khufus-Food.webp") center/cover no-repeat;
+    url("/assets/images/dishes/indian_thali_curries.webp") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.18);
 }
 
@@ -7649,7 +7649,7 @@ REAL LOCK + INTRO FADE OUT + TIMELINE APPEARS AFTER
                     <span class="kh-tl-script">Anticipation Begins</span>
                   </h3>
                   <p class="kh-tl-text">
-                    The experience starts before arrival, shaped by distance, silhouette, and the quiet tension of moving toward something monumental.
+                    The experience starts before arrival, shaped by distance, silhouette, and the quiet tension of moving toward authentic heritage.
                   </p>
                   <div class="kh-tl-meta">Approach / Horizon / Expectation</div>
                 </div>
@@ -8043,7 +8043,7 @@ LEFT VISUAL
   overflow:hidden;
   background:
     linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/Khufus-Kitchen.webp") center/cover no-repeat;
+    url("/assets/images/dishes/traditional_thali.webp") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.14);
 }
 
@@ -8410,7 +8410,7 @@ FIRST PANEL LAYOUT MATCHES ORIGINAL
   overflow:hidden;
   background:
     linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/Khufus-Kitchen.webp") center/cover no-repeat;
+    url("/assets/images/dishes/traditional_thali.webp") center/cover no-repeat;
   box-shadow:none;
   z-index:2;
 }
@@ -8656,7 +8656,7 @@ DESKTOP VERSION
           </h2>
 
           <p class="kh-arch-text kh-arch-animate kh-arch-delay3">
-            Khufus treats architecture not as backdrop, but as an emotional instrument. Light, enclosure, openness, and material weight are composed with restraint, guiding the guest toward a quieter and more deliberate sense of arrival.
+            We treat authentic cooking not as routine, but as an art of devotion. Pure ghee, stone-ground masalas, whole spices, and slow clay pot simmering come together to create rich, unforgettable dining moments across the Bay Area.
           </p>
 
           <div class="kh-arch-divider kh-arch-animate kh-arch-delay3"></div>
@@ -8723,7 +8723,7 @@ MOBILE VERSION
           </h2>
 
           <p class="kh-arch-mobile-text">
-            Khufus treats architecture not as backdrop, but as an emotional instrument. Light, enclosure, openness, and material weight are composed with restraint, guiding the guest toward a quieter and more deliberate sense of arrival.
+            We treat authentic cooking not as routine, but as an art of devotion. Pure ghee, stone-ground masalas, whole spices, and slow clay pot simmering come together to create rich, unforgettable dining moments across the Bay Area.
           </p>
         </div>
 
@@ -8883,7 +8883,7 @@ MOBILE VERSION
 }
 
 .kh-final-sec::after{
-  content:"KHUFUS";
+  content:"HERITAGE";
   position:absolute;
   right:-12px;
   bottom:-14px;
@@ -9108,7 +9108,7 @@ RIGHT VISUAL STACK
   overflow:hidden;
   background:
     linear-gradient(180deg, rgba(24,18,12,.10) 0%, rgba(24,18,12,.30) 100%),
-    url("/assets/images/Khufus-Food.webp") center/cover no-repeat;
+    url("/assets/images/dishes/indian_thali_curries.webp") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.18);
 }
 
@@ -9415,11 +9415,11 @@ RESPONSIVE
             <h2 class="kh-final-title kh-final-animate kh-final-delay2">
               Some Places Are Visited.<br>
               Others Are Remembered.
-              <span class="kh-final-script">Khufus belongs to the latter</span>
+              <span class="kh-final-script">Biryani Spot belongs to tradition</span>
             </h2>
 
             <p class="kh-final-text kh-final-animate kh-final-delay3">
-              Khufus is shaped as something that extends beyond the meal itself. The setting, the pace, the light, and the quiet gravity of place come together to leave an impression that stays present long after the table is left behind.
+              Biryani Spot Chennai Dosa is shaped as something that extends beyond the meal itself. The aroma of roasted spices, the sizzle of the tawa, and the warmth of family dining leave an impression that stays present long after your visit.
             </p>
 
             <div class="kh-final-actions kh-final-animate kh-final-delay4">
@@ -9430,7 +9430,7 @@ RESPONSIVE
                 </svg>
               </a>
 
-              <a href="/contact" class="kh-final-btn kh-final-btn--ghost">
+              <a href="/menu" class="kh-final-btn kh-final-btn--ghost">
                 <span>Enquire Privately</span>
               </a>
             </div>

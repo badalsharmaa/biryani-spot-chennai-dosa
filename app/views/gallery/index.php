@@ -1124,7 +1124,7 @@ RESPONSIVE
 
       <p class="kh-gallery-hero-lead kh-gallery-hero-reveal">
 
-        A curated visual sequence of Khufus through architecture, materiality, mood, and ritual. Each image is intended to preserve the atmosphere of the experience rather than simply document it.
+        A curated visual journey through Biryani Spot & Chennai Dosa — from sizzling cast-iron dosas and slow-steamed handi biryanis to our warm dining rooms across Dublin, Milpitas, Livermore, and Concord.
 
       </p>
 
@@ -1143,7 +1143,7 @@ RESPONSIVE
 
       <p>
 
-        A visual record of light, material, composition, and presence, curated to reflect the experience with quiet precision.
+        A visual record of culinary craft, authentic spices, and vibrant dining ambiance, curated to reflect true South Indian hospitality.
 
       </p>
 

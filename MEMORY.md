@@ -219,6 +219,18 @@ biryani_spot_chennai_dosa/
   - [`app/Core/Router.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/Core/Router.php)
   - [`public/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/public/index.php)
 
+### 18. In-Place Content & Asset Replacement (`/about`, `/contact`, `/gallery`, `/legacy`)
+- **Changes**:
+  - **About Page (`/about`)**: Replaced Egyptian architectural copy with Chettinad spice alchemy, stone-ground masalas, clay handi slow cooking, and Bay Area heritage across Dublin, Milpitas, Livermore, and Concord.
+  - **Contact & Locations (`/contact`, `/locations`)**: Updated hero banner and contact narrative for dining inquiries, group reservations, and catering bookings across all 4 Northern California branches.
+  - **Gallery Page (`/gallery`)**: Reframed visual narrative around sizzling cast-iron dosas, slow-steamed handi biryanis, and warm dining atmospheres.
+  - **Legacy Page (`/legacy`)**: Replaced foreign chef placeholders with master Indian culinary leaders (Executive Chef Kumaravel, Master of Dum Pukht Chef Syed Farooq, Senior Tawa Specialist Chef Murugan).
+- **Files**:
+  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+  - [`app/views/locations/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/locations/index.php)
+  - [`app/views/gallery/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/gallery/index.php)
+  - [`app/views/legacy/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/legacy/index.php)
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development

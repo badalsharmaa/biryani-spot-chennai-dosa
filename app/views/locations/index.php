@@ -1288,7 +1288,7 @@ USING EXPERIENCE HERO LAYOUT
     rgba(20,10,5,0.9) 75%,
     rgba(30,18,12,1) 100%
   ),
-  url("/assets/ai_ganerated/images/contact_page_hero_section.png")
+  url("/assets/images/banners/hero_banner.webp")
   center center / cover no-repeat;
 }
 
@@ -1475,7 +1475,7 @@ RESPONSIVE
 
       <p class="kh-gallery-hero-lead kh-gallery-hero-reveal">
 
-        Whether you are planning a visit, arranging a private experience, or making an enquiry, our team is here to assist you with clarity and care. Every interaction is handled with the same attention as the experience itself.
+        Whether you are planning a visit to our Dublin, Milpitas, Livermore, or Concord locations, inquiring about catering, or booking a private party, our team is here to assist you with warmth and care.
 
       </p>
 
@@ -1494,7 +1494,7 @@ RESPONSIVE
 
       <p>
 
-        Reservations, private bookings, and general enquiries are handled directly by our team to ensure precision, discretion, and a seamless experience from the very first interaction.
+        Dining inquiries, party orders, and catering bookings are handled directly by our dedicated management team across all four Northern California locations.
 
       </p>
 
