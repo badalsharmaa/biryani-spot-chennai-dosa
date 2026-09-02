@@ -2685,12 +2685,8 @@ div.elementor-element-cf05877,
 /* Header Positioned on Hero Section Top Only (Transparent Header for Hero Pages) */
 body.home header.elementor-48,
 body.home .elementor-location-header,
-body.home .elementor-48 .elementor-element.elementor-element-91c3171,
-body.home .elementor-location-header .elementor-element-91c3171,
 body.page-hero-layout header.elementor-48,
-body.page-hero-layout .elementor-location-header,
-body.page-hero-layout .elementor-48 .elementor-element.elementor-element-91c3171,
-body.page-hero-layout .elementor-location-header .elementor-element-91c3171 {
+body.page-hero-layout .elementor-location-header {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -2702,16 +2698,17 @@ body.page-hero-layout .elementor-location-header .elementor-element-91c3171 {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: none !important;
+  isolation: isolate !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 body:not(.home):not(.page-hero-layout) header.elementor-48,
 body:not(.home):not(.page-hero-layout) .elementor-location-header,
-body:not(.home):not(.page-hero-layout) .elementor-48 .elementor-element.elementor-element-91c3171,
-body:not(.home):not(.page-hero-layout) .elementor-location-header .elementor-element-91c3171,
 body.page-inner:not(.page-hero-layout) header.elementor-48,
-body.page-inner:not(.page-hero-layout) .elementor-location-header,
-body.page-inner:not(.page-hero-layout) .elementor-48 .elementor-element.elementor-element-91c3171,
-body.page-inner:not(.page-hero-layout) .elementor-location-header .elementor-element-91c3171 {
+body.page-inner:not(.page-hero-layout) .elementor-location-header {
   position: relative !important;
   top: auto !important;
   left: auto !important;
@@ -2719,6 +2716,7 @@ body.page-inner:not(.page-hero-layout) .elementor-location-header .elementor-ele
   z-index: 1000 !important;
   background-color: #1e120c !important;
   background: #1e120c !important;
+  isolation: isolate !important;
 }
 
 body.page-inner:not(.page-hero-layout) #page,
@@ -2738,6 +2736,7 @@ body.page-hero-layout #main {
   margin-top: 0 !important;
 }
 
+/* Three-Column Header Bar with Cross-Browser WebKit Flexbox */
 .elementor-48 .elementor-element.elementor-element-91c3171 {
   display: flex !important;
   flex-direction: row !important;
@@ -2745,14 +2744,39 @@ body.page-hero-layout #main {
   justify-content: space-between !important;
   padding: 24px 48px !important;
   box-sizing: border-box !important;
+  width: 100% !important;
+  position: relative !important;
+  z-index: 100000000 !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
 }
 
+/* Left Column: Reservations & The Menu Links */
 .elementor-48 .elementor-element.elementor-element-541a8a9 {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
+  justify-content: flex-start !important;
+  flex: 1 1 0% !important;
+  width: auto !important;
+  min-width: max-content !important;
   gap: 28px !important;
   flex-wrap: nowrap !important;
+  z-index: 10 !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-a10634e,
+.elementor-48 .elementor-element.elementor-element-6664fe9 {
+  display: inline-block !important;
+  width: auto !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-a10634e .elementor-heading-title,
+.elementor-48 .elementor-element.elementor-element-6664fe9 .elementor-heading-title {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .elementor-48 .elementor-element.elementor-element-a10634e .elementor-heading-title a,
@@ -2766,6 +2790,7 @@ body.page-hero-layout #main {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.95) !important;
   white-space: nowrap !important;
   transition: opacity 0.25s ease !important;
+  display: inline-block !important;
 }
 
 .elementor-48 .elementor-element.elementor-element-a10634e .elementor-heading-title a:hover,
@@ -2773,19 +2798,79 @@ body.page-hero-layout #main {
   opacity: 0.8 !important;
 }
 
+/* Center Column: Royal Logo Emblem */
+.elementor-48 .elementor-element.elementor-element-c1e51b4 {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex: 1 1 0% !important;
+  width: auto !important;
+  min-width: max-content !important;
+  text-align: center !important;
+  z-index: 10 !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-76a29c8 {
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 auto !important;
+}
+
+.elementor-48 .elementor-element.elementor-element-76a29c8 a {
+  display: inline-block !important;
+}
+
 .elementor-48 .elementor-element.elementor-element-76a29c8 img {
   width: 78px !important;
   height: auto !important;
+  -webkit-filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
   display: block !important;
   margin: 0 auto !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+/* Right Column: Lottie Hamburger Toggle Button */
+.elementor-48 .elementor-element.elementor-element-c7ef4ce {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  flex: 1 1 0% !important;
+  width: auto !important;
+  min-width: 90px !important;
+  z-index: 10 !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
 }
 
 #lottie-toggle {
   z-index: 100000001 !important;
   cursor: pointer !important;
   pointer-events: auto !important;
+  -webkit-filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+@media (max-width: 768px) {
+  .elementor-48 .elementor-element.elementor-element-91c3171 {
+    padding: 16px 20px !important;
+  }
+  .elementor-48 .elementor-element.elementor-element-541a8a9 {
+    display: none !important;
+  }
+  .elementor-48 .elementor-element.elementor-element-c1e51b4 {
+    justify-content: flex-start !important;
+  }
+  .elementor-48 .elementor-element.elementor-element-76a29c8 img {
+    width: 60px !important;
+  }
 }
 
 /* Seamless Section 7 & Footer Integration */

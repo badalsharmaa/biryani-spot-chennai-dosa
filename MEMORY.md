@@ -120,6 +120,13 @@ biryani_spot_chennai_dosa/
   - **Section 5 (Polaroid Slider)**:
     - Mapped Slide 1 to authentic Dum Biryani, Slide 2 to Golden Chennai Dosa, and Slide 3 to Milpitas Dining Ambiance.
 
+### 5. Safari/WebKit Header Links & Logo Visibility Fix
+- **Symptom**: Header links ("Reservations", "The Menu") and center logo were visible in Chrome, but completely invisible / collapsed in Safari (macOS/iOS).
+- **Root Causes**:
+  - Elementor's CSS variables computed `--container-widget-width: calc((1 - 1) * 100%) = 0%`, which WebKit flexbox strictly enforced, collapsing the links and logo flex containers to 0px width.
+  - WebKit 3D GPU layer occlusion: Hardware-accelerated background video and overlays in the Hero section punched through 2D absolute header children in Safari's compositing pipeline.
+- **Fix**: Updated `public/assets/css/khufus-theme.css` to add `-webkit-transform: translate3d(0,0,0)`, `transform: translateZ(0)`, `isolation: isolate`, and explicit flexbox properties (`flex: 1 1 0%`, `min-width: max-content`, `width: auto`) for all 3 header columns.
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development

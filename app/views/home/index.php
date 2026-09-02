@@ -6280,12 +6280,14 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   const TARGET_URL = '/gallery';
 
   const IMAGES = [
-    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_crab_masala_roast.jpg",
-    "/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg",
-    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_tikka_masala_sizzler.jpg",
-    "/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dal_makhani_slow_cooked.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_south_indian_curry_feast_spread.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_spicy_paneer_65_crispy_starter.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_bhurji_gravy.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_royal_maharaja_thali_platter.jpg",
     "/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg",
     "/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_medu_vada_sambar_chutney_combo.jpg",
+    "/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg",
     "/assets/images/google_maps/concord/curries_and_appetizers/concord_chettinad_mutton_sukka_masala.jpg",
     "/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg"
   ];
@@ -7528,7 +7530,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
       text: 'Founded on a passion for honest, authentic Indian flavors, Biryani Spot Chennai Dosa has become a beloved gathering place across the Bay Area for families, friends, and food enthusiasts.',
       mobileText: 'A beloved gathering place across the Bay Area for families and food enthusiasts celebrating South Indian flavors.',
       note: 'From daily comfort lunches to grand weekend celebrations, every guest is welcomed with heartfelt Indian hospitality.',
-      image: '/assets/images/google_maps/concord/curries_and_appetizers/concord_paneer_tikka_butter_masala.jpg',
+      image: '/assets/images/google_maps/milpitas/store_interior_and_vibe/milpitas_restaurant_main_dining_hall_booths.jpg',
       photoTitle: 'Warm Dining Ambiance'
     }
   ];
@@ -8579,19 +8581,19 @@ RESPONSIVE
         <div class="kh-home-story-columns" id="khHomeStoryColumns">
 
           <div class="kh-home-story-col kh-home-story-col--1" data-speed="0.18">
-            <img src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_warm_ambient_lighting_indoor_seating.jpg" class="kh-home-story-img" alt="Royal Kashmiri Mutton Curry" loading="lazy">
+            <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_garlic_naan_tandoori_bread.jpg" class="kh-home-story-img" alt="Royal Kashmiri Mutton Curry" loading="lazy">
           </div>
 
           <div class="kh-home-story-col kh-home-story-col--2" data-speed="0.32">
-            <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_spicy_paneer_65_crispy_starter.jpg" class="kh-home-story-img" alt="Creamy Butter Chicken Masala" loading="lazy">
+            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_mutton_rogan_josh_slow_simmered.jpg" class="kh-home-story-img" alt="Creamy Butter Chicken Masala" loading="lazy">
           </div>
 
           <div class="kh-home-story-col kh-home-story-col--3" data-speed="0.22">
-            <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_chicken_tikka_masala_gravy.jpg" class="kh-home-story-img" alt="Tandoori Sizzler Platter" loading="lazy">
+            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_andhra_chicken_65.jpg" class="kh-home-story-img" alt="Tandoori Sizzler Platter" loading="lazy">
           </div>
 
           <div class="kh-home-story-float kh-home-story-animate kh-home-story-delay3">
-            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_royal_maharaja_thali_platter.jpg"  class="kh-home-story-float-img" alt="Crispy Andhra Chicken 65" loading="lazy">
+            <img src="/assets/images/google_maps/milpitas/biryani_specials/milpitas_hyderabadi_chicken_dum_biryani_pot.jpg"  class="kh-home-story-float-img" alt="Crispy Andhra Chicken 65" loading="lazy">
           </div>
 
           <div class="kh-home-story-card kh-home-story-animate kh-home-story-delay4">
