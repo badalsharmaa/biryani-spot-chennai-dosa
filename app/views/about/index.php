@@ -1,3 +1,22 @@
+<style>
+html, body.page-template-default, body.page-inner, .site-content, #primary, #main, .elementor-911 {
+  background-color: #F6F1EA !important;
+}
+.elementor-911 .e-parent {
+  background-color: #F6F1EA !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.kh-curtain-mv {
+  background: #F4EDE4 !important;
+}
+.kh-timeline-pin {
+  background: #F4EDE4 !important;
+}
+.elementor-element-ce93b65 {
+  background-color: #1e120c !important;
+}
+</style>
 <?php
 $pageTitle = "About | Biryani Spot Chennai Dosa";
 require_once __DIR__ . "/../layouts/header.php";
@@ -595,8 +614,8 @@ UNCHANGED
   border-radius:0;
   overflow:hidden;
   background:
-    linear-gradient(180deg,rgba(24,18,12,.08) 0%,rgba(24,18,12,.24) 100%),
-    url("/assets/images/Food-at-the-Pyramids.webp") center/cover no-repeat;
+    linear-gradient(180deg,rgba(24,18,12,.58) 0%,rgba(24,18,12,.54) 100%),
+    url("/assets/images/google_maps/South_Chennai.jpg") center/cover no-repeat;
   box-shadow:0 28px 60px rgba(0,0,0,.14);
 }
 
@@ -1227,7 +1246,7 @@ CENTER LOGO (FIXED LAYERS)
 }
 
 .kh-curtain-mv{
-  --kh-bg:transparen;
+  --kh-bg:#F4EDE4;
   --kh-card:#FAF7F2;
   --kh-card-soft:#F4ECE2;
   --kh-text:#3F2C1F;
@@ -1242,20 +1261,11 @@ CENTER LOGO (FIXED LAYERS)
   width:100%;
   padding:60px;
   overflow:hidden;
-  background:
-    radial-gradient(circle at 14% 18%, rgba(106,76,54,.035), transparent 22%),
-    radial-gradient(circle at 88% 20%, rgba(106,76,54,.025), transparent 18%),
-    linear-gradient(180deg, var(--kh-bg) 0%, var(--kh-card-soft) 100%);
+  background: #F4EDE4;
 }
 
 .kh-curtain-mv::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.12), transparent 18%),
-    radial-gradient(circle at 78% 78%, rgba(255,255,255,.14), transparent 18%);
-  pointer-events:none;
+  display:none;
 }
 
 .kh-curtain-wrap{

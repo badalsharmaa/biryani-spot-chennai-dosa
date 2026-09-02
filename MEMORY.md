@@ -231,12 +231,14 @@ biryani_spot_chennai_dosa/
   - [`app/views/gallery/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/gallery/index.php)
   - [`app/views/legacy/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/legacy/index.php)
 
-### 20. About Page Timeline Background & Card Brown Gradient Removal (`/about`)
+### 21. About Page Global Cream Background & Dark Brown Boundary Leak Removal (`/about`)
 - **Changes**:
-  - Removed brown radial gradients (`radial-gradient(...)`) from the timeline section background (`.kh-timeline-sec`), replacing it with uniform `#F4EDE4`.
-  - Removed top-right corner brown radial gradient and pseudo-element gradient overlays from `.kh-tl-card-inner::before` and cards.
-  - Disabled all background sketch watermarks (`.kh-egypt-sketch { display: none !important; }`), ensuring a clean visual backdrop across Chapter 1 through Chapter 5.
-  - Visually tested and verified across all chapter scroll positions in Chrome DevTools.
+  - Diagnosed dark brown background leaks identified in user desktop screenshots:
+    - Screenshot 1 (`7.11.43 PM.png`): Section 3 Booklet had transparent background and parent container padding that exposed the `#241810` dark brown body background.
+    - Screenshot 2 (`7.12.09 PM.png`): Dark brown horizontal strip between Section 4 Timeline and Section 5 was caused by Elementor parent container padding exposing the body background.
+  - Set `html`, `body.page-template-default`, `.elementor-911`, and all `.e-parent` section containers to `background-color: #F6F1EA !important; padding: 0 !important; margin: 0 !important;`.
+  - Set Section 3 Booklet (`.kh-curtain-mv`) and Section 4 Timeline pin (`.kh-timeline-pin`) to `background: #F4EDE4 !important;`.
+  - Thoroughly tested and verified with Chrome DevTools screenshots across both transition points.
 - **Files**:
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 
