@@ -231,12 +231,12 @@ biryani_spot_chennai_dosa/
   - [`app/views/gallery/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/gallery/index.php)
   - [`app/views/legacy/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/legacy/index.php)
 
-### 19. About Page Timeline Section Viewport Scroll Hold Engine & DOM De-duplication (`/about`)
+### 20. About Page Timeline Background & Card Brown Gradient Removal (`/about`)
 - **Changes**:
-  - Removed duplicate ~4,500 lines of legacy WordPress Elementor blocks at the top of `app/views/about/index.php`, eliminating element ID collisions (`#khTimelinePin`, `#khTimelineSec`, `#khCurtainMV`) and eradicating the stray full-width overlapping brown boxes.
-  - Set `.kh-tl-opposite` and `.kh-tl-opposite-icon` to `display: none !important;`, removing all SVG mask placeholder brown squares between Chapters 4 and 5.
-  - Replaced CSS `position: sticky` with robust JS-driven `position: fixed` / `position: absolute` switching during RAF tick loop, ensuring zero premature unsticking or body background exposure regardless of ancestor `overflow` rules.
-  - Thoroughly tested and verified across all scroll stages (Chapters 1 to 5 + exit transition) via Chrome DevTools screenshot verification.
+  - Removed brown radial gradients (`radial-gradient(...)`) from the timeline section background (`.kh-timeline-sec`), replacing it with uniform `#F4EDE4`.
+  - Removed top-right corner brown radial gradient and pseudo-element gradient overlays from `.kh-tl-card-inner::before` and cards.
+  - Disabled all background sketch watermarks (`.kh-egypt-sketch { display: none !important; }`), ensuring a clean visual backdrop across Chapter 1 through Chapter 5.
+  - Visually tested and verified across all chapter scroll positions in Chrome DevTools.
 - **Files**:
   - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
 

@@ -1907,20 +1907,11 @@ MOBILE = LOCKED INTRO, THEN INTERNAL TIMELINE SCROLL
   min-height:100vh;
   padding:60px;
   overflow:hidden;
-  background:
-    radial-gradient(circle at 12% 14%, rgba(106,76,54,.045), transparent 22%),
-    radial-gradient(circle at 86% 18%, rgba(106,76,54,.035), transparent 18%),
-    linear-gradient(180deg, var(--kh-bg) 0%, var(--kh-bg-soft) 100%);
+  background: #F4EDE4;
 }
 
 .kh-timeline-sec::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,.12), transparent 18%),
-    radial-gradient(circle at 78% 72%, rgba(255,255,255,.12), transparent 20%);
-  pointer-events:none;
+  display:none;
 }
 
 .kh-timeline-wrap{
@@ -1936,14 +1927,7 @@ MOBILE = LOCKED INTRO, THEN INTERNAL TIMELINE SCROLL
 SUBTLE BRANDING SKETCHES
 ========================= */
 
-.kh-egypt-sketch{
-  position:absolute;
-  pointer-events:none;
-  user-select:none;
-  z-index:1;
-  opacity:.055;
-  mix-blend-mode:multiply;
-}
+.kh-egypt-sketch{ display:none !important; }
 
 .kh-egypt-sketch svg{
   width:100%;
@@ -2276,22 +2260,13 @@ TIMELINE ITEM
   padding:28px 28px 24px;
   position:relative;
   overflow:hidden;
-  background:linear-gradient(180deg, rgba(250,247,242,.86) 0%, rgba(244,236,226,.74) 100%);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+  background:#FAF7F2;
   border:1px solid rgba(63,44,31,.08);
-  box-shadow:none;
-  filter:none;
+  box-shadow:0 8px 24px rgba(63,44,31,.04);
 }
 
 .kh-tl-card-inner::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.20), transparent 40%),
-    radial-gradient(circle at 84% 20%, rgba(106,76,54,.04), transparent 24%);
-  pointer-events:none;
+  display:none;
 }
 
 .kh-tl-label{
