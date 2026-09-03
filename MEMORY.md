@@ -349,6 +349,11 @@ biryani_spot_chennai_dosa/
   - Added `<link rel="preload" href="/assets/images/Menu-Animation-Custom-8.json" as="fetch" crossorigin>` in `<head>`.
   - Updated `initBiryaniDrawer()` to preserve the fallback icon and smoothly transition once Lottie's `data_ready` event fires.
 
+### 36. Menu Page PHP Parse Syntax Error Fix (`/menu`)
+- **Symptom**: Menu page failed to open, crashing with `Parse error: syntax error, unexpected token "=" in app/views/menu/index.php on line 119`.
+- **Root Cause**: An accidental inline replacement injected `loading="lazy" decoding="async">` inside the PHP short echo tag `<img src="<?= htmlspecialchars($feat['image']) ? loading="lazy" decoding="async">" ...>` on line 119 and `<img src="<?= htmlspecialchars($item- loading="lazy" decoding="async">imageUrl) ?>" ...>` on line 246.
+- **Fix**: Corrected both PHP expressions in [`app/views/menu/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/menu/index.php) and verified all PHP templates pass `php -l` lint checks and render cleanly.
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development

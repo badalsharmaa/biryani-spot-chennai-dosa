@@ -14,7 +14,7 @@
 				<div class="elementor-element elementor-element-03cc9a3 elementor-widget elementor-widget-image" data-id="03cc9a3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 															<img width="144" height="141" src="/assets/images/ornaments/logo.webp" class="attachment-large size-large wp-image-115" alt="Biryani Spot Chennai Dosa" />															</div>
 				<div class="elementor-element elementor-element-11b6d61 elementor-widget elementor-widget-image" data-id="11b6d61" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" / loading="lazy" decoding="async">															</div>
+															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" loading="lazy" decoding="async" />															</div>
 				</div>
 				</div>
 				</div>
@@ -162,7 +162,7 @@
 				</div>
 		<div class="elementor-element elementor-element-368a8e2 e-con-full e-flex e-con e-child" data-id="368a8e2" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-1518cc5 elementor-widget elementor-widget-image" data-id="1518cc5" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" / loading="lazy" decoding="async">															</div>
+															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" loading="lazy" decoding="async" />															</div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-11011dc elementor-widget elementor-widget-text-editor" data-id="11011dc" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
