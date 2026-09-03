@@ -323,8 +323,11 @@ function initParallax() {
   const birdLeft = document.querySelector(".kh-bird-left");
   const birdRight = document.querySelector(".kh-bird-right");
   const archWrap = document.querySelector(".kh-arch-wrap");
+  const archSec = document.querySelector(".kh-arch-section");
 
-  function onScroll() {
+  let ticking = false;
+
+  function updateParallax() {
     const windowH = window.innerHeight;
 
     whyPanels.forEach(panel => {
@@ -345,16 +348,13 @@ function initParallax() {
       }
     });
 
-    if (birdLeft || birdRight || archWrap) {
-      const archSec = document.querySelector(".kh-arch-section");
-      if (archSec) {
-        const rect = archSec.getBoundingClientRect();
-        if (rect.top < windowH && rect.bottom > 0) {
-          const offset = (rect.top - windowH / 2);
-          if (birdLeft) birdLeft.style.transform = `translate3d(0, ${offset * -0.15}px, 0)`;
-          if (birdRight) birdRight.style.transform = `translate3d(0, ${offset * 0.18}px, 0)`;
-          if (archWrap) archWrap.style.transform = `translate3d(0, ${offset * 0.08}px, 0)`;
-        }
+    if (archSec && (birdLeft || birdRight || archWrap)) {
+      const rect = archSec.getBoundingClientRect();
+      if (rect.top < windowH && rect.bottom > 0) {
+        const offset = (rect.top - windowH / 2);
+        if (birdLeft) birdLeft.style.transform = `translate3d(0, ${offset * -0.15}px, 0)`;
+        if (birdRight) birdRight.style.transform = `translate3d(0, ${offset * 0.18}px, 0)`;
+        if (archWrap) archWrap.style.transform = `translate3d(0, ${offset * 0.08}px, 0)`;
       }
     }
 
@@ -365,6 +365,16 @@ function initParallax() {
         const scale = 0.94 + progress * 0.06;
         ctaInner.style.transform = `scale(${scale})`;
       }
+    }
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateParallax();
+        ticking = false;
+      });
+      ticking = true;
     }
   }
 
@@ -384,6 +394,8 @@ function init3DGallery() {
   let startX = 0;
   let targetX = 0;
   let currentX = 0;
+  let isVisible = true;
+  let isRunning = false;
 
   function updateItems() {
     const viewportCenter = window.innerWidth / 2;
@@ -405,16 +417,45 @@ function init3DGallery() {
   }
 
   function render() {
-    currentX += (targetX - currentX) * 0.08;
-    track.style.transform = `translate3d(${currentX}px, 0, 0) rotateX(6deg)`;
-    updateItems();
-    requestAnimationFrame(render);
+    if (!isVisible) {
+      isRunning = false;
+      return;
+    }
+
+    const diff = targetX - currentX;
+    if (Math.abs(diff) > 0.05 || isDown) {
+      currentX += diff * 0.08;
+      track.style.transform = `translate3d(${currentX}px, 0, 0) rotateX(6deg)`;
+      updateItems();
+      requestAnimationFrame(render);
+    } else {
+      currentX = targetX;
+      track.style.transform = `translate3d(${currentX}px, 0, 0) rotateX(6deg)`;
+      updateItems();
+      isRunning = false;
+    }
+  }
+
+  function startRender() {
+    if (!isRunning && isVisible) {
+      isRunning = true;
+      requestAnimationFrame(render);
+    }
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      isVisible = entries[0].isIntersecting;
+      if (isVisible) startRender();
+    }, { rootMargin: "100px" });
+    observer.observe(viewport);
   }
 
   viewport.addEventListener("mousedown", e => {
     isDown = true;
     viewport.classList.add("is-dragging");
     startX = e.pageX - targetX;
+    startRender();
   });
 
   window.addEventListener("mouseup", () => {
@@ -426,11 +467,13 @@ function init3DGallery() {
     if (!isDown) return;
     e.preventDefault();
     targetX = e.pageX - startX;
+    startRender();
   });
 
   viewport.addEventListener("touchstart", e => {
     isDown = true;
     startX = e.touches[0].pageX - targetX;
+    startRender();
   }, { passive: true });
 
   window.addEventListener("touchend", () => {
@@ -440,9 +483,10 @@ function init3DGallery() {
   window.addEventListener("touchmove", e => {
     if (!isDown) return;
     targetX = e.touches[0].pageX - startX;
+    startRender();
   }, { passive: true });
 
-  render();
+  startRender();
 }
 
 /* --------------------------------------------------------------------------
