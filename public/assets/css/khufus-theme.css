@@ -336,111 +336,111 @@ body:not(.home) #khufusIntro {
 }
 
 #khufusIntro .khf-text {
-  position: relative !important;
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 14px !important;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
 
 #khufusIntro .khf-kicker {
-  font-family: var(--font-sans, "Roboto", sans-serif) !important;
-  font-size: 11px !important;
-  letter-spacing: 0.28em !important;
-  text-transform: uppercase !important;
-  color: #DAB79F !important;
-  opacity: 0 !important;
-  transform: translateY(8px) !important;
-  animation: khfFadeUp 0.6s ease 0.1s forwards !important;
+  font-family: var(--font-sans, "Roboto", sans-serif);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #DAB79F;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: khfFadeUp 0.6s ease 0.15s forwards;
 }
 
 #khufusIntro .khf-line {
-  color: #FAF7F2 !important;
-  font-family: "IvyOraDisplay", var(--font-serif, "Cinzel", serif) !important;
-  font-weight: 300 !important;
-  font-size: clamp(22px, 3vw, 38px) !important;
-  line-height: 1.35 !important;
-  max-width: 820px !important;
+  color: #FAF7F2;
+  font-family: "IvyOraDisplay", var(--font-serif, "Cinzel", serif);
+  font-weight: 300;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.35;
+  max-width: 820px;
 }
 
 #khufusIntro .khf-word {
-  display: inline-block !important;
-  opacity: 0 !important;
-  transform: translate3d(0, 14px, 0) !important;
-  animation: khfWordIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-  animation-delay: var(--d, 0ms) !important;
-  margin: 0 3px !important;
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  animation: khfWordIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--d, 0ms);
+  margin: 0 3px;
 }
 
 #khufusIntro .khf-lead {
-  font-style: italic !important;
-  color: #DAB79F !important;
+  font-style: italic;
+  color: #DAB79F;
 }
 
 #khufusIntro .khf-subline {
-  font-family: var(--font-sans, "Roboto", sans-serif) !important;
-  font-size: clamp(13px, 1.4vw, 16px) !important;
-  font-weight: 300 !important;
-  color: rgba(250, 247, 242, 0.78) !important;
-  letter-spacing: 0.04em !important;
-  opacity: 0 !important;
-  transform: translateY(8px) !important;
-  animation: khfFadeUp 0.6s ease 0.4s forwards !important;
+  font-family: var(--font-sans, "Roboto", sans-serif);
+  font-size: clamp(13px, 1.4vw, 16px);
+  font-weight: 300;
+  color: rgba(250, 247, 242, 0.78);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: khfFadeUp 0.6s ease 0.4s forwards;
 }
 
 #khufusIntro .khf-locations-pill {
-  font-family: var(--font-sans, "Roboto", sans-serif) !important;
-  font-size: 11px !important;
-  letter-spacing: 0.16em !important;
-  text-transform: uppercase !important;
-  color: #DAB79F !important;
-  background: rgba(218, 183, 159, 0.12) !important;
-  border: 1px solid rgba(218, 183, 159, 0.25) !important;
-  padding: 6px 16px !important;
-  border-radius: 999px !important;
-  margin-top: 4px !important;
-  opacity: 0 !important;
-  transform: translateY(8px) !important;
-  animation: khfFadeUp 0.6s ease 0.6s forwards !important;
+  font-family: var(--font-sans, "Roboto", sans-serif);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #DAB79F;
+  background: rgba(218, 183, 159, 0.12);
+  border: 1px solid rgba(218, 183, 159, 0.25);
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-top: 4px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: khfFadeUp 0.6s ease 0.6s forwards;
 }
 
 #khufusIntro .khf-loader-bar {
-  width: 140px !important;
-  height: 2px !important;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-radius: 2px !important;
-  overflow: hidden !important;
-  margin-top: 22px !important;
-  margin-bottom: 16px !important;
+  width: 140px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 22px;
+  margin-bottom: 16px;
 }
 
 #khufusIntro .khf-loader-progress {
-  width: 0% !important;
-  height: 100% !important;
-  background: #DAB79F !important;
-  animation: khfProgress 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards !important;
+  width: 0%;
+  height: 100%;
+  background: #DAB79F;
+  animation: khfProgress 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 #khufusIntro .khf-skip {
-  padding: 8px 22px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  color: rgba(255, 255, 255, 0.75) !important;
-  background: transparent !important;
-  font-family: var(--font-sans, "Roboto", sans-serif) !important;
-  font-size: 11px !important;
-  letter-spacing: 0.16em !important;
-  text-transform: uppercase !important;
-  cursor: pointer !important;
-  transition: all 0.25s ease !important;
+  padding: 8px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  font-family: var(--font-sans, "Roboto", sans-serif);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 #khufusIntro .khf-skip:hover {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border-color: #DAB79F !important;
-  color: #FAF7F2 !important;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #DAB79F;
+  color: #FAF7F2;
 }
 
 @keyframes khfLogoFade {
@@ -449,10 +449,15 @@ body:not(.home) #khufusIntro {
 }
 
 @keyframes khfFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes khfWordIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -468,14 +473,15 @@ body:not(.home) #khufusIntro {
 /* --------------------------------------------------------------------------
    3B. LUXURY HEADER & HERO ENTRANCE
    -------------------------------------------------------------------------- */
-body.home.has-preloader:not(.page-ready) header.elementor-location-header,
-body.home.has-preloader:not(.page-ready) .khf-header {
-  display: none !important;
+body.home:not(.page-ready) header.elementor-location-header,
+body.home:not(.page-ready) .khf-header {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
 }
 
+html.khf-no-intro body.home header.elementor-location-header,
+html.khf-no-intro body.home .khf-header,
 body.page-ready header.elementor-location-header,
 body.page-ready .khf-header,
 body:not(.home) header.elementor-location-header,
