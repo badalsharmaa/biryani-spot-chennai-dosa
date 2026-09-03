@@ -1,0 +1,11 @@
+{
+  "name": "badalsharma/biryani-spot-chennai-dosa",
+  "description": "Biryani Spot & Chennai Dosa Official Website",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "ext-pdo": "*",
+    "ext-pdo_sqlite": "*",
+    "ext-json": "*"
+  }
+}
