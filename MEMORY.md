@@ -279,9 +279,35 @@ biryani_spot_chennai_dosa/
 - **Changes**:
   - Audited and aligned all page narrative with authentic Chettinad, Dum Biryani, and Dosa heritage from `old_website_data`.
   - Proofread and verified all 6 sections (Hero, The Origin, Mission & Vision Booklet, 5-Chapter Experience Timeline, Architecture of Emotion, and Final Invitation).
-  - Verified navigation links to `/reservations`, `/menu`, and Bay Area locations (Dublin, Milpitas, Livermore, Concord).
-- **Files**:
-  - [`app/views/about/index.php`](file:///Users/badalsharma/Work/biryani_spot_chennai_dosa/app/views/about/index.php)
+### 25. Dropdown Menu Background Visibility Fix (`#elementor-popup-modal-166`)
+- **Symptom**: Dropdown hamburger menu drawer had solid grey background blocking the background image.
+- **Fix**: Cleared solid background colors from `.dialog-widget-content`, `.dialog-message`, and `.elementor-166` across templates and `post-166.css`. Applied `/assets/ai_ganerated/images/footer.png` with a balanced dark mahogany gradient backdrop (`rgba(14, 8, 4, 0.60)` to `0.78`).
+
+### 26. Vercel Static Hosting & Routing Architecture
+- **Symptom**: Navigation links (`/menu`, `/reservations`, etc.) returned 404 or served stale styles on Vercel deployments.
+- **Fix**:
+  - Added clean route rewrites in `vercel.json` for all 10 pages (`/`, `/menu`, `/reservations`, `/contact`, `/locations`, `/gallery`, `/legacy`, `/about`, `/experience`, `/bistro`).
+  - Configured CDN `Cache-Control: public, max-age=0, must-revalidate` for CSS/JS to eliminate stale cached stylesheets on Vercel deployments.
+
+### 27. First-Frame WebP Hero Video Poster & Smooth Loading
+- **Symptom**: Hero video took time to stream on slower connections, leaving a temporary blank area before playback.
+- **Fix**:
+  - Extracted frame 0 of `/assets/ai_ganerated/video/video1.mp4` into a lightweight 118 KB WebP: `/assets/ai_ganerated/video/video1_poster.webp`.
+  - Applied `poster="/assets/ai_ganerated/video/video1_poster.webp"` and `preload="auto"` to desktop and mobile `<video>` tags with instant background fallbacks.
+
+### 28. Luxury Preloader Intro Overlay & Keyframe Specificity Fix
+- **Symptom**: Preloader showed duplicate logos (header logo + preloader logo), static progress bar, and invisible staggered typography.
+- **Fix**:
+  - Built single-run luxury intro overlay `#khufusIntro` with gold emblem, glowing divider, staggered word typography reveal (*"At Biryani Spot, culinary tradition is treated as heritage, not performance."*), and 2.2s progress bar.
+  - Eliminated `!important` on CSS rules targeting keyframe properties (`opacity: 0`, `width: 0%`), allowing `@keyframes khfWordIn` and `@keyframes khfProgress` to execute smoothly.
+  - Added `body.home:not(.page-ready) header.elementor-location-header { opacity: 0 !important; visibility: hidden !important; }` to hide the top header during the preloader so only one logo is visible.
+  - Integrated `sessionStorage.getItem("khfIntroShown")` and early `<head>` FOUC guard script to ensure zero preloader flash on return visits.
+
+### 29. Dead-Center Hero Layout Alignment
+- **Symptom**: Hero title and CTA were pushed towards the bottom of the hero section.
+- **Fix**:
+  - Set `.elementor-element-78802e6` and `.elementor-element-d554e4d` to `justify-content: center !important; align-items: center !important; text-align: center !important;`.
+  - Removed top spacer height offset for a true dead-center layout across desktop and mobile.
 
 ---
 
