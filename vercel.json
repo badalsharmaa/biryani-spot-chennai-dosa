@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/menu", "destination": "/menu.html" },
+    { "source": "/reservations", "destination": "/reservations.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/experience", "destination": "/experience.html" },
+    { "source": "/legacy", "destination": "/legacy.html" },
+    { "source": "/locations", "destination": "/locations.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/bistro", "destination": "/bistro.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

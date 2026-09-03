@@ -10,7 +10,7 @@ if (php_sapi_name() === "cli-server") {
     }
 }
 
-require_once __DIR__ . "/../app/Core/Autoloader.php";
+require_once __DIR__ . "/app/Core/Autoloader.php";
 \App\Core\Autoloader::register();
 
 use App\Core\App;
