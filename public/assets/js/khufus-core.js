@@ -25,16 +25,70 @@ document.addEventListener("DOMContentLoaded", () => {
    -------------------------------------------------------------------------- */
 function initPreloader() {
   const intro = document.getElementById("khufusIntro");
-  if (intro) {
-    try { intro.remove(); } catch(e) {}
-  }
-  document.body.classList.add("page-ready");
+  const skipBtn = document.getElementById("khfSkip");
   const heroTitle = document.querySelector(".khf-hero-title");
-  if (heroTitle) heroTitle.classList.add("is-in");
-  const heroSection = document.querySelector(".elementor-element-78802e6");
-  if (heroSection) heroSection.classList.add("hero-reveal-active");
-  const header = document.querySelector(".elementor-location-header, .khf-header");
-  if (header) header.classList.add("header-reveal-active");
+
+  let introShown = false;
+  try {
+    introShown = sessionStorage.getItem("khfIntroShown") === "true";
+  } catch (e) {
+    introShown = false;
+  }
+
+  // If not on homepage or already shown in this session, skip immediately:
+  if (!intro || introShown || !document.body.classList.contains("home")) {
+    if (intro) {
+      intro.style.display = "none";
+      try { intro.remove(); } catch (e) {}
+    }
+    document.body.classList.add("page-ready");
+    if (heroTitle) heroTitle.classList.add("is-in");
+    return;
+  }
+
+  // Distribute staggered word delays
+  const words = intro.querySelectorAll(".khf-word");
+  words.forEach((w, idx) => {
+    w.style.setProperty("--d", `${idx * 65}ms`);
+  });
+
+  let dismissed = false;
+  function dismissIntro() {
+    if (dismissed) return;
+    dismissed = true;
+    try {
+      sessionStorage.setItem("khfIntroShown", "true");
+    } catch (e) {}
+
+    intro.classList.add("is-hidden");
+    document.body.classList.add("page-ready");
+
+    setTimeout(() => {
+      try { intro.remove(); } catch (e) {}
+    }, 750);
+
+    if (heroTitle) {
+      heroTitle.classList.add("is-animating");
+      requestAnimationFrame(() => {
+        heroTitle.classList.add("is-in");
+        setTimeout(() => {
+          heroTitle.classList.remove("is-animating");
+        }, 1200);
+      });
+    }
+
+    const heroSection = document.querySelector(".elementor-element-78802e6");
+    if (heroSection) {
+      heroSection.classList.add("hero-reveal-active");
+    }
+  }
+
+  if (skipBtn) {
+    skipBtn.addEventListener("click", dismissIntro);
+  }
+
+  // Auto-dismiss when progress bar finishes (2.2s)
+  setTimeout(dismissIntro, 2200);
 }
 
 /* --------------------------------------------------------------------------

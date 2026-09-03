@@ -4128,6 +4128,13 @@ P88G KHUFUS FOOTER ACCORDION
 }
 </style>
   <link rel="stylesheet" href="/assets/css/khufus-theme.css?v=<?= time() ?>">
+  <script>
+    try {
+      if (sessionStorage.getItem("khfIntroShown") === "true") {
+        document.documentElement.classList.add("khf-no-intro");
+      }
+    } catch(e) {}
+  </script>
 
 
 
@@ -4144,6 +4151,42 @@ $bodyClass = ($isHome ? 'home ' : 'page-inner ') .
              'page-template-default page wp-custom-logo ast-desktop ast-separate-container elementor-default elementor-kit-48';
 ?>
 <body class="<?= htmlspecialchars($bodyClass) ?>">
+
+<?php if ($isHome): ?>
+  <!-- =========================================================================
+       1. PRELOADER INTRO OVERLAY (HOME PAGE ONLY)
+       ========================================================================= -->
+  <div id="khufusIntro" class="khf-preloader-root">
+    <div class="khf-inner">
+      <div class="khf-logo-wrapper">
+        <img src="/assets/images/ornaments/logo.webp" alt="Biryani Spot Chennai Dosa Logo">
+        <div class="khf-logo-divider"></div>
+      </div>
+      <div class="khf-text">
+        <div class="khf-kicker">Elevated South Indian Dining</div>
+        <div class="khf-line">
+          <span class="khf-word khf-lead">At</span>
+          <span class="khf-word khf-lead">Biryani</span>
+          <span class="khf-word khf-lead">Spot,</span>
+          <span class="khf-word">culinary</span>
+          <span class="khf-word">tradition</span>
+          <span class="khf-word">is</span>
+          <span class="khf-word">treated</span>
+          <span class="khf-word">as</span>
+          <span class="khf-word">heritage,</span>
+          <span class="khf-word">not</span>
+          <span class="khf-word">performance.</span>
+        </div>
+        <div class="khf-subline">Authentic Dum Biryanis &amp; Golden Fermented Dosas</div>
+        <div class="khf-locations-pill">Dublin &bull; Milpitas &bull; Livermore &bull; Concord</div>
+      </div>
+      <div class="khf-loader-bar">
+        <div class="khf-loader-progress"></div>
+      </div>
+      <button id="khfSkip" class="khf-skip" type="button">Skip Intro</button>
+    </div>
+  </div>
+<?php endif; ?>
 
 <header data-elementor-type="header" data-elementor-id="48" class="elementor elementor-48 elementor-location-header" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-91c3171 e-con-full e-flex e-con e-parent" data-id="91c3171" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
