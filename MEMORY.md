@@ -309,6 +309,46 @@ biryani_spot_chennai_dosa/
   - Set `.elementor-element-78802e6` and `.elementor-element-d554e4d` to `justify-content: center !important; align-items: center !important; text-align: center !important;`.
   - Removed top spacer height offset for a true dead-center layout across desktop and mobile.
 
+### 30. Duplicate Bottom Hero Section Removal on Home Page
+- **Symptom**: The home page had an accidental duplicate copy of the Hero section at the bottom of the page before the footer.
+- **Fix**: Removed the entire duplicate `.elementor-element-78802e6` container from `app/views/home/index.php`, `index.html`, and `public/index.html`.
+
+### 31. Vercel Edge Caching & Performance Architecture (`vercel.json`)
+- **Symptom**: Extremely slow page loads on Vercel deployments caused by `Cache-Control: public, max-age=0, must-revalidate` applied universally to all assets.
+- **Fix**:
+  - Configured long-term immutable caching (`max-age=31536000, immutable`) for custom luxury fonts (`.woff2`, `.woff`).
+  - Configured stale-while-revalidate caching (`max-age=31536000, stale-while-revalidate=604800`) for images (`.webp`, `.png`, `.jpg`, `.svg`), scripts, stylesheets, and video media.
+  - Added byte-range streaming header (`Accept-Ranges: bytes`) for smooth video playback.
+  - Kept fresh revalidation (`max-age=0, must-revalidate`) specifically for `.html` documents so code pushes reflect immediately.
+
+### 32. Dead Font Dumps & Render-Blocking Font Optimization (Saved ~3.2 MB)
+- **Symptom**: Every page had a 77.5 KB inlined `@font-face` CSS dump for Roboto pointing to non-existent `/cf-fonts/` paths, plus a blocking external Google Fonts `<link>` for 18 weights of `Roboto Slab`.
+- **Fix**:
+  - Stripped the dead Roboto dump across all PHP views and static `.html` files, reducing `index.html` size from 595 KB down to 439 KB.
+  - Removed the blocking external `Roboto Slab` Google Fonts stylesheet.
+  - Added `<script defer>` for external `lottie-web`.
+  - Preloaded critical display fonts (`IvyOraDisplay-Light.woff2`, `GoldenHopes.woff2`) and brand emblem in `<head>`.
+
+### 33. Unthrottled Scroll & RAF Layout Thrashing Fix
+- **Symptom**: Heavy scroll lag and high Total Blocking Time (TBT) caused by unthrottled `getBoundingClientRect()` layout recalculations on every scroll event.
+- **Fix**:
+  - `initParallax()`: Wrapped scroll position recalculations in a single `requestAnimationFrame` tick per screen refresh.
+  - `init3DGallery()`: Added `IntersectionObserver` gating and auto-sleep so the render loop only runs when actively visible in the viewport.
+
+### 34. Lighthouse Core Web Vitals (LCP Preload & Lazy Image Decoding)
+- **Symptom**: Below-the-fold food photography was competing for bandwidth with the Hero video/poster on initial page load.
+- **Fix**:
+  - Added high-priority hero poster preload in `<head>`: `<link rel="preload" href="/assets/ai_ganerated/video/video1_poster.webp" as="image" type="image/webp" fetchpriority="high">`.
+  - Added `loading="lazy"` and `decoding="async"` to all below-the-fold `<img>` tags across all 10 pages.
+  - Added SEO `<meta name="description">` and `<meta name="theme-color" content="#13100d">`.
+
+### 35. Instant 0ms Hamburger Menu Button with SVG Fallback & JSON Preload
+- **Symptom**: Hamburger menu button rendered with a 1-3s delay on cold loads because `#lottie-toggle` was an empty `<div>` waiting for Lottie JS and JSON network requests.
+- **Fix**:
+  - Placed an inline static luxury SVG icon inside `<div id="lottie-toggle">` directly in server-rendered HTML for instant 0ms First Paint.
+  - Added `<link rel="preload" href="/assets/images/Menu-Animation-Custom-8.json" as="fetch" crossorigin>` in `<head>`.
+  - Updated `initBiryaniDrawer()` to preserve the fallback icon and smoothly transition once Lottie's `data_ready` event fires.
+
 ---
 
 ## ⚠️ Rules & Gotchas for Future Development
@@ -327,6 +367,9 @@ biryani_spot_chennai_dosa/
 
 4. **Preserve Handwriting Script Fonts**:
    The `GoldenHopes` cursive font must always maintain its subtle `-2deg` transform and luxury color `#6A4C36` to uphold the fine-dining aesthetic.
+
+5. **Static HTML vs PHP View Parity**:
+   Always maintain parity between `app/views/` (for local PHP server) and root/`public/*.html` (for Vercel static rewrites).
 
 ---
 
