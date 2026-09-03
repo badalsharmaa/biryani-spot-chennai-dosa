@@ -4136,75 +4136,7 @@ P88G KHUFUS FOOTER ACCORDION
   <!-- =========================================================================
        1. PRELOADER INTRO OVERLAY
        ========================================================================= -->
-  <div id="khufusIntro">
-    <div class="khf-inner">
-      <div class="khf-logo-wrapper">
-        <img src="/assets/images/ornaments/logo.webp" alt="Biryani Spot Chennai Dosa Logo">
-        <div class="khf-logo-divider"></div>
-      </div>
-      <div class="khf-text">
-        <div class="khf-kicker">Elevated South Indian Dining</div>
-        <div class="khf-line">
-          <span class="khf-word khf-lead">At</span>
-          <span class="khf-word khf-lead">Biryani</span>
-          <span class="khf-word khf-lead">Spot,</span>
-          <span class="khf-word">culinary</span>
-          <span class="khf-word">tradition</span>
-          <span class="khf-word">is</span>
-          <span class="khf-word">treated</span>
-          <span class="khf-word">as</span>
-          <span class="khf-word">heritage,</span>
-          <span class="khf-word">not</span>
-          <span class="khf-word">performance.</span>
-        </div>
-        <div class="khf-subline">Authentic Dum Biryanis &amp; Golden Fermented Dosas</div>
-        <div class="khf-locations-pill">Dublin &bull; Milpitas &bull; Livermore &bull; Concord</div>
-      </div>
-      <div class="khf-loader-bar">
-        <div class="khf-loader-progress"></div>
-      </div>
-      <button id="khfSkip" class="khf-skip" type="button">Skip Intro</button>
-    </div>
-  </div>
-      <div class="khf-text">
-        <div class="khf-line">
-          <span class="khf-word khf-lead">At</span>
-          <span class="khf-word khf-lead">Biryani</span>
-          <span class="khf-word khf-lead">Spot,</span>
-          <span class="khf-word">culinary</span>
-          <span class="khf-word">tradition</span>
-          <span class="khf-word">is</span>
-          <span class="khf-word">treated</span>
-          <span class="khf-word">as</span>
-          <span class="khf-word">heritage,</span>
-          <span class="khf-word">not</span>
-          <span class="khf-word">performance.</span>
-        </div>
-      </div>
-      <button id="khfSkip" class="khf-skip" type="button">Skip Intro</button>
-    </div>
-  </div>
-
-<header data-elementor-type="header" data-elementor-id="48" class="elementor elementor-48 elementor-location-header" data-elementor-post-type="elementor_library">
-			<div class="elementor-element elementor-element-91c3171 e-con-full e-flex e-con e-parent" data-id="91c3171" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
-		<div class="elementor-element elementor-element-541a8a9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="541a8a9" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-a10634e elementor-widget elementor-widget-heading" data-id="a10634e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default"><a href="/reservations">RESERVATIONS</a></h2>				</div>
-				<div class="elementor-element elementor-element-6664fe9 elementor-widget elementor-widget-heading" data-id="6664fe9" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default"><a href="/menu">THE MENU</a></h2>				</div>
-				</div>
-		<div class="elementor-element elementor-element-c1e51b4 e-con-full e-flex e-con e-child" data-id="c1e51b4" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-76a29c8 elementor-widget elementor-widget-image" data-id="76a29c8" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-																<a href="/">
-							<img width="144" height="141" src="/assets/images/ornaments/logo.webp" class="attachment-large size-large wp-image-115" alt="Biryani Spot Chennai Dosa Logo" />								</a>
-															</div>
-				</div>
-		<div class="elementor-element elementor-element-c7ef4ce e-con-full e-flex e-con e-child" data-id="c7ef4ce" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-0f99354 elementor-widget elementor-widget-html" data-id="0f99354" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<div class="lottie-wrapper">
-  <div id="lottie-toggle"></div>
-</div>
-				</div>
+  
 				</div>
 				</div>
 				</header>
@@ -8379,35 +8311,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     });
   }
 
-  var intro=document.getElementById("khufusIntro");
-  if(!intro){
-    waitForFont();
-    return;
-  }
-
-    var fired=false;
-  function maybeFire(){
-    if(fired) return;
-    var isHidden = intro.classList.contains("is-hidden") || document.body.classList.contains("page-ready");
-    if(isHidden){
-      fired=true;
-      setTimeout(waitForFont,50);
-      try{obs.disconnect();}catch(e){}
-    }
-  }
-
-  var obs=new MutationObserver(maybeFire);
-  obs.observe(intro,{attributes:true,attributeFilter:["class"]});
-  obs.observe(document.body,{attributes:true,attributeFilter:["class"]});
-  maybeFire();
-
-  setTimeout(function(){
-    if(!fired){
-      fired=true;
-      waitForFont();
-      try{obs.disconnect();}catch(e){}
-    }
-  },3000);
+  waitForFont();
 })();
 </script>
 				</div>

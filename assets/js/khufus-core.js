@@ -25,80 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
    -------------------------------------------------------------------------- */
 function initPreloader() {
   const intro = document.getElementById("khufusIntro");
-  const skipBtn = document.getElementById("khfSkip");
+  if (intro) {
+    try { intro.remove(); } catch(e) {}
+  }
+  document.body.classList.add("page-ready");
   const heroTitle = document.querySelector(".khf-hero-title");
-
-  let introShown = false;
-  try {
-    introShown = sessionStorage.getItem("khfIntroShown") === "true";
-  } catch(e) {
-    introShown = false;
-  }
-
-  // If intro not on page, not on home page, or already shown before in session:
-  if (!intro || introShown || !document.body.classList.contains("home")) {
-    if (intro) {
-      intro.style.display = "none";
-      try { intro.remove(); } catch(e) {}
-    }
-    document.body.classList.add("page-ready");
-    if (heroTitle) heroTitle.classList.add("is-in");
-    const heroSection = document.querySelector(".elementor-element-78802e6");
-    if (heroSection) heroSection.classList.add("hero-reveal-active");
-    const header = document.querySelector(".elementor-location-header, .khf-header");
-    if (header) header.classList.add("header-reveal-active");
-    return;
-  }
-
-  // First visit on home page:
-  document.body.classList.add("has-preloader");
-
-  const words = intro.querySelectorAll(".khf-word");
-  words.forEach((w, idx) => {
-    w.style.setProperty("--d", `${idx * 65}ms`);
-  });
-
-  let dismissed = false;
-  function dismissIntro() {
-    if (dismissed) return;
-    dismissed = true;
-    try { sessionStorage.setItem("khfIntroShown", "true"); } catch(e) {}
-    
-    intro.classList.add("is-hidden");
-    document.body.classList.add("page-ready");
-    document.body.classList.remove("has-preloader");
-
-    setTimeout(() => {
-      try { intro.remove(); } catch(e) {}
-    }, 850);
-
-    // Trigger hero animations with cinematic stagger
-    if (heroTitle) {
-      heroTitle.classList.add("is-animating");
-      requestAnimationFrame(() => {
-        heroTitle.classList.add("is-in");
-        setTimeout(() => {
-          heroTitle.classList.remove("is-animating");
-        }, 1400);
-      });
-    }
-
-    const heroSection = document.querySelector(".elementor-element-78802e6");
-    if (heroSection) {
-      heroSection.classList.add("hero-reveal-active");
-    }
-
-    const header = document.querySelector(".elementor-location-header, .khf-header");
-    if (header) {
-      header.classList.add("header-reveal-active");
-    }
-  }
-
-  if (skipBtn) {
-    skipBtn.addEventListener("click", dismissIntro);
-  }
-
-  setTimeout(dismissIntro, 2200);
+  if (heroTitle) heroTitle.classList.add("is-in");
+  const heroSection = document.querySelector(".elementor-element-78802e6");
+  if (heroSection) heroSection.classList.add("hero-reveal-active");
+  const header = document.querySelector(".elementor-location-header, .khf-header");
+  if (header) header.classList.add("header-reveal-active");
 }
 
 /* --------------------------------------------------------------------------

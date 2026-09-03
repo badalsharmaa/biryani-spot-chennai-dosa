@@ -3258,42 +3258,7 @@ MOBILE — STRONGER PRESENCE
     });
   }
 
-  var intro=document.getElementById("khufusIntro");
-  if(!intro){
-    waitForFont();
-    return;
-  }
-
-  var seenVisible=false;
-  var fired=false;
-
-  function maybeFire(){
-    if(fired) return;
-
-    var visible=intro.classList.contains("is-visible");
-    var exiting=intro.classList.contains("is-exiting");
-
-    if(visible||exiting) seenVisible=true;
-
-    if(seenVisible&&!visible&&!exiting){
-      fired=true;
-      setTimeout(waitForFont,80);
-      try{obs.disconnect();}catch(e){}
-    }
-  }
-
-  var obs=new MutationObserver(maybeFire);
-  obs.observe(intro,{attributes:true,attributeFilter:["class"]});
-  maybeFire();
-
-  setTimeout(function(){
-    if(fired) return;
-    if(!seenVisible){
-      fired=true;
-      waitForFont();
-      try{obs.disconnect();}catch(e){}
-    }
-  },4000);
+  waitForFont();
 })();
 </script>
 				</div>

@@ -4173,35 +4173,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     });
   }
 
-  var intro=document.getElementById("khufusIntro");
-  if(!intro){
-    waitForFont();
-    return;
-  }
-
-  var fired=false;
-  function maybeFire(){
-    if(fired) return;
-    var isHidden = intro.classList.contains("is-hidden") || document.body.classList.contains("page-ready");
-    if(isHidden){
-      fired=true;
-      setTimeout(waitForFont,50);
-      try{obs.disconnect();}catch(e){}
-    }
-  }
-
-  var obs=new MutationObserver(maybeFire);
-  obs.observe(intro,{attributes:true,attributeFilter:["class"]});
-  obs.observe(document.body,{attributes:true,attributeFilter:["class"]});
-  maybeFire();
-
-  setTimeout(function(){
-    if(!fired){
-      fired=true;
-      waitForFont();
-      try{obs.disconnect();}catch(e){}
-    }
-  },3000);
+  waitForFont();
 })();
 </script>
 				</div>
