@@ -468,10 +468,23 @@ body:not(.home) #khufusIntro {
 /* --------------------------------------------------------------------------
    3B. LUXURY HEADER & HERO ENTRANCE
    -------------------------------------------------------------------------- */
-header.elementor-location-header,
-.khf-header {
+body.home.has-preloader:not(.page-ready) header.elementor-location-header,
+body.home.has-preloader:not(.page-ready) .khf-header {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+body.page-ready header.elementor-location-header,
+body.page-ready .khf-header,
+body:not(.home) header.elementor-location-header,
+body:not(.home) .khf-header {
   opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
   transform: translate3d(0, 0, 0) !important;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* Hero Background Video */
@@ -3289,6 +3302,18 @@ article.post-1536,
 .elementor-background-video-container,
 .elementor-1536 .elementor-element.elementor-element-78802e6,
 .elementor-1536 .elementor-element.elementor-element-d554e4d {
+  position: relative !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  background: #120904 url("/assets/ai_ganerated/video/video1_poster.webp") center center / cover no-repeat !important;
+}
+
+.elementor-background-video-container {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
