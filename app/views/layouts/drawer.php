@@ -308,29 +308,44 @@ function initBiryaniDrawer() {
   const modal = document.getElementById("elementor-popup-modal-166");
   if (!toggleEl || !modal || toggleEl.dataset.initialized === "true") return;
   toggleEl.dataset.initialized = "true";
-  toggleEl.innerHTML = "";
 
   let isOpen = false;
   let anim = null;
   let busy = false;
   const speedFactor = 1.6;
 
-  // Initialize Lottie Animation
+  function setupLottie() {
+    if (window.lottie && !anim) {
+      anim = lottie.loadAnimation({
+        container: toggleEl,
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        path: "/assets/images/Menu-Animation-Custom-8.json"
+      });
+      anim.setSpeed(speedFactor);
+      anim.addEventListener('data_ready', () => {
+        const total = anim.totalFrames;
+        const start = Math.floor(total * 0.1);
+        anim.goToAndStop(start, true);
+        const fallback = toggleEl.querySelector(".khf-fallback-burger");
+        if (fallback) fallback.remove();
+      });
+    }
+  }
+
+  // Initialize Lottie Animation immediately or on load
   if (window.lottie) {
-    toggleEl.innerHTML = "";
-    anim = lottie.loadAnimation({
-      container: toggleEl,
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      path: "/assets/images/Menu-Animation-Custom-8.json"
-    });
-    anim.setSpeed(speedFactor);
-    anim.addEventListener('data_ready', () => {
-      const total = anim.totalFrames;
-      const start = Math.floor(total * 0.1);
-      anim.goToAndStop(start, true);
-    });
+    setupLottie();
+  } else {
+    window.addEventListener("load", setupLottie, { once: true });
+    // Also poll briefly if script finishes before load event
+    const checkLottie = setInterval(() => {
+      if (window.lottie) {
+        clearInterval(checkLottie);
+        setupLottie();
+      }
+    }, 50);
   }
 
   function openDrawer(){

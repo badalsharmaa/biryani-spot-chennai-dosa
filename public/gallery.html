@@ -15,6 +15,7 @@
   <link rel="preload" href="/assets/images/GoldenHopes.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/images/ornaments/logo.webp" as="image" type="image/webp">
   <link rel="preload" href="/assets/ai_ganerated/video/video1_poster.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/assets/images/Menu-Animation-Custom-8.json" as="fetch" crossorigin>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -4154,7 +4155,12 @@ P88G KHUFUS FOOTER ACCORDION
 		<div class="elementor-element elementor-element-c7ef4ce e-con-full e-flex e-con e-child" data-id="c7ef4ce" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-0f99354 elementor-widget elementor-widget-html" data-id="0f99354" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<div class="lottie-wrapper">
-  <div id="lottie-toggle"></div>
+  <div id="lottie-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0">
+    <svg class="khf-fallback-burger" viewBox="0 0 473 266" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;pointer-events:none;">
+      <line x1="80" y1="92" x2="393" y2="92" stroke="#fdfdfd" stroke-width="12" stroke-linecap="round"/>
+      <line x1="80" y1="177" x2="393" y2="177" stroke="#fdfdfd" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+  </div>
 </div>
 				</div>
 				</div>
@@ -6192,29 +6198,42 @@ function initBiryaniDrawer() {
   const modal = document.getElementById("elementor-popup-modal-166");
   if (!toggleEl || !modal || toggleEl.dataset.initialized === "true") return;
   toggleEl.dataset.initialized = "true";
-  toggleEl.innerHTML = "";
 
   let isOpen = false;
   let anim = null;
   let busy = false;
   const speedFactor = 1.6;
 
-  // Initialize Lottie Animation
+  function setupLottie() {
+    if (window.lottie && !anim) {
+      anim = lottie.loadAnimation({
+        container: toggleEl,
+        renderer: "svg",
+        loop: false,
+        autoplay: false,
+        path: "/assets/images/Menu-Animation-Custom-8.json"
+      });
+      anim.setSpeed(speedFactor);
+      anim.addEventListener('data_ready', () => {
+        const total = anim.totalFrames;
+        const start = Math.floor(total * 0.1);
+        anim.goToAndStop(start, true);
+        const fallback = toggleEl.querySelector(".khf-fallback-burger");
+        if (fallback) fallback.remove();
+      });
+    }
+  }
+
   if (window.lottie) {
-    toggleEl.innerHTML = "";
-    anim = lottie.loadAnimation({
-      container: toggleEl,
-      renderer: "svg",
-      loop: false,
-      autoplay: false,
-      path: "/assets/images/Menu-Animation-Custom-8.json"
-    });
-    anim.setSpeed(speedFactor);
-    anim.addEventListener('data_ready', () => {
-      const total = anim.totalFrames;
-      const start = Math.floor(total * 0.1);
-      anim.goToAndStop(start, true);
-    });
+    setupLottie();
+  } else {
+    window.addEventListener("load", setupLottie, { once: true });
+    const checkLottie = setInterval(() => {
+      if (window.lottie) {
+        clearInterval(checkLottie);
+        setupLottie();
+      }
+    }, 50);
   }
 
   function openDrawer(){

@@ -15,6 +15,7 @@
   <link rel="preload" href="/assets/images/GoldenHopes.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/images/ornaments/logo.webp" as="image" type="image/webp">
   <link rel="preload" href="/assets/ai_ganerated/video/video1_poster.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/assets/images/Menu-Animation-Custom-8.json" as="fetch" crossorigin>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -4209,7 +4210,12 @@ $bodyClass = ($isHome ? 'home ' : 'page-inner ') .
 		<div class="elementor-element elementor-element-c7ef4ce e-con-full e-flex e-con e-child" data-id="c7ef4ce" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-0f99354 elementor-widget elementor-widget-html" data-id="0f99354" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<div class="lottie-wrapper">
-  <div id="lottie-toggle"></div>
+  <div id="lottie-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0">
+    <svg class="khf-fallback-burger" viewBox="0 0 473 266" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;pointer-events:none;">
+      <line x1="80" y1="92" x2="393" y2="92" stroke="#fdfdfd" stroke-width="12" stroke-linecap="round"/>
+      <line x1="80" y1="177" x2="393" y2="177" stroke="#fdfdfd" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+  </div>
 </div>
 				</div>
 				</div>
