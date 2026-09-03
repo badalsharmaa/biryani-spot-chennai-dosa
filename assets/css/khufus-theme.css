@@ -3296,29 +3296,41 @@ article.post-1536,
 .elementor-element.elementor-element-78802e6,
 .elementor-element.elementor-element-d554e4d {
   position: relative !important;
-  background: #0d0a08 !important; /* Pure dark fallback — zero external images */
-  background-image: none !important;
+  min-height: 100vh !important;
   min-height: 100svh !important;
   height: 100svh !important;
   width: 100% !important;
-  overflow: hidden !important;
-}
-
-/* Background video container */
-.elementor-background-video-container,
-.elementor-1536 .elementor-element.elementor-element-78802e6,
-.elementor-1536 .elementor-element.elementor-element-d554e4d {
-  position: relative !important;
-  min-height: 100vh !important;
-  min-height: 100svh !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-end !important;
+  justify-content: center !important;
   align-items: center !important;
+  text-align: center !important;
   overflow: hidden !important;
+  padding: 80px 24px 40px !important;
   background: #120904 url("/assets/ai_ganerated/video/video1_poster.webp") center center / cover no-repeat !important;
 }
 
+/* Hide top spacer widget so content is dead center */
+.elementor-1536 .elementor-element.elementor-element-78802e6 .elementor-element-665773d,
+.elementor-1536 .elementor-element.elementor-element-d554e4d .elementor-element-5400291 {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Center widget wrappers */
+.elementor-1536 .elementor-element.elementor-element-78802e6 .elementor-widget,
+.elementor-1536 .elementor-element.elementor-element-d554e4d .elementor-widget {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Background video container */
 .elementor-background-video-container {
   position: absolute !important;
   top: 0 !important;
