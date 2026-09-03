@@ -7538,7 +7538,7 @@ RESPONSIVE
           <article class="kh-ritual-selector-panel is-active" data-index="0">
             <div class="kh-ritual-selector-panel-inner">
               <div class="kh-ritual-selector-media kh-ritual-selector-media--1"></div>
-              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
+              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo" loading="lazy">
               <div class="kh-ritual-selector-contentbox">
                 <div class="kh-ritual-selector-index">01</div>
                 <div class="kh-ritual-selector-label">First Movement</div>
@@ -7572,7 +7572,7 @@ RESPONSIVE
           <article class="kh-ritual-selector-panel" data-index="1">
             <div class="kh-ritual-selector-panel-inner">
               <div class="kh-ritual-selector-media kh-ritual-selector-media--2"></div>
-              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
+              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo" loading="lazy">
               <div class="kh-ritual-selector-contentbox">
                 <div class="kh-ritual-selector-index">02</div>
                 <div class="kh-ritual-selector-label">Second Movement</div>
@@ -7606,7 +7606,7 @@ RESPONSIVE
           <article class="kh-ritual-selector-panel" data-index="2">
             <div class="kh-ritual-selector-panel-inner">
               <div class="kh-ritual-selector-media kh-ritual-selector-media--3"></div>
-              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
+              <img decoding="async" class="kh-ritual-selector-panel-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo" loading="lazy">
               <div class="kh-ritual-selector-contentbox">
                 <div class="kh-ritual-selector-index">03</div>
                 <div class="kh-ritual-selector-label">Final Movement</div>
@@ -7681,7 +7681,7 @@ MOBILE SIMPLIFIED CARD STACK
         <article class="kh-ritual-mobile-card">
           <div class="kh-ritual-mobile-card-inner">
             <div class="kh-ritual-mobile-media kh-ritual-mobile-media--1"></div>
-            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
+            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo" loading="lazy">
 
             <div class="kh-ritual-mobile-box">
               <div class="kh-ritual-mobile-label">Moment One</div>
@@ -7699,7 +7699,7 @@ MOBILE SIMPLIFIED CARD STACK
         <article class="kh-ritual-mobile-card">
           <div class="kh-ritual-mobile-card-inner">
             <div class="kh-ritual-mobile-media kh-ritual-mobile-media--2"></div>
-            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
+            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo" loading="lazy">
 
             <div class="kh-ritual-mobile-box">
               <div class="kh-ritual-mobile-label">Moment Two</div>
@@ -7717,7 +7717,7 @@ MOBILE SIMPLIFIED CARD STACK
         <article class="kh-ritual-mobile-card">
           <div class="kh-ritual-mobile-card-inner">
             <div class="kh-ritual-mobile-media kh-ritual-mobile-media--3"></div>
-            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo">
+            <img decoding="async" class="kh-ritual-mobile-logo" src="/assets/images/Logo-in-White.svg" alt="Biryani Spot Chennai Dosa Logo" loading="lazy">
 
             <div class="kh-ritual-mobile-box">
               <div class="kh-ritual-mobile-label">Moment Three</div>

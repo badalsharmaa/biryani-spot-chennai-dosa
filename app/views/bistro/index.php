@@ -3364,7 +3364,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-800a825 e-con-full e-flex e-con e-parent" data-id="800a825" data-element_type="container" data-e-type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-															<img decoding="async" width="1024" height="847" src="/assets/images/ornaments/crest-biryani-dosa.svg" class="attachment-large size-large wp-image-883" alt="Biryani Spot Chennai Dosa Royal Crest" />															</div>
+															<img decoding="async" width="1024" height="847" src="/assets/images/ornaments/crest-biryani-dosa.svg" class="attachment-large size-large wp-image-883" alt="Biryani Spot Chennai Dosa Royal Crest" / loading="lazy">															</div>
 				<div class="elementor-element elementor-element-b276c9f elementor-widget elementor-widget-html" data-id="b276c9f" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 					<div class="mnq-ai-disclaimer" id="mnqAiDisclaimer">
   <div class="mnq-ai-disclaimer-inner" tabindex="0">
@@ -3963,16 +3963,16 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="kh-semicircle"></div>
 
   <div class="kh-bird-left">
-    <img decoding="async" src="/assets/images/ornaments/crest-biryani-dosa.svg" alt="Royal Peacocks & Dum Handi Crest">
+    <img decoding="async" src="/assets/images/ornaments/crest-biryani-dosa.svg" alt="Royal Peacocks & Dum Handi Crest" loading="lazy">
   </div>
 
   <div class="kh-bird-right">
-    <img decoding="async" src="/assets/images/ornaments/crest-biryani-dosa.svg" alt="Royal Peacocks & Dum Handi Crest">
+    <img decoding="async" src="/assets/images/ornaments/crest-biryani-dosa.svg" alt="Royal Peacocks & Dum Handi Crest" loading="lazy">
   </div>
 
   <div class="kh-arch-wrap">
     <div class="kh-arch">
-      <img decoding="async" src="/assets/images/50-best-3-1536x1165-1.webp">
+      <img decoding="async" src="/assets/images/50-best-3-1536x1165-1.webp" loading="lazy">
     </div>
   </div>
 
@@ -4022,7 +4022,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="khufusbistro-accordion__header">
           <span class="khufusbistro-accordion__side-title">The Bistro</span>
           <span class="khufusbistro-accordion__active-icon" aria-hidden="true"></span>
-          <img decoding="async" class="khufusbistro-accordion__corner-icon" src="/assets/images/2nd-Image.svg" alt="">
+          <img decoding="async" class="khufusbistro-accordion__corner-icon" src="/assets/images/2nd-Image.svg" alt="" loading="lazy">
           <span class="khufusbistro-accordion__number">01</span>
           <div class="khufusbistro-accordion__content">
               <div class="khufusbistro-accordion__kicker">The Bistro</div>
@@ -4041,7 +4041,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="khufusbistro-accordion__header">
           <span class="khufusbistro-accordion__side-title">The Evening</span>
           <span class="khufusbistro-accordion__active-icon" aria-hidden="true"></span>
-          <img decoding="async" class="khufusbistro-accordion__corner-icon" src="/assets/images/2nd-Image.svg" alt="">
+          <img decoding="async" class="khufusbistro-accordion__corner-icon" src="/assets/images/2nd-Image.svg" alt="" loading="lazy">
           <span class="khufusbistro-accordion__number">02</span>
           <div class="khufusbistro-accordion__content">
               <div class="khufusbistro-accordion__kicker">The Evening</div>
@@ -4060,7 +4060,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="khufusbistro-accordion__header">
           <span class="khufusbistro-accordion__side-title">The Kitchen</span>
           <span class="khufusbistro-accordion__active-icon" aria-hidden="true"></span>
-          <img decoding="async" class="khufusbistro-accordion__corner-icon" src="/assets/images/2nd-Image.svg" alt="">
+          <img decoding="async" class="khufusbistro-accordion__corner-icon" src="/assets/images/2nd-Image.svg" alt="" loading="lazy">
           <span class="khufusbistro-accordion__number">03</span>
           <div class="khufusbistro-accordion__content">
               <div class="khufusbistro-accordion__kicker">The Kitchen</div>
@@ -4502,7 +4502,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </svg>		</div>
 		<div class="elementor-element elementor-element-d4152ef e-con-full e-flex e-con e-child" data-id="d4152ef" data-element_type="container" data-e-type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
 				<div class="elementor-element elementor-element-facdacf elementor-widget elementor-widget-image" data-id="facdacf" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img decoding="async" width="75" height="91" src="/assets/images/Pattern-With-Leaves-Design.svg" class="attachment-large size-large wp-image-1612" alt="" />															</div>
+															<img decoding="async" width="75" height="91" src="/assets/images/Pattern-With-Leaves-Design.svg" class="attachment-large size-large wp-image-1612" alt="" / loading="lazy">															</div>
 				<div class="elementor-element elementor-element-7449318 elementor-widget elementor-widget-heading" data-id="7449318" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="heading.default">
 					<h2 class="elementor-heading-title elementor-size-default">THE <i><b>BISTRO'S</i></b> Night EXPERIENCE</h2>				</div>
 				<div class="elementor-element elementor-element-0d0435f elementor-widget elementor-widget-text-editor" data-id="0d0435f" data-element_type="widget" data-e-type="widget" data-settings="{&quot;motion_fx_motion_fx_scrolling&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_effect&quot;:&quot;yes&quot;,&quot;motion_fx_translateY_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;motion_fx_translateY_affectedRange&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;motion_fx_devices&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;]}" data-widget_type="text-editor.default">
@@ -4920,7 +4920,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="khf-et-grid" id="khfEtGrid">
 
     <article class="khf-et-card khf-et-card--one" data-index="0">
-      <img decoding="async" src="/assets/images/Giovanni-Bolandrini.webp" alt="Giovanni Bolandrini">
+      <img decoding="async" src="/assets/images/Giovanni-Bolandrini.webp" alt="Giovanni Bolandrini" loading="lazy">
       <div class="khf-et-overlay">
         <div class="khf-et-base">
           <div class="khf-et-label-wrap">
@@ -4937,7 +4937,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </article>
 
     <article class="khf-et-card khf-et-card--two" data-index="1">
-      <img decoding="async" src="/assets/images/FG-3.webp" alt="The Culinary Edit">
+      <img decoding="async" src="/assets/images/FG-3.webp" alt="The Culinary Edit" loading="lazy">
       <div class="khf-et-overlay">
         <div class="khf-et-base">
           <div class="khf-et-label-wrap">
@@ -4954,7 +4954,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </article>
 
     <article class="khf-et-card khf-et-card--three" data-index="2">
-      <img decoding="async" src="/assets/images/Kitchen-by-Night.webp" alt="Behind The Table">
+      <img decoding="async" src="/assets/images/Kitchen-by-Night.webp" alt="Behind The Table" loading="lazy">
       <div class="khf-et-overlay">
         <div class="khf-et-base">
           <div class="khf-et-label-wrap">
@@ -4971,7 +4971,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </article>
 
     <article class="khf-et-card khf-et-card--four" data-index="3">
-      <img decoding="async" src="/assets/images/Chef-Mostafa-Seif.webp" alt="Chef Mostafa Seif">
+      <img decoding="async" src="/assets/images/Chef-Mostafa-Seif.webp" alt="Chef Mostafa Seif" loading="lazy">
       <div class="khf-et-overlay">
         <div class="khf-et-base">
           <div class="khf-et-label-wrap">
@@ -4997,7 +4997,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class="khf-et-detail-stage">
       <div class="khf-et-detail-bg">
-        <img decoding="async" id="khfEtDetailBgImage" src="/assets/images/Giovanni-Bolandrini.webp" alt="Background Image">
+        <img decoding="async" id="khfEtDetailBgImage" src="/assets/images/Giovanni-Bolandrini.webp" alt="Background Image" loading="lazy">
       </div>
 
       <div class="khf-et-detail-overlay"></div>
@@ -5022,7 +5022,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <div class="khf-et-detail-right">
           <div class="khf-et-detail-image-wrap">
-            <img decoding="async" id="khfEtDetailImage" src="/assets/images/Giovanni-Bolandrini.webp" alt="Detail Image">
+            <img decoding="async" id="khfEtDetailImage" src="/assets/images/Giovanni-Bolandrini.webp" alt="Detail Image" loading="lazy">
           </div>
         </div>
       </div>
@@ -6437,8 +6437,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="kh-reserve-intro">
 
-<img decoding="async" class="kh-reserve-icon kh-reserve-icon-top" src="/assets/images/Icon-Design.svg" alt="">
-<img decoding="async" class="kh-reserve-icon kh-reserve-icon-bottom" src="/assets/images/1st-Image.svg" alt="">
+<img decoding="async" class="kh-reserve-icon kh-reserve-icon-top" src="/assets/images/Icon-Design.svg" alt="" loading="lazy">
+<img decoding="async" class="kh-reserve-icon kh-reserve-icon-bottom" src="/assets/images/1st-Image.svg" alt="" loading="lazy">
 
 <p class="kh-reserve-intro-text">
   YOUR TABLE AWAITS <span class="kh-reserve-script">beneath the pyramids</span><br>
@@ -6656,7 +6656,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <section class="kh-day-section">
   <div class="kh-day-inner">
     <div class="kh-day-art" aria-hidden="true">
-      <img decoding="async" src="/assets/images/image.png" alt="">
+      <img decoding="async" src="/assets/images/image.png" alt="" loading="lazy">
     </div>
 
     <div class="kh-day-copy">

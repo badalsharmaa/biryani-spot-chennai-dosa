@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Authentic Dum Biryanis &amp; Golden Fermented Dosas across Dublin, Milpitas, Livermore, and Concord. Elevated South Indian dining experience.">
+  <meta name="theme-color" content="#13100d">
   <title><?= htmlspecialchars($pageTitle ?? "Biryani Spot Chennai Dosa | Authentic South Indian Dining") ?></title>
   <!-- Favicon / Browser Tab Icon -->
   <link rel="icon" type="image/webp" href="/assets/images/ornaments/logo.webp">
@@ -12,6 +14,7 @@
   <link rel="preload" href="/assets/images/IvyOraDisplay-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/images/GoldenHopes.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/images/ornaments/logo.webp" as="image" type="image/webp">
+  <link rel="preload" href="/assets/ai_ganerated/video/video1_poster.webp" as="image" type="image/webp" fetchpriority="high">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}

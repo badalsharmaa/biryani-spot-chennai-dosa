@@ -44,7 +44,7 @@
               <div class="elementor-element elementor-element-1980e35 e-con-full stagger-item drawer-image-card e-flex e-con e-child" data-id="1980e35" data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-b0721a6 elementor-widget elementor-widget-image drawer-square-wrapper" data-id="b0721a6" data-element_type="widget" data-e-type="widget">
                   <a href="/reservations" class="drawer-square-link">
-                    <img width="600" height="600" src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_restaurant_main_dining_hall_booths.jpg" alt="Dining Room Reservations" class="drawer-square-img" />
+                    <img width="600" height="600" src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_restaurant_main_dining_hall_booths.jpg" alt="Dining Room Reservations" class="drawer-square-img" / loading="lazy" decoding="async">
                   </a>
                 </div>
                 <div class="elementor-element elementor-element-f6c66dc elementor-widget elementor-widget-heading" data-id="f6c66dc" data-element_type="widget" data-e-type="widget">
@@ -56,7 +56,7 @@
               <div class="elementor-element elementor-element-0700956 e-con-full stagger-item drawer-image-card e-flex e-con e-child" data-id="0700956" data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-fc50da0 elementor-widget elementor-widget-image drawer-square-wrapper" data-id="fc50da0" data-element_type="widget" data-e-type="widget">
                   <a href="/gallery" class="drawer-square-link">
-                    <img width="600" height="600" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast" class="drawer-square-img" />
+                    <img width="600" height="600" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast" class="drawer-square-img" / loading="lazy" decoding="async">
                   </a>
                 </div>
                 <div class="elementor-element elementor-element-09e20a0 elementor-widget elementor-widget-heading" data-id="09e20a0" data-element_type="widget" data-e-type="widget">
@@ -68,7 +68,7 @@
               <div class="elementor-element elementor-element-18dba49 e-con-full stagger-item drawer-image-card e-flex e-con e-child" data-id="18dba49" data-element_type="container" data-e-type="container">
                 <div class="elementor-element elementor-element-59d479c elementor-widget elementor-widget-image drawer-square-wrapper" data-id="59d479c" data-element_type="widget" data-e-type="widget">
                   <a href="/menu" class="drawer-square-link">
-                    <img width="600" height="600" src="/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Signature Dum Biryani" class="drawer-square-img" />
+                    <img width="600" height="600" src="/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Signature Dum Biryani" class="drawer-square-img" / loading="lazy" decoding="async">
                   </a>
                 </div>
                 <div class="elementor-element elementor-element-9e0c5aa elementor-widget elementor-widget-heading" data-id="9e0c5aa" data-element_type="widget" data-e-type="widget">

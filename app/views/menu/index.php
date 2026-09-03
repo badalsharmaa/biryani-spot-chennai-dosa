@@ -116,7 +116,7 @@ $featuredItems = [
               <div class="kh-featured-frame">
                 <?php foreach ($featuredItems as $idx => $feat): ?>
                   <div class="kh-featured-slide <?= $idx === 0 ? 'is-active' : '' ?>" data-index="<?= $idx ?>">
-                    <img src="<?= htmlspecialchars($feat['image']) ?>" alt="<?= htmlspecialchars($feat['title']) ?>" />
+                    <img src="<?= htmlspecialchars($feat['image']) ? loading="lazy" decoding="async">" alt="<?= htmlspecialchars($feat['title']) ?>" />
                   </div>
                 <?php endforeach; ?>
               </div>
@@ -243,7 +243,7 @@ $featuredItems = [
                          data-locations="<?= htmlspecialchars(strtolower($locationsList)) ?>">
                   
                   <div class="dish-card-media">
-                    <img src="<?= htmlspecialchars($item->imageUrl) ?>" alt="<?= htmlspecialchars($item->name) ?>" loading="lazy" onerror="this.src='/assets/images/DSCF1644-1024x1024.webp';" />
+                    <img src="<?= htmlspecialchars($item- loading="lazy" decoding="async">imageUrl) ?>" alt="<?= htmlspecialchars($item->name) ?>" loading="lazy" onerror="this.src='/assets/images/DSCF1644-1024x1024.webp';" />
                     <div class="dish-diet-pill <?= $isVeg ? 'is-veg' : 'is-nonveg' ?>">
                       <span class="diet-dot"></span>
                       <span><?= $isVeg ? 'VEG' : 'NON-VEG' ?></span>

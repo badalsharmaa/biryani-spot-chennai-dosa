@@ -14,7 +14,7 @@
 				<div class="elementor-element elementor-element-03cc9a3 elementor-widget elementor-widget-image" data-id="03cc9a3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
 															<img width="144" height="141" src="/assets/images/ornaments/logo.webp" class="attachment-large size-large wp-image-115" alt="Biryani Spot Chennai Dosa" />															</div>
 				<div class="elementor-element elementor-element-11b6d61 elementor-widget elementor-widget-image" data-id="11b6d61" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" />															</div>
+															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" / loading="lazy" decoding="async">															</div>
 				</div>
 				</div>
 				</div>
@@ -162,7 +162,7 @@
 				</div>
 		<div class="elementor-element elementor-element-368a8e2 e-con-full e-flex e-con e-child" data-id="368a8e2" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-1518cc5 elementor-widget elementor-widget-image" data-id="1518cc5" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" />															</div>
+															<img width="193" height="200" src="/assets/images/IMG_3211.webp" class="attachment-large size-large wp-image-590" alt="" / loading="lazy" decoding="async">															</div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-11011dc elementor-widget elementor-widget-text-editor" data-id="11011dc" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
@@ -175,7 +175,7 @@
     <li class="p88g-footer-menu-item">
       <a href="/reservations" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-1')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
         <span>Authentic Dum Biryani</span>
-        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
+        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon" loading="lazy" decoding="async">
       </a>
       <div id="p88g-footer-content-1" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
@@ -194,7 +194,7 @@
     <li class="p88g-footer-menu-item">
       <a href="/menu" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-2')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
         <span>Crispy Golden Dosas</span>
-        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
+        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon" loading="lazy" decoding="async">
       </a>
       <div id="p88g-footer-content-2" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
@@ -213,7 +213,7 @@
     <li class="p88g-footer-menu-item">
       <a href="/experience" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-3')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
         <span>4 Bay Area Locations</span>
-        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
+        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon" loading="lazy" decoding="async">
       </a>
       <div id="p88g-footer-content-3" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">
@@ -232,7 +232,7 @@
     <li class="p88g-footer-menu-item">
       <a href="/reservations" class="p88g-footer-menu-link-mobile" onclick="if (!window.__cfRLUnblockHandlers) return false; p88gFooterToggleSubmenu(event, 'p88g-footer-content-4')" data-cf-modified-3c4a508c150dd2c8e74c9838-="">
         <span>Catering & Events</span>
-        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon">
+        <img src="/assets/images/Chevron-Right-Khufus.svg" alt="arrow" class="p88g-footer-menu-icon" loading="lazy" decoding="async">
       </a>
       <div id="p88g-footer-content-4" class="p88g-footer-submenu-content" aria-hidden="true">
         <div class="p88g-footer-submenu-copy">

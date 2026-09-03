@@ -4501,7 +4501,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
   <div class="khf-why-grid">
 
     <article class="khf-why-panel khf-why-panel--1" data-speed="0.25">
-      <img decoding="async" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_hyderabadi_apollo_fish_fry.jpg" alt="Royal Dum Biryani">
+      <img decoding="async" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_hyderabadi_apollo_fish_fry.jpg" alt="Royal Dum Biryani" loading="lazy">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4525,7 +4525,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--2" data-speed="0.35">
-      <img decoding="async" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg" alt="Crispy Paper Roast Dosa">
+      <img decoding="async" src="/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg" alt="Crispy Paper Roast Dosa" loading="lazy">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -4549,7 +4549,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     </article>
 
     <article class="khf-why-panel khf-why-panel--3" data-speed="0.28">
-      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg" alt="Chettinad Spices & Sizzlers">
+      <img decoding="async" src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg" alt="Chettinad Spices & Sizzlers" loading="lazy">
 
       <div class="khf-why-overlay">
         <div class="khf-why-inner">
@@ -8421,19 +8421,19 @@ RESPONSIVE
         <div class="kh-home-story-columns" id="khHomeStoryColumns">
 
           <div class="kh-home-story-col kh-home-story-col--1" data-speed="0.18">
-            <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_garlic_naan_tandoori_bread.jpg" class="kh-home-story-img" alt="Royal Kashmiri Mutton Curry" loading="lazy">
+            <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_garlic_naan_tandoori_bread.jpg" class="kh-home-story-img" alt="Royal Kashmiri Mutton Curry" loading="lazy" decoding="async">
           </div>
 
           <div class="kh-home-story-col kh-home-story-col--2" data-speed="0.32">
-            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_mutton_rogan_josh_slow_simmered.jpg" class="kh-home-story-img" alt="Creamy Butter Chicken Masala" loading="lazy">
+            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_mutton_rogan_josh_slow_simmered.jpg" class="kh-home-story-img" alt="Creamy Butter Chicken Masala" loading="lazy" decoding="async">
           </div>
 
           <div class="kh-home-story-col kh-home-story-col--3" data-speed="0.22">
-            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_andhra_chicken_65.jpg" class="kh-home-story-img" alt="Tandoori Sizzler Platter" loading="lazy">
+            <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_andhra_chicken_65.jpg" class="kh-home-story-img" alt="Tandoori Sizzler Platter" loading="lazy" decoding="async">
           </div>
 
           <div class="kh-home-story-float kh-home-story-animate kh-home-story-delay3">
-            <img src="/assets/images/google_maps/milpitas/biryani_specials/milpitas_hyderabadi_chicken_dum_biryani_pot.jpg"  class="kh-home-story-float-img" alt="Crispy Andhra Chicken 65" loading="lazy">
+            <img src="/assets/images/google_maps/milpitas/biryani_specials/milpitas_hyderabadi_chicken_dum_biryani_pot.jpg"  class="kh-home-story-float-img" alt="Crispy Andhra Chicken 65" loading="lazy" decoding="async">
           </div>
 
           <div class="kh-home-story-card kh-home-story-animate kh-home-story-delay4">
@@ -8483,19 +8483,19 @@ RESPONSIVE
       <div class="kh-home-story-mobile-columns" id="khHomeStoryMobileColumns">
 
         <div class="kh-home-story-mobile-col kh-home-story-mobile-col--1" data-speed="0.18">
-          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg" class="kh-home-story-mobile-img" alt="Royal Kashmiri Mutton Curry" loading="lazy">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg" class="kh-home-story-mobile-img" alt="Royal Kashmiri Mutton Curry" loading="lazy" decoding="async">
         </div>
 
         <div class="kh-home-story-mobile-col kh-home-story-mobile-col--2" data-speed="0.32">
-          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg" class="kh-home-story-mobile-img" alt="Creamy Butter Chicken Masala" loading="lazy">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg" class="kh-home-story-mobile-img" alt="Creamy Butter Chicken Masala" loading="lazy" decoding="async">
         </div>
 
         <div class="kh-home-story-mobile-col kh-home-story-mobile-col--3" data-speed="0.22">
-          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_chicken_leg_sizzler.jpg" class="kh-home-story-mobile-img" alt="Tandoori Sizzler Platter" loading="lazy">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_chicken_leg_sizzler.jpg" class="kh-home-story-mobile-img" alt="Tandoori Sizzler Platter" loading="lazy" decoding="async">
         </div>
 
         <div class="kh-home-story-mobile-float">
-          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_andhra_chicken_65.jpg" class="kh-home-story-mobile-float-img" alt="Crispy Andhra Chicken 65" loading="lazy">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_andhra_chicken_65.jpg" class="kh-home-story-mobile-float-img" alt="Crispy Andhra Chicken 65" loading="lazy" decoding="async">
         </div>
 
         <div class="kh-home-story-mobile-card">
