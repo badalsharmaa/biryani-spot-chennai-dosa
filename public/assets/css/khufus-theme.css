@@ -3091,7 +3091,9 @@ article.post-1536,
 }
 
 /* Background video container */
-.elementor-background-video-container {
+.elementor-background-video-container,
+.elementor-1536 .elementor-element.elementor-element-78802e6,
+.elementor-1536 .elementor-element.elementor-element-d554e4d {
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -3103,6 +3105,7 @@ article.post-1536,
   z-index: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
+  background: #120904 url("/assets/ai_ganerated/video/video1_poster.webp") center center / cover no-repeat !important;
 }
 
 /* Background video in FILL mode (covers 100% of viewport on mobile & desktop) */

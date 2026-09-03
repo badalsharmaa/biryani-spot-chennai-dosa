@@ -4000,7 +4000,7 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
 			<div data-elementor-type="wp-page" data-elementor-id="1536" class="elementor elementor-1536" data-elementor-post-type="page">
 				<div class="elementor-element elementor-element-78802e6 e-con-full elementor-hidden-tablet e-flex e-con e-parent" data-id="78802e6" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;\/assets\/ai_ganerated\/video\/video1.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
 		<div class="elementor-background-video-container">
-							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop src="/assets/ai_ganerated/video/video1.mp4">
+							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop preload="auto" poster="/assets/ai_ganerated/video/video1_poster.webp" src="/assets/ai_ganerated/video/video1.mp4">
 								<source src="/assets/ai_ganerated/video/video1.mp4" type="video/mp4">
 							</video>
 					</div>		<div class="elementor-element elementor-element-665773d elementor-widget elementor-widget-spacer" data-id="665773d" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
@@ -9186,7 +9186,7 @@ RESPONSIVE
 				</div>
 		<div class="elementor-element elementor-element-d554e4d e-con-full elementor-hidden-desktop elementor-hidden-mobile e-flex e-con e-parent" data-id="d554e4d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;\/assets\/ai_ganerated\/video\/video1.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
 		<div class="elementor-background-video-container">
-							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop src="/assets/ai_ganerated/video/video1.mp4">
+							<video class="elementor-background-video-hosted" role="presentation" autoplay muted playsinline loop preload="auto" poster="/assets/ai_ganerated/video/video1_poster.webp" src="/assets/ai_ganerated/video/video1.mp4">
 								<source src="/assets/ai_ganerated/video/video1.mp4" type="video/mp4">
 							</video>
 					</div>		<div class="elementor-element elementor-element-5400291 elementor-widget elementor-widget-spacer" data-id="5400291" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
