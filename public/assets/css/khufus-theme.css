@@ -645,10 +645,13 @@ body.page-ready .elementor-element-78802e6 .elementor-widget-heading:not(.elemen
 #elementor-popup-modal-166 {
   position: fixed;
   inset: 0;
-  background: linear-gradient(rgba(18, 11, 7, 0.88), rgba(18, 11, 7, 0.94)),
+  background: linear-gradient(180deg, rgba(14, 8, 4, 0.60) 0%, rgba(14, 8, 4, 0.78) 100%),
               url("/assets/ai_ganerated/images/footer.png") center center / cover no-repeat !important;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background-color: #120904 !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 99999999;
   display: flex;
   align-items: center;
@@ -656,6 +659,25 @@ body.page-ready .elementor-element-78802e6 .elementor-widget-heading:not(.elemen
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s var(--ease-luxury), visibility 0.5s;
+}
+
+#elementor-popup-modal-166 .biryani-drawer-inner,
+#elementor-popup-modal-166 .dialog-widget,
+#elementor-popup-modal-166 .dialog-widget-content,
+#elementor-popup-modal-166 .dialog-message,
+#elementor-popup-modal-166 .elementor-location-popup,
+#elementor-popup-modal-166 [data-elementor-type="popup"],
+#elementor-popup-modal-166 .elementor-166,
+#elementor-popup-modal-166 .elementor-element-a57fe6c,
+#elementor-popup-modal-166 .elementor-element-4ce0183,
+#elementor-popup-modal-166 .elementor-element-e40b100,
+#elementor-popup-modal-166 .elementor-element-4ad8b70,
+#elementor-popup-modal-166 .popup-stagger {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 .khf-menu-overlay.is-open {

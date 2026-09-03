@@ -86,17 +86,21 @@
 
 <style>
   /* ===== Luxury Menu Drawer Overlay System ===== */
-  #elementor-popup-modal-166 {
+  #elementor-popup-modal-166,
+  .biryani-menu-drawer-modal {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
     z-index: 99999999 !important;
-    background: linear-gradient(rgba(18, 11, 7, 0.88), rgba(18, 11, 7, 0.94)),
+    background: linear-gradient(180deg, rgba(14, 8, 4, 0.60) 0%, rgba(14, 8, 4, 0.78) 100%),
                 url("/assets/ai_ganerated/images/footer.png") center center / cover no-repeat !important;
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
+    background-color: #120904 !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -108,6 +112,26 @@
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
+  }
+
+  /* Make all inner modal wrapper backgrounds completely transparent so footer.png is 100% visible */
+  #elementor-popup-modal-166 .biryani-drawer-inner,
+  #elementor-popup-modal-166 .dialog-widget,
+  #elementor-popup-modal-166 .dialog-widget-content,
+  #elementor-popup-modal-166 .dialog-message,
+  #elementor-popup-modal-166 .elementor-location-popup,
+  #elementor-popup-modal-166 [data-elementor-type="popup"],
+  #elementor-popup-modal-166 .elementor-166,
+  #elementor-popup-modal-166 .elementor-element-a57fe6c,
+  #elementor-popup-modal-166 .elementor-element-4ce0183,
+  #elementor-popup-modal-166 .elementor-element-e40b100,
+  #elementor-popup-modal-166 .elementor-element-4ad8b70,
+  #elementor-popup-modal-166 .popup-stagger {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
   }
 
   /* Completely remove Egyptian background overlays */
