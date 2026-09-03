@@ -2,14 +2,19 @@
 
 declare(strict_types=1);
 
+// Set root directory as working directory
+chdir(dirname(__DIR__));
+
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
+ini_set('session.save_path', '/tmp');
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/../app/Core/Autoloader.php';
 \App\Core\Autoloader::register();
 
 use App\Core\App;
+use App\Core\View;
 use App\Controllers\HomeController;
 use App\Controllers\MenuController;
 use App\Controllers\ReservationController;
@@ -23,6 +28,7 @@ use App\Controllers\BistroController;
 try {
     // Initialize Application Kernel
     App::boot();
+    View::setViewsPath(__DIR__ . '/../app/views');
     $router = App::router();
 
     // Web Page Routes
