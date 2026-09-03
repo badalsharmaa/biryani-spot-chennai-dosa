@@ -4128,6 +4128,13 @@ P88G KHUFUS FOOTER ACCORDION
 }
 </style>
   <link rel="stylesheet" href="/assets/css/khufus-theme.css?v=<?= time() ?>">
+  <script>
+    try {
+      if (sessionStorage.getItem("khfIntroShown") === "true") {
+        document.documentElement.classList.add("khf-no-intro");
+      }
+    } catch(e) {}
+  </script>
 
 
 

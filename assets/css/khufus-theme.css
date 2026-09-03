@@ -269,6 +269,14 @@ button {
 /* --------------------------------------------------------------------------
    3. PRELOADER INTRO OVERLAY (#khufusIntro)
    -------------------------------------------------------------------------- */
+html.khf-no-intro #khufusIntro,
+body:not(.home) #khufusIntro {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 #khufusIntro {
   position: fixed;
   inset: 0;
@@ -281,9 +289,10 @@ button {
 }
 
 #khufusIntro.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  display: none;
 }
 
 #khufusIntro .khf-inner {
@@ -454,17 +463,23 @@ button {
    -------------------------------------------------------------------------- */
 header.elementor-location-header,
 .khf-header {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.home.has-preloader:not(.page-ready) header.elementor-location-header,
+body.home.has-preloader:not(.page-ready) .khf-header {
   opacity: 0;
   transform: translate3d(0, -20px, 0);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body.page-ready header.elementor-location-header,
 body.page-ready .khf-header,
 header.elementor-location-header.header-reveal-active,
 .khf-header.header-reveal-active {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
 }
 
 /* Hero Background Video Slow Cinematic Zoom-Out Entrance */
