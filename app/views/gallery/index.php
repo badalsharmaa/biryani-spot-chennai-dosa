@@ -273,7 +273,7 @@ USING EXPERIENCE HERO LAYOUT
       rgba(80,60,40,.92) 75%,
       rgba(92,71,43,1) 100%
     ),
-    url("/assets/images/Image-of-Desert-2.webp")
+    url("/assets/ai_ganerated/images/gallery_page_hero_section.png")
     center center / cover no-repeat;
 
   filter:grayscale(40%);

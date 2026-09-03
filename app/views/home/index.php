@@ -4179,36 +4179,29 @@ class="post-1536 page type-page status-publish ast-article-single" id="post-1536
     return;
   }
 
-  var seenVisible=false;
   var fired=false;
-
   function maybeFire(){
     if(fired) return;
-
-    var visible=intro.classList.contains("is-visible");
-    var exiting=intro.classList.contains("is-exiting");
-
-    if(visible||exiting) seenVisible=true;
-
-    if(seenVisible&&!visible&&!exiting){
+    var isHidden = intro.classList.contains("is-hidden") || document.body.classList.contains("page-ready");
+    if(isHidden){
       fired=true;
-      setTimeout(waitForFont,80);
+      setTimeout(waitForFont,50);
       try{obs.disconnect();}catch(e){}
     }
   }
 
   var obs=new MutationObserver(maybeFire);
   obs.observe(intro,{attributes:true,attributeFilter:["class"]});
+  obs.observe(document.body,{attributes:true,attributeFilter:["class"]});
   maybeFire();
 
   setTimeout(function(){
-    if(fired) return;
-    if(!seenVisible){
+    if(!fired){
       fired=true;
       waitForFont();
       try{obs.disconnect();}catch(e){}
     }
-  },4000);
+  },3000);
 })();
 </script>
 				</div>

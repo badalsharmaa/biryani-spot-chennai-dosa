@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initBistroAccordion();
   initFaqAccordion();
   initMenuTabs();
+  initSequentialContactForm();
+  initLocationTabs();
 });
 
 /* --------------------------------------------------------------------------
@@ -26,17 +28,56 @@ function initPreloader() {
   const skipBtn = document.getElementById("khfSkip");
   const heroTitle = document.querySelector(".khf-hero-title");
 
-  if (!intro) return;
+  if (!intro) {
+    document.body.classList.add("page-ready");
+    if (heroTitle) heroTitle.classList.add("is-in");
+    return;
+  }
+
+  // If intro has already been shown in this session, skip immediately
+  if (sessionStorage.getItem("khfIntroShown") === "true") {
+    intro.style.display = "none";
+    document.body.classList.add("page-ready");
+    if (heroTitle) heroTitle.classList.add("is-in");
+    const heroSection = document.querySelector(".elementor-element-78802e6");
+    if (heroSection) heroSection.classList.add("hero-reveal-active");
+    const header = document.querySelector(".elementor-location-header, .khf-header");
+    if (header) header.classList.add("header-reveal-active");
+    return;
+  }
 
   const words = intro.querySelectorAll(".khf-word");
   words.forEach((w, idx) => {
-    w.style.setProperty("--d", `${idx * 85}ms`);
+    w.style.setProperty("--d", `${idx * 65}ms`);
   });
 
+  let dismissed = false;
   function dismissIntro() {
+    if (dismissed) return;
+    dismissed = true;
+    try { sessionStorage.setItem("khfIntroShown", "true"); } catch(e) {}
     intro.classList.add("is-hidden");
+    document.body.classList.add("page-ready");
+
+    // Trigger hero animations with cinematic stagger
     if (heroTitle) {
-      heroTitle.classList.add("is-in");
+      heroTitle.classList.add("is-animating");
+      requestAnimationFrame(() => {
+        heroTitle.classList.add("is-in");
+        setTimeout(() => {
+          heroTitle.classList.remove("is-animating");
+        }, 1400);
+      });
+    }
+
+    const heroSection = document.querySelector(".elementor-element-78802e6");
+    if (heroSection) {
+      heroSection.classList.add("hero-reveal-active");
+    }
+
+    const header = document.querySelector(".elementor-location-header, .khf-header");
+    if (header) {
+      header.classList.add("header-reveal-active");
     }
   }
 
@@ -44,7 +85,7 @@ function initPreloader() {
     skipBtn.addEventListener("click", dismissIntro);
   }
 
-  setTimeout(dismissIntro, 2000);
+  setTimeout(dismissIntro, 2500);
 }
 
 /* --------------------------------------------------------------------------
@@ -474,6 +515,285 @@ function initMenuTabs() {
         } else {
           cat.style.display = "none";
         }
+      });
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   13. SEQUENTIAL MULTI-STEP CONTACT FORM CONTROLLER
+   -------------------------------------------------------------------------- */
+function initSequentialContactForm() {
+  const container = document.getElementById("khSeqContact");
+  const form = document.getElementById("khSeqForm");
+  if (!container || !form) return;
+
+  let currentStep = 1;
+  const totalSteps = 4;
+  let selectedMethod = "email";
+
+  const progressText = document.getElementById("khSeqProgressText");
+  const progressFill = document.getElementById("khSeqProgressFill");
+  const steps = container.querySelectorAll(".kh-seq-step");
+  const prevBtn = document.getElementById("khPrevBtn");
+  const nextBtn = document.getElementById("khNextBtn");
+  const methodInput = document.getElementById("khContactMethod");
+  const choices = container.querySelectorAll(".kh-seq-choice");
+  const dynamicQuestion = document.getElementById("khDynamicQuestion");
+  const contactInput = document.getElementById("khContactValue");
+  const messageInput = document.getElementById("khMessage");
+  const messageCounter = document.getElementById("khMessageCounter");
+  const successBox = document.getElementById("khSeqSuccess");
+  const resetBtn = document.getElementById("khSeqReset");
+  const nameInput = document.getElementById("khName");
+
+  function updateUI() {
+    steps.forEach(step => {
+      const stepNum = parseInt(step.dataset.step, 10);
+      step.classList.toggle("is-active", stepNum === currentStep);
+    });
+
+    if (progressText) {
+      progressText.textContent = `0${currentStep} / 0${totalSteps}`;
+    }
+    if (progressFill) {
+      progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
+    }
+
+    if (prevBtn) {
+      prevBtn.disabled = (currentStep === 1);
+    }
+    if (nextBtn) {
+      nextBtn.textContent = (currentStep === totalSteps) ? "Submit" : "Next";
+    }
+
+    setTimeout(() => {
+      const activeStep = container.querySelector(".kh-seq-step.is-active");
+      if (activeStep) {
+        const input = activeStep.querySelector("input, textarea");
+        if (input) input.focus();
+      }
+    }, 100);
+  }
+
+  choices.forEach(btn => {
+    btn.addEventListener("click", () => {
+      choices.forEach(c => c.classList.remove("is-selected"));
+      btn.classList.add("is-selected");
+      selectedMethod = btn.dataset.method || "email";
+      if (methodInput) methodInput.value = selectedMethod;
+
+      if (selectedMethod === "email") {
+        if (dynamicQuestion) dynamicQuestion.textContent = "What is your email address?";
+        if (contactInput) {
+          contactInput.type = "email";
+          contactInput.placeholder = "your@email.com";
+          contactInput.inputMode = "email";
+        }
+      } else if (selectedMethod === "phone") {
+        if (dynamicQuestion) dynamicQuestion.textContent = "What is your phone number?";
+        if (contactInput) {
+          contactInput.type = "tel";
+          contactInput.placeholder = "(555) 000-0000";
+          contactInput.inputMode = "tel";
+        }
+      } else if (selectedMethod === "whatsapp") {
+        if (dynamicQuestion) dynamicQuestion.textContent = "What is your WhatsApp number?";
+        if (contactInput) {
+          contactInput.type = "tel";
+          contactInput.placeholder = "+1 (555) 000-0000";
+          contactInput.inputMode = "tel";
+        }
+      }
+
+      setTimeout(() => {
+        if (currentStep === 2) {
+          currentStep = 3;
+          updateUI();
+        }
+      }, 180);
+    });
+  });
+
+  if (messageInput && messageCounter) {
+    messageInput.addEventListener("input", () => {
+      const len = messageInput.value.length;
+      messageCounter.textContent = `${len} / 220`;
+      messageCounter.classList.toggle("is-idle", len === 0);
+    });
+  }
+
+  function validateCurrentStep() {
+    if (currentStep === 1) {
+      if (!nameInput || !nameInput.value.trim()) {
+        if (nameInput) {
+          nameInput.classList.add("is-invalid");
+          nameInput.focus();
+        }
+        return false;
+      }
+      if (nameInput) nameInput.classList.remove("is-invalid");
+      return true;
+    }
+
+    if (currentStep === 2) {
+      return true;
+    }
+
+    if (currentStep === 3) {
+      if (!contactInput || !contactInput.value.trim()) {
+        if (contactInput) {
+          contactInput.classList.add("is-invalid");
+          contactInput.focus();
+        }
+        return false;
+      }
+      if (selectedMethod === "email") {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(contactInput.value.trim())) {
+          contactInput.classList.add("is-invalid");
+          contactInput.focus();
+          return false;
+        }
+      } else {
+        if (contactInput.value.trim().length < 7) {
+          contactInput.classList.add("is-invalid");
+          contactInput.focus();
+          return false;
+        }
+      }
+      if (contactInput) contactInput.classList.remove("is-invalid");
+      return true;
+    }
+
+    if (currentStep === 4) {
+      if (!messageInput || !messageInput.value.trim()) {
+        if (messageInput) {
+          messageInput.classList.add("is-invalid");
+          messageInput.focus();
+        }
+        return false;
+      }
+      if (messageInput) messageInput.classList.remove("is-invalid");
+      return true;
+    }
+
+    return true;
+  }
+
+  function goNext() {
+    if (!validateCurrentStep()) return;
+
+    if (currentStep < totalSteps) {
+      currentStep++;
+      updateUI();
+    } else {
+      submitForm();
+    }
+  }
+
+  function goPrev() {
+    if (currentStep > 1) {
+      currentStep--;
+      updateUI();
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      goNext();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      goPrev();
+    });
+  }
+
+  form.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && e.target.tagName !== "TEXTAREA") {
+      e.preventDefault();
+      goNext();
+    }
+  });
+
+  function submitForm() {
+    if (nextBtn) {
+      nextBtn.disabled = true;
+      nextBtn.textContent = "Sending...";
+    }
+
+    const payload = {
+      name: nameInput ? nameInput.value.trim() : "",
+      contact_method: selectedMethod,
+      contact_value: contactInput ? contactInput.value.trim() : "",
+      message: messageInput ? messageInput.value.trim() : ""
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+      form.style.display = "none";
+      if (successBox) {
+        successBox.classList.add("is-visible");
+      }
+    })
+    .catch(() => {
+      form.style.display = "none";
+      if (successBox) {
+        successBox.classList.add("is-visible");
+      }
+    })
+    .finally(() => {
+      if (nextBtn) {
+        nextBtn.disabled = false;
+        nextBtn.textContent = "Submit";
+      }
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      form.reset();
+      currentStep = 1;
+      form.style.display = "block";
+      if (successBox) successBox.classList.remove("is-visible");
+      if (messageCounter) messageCounter.textContent = "0 / 220";
+      choices.forEach((c, idx) => c.classList.toggle("is-selected", idx === 0));
+      selectedMethod = "email";
+      updateUI();
+    });
+  }
+
+  updateUI();
+}
+
+/* --------------------------------------------------------------------------
+   14. LOCATION SWITCHER TABS CONTROLLER
+   -------------------------------------------------------------------------- */
+function initLocationTabs() {
+  const tabBtns = document.querySelectorAll(".kh-location-tab-btn");
+  const panels = document.querySelectorAll(".kh-location-panel");
+  if (!tabBtns.length) return;
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.location;
+      tabBtns.forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+
+      panels.forEach(p => {
+        p.classList.toggle("is-active", p.dataset.location === target);
       });
     });
   });

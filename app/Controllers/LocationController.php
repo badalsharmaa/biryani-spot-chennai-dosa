@@ -22,20 +22,41 @@ class LocationController extends BaseController
     {
         $body = $request->getBody();
         $name = Validator::sanitize($body["name"] ?? "");
+        $contactMethod = Validator::sanitize($body["contact_method"] ?? "email");
+        $contactValue = Validator::sanitize($body["contact_value"] ?? "");
+        
         $email = trim($body["email"] ?? "");
         $phone = Validator::sanitize($body["phone"] ?? "");
-        $location = Validator::sanitize($body["location"] ?? "");
-        $subject = Validator::sanitize($body["subject"] ?? "");
+        
+        if (empty($email) && $contactMethod === "email") {
+            $email = $contactValue;
+        }
+        if (empty($phone) && ($contactMethod === "phone" || $contactMethod === "whatsapp")) {
+            $phone = $contactValue;
+        }
+        
+        $location = Validator::sanitize($body["location"] ?? "Bay Area Locations");
+        $subject = Validator::sanitize($body["subject"] ?? "Website Contact Inquiry");
         $message = Validator::sanitize($body["message"] ?? "");
 
-        if (empty($name) || !Validator::email($email)) {
-            $this->json(["success" => false, "error" => "Name and valid email required."], 400);
+        if (empty($name)) {
+            $this->json(["success" => false, "error" => "Your name is required."], 400);
+            return;
+        }
+
+        if (empty($email) && empty($phone)) {
+            $this->json(["success" => false, "error" => "Please provide a valid email address or phone number."], 400);
+            return;
+        }
+
+        if (!empty($email) && !Validator::email($email)) {
+            $this->json(["success" => false, "error" => "Please provide a valid email address."], 400);
             return;
         }
 
         $inquiry = new ContactInquiry(
             name: $name,
-            email: $email,
+            email: $email ?: "inquiry@biryanispotchennaidosa.com",
             phone: $phone,
             location: $location,
             subject: $subject,

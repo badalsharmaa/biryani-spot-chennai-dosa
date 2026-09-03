@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($pageTitle ?? "Biryani Spot Chennai Dosa | Authentic South Indian Dining") ?></title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo-white.svg">
+  <!-- Favicon / Browser Tab Icon -->
+  <link rel="icon" type="image/webp" href="/assets/images/ornaments/logo.webp">
+  <link rel="shortcut icon" type="image/webp" href="/assets/images/ornaments/logo.webp">
+  <link rel="apple-touch-icon" href="/assets/images/ornaments/logo.webp">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -4132,7 +4135,7 @@ P88G KHUFUS FOOTER ACCORDION
 $currentUri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($currentUri, PHP_URL_PATH);
 $pathClean = rtrim($path, '/');
-$isHome = ($pathClean === '' || $pathClean === '/' || $pathClean === '/index.php' || str_contains($pathClean, 'email-protection'));
+$isHome = ($pathClean === '' || $pathClean === '/' || $pathClean === '/index.php');
 $isHeroPage = $isHome || in_array($pathClean, ['/menu', '/contact', '/locations', '/gallery', '/legacy', '/about', '/experience', '/bistro', '/reservations']);
 
 $bodyClass = ($isHome ? 'home ' : 'page-inner ') . 
@@ -4141,6 +4144,43 @@ $bodyClass = ($isHome ? 'home ' : 'page-inner ') .
              'page-template-default page wp-custom-logo ast-desktop ast-separate-container elementor-default elementor-kit-48';
 ?>
 <body class="<?= htmlspecialchars($bodyClass) ?>">
+
+<?php if ($isHome): ?>
+  <!-- =========================================================================
+       1. PRELOADER INTRO OVERLAY (HOME PAGE ONLY)
+       ========================================================================= -->
+  <div id="khufusIntro">
+    <div class="khf-inner">
+      <div class="khf-logo-wrapper">
+        <img src="/assets/images/ornaments/logo.webp" alt="Biryani Spot Chennai Dosa Logo">
+        <div class="khf-logo-divider"></div>
+      </div>
+      <div class="khf-text">
+        <div class="khf-kicker">Elevated South Indian Dining</div>
+        <div class="khf-line">
+          <span class="khf-word khf-lead">At</span>
+          <span class="khf-word khf-lead">Biryani</span>
+          <span class="khf-word khf-lead">Spot,</span>
+          <span class="khf-word">culinary</span>
+          <span class="khf-word">tradition</span>
+          <span class="khf-word">is</span>
+          <span class="khf-word">treated</span>
+          <span class="khf-word">as</span>
+          <span class="khf-word">heritage,</span>
+          <span class="khf-word">not</span>
+          <span class="khf-word">performance.</span>
+        </div>
+        <div class="khf-subline">Authentic Dum Biryanis &amp; Golden Fermented Dosas</div>
+        <div class="khf-locations-pill">Dublin &bull; Milpitas &bull; Livermore &bull; Concord</div>
+      </div>
+      <div class="khf-loader-bar">
+        <div class="khf-loader-progress"></div>
+      </div>
+      <button id="khfSkip" class="khf-skip" type="button">Skip Intro</button>
+    </div>
+  </div>
+<?php endif; ?>
+
 <header data-elementor-type="header" data-elementor-id="48" class="elementor elementor-48 elementor-location-header" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-91c3171 e-con-full e-flex e-con e-parent" data-id="91c3171" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
 		<div class="elementor-element elementor-element-541a8a9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="541a8a9" data-element_type="container" data-e-type="container">

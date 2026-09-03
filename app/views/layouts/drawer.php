@@ -93,9 +93,10 @@
     width: 100vw !important;
     height: 100vh !important;
     z-index: 99999999 !important;
-    background: rgba(22, 14, 9, 0.97) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
+    background: linear-gradient(rgba(18, 11, 7, 0.88), rgba(18, 11, 7, 0.94)),
+                url("/assets/ai_ganerated/images/footer.png") center center / cover no-repeat !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;

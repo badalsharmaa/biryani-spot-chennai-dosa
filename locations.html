@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &amp; Locations | Biryani Spot Chennai Dosa</title>
-  <link rel="icon" type="image/svg+xml" href="/assets/images/logo-white.svg">
+    <!-- Favicon / Browser Tab Icon -->
+  <link rel="icon" type="image/webp" href="/assets/images/ornaments/logo.webp">
+  <link rel="shortcut icon" type="image/webp" href="/assets/images/ornaments/logo.webp">
+  <link rel="apple-touch-icon" href="/assets/images/ornaments/logo.webp">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -4129,6 +4132,51 @@ P88G KHUFUS FOOTER ACCORDION
 
 
 <body class="page-inner page-hero-layout page-template-default page wp-custom-logo ast-desktop ast-separate-container elementor-default elementor-kit-48">
+
+  
+      <div class="khf-text">
+        <div class="khf-kicker">Elevated South Indian Dining</div>
+        <div class="khf-line">
+          <span class="khf-word khf-lead">At</span>
+          <span class="khf-word khf-lead">Biryani</span>
+          <span class="khf-word khf-lead">Spot,</span>
+          <span class="khf-word">culinary</span>
+          <span class="khf-word">tradition</span>
+          <span class="khf-word">is</span>
+          <span class="khf-word">treated</span>
+          <span class="khf-word">as</span>
+          <span class="khf-word">heritage,</span>
+          <span class="khf-word">not</span>
+          <span class="khf-word">performance.</span>
+        </div>
+        <div class="khf-subline">Authentic Dum Biryanis &amp; Golden Fermented Dosas</div>
+        <div class="khf-locations-pill">Dublin &bull; Milpitas &bull; Livermore &bull; Concord</div>
+      </div>
+      <div class="khf-loader-bar">
+        <div class="khf-loader-progress"></div>
+      </div>
+      <button id="khfSkip" class="khf-skip" type="button">Skip Intro</button>
+    </div>
+  </div>
+      <div class="khf-text">
+        <div class="khf-line">
+          <span class="khf-word khf-lead">At</span>
+          <span class="khf-word khf-lead">Biryani</span>
+          <span class="khf-word khf-lead">Spot,</span>
+          <span class="khf-word">culinary</span>
+          <span class="khf-word">tradition</span>
+          <span class="khf-word">is</span>
+          <span class="khf-word">treated</span>
+          <span class="khf-word">as</span>
+          <span class="khf-word">heritage,</span>
+          <span class="khf-word">not</span>
+          <span class="khf-word">performance.</span>
+        </div>
+      </div>
+      <button id="khfSkip" class="khf-skip" type="button">Skip Intro</button>
+    </div>
+  </div>
+
 <header data-elementor-type="header" data-elementor-id="48" class="elementor elementor-48 elementor-location-header" data-elementor-post-type="elementor_library">
 			<div class="elementor-element elementor-element-91c3171 e-con-full e-flex e-con e-parent" data-id="91c3171" data-element_type="container" data-e-type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;}">
 		<div class="elementor-element elementor-element-541a8a9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="541a8a9" data-element_type="container" data-e-type="container">
@@ -4423,7 +4471,7 @@ USING EXPERIENCE HERO LAYOUT
     rgba(92,71,43,0.9) 75%,
     rgba(92,71,43,1) 100%
   ),
-  url("/assets/images/Image-of-Desert.webp")
+  url("/assets/ai_ganerated/images/contact_page_hero_section.png")
   center center / cover no-repeat;
 
 }
@@ -5825,7 +5873,7 @@ RESPONSIVE
   <div id="kh-map"></div>
 
   <div class="kh-map-card">
-    <a class="kh-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=29.965518,31.1107948" target="_blank" rel="noopener">
+    <a class="kh-map-link" id="khMapDirectionsBtn" href="https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%204288%20Dublin%20Blvd%20%23111%2C%20Dublin%2C%20CA%2094568" target="_blank" rel="noopener">
       Get Directions
     </a>
   </div>
@@ -5839,20 +5887,23 @@ RESPONSIVE
   var mapEl = document.getElementById("kh-map");
   if(!mapEl) return;
 
-  var lat = 29.965518;
-  var lng = 31.1107948;
+  var locations = [
+    { name: "Dublin", lat: 37.704563, lng: -121.87544, address: "4288 Dublin Blvd #111, Dublin, CA 94568", phone: "(925) 361-5317", url: "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%204288%20Dublin%20Blvd%20%23111%2C%20Dublin%2C%20CA%2094568" },
+    { name: "Milpitas", lat: 37.425353, lng: -121.905125, address: "380 South Main Street, Milpitas, CA 95035", phone: "(669) 264-7920", url: "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%20380%20South%20Main%20Street%2C%20Milpitas%2C%20CA%2095035" },
+    { name: "Livermore", lat: 37.69143, lng: -121.773786, address: "2050 Portola Avenue, Livermore, CA 94551", phone: "(669) 264-7920", url: "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%202050%20Portola%20Avenue%2C%20Livermore%2C%20CA%2094551" },
+    { name: "Concord", lat: 37.970282, lng: -122.011414, address: "3540 Clayton Road, Concord, CA 94519", phone: "(925) 494-4470", url: "https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%203540%20Clayton%20Road%2C%20Concord%2C%20CA%2094519" }
+  ];
 
   var map = L.map(mapEl,{
     zoomControl:false,
     attributionControl:false,
     scrollWheelZoom:false,
-    dragging:false,
+    dragging:true,
     touchZoom:true,
     doubleClickZoom:false,
     boxZoom:false,
-    keyboard:false,
-    tap:false
-  }).setView([lat,lng],15);
+    keyboard:false
+  }).setView([37.704563, -121.87544], 10);
 
   L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -5871,25 +5922,31 @@ RESPONSIVE
     iconAnchor:[14,14]
   });
 
-  L.marker([lat,lng],{
-    icon:pinIcon,
-    draggable:false,
-    interactive:false,
-    keyboard:false
-  }).addTo(map);
+  locations.forEach(function(loc){
+    var marker = L.marker([loc.lat, loc.lng],{
+      icon:pinIcon
+    }).addTo(map);
+
+    marker.bindPopup(`
+      <div style="font-family:sans-serif;font-size:13px;color:#1A1009;padding:4px;">
+        <strong style="font-size:14px;">${loc.name}</strong><br>
+        <span>${loc.address}</span><br>
+        <span>${loc.phone}</span><br>
+        <a href="${loc.url}" target="_blank" rel="noopener" style="color:#8C6239;font-weight:600;display:inline-block;margin-top:4px;">View on Google Maps</a>
+      </div>
+    `);
+  });
 
   function fixMap(){
     setTimeout(function(){
       map.invalidateSize();
     },60);
-
     setTimeout(function(){
       map.invalidateSize();
     },300);
   }
 
   fixMap();
-
   window.addEventListener("resize",fixMap);
   window.addEventListener("load",fixMap);
 
@@ -5993,7 +6050,7 @@ RESPONSIVE
 }
 
 .kh-oh-note{
-  margin-top:18px; /* reduced from 24px */
+  margin-top:18px;
   padding:14px 16px;
   border:1px solid rgba(255,255,255,.16);
   background:rgba(255,255,255,.04);
@@ -6030,56 +6087,124 @@ RESPONSIVE
   <div class="kh-oh-inner">
 
     <div class="kh-oh-header">
-      <h3 class="kh-oh-title">Store Hours &amp; Contact</h3>
+      <h3 class="kh-oh-title">Operating Hours</h3>
       <span class="kh-oh-line"></span>
     </div>
 
-    <div class="kh-oh-list">
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Monday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
-      </div>
+    <!-- Location Tab Buttons -->
+    <div class="kh-location-nav">
+      <button type="button" class="kh-location-tab-btn is-active" data-location="dublin">Dublin</button>
+      <button type="button" class="kh-location-tab-btn" data-location="milpitas">Milpitas</button>
+      <button type="button" class="kh-location-tab-btn" data-location="livermore">Livermore</button>
+      <button type="button" class="kh-location-tab-btn" data-location="concord">Concord</button>
+    </div>
 
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Tuesday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
+    <!-- Panel Dublin -->
+    <div class="kh-location-panel is-active" data-location="dublin">
+      <div class="kh-oh-list">
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Mon, Wed, Thu</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:30 AM – 2:30 PM &amp; 5:30 PM – 9:30 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Friday &amp; Saturday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:30 AM – 10:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Sunday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:30 AM – 9:30 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Tuesday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time" style="color:#DAB79F;">Closed</span>
+        </div>
       </div>
+    </div>
 
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Wednesday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
+    <!-- Panel Milpitas -->
+    <div class="kh-location-panel" data-location="milpitas">
+      <div class="kh-oh-list">
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Mon, Wed, Thu</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">10:30 AM – 9:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Friday &amp; Saturday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">10:30 AM – 9:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Sunday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">10:30 AM – 9:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Tuesday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time" style="color:#DAB79F;">Closed</span>
+        </div>
       </div>
+    </div>
 
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Thursday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
+    <!-- Panel Livermore -->
+    <div class="kh-location-panel" data-location="livermore">
+      <div class="kh-oh-list">
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Mon, Wed, Thu</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:30 AM – 9:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Friday &amp; Saturday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:30 AM – 10:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Sunday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:30 AM – 9:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Tuesday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time" style="color:#DAB79F;">Closed</span>
+        </div>
       </div>
+    </div>
 
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Friday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
-      </div>
-
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Saturday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
-      </div>
-
-      <div class="kh-oh-row">
-        <span class="kh-oh-day">Sunday</span>
-        <span class="kh-oh-divider"></span>
-        <span class="kh-oh-time">9:00 AM - 4:00 PM</span>
+    <!-- Panel Concord -->
+    <div class="kh-location-panel" data-location="concord">
+      <div class="kh-oh-list">
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Mon, Wed, Thu</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:00 AM – 3:00 PM &amp; 5:30 PM – 9:30 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Friday &amp; Saturday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:00 AM – 10:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Sunday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time">11:00 AM – 10:00 PM</span>
+        </div>
+        <div class="kh-oh-row">
+          <span class="kh-oh-day">Tuesday</span>
+          <span class="kh-oh-divider"></span>
+          <span class="kh-oh-time" style="color:#DAB79F;">Closed</span>
+        </div>
       </div>
     </div>
 
     <p class="kh-oh-note">
-      <span>Note:</span> Last order is strictly at 3:00 PM.
+      <span>Catering &amp; Large Orders:</span> Available daily across all Bay Area locations. We aim to respond within 24 hours.
     </p>
 
   </div>
@@ -6145,7 +6270,7 @@ RESPONSIVE
   display:flex;
   align-items:center;
   gap:14px;
-  margin-bottom:34px;
+  margin-bottom:28px;
   width:100%;
 }
 
@@ -6176,9 +6301,9 @@ RESPONSIVE
 .kh-ct-row{
   display:grid;
   grid-template-columns:120px minmax(0,1fr);
-  gap:28px;
+  gap:24px;
   align-items:start;
-  padding:18px 0;
+  padding:16px 0;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
@@ -6201,7 +6326,7 @@ RESPONSIVE
   font-family:"Bricolage Grotesque", sans-serif;
   font-weight:300;
   font-size:14px;
-  line-height:1.9;
+  line-height:1.8;
   color:rgba(255,255,255,.78);
   text-align:right;
   word-break:break-word;
@@ -6214,7 +6339,7 @@ RESPONSIVE
 }
 
 .kh-ct-value a:hover{
-  color:#FFFFFF;
+  color:#DAB79F;
 }
 
 @media (max-width:480px){
@@ -6233,49 +6358,53 @@ RESPONSIVE
   <div class="kh-ct-inner">
 
     <div class="kh-ct-header">
-      <h3 class="kh-ct-title">Call or Order Online</h3>
+      <h3 class="kh-ct-title">Call &amp; Order Online</h3>
       <span class="kh-ct-line"></span>
     </div>
 
     <div class="kh-ct-list">
 
       <div class="kh-ct-row">
-        <div class="kh-ct-label">Address</div>
+        <div class="kh-ct-label">Dublin</div>
         <div class="kh-ct-value">
-          <a href="https://maps.app.goo.gl/Y8u743YQLnqs7jWm9" target="_blank" rel="noopener">
-            Khufu’s, Giza Plateau,<br>
-            Nazlet El-Semman, Al Haram, Giza
-          </a>
+          <a href="tel:9253615317">(925) 361-5317</a><br>
+          <a href="https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%204288%20Dublin%20Blvd%20%23111%2C%20Dublin%2C%20CA%2094568" target="_blank" rel="noopener">4288 Dublin Blvd #111, Dublin</a><br>
+          <a href="https://order.toasttab.com/online/biryani-spot-4288-dublin-blvd-111" target="_blank" rel="noopener" style="color:#DAB79F;font-weight:500;">Order Online via Toast &rarr;</a>
         </div>
       </div>
 
       <div class="kh-ct-row">
-        <div class="kh-ct-label">Phone</div>
+        <div class="kh-ct-label">Milpitas</div>
         <div class="kh-ct-value">
-          <a href="tel:+201080058888">+20 108 005 8888</a><br>
-          <a href="tel:+201080068888">+20 108 006 8888</a>
+          <a href="tel:6692647920">(669) 264-7920</a><br>
+          <a href="https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%20380%20South%20Main%20Street%2C%20Milpitas%2C%20CA%2095035" target="_blank" rel="noopener">380 South Main Street, Milpitas</a><br>
+          <a href="https://order.toasttab.com/online/biryani-and-dosa-grill-milpitas-380-south-main-street" target="_blank" rel="noopener" style="color:#DAB79F;font-weight:500;">Order Online via Toast &rarr;</a>
         </div>
       </div>
 
       <div class="kh-ct-row">
-        <div class="kh-ct-label">Reservations</div>
+        <div class="kh-ct-label">Livermore</div>
         <div class="kh-ct-value">
-          <a href="/cdn-cgi/l/email-protection#2654435543545047524f494855664d4e534053550845494b"><span class="__cf_email__" data-cfemail="0371667066717562776a6c6d7043686b766576702d606c6e">[email&#160;protected]</span></a>
+          <a href="tel:6692647920">(669) 264-7920</a><br>
+          <a href="https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%202050%20Portola%20Avenue%2C%20Livermore%2C%20CA%2094551" target="_blank" rel="noopener">2050 Portola Avenue, Livermore</a><br>
+          <a href="https://order.toasttab.com/online/chennai-biryani-and-dosa-livermore-portal-ave" target="_blank" rel="noopener" style="color:#DAB79F;font-weight:500;">Order Online via Toast &rarr;</a>
         </div>
       </div>
 
       <div class="kh-ct-row">
-        <div class="kh-ct-label">Private Events</div>
+        <div class="kh-ct-label">Concord</div>
         <div class="kh-ct-value">
-          <a href="/cdn-cgi/l/email-protection#d4b1a2b1baa0a794bfbca1b2a1a7fab7bbb9"><span class="__cf_email__" data-cfemail="37524152594344775c5f425142441954585a">[email&#160;protected]</span></a><br>
-          <a href="tel:+201080688890">+20 108 068 8890</a>
+          <a href="tel:9254944470">(925) 494-4470</a><br>
+          <a href="https://google.com/maps/place?q=Biryani%20and%20Dosa%20Grill%2C%203540%20Clayton%20Road%2C%20Concord%2C%20CA%2094519" target="_blank" rel="noopener">3540 Clayton Road, Concord</a><br>
+          <a href="https://order.toasttab.com/online/chennai-dosa" target="_blank" rel="noopener" style="color:#DAB79F;font-weight:500;">Order Online via Toast &rarr;</a>
         </div>
       </div>
 
       <div class="kh-ct-row">
-        <div class="kh-ct-label">Press</div>
+        <div class="kh-ct-label">Catering &amp; Events</div>
         <div class="kh-ct-value">
-          <a href="/cdn-cgi/l/email-protection#a9d9dbccdadae9d9c0ccdb9191cedbc6dcd987cac6c4"><span class="__cf_email__" data-cfemail="cabab8afb9b98abaa3afb8f2f2adb8a5bfbae4a9a5a7">[email&#160;protected]</span></a>
+          <a href="mailto:info@biryanispotchennaidosa.com">info@biryanispotchennaidosa.com</a><br>
+          <span style="font-size:12px;color:rgba(255,255,255,0.5);">Response within 24 hours</span>
         </div>
       </div>
 
@@ -6292,12 +6421,12 @@ RESPONSIVE
   <div class="kh-seq-inner">
 
     <div class="kh-seq-header">
-      <h3 class="kh-seq-title">Contact Us</h3>
+      <h3 class="kh-seq-title">Get in Touch with Us</h3>
       <span class="kh-seq-line"></span>
     </div>
 
     <p class="kh-seq-intro">
-      A few details are all we need. Share your preferred contact method and message, and our team will be in touch shortly.
+      We'd love to hear from you! Whether you have questions, feedback, or special requests, our team is here to help. We aim to respond within 24 hours.
     </p>
 
     <div class="kh-seq-progress-row">
@@ -6309,7 +6438,7 @@ RESPONSIVE
 
     <form class="kh-seq-form" id="khSeqForm" novalidate>
       <input type="hidden" name="contact_method" id="khContactMethod" value="email">
-      <div class="kh-seq-hp" aria-hidden="true">
+      <div class="kh-seq-hp" aria-hidden="true" style="display:none;">
         <label for="khWebsite">Website</label>
         <input
           type="text"
@@ -6324,7 +6453,7 @@ RESPONSIVE
       <div class="kh-seq-stage">
 
         <section class="kh-seq-step is-active" data-step="1">
-          <h2 class="kh-seq-question" data-text="What should we call you?"></h2>
+          <h2 class="kh-seq-question" data-text="What should we call you?">What should we call you?</h2>
           <div class="kh-seq-field-wrap">
             <input
               class="kh-seq-input"
@@ -6333,21 +6462,22 @@ RESPONSIVE
               name="name"
               placeholder="Your name"
               autocomplete="name"
+              required
             >
           </div>
         </section>
 
         <section class="kh-seq-step" data-step="2">
-          <h2 class="kh-seq-question" data-text="How would you prefer we contact you?"></h2>
+          <h2 class="kh-seq-question" data-text="How would you prefer we contact you?">How would you prefer we contact you?</h2>
           <div class="kh-seq-choices" id="khContactChoices">
-                          <button type="button" class="kh-seq-choice" data-method="email">Email</button>
-                          <button type="button" class="kh-seq-choice" data-method="phone">Phone</button>
-                          <button type="button" class="kh-seq-choice" data-method="whatsapp">WhatsApp</button>
-                      </div>
+            <button type="button" class="kh-seq-choice is-selected" data-method="email">Email</button>
+            <button type="button" class="kh-seq-choice" data-method="phone">Phone</button>
+            <button type="button" class="kh-seq-choice" data-method="whatsapp">WhatsApp</button>
+          </div>
         </section>
 
         <section class="kh-seq-step" data-step="3">
-          <h2 class="kh-seq-question" id="khDynamicQuestion" data-text="What is your email address?"></h2>
+          <h2 class="kh-seq-question" id="khDynamicQuestion" data-text="What is your email address?">What is your email address?</h2>
           <div class="kh-seq-field-wrap">
             <input
               class="kh-seq-input"
@@ -6357,19 +6487,21 @@ RESPONSIVE
               placeholder="your@email.com"
               autocomplete="email"
               inputmode="email"
+              required
             >
           </div>
         </section>
 
         <section class="kh-seq-step" data-step="4">
-          <h2 class="kh-seq-question" data-text="How may we assist you?"></h2>
+          <h2 class="kh-seq-question" data-text="How may we assist you?">How may we assist you?</h2>
           <div class="kh-seq-field-wrap">
             <textarea
               class="kh-seq-textarea"
               id="khMessage"
               name="message"
-              placeholder="Write your message here..."
+              placeholder="Write your message here (dining inquiry, catering, feedback)..."
               maxlength="220"
+              required
             ></textarea>
             <div class="kh-seq-counter is-idle" id="khMessageCounter">0 / 220</div>
           </div>
@@ -6385,7 +6517,7 @@ RESPONSIVE
       <div class="kh-seq-success" id="khSeqSuccess" aria-live="polite">
         <div class="kh-seq-success-inner">
           <h3 class="kh-seq-success-title">Thank you for your submission.</h3>
-          <p class="kh-seq-success-text" id="khSeqSuccessText">Your message has been successfully received. A member of our team will review your request and respond shortly.</p>
+          <p class="kh-seq-success-text" id="khSeqSuccessText">Your message has been successfully received. A member of our team will review your request and respond within 24 hours.</p>
           <button type="button" class="kh-seq-success-reset" id="khSeqReset">Submit Another Request</button>
         </div>
       </div>
@@ -6977,7 +7109,7 @@ P88G KHUFUS FOOTER ACCORDION
     width: 100vw !important;
     height: 100vh !important;
     z-index: 99999999 !important;
-    background: rgba(22, 14, 9, 0.97) !important;
+    background: linear-gradient(rgba(18, 11, 7, 0.88), rgba(18, 11, 7, 0.94)), url("/assets/ai_ganerated/images/footer.png") center center / cover no-repeat !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     display: flex !important;
