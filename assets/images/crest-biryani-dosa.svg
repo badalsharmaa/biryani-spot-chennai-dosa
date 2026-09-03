@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="248" viewBox="0 0 300 248" fill="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0B3"/>
+      <stop offset="35%" stop-color="#D4AF37"/>
+      <stop offset="70%" stop-color="#AA7C11"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+    <linearGradient id="brassGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8C6D23"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#FFF5CC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top Star Anise Finial & Aromatic Steam -->
+  <g transform="translate(150, 24)">
+    <path d="M0 -14 C1.5 -7, 4 -4, 9 0 C4 4, 1.5 7, 0 14 C-1.5 7, -4 4, -9 0 C-4 -4, -1.5 -7, 0 -14Z" fill="url(#goldGradient)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#FFF5CC"/>
+    <!-- Ascending Steam Spirals -->
+    <path d="M-8 12 C-14 20, -4 28, -6 36" stroke="url(#goldGradient)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+    <path d="M0 14 C-2 24, 6 30, 2 40" stroke="url(#goldGradient)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M8 12 C14 20, 4 28, 6 36" stroke="url(#goldGradient)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Central Royal Dum Handi (Pot) -->
+  <g transform="translate(150, 115)">
+    <!-- Handi Lid & Dough Dum Seal (Purdah) -->
+    <ellipse cx="0" cy="-28" rx="28" ry="7" fill="url(#brassGradient)" stroke="#FFF5CC" stroke-width="0.8"/>
+    <path d="M-28 -28 C-28 -24, 28 -24, 28 -28 C28 -32, -28 -32, -28 -28 Z" fill="#D4AF37" stroke="#8C6D23" stroke-width="0.5"/>
+    <path d="M-26 -28 Q-20 -25, -14 -28 Q-8 -25, -2 -28 Q4 -25, 10 -28 Q16 -25, 22 -28 Q26 -26, 26 -28" stroke="#FFF5CC" stroke-width="0.8" fill="none"/>
+
+    <!-- Handi Body (Wide-Bellied Brass Pot) -->
+    <path d="M-24 -22 C-38 -10, -42 12, -26 26 C-15 35, 15 35, 26 26 C42 12, 38 -10, 24 -22 Z" fill="url(#brassGradient)" stroke="#FFF5CC" stroke-width="1.2"/>
+
+    <!-- Handi Belly Ornate Girdle & Kolam Beadings -->
+    <path d="M-36 2 Q0 12, 36 2" stroke="#FFF5CC" stroke-width="1.2" fill="none"/>
+    <path d="M-30 14 Q0 24, 30 14" stroke="#8C6D23" stroke-width="0.8" stroke-dasharray="2 3" fill="none"/>
+    <circle cx="0" cy="8" r="4" fill="#FFF5CC"/>
+    <circle cx="0" cy="8" r="2" fill="#8C6D23"/>
+    <circle cx="-14" cy="5" r="2.5" fill="#FFF5CC"/>
+    <circle cx="14" cy="5" r="2.5" fill="#FFF5CC"/>
+
+    <!-- Handi Base Pedestal -->
+    <path d="M-18 28 L-22 34 H22 L18 28 Z" fill="url(#goldGradient)" stroke="#8C6D23" stroke-width="0.8"/>
+  </g>
+
+  <!-- LEFT PEACOCK (Mayil) -->
+  <g transform="translate(150, 115)">
+    <!-- Peacock Head & Crown (Facing Center) -->
+    <path d="M-62 -48 C-56 -48, -50 -42, -52 -34 C-54 -26, -60 -18, -66 -10" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M-52 -38 L-44 -36 L-51 -32 Z" fill="url(#goldGradient)"/> <!-- Beak -->
+    <circle cx="-56" cy="-38" r="1.5" fill="#FFF5CC"/> <!-- Eye -->
+    <!-- Crest Feathers -->
+    <path d="M-60 -48 L-64 -58 M-58 -48 L-58 -60 M-56 -48 L-52 -58" stroke="url(#goldGradient)" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="-64" cy="-58" r="1.8" fill="#FFF5CC"/>
+    <circle cx="-58" cy="-60" r="1.8" fill="#FFF5CC"/>
+    <circle cx="-52" cy="-58" r="1.8" fill="#FFF5CC"/>
+
+    <!-- Peacock Breast & Wing Arch -->
+    <path d="M-66 -10 C-78 0, -88 18, -82 38 C-80 44, -72 48, -64 42 C-58 36, -56 20, -58 8" fill="url(#brassGradient)" stroke="#FFF5CC" stroke-width="1"/>
+
+    <!-- Ornate Tail Plumes Fan (Left Cascading Feathers) -->
+    <path d="M-82 20 C-102 12, -125 24, -135 48 C-125 44, -110 40, -96 42" stroke="url(#goldGradient)" stroke-width="1.4" fill="none"/>
+    <path d="M-80 32 C-104 30, -128 48, -132 74 C-120 64, -104 56, -88 52" stroke="url(#goldGradient)" stroke-width="1.4" fill="none"/>
+    <path d="M-74 44 C-94 50, -114 72, -112 98 C-104 84, -92 72, -78 62" stroke="url(#goldGradient)" stroke-width="1.4" fill="none"/>
+
+    <!-- Peacock Eye Feathers (Mayilkan) -->
+    <circle cx="-130" cy="46" r="4" fill="url(#goldGradient)"/>
+    <circle cx="-130" cy="46" r="2" fill="#8C6D23"/>
+    <circle cx="-126" cy="72" r="4" fill="url(#goldGradient)"/>
+    <circle cx="-126" cy="72" r="2" fill="#8C6D23"/>
+    <circle cx="-106" cy="94" r="4" fill="url(#goldGradient)"/>
+    <circle cx="-106" cy="94" r="2" fill="#8C6D23"/>
+  </g>
+
+  <!-- RIGHT PEACOCK (Mayil - Symmetrical Mirror) -->
+  <g transform="translate(150, 115) scale(-1, 1)">
+    <!-- Peacock Head & Crown -->
+    <path d="M-62 -48 C-56 -48, -50 -42, -52 -34 C-54 -26, -60 -18, -66 -10" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M-52 -38 L-44 -36 L-51 -32 Z" fill="url(#goldGradient)"/>
+    <circle cx="-56" cy="-38" r="1.5" fill="#FFF5CC"/>
+    <!-- Crest Feathers -->
+    <path d="M-60 -48 L-64 -58 M-58 -48 L-58 -60 M-56 -48 L-52 -58" stroke="url(#goldGradient)" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="-64" cy="-58" r="1.8" fill="#FFF5CC"/>
+    <circle cx="-58" cy="-60" r="1.8" fill="#FFF5CC"/>
+    <circle cx="-52" cy="-58" r="1.8" fill="#FFF5CC"/>
+
+    <!-- Peacock Breast & Wing Arch -->
+    <path d="M-66 -10 C-78 0, -88 18, -82 38 C-80 44, -72 48, -64 42 C-58 36, -56 20, -58 8" fill="url(#brassGradient)" stroke="#FFF5CC" stroke-width="1"/>
+
+    <!-- Ornate Tail Plumes Fan -->
+    <path d="M-82 20 C-102 12, -125 24, -135 48 C-125 44, -110 40, -96 42" stroke="url(#goldGradient)" stroke-width="1.4" fill="none"/>
+    <path d="M-80 32 C-104 30, -128 48, -132 74 C-120 64, -104 56, -88 52" stroke="url(#goldGradient)" stroke-width="1.4" fill="none"/>
+    <path d="M-74 44 C-94 50, -114 72, -112 98 C-104 84, -92 72, -78 62" stroke="url(#goldGradient)" stroke-width="1.4" fill="none"/>
+
+    <!-- Peacock Eye Feathers -->
+    <circle cx="-130" cy="46" r="4" fill="url(#goldGradient)"/>
+    <circle cx="-130" cy="46" r="2" fill="#8C6D23"/>
+    <circle cx="-126" cy="72" r="4" fill="url(#goldGradient)"/>
+    <circle cx="-126" cy="72" r="2" fill="#8C6D23"/>
+    <circle cx="-106" cy="94" r="4" fill="url(#goldGradient)"/>
+    <circle cx="-106" cy="94" r="2" fill="#8C6D23"/>
+  </g>
+
+  <!-- BOTTOM FOUNDATION: Banana Leaf & Golden Dosa Swirl Crest -->
+  <g transform="translate(150, 195)">
+    <!-- Banana Leaf Arch Base -->
+    <path d="M-110 10 C-60 -8, 60 -8, 110 10 C65 2, -65 2, -110 10Z" fill="url(#goldGradient)" stroke="#8C6D23" stroke-width="0.8"/>
+    <!-- Banana Leaf Center Rib & Veins -->
+    <path d="M-110 10 Q0 0, 110 10" stroke="#FFF5CC" stroke-width="1" fill="none"/>
+
+    <!-- Central Dosa Tawa Spiral Medallion -->
+    <circle cx="0" cy="18" r="18" fill="url(#brassGradient)" stroke="#FFF5CC" stroke-width="1.5"/>
+    <path d="M0 18 m-12 0 a 12 12 0 1 0 24 0 a 12 12 0 1 0 -24 0" stroke="#FFF5CC" stroke-width="0.6" stroke-dasharray="1.5 2" fill="none"/>
+    <!-- Golden Swirl Spiral -->
+    <path d="M0 18 Q4 14, 8 18 Q10 24, 0 26 Q-10 24, -8 16 Q-6 8, 4 10 Q12 12, 10 20" stroke="url(#goldGradient)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+    <circle cx="0" cy="18" r="2.5" fill="#FFF5CC"/>
+
+    <!-- Flanking Traditional Kolam Dots -->
+    <circle cx="-26" cy="18" r="2" fill="#D4AF37"/>
+    <circle cx="-34" cy="18" r="1.5" fill="#D4AF37"/>
+    <circle cx="-42" cy="18" r="1" fill="#D4AF37"/>
+    <circle cx="26" cy="18" r="2" fill="#D4AF37"/>
+    <circle cx="34" cy="18" r="1.5" fill="#D4AF37"/>
+    <circle cx="42" cy="18" r="1" fill="#D4AF37"/>
+  </g>
+</svg>

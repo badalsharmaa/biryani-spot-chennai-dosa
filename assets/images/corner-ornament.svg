@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+  <!-- Outer Corner Anchor Lines -->
+  <path d="M2 58V14C2 7.373 7.373 2 14 2H58" stroke="#C59B27" stroke-width="0.8" stroke-linecap="round"/>
+  <path d="M6 54V16C6 10.477 10.477 6 16 6H54" stroke="#D4AF37" stroke-width="0.5" stroke-dasharray="1.5 2" stroke-linecap="round"/>
+
+  <!-- Corner Finial Node (Top-Left) -->
+  <circle cx="2" cy="2" r="1.5" fill="#C59B27"/>
+  <circle cx="14" cy="2" r="1" fill="#D4AF37"/>
+  <circle cx="2" cy="14" r="1" fill="#D4AF37"/>
+  <circle cx="58" cy="2" r="1.5" fill="#C59B27"/>
+  <circle cx="2" cy="58" r="1.5" fill="#C59B27"/>
+
+  <!-- Central Star Anise Bloom at Corner Apex -->
+  <g transform="translate(18, 18)">
+    <!-- 8-Pointed Star Anise Petals -->
+    <path d="M0 -12 C1 -6, 4 -4, 10 0 C4 4, 1 6, 0 12 C-1 6, -4 4, -10 0 C-4 -4, -1 -6, 0 -12Z" fill="none" stroke="#C59B27" stroke-width="0.7"/>
+    <path d="M-8.5 -8.5 C-4 -5, -3 -2, 0 0 C3 -2, 4 -5, 8.5 -8.5 C5 -4, 2 -3, 0 0 C-2 3, -5 4, -8.5 8.5 C-4 5, -2 3, 0 0 C2 -3, 5 -4, 8.5 8.5" fill="none" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="2.2" fill="#C59B27"/>
+    <circle cx="0" cy="0" r="1" fill="#FFF8E7"/>
+  </g>
+
+  <!-- Flowing Chettinad Manga (Paisley) & Cardamom Curves -->
+  <path d="M18 6 C28 6, 38 12, 42 22 C36 22, 30 18, 26 14" fill="none" stroke="#C59B27" stroke-width="0.6"/>
+  <path d="M6 18 C6 28, 12 38, 22 42 C22 36, 18 30, 14 26" fill="none" stroke="#C59B27" stroke-width="0.6"/>
+
+  <!-- Kolam Diamond & Rice Grain Embellishments -->
+  <path d="M32 10 L34 12 L32 14 L30 12 Z" fill="#D4AF37"/>
+  <path d="M10 32 L12 34 L14 32 L12 30 Z" fill="#D4AF37"/>
+  <path d="M46 8 L47.5 9.5 L46 11 L44.5 9.5 Z" fill="#C59B27"/>
+  <path d="M8 46 L9.5 47.5 L11 46 L9.5 44.5 Z" fill="#C59B27"/>
+
+  <!-- Diagonal Spoke Flourish -->
+  <path d="M26 26 C34 34, 44 40, 52 44" fill="none" stroke="#D4AF37" stroke-width="0.5" stroke-linecap="round"/>
+  <circle cx="52" cy="44" r="1.2" fill="#C59B27"/>
+</svg>

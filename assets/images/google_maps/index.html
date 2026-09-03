@@ -1,0 +1,2460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps Assets Index & Visual Browser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --card-bg: #161a20;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #ff8a3d;
+      --accent-glow: rgba(255, 138, 61, 0.2);
+      --text: #f0f2f5;
+      --text-muted: #8c96a5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 30px 20px 80px;
+    }
+    .header {
+      max-width: 1400px;
+      margin: 0 auto 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+    h1 { font-size: 28px; font-weight: 800; display: flex; align-items: center; gap: 12px; }
+    .badge {
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid rgba(255, 138, 61, 0.4);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .controls {
+      max-width: 1400px;
+      margin: 0 auto 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 250px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+    .stats-bar {
+      max-width: 1400px;
+      margin: 0 auto 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 138, 61, 0.4);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .img-wrap {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: #000;
+      overflow: hidden;
+    }
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover .img-wrap img {
+      transform: scale(1.05);
+    }
+    .loc-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .size-tag {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .info {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .cat {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    .file-path {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px 8px;
+      border-radius: 4px;
+      word-break: break-all;
+      margin-top: auto;
+      cursor: pointer;
+    }
+    .file-path:hover {
+      color: #fff;
+      background: rgba(255, 138, 61, 0.15);
+    }
+    .copied-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>📸 Google Maps Assets Index <span class="badge" id="totalCount">168 Assets</span></h1>
+      <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">Visual catalog of high-resolution food, dosa, biryani, interior, and storefront photos.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input type="text" class="search-input" id="searchInput" placeholder="🔍 Search dishes, biryani, dosas, curries, locations...">
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="dublin">Dublin</button>
+      <button class="filter-btn" data-filter="livermore">Livermore</button>
+      <button class="filter-btn" data-filter="milpitas">Milpitas</button>
+      <button class="filter-btn" data-filter="concord">Concord</button>
+    </div>
+  </div>
+
+  <div class="stats-bar" id="statsBar">Showing 168 images</div>
+
+  <div class="grid" id="assetGrid">
+    
+      <div class="card" data-location="concord" data-category="biryani_specials" data-search="hyderabadi chicken dum biryani pot concord_hyderabadi_chicken_dum_biryani_pot.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/biryani_specials/concord_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Hyderabadi Chicken Dum Biryani Pot" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">858.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Hyderabadi Chicken Dum Biryani Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/biryani_specials/concord_hyderabadi_chicken_dum_biryani_pot.jpg')">concord_hyderabadi_chicken_dum_biryani_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="biryani_specials" data-search="vijayawada special spicy chicken biryani concord_vijayawada_special_spicy_chicken_biryani.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/biryani_specials/concord_vijayawada_special_spicy_chicken_biryani.jpg" alt="Vijayawada Special Spicy Chicken Biryani" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">685.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Vijayawada Special Spicy Chicken Biryani</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/biryani_specials/concord_vijayawada_special_spicy_chicken_biryani.jpg')">concord_vijayawada_special_spicy_chicken_biryani.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="bhature chole combo platter concord_bhature_chole_combo_platter.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_bhature_chole_combo_platter.jpg" alt="Bhature Chole Combo Platter" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">312.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Bhature Chole Combo Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_bhature_chole_combo_platter.jpg')">concord_bhature_chole_combo_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="bhindi do pyaza stir fry concord_bhindi_do_pyaza_stir_fry.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_bhindi_do_pyaza_stir_fry.jpg" alt="Bhindi Do Pyaza Stir Fry" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">80.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Bhindi Do Pyaza Stir Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_bhindi_do_pyaza_stir_fry.jpg')">concord_bhindi_do_pyaza_stir_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="chana masala punjabi gravy concord_chana_masala_punjabi_gravy.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_chana_masala_punjabi_gravy.jpg" alt="Chana Masala Punjabi Gravy" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">586.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chana Masala Punjabi Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_chana_masala_punjabi_gravy.jpg')">concord_chana_masala_punjabi_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="chettinad mutton sukka masala concord_chettinad_mutton_sukka_masala.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_chettinad_mutton_sukka_masala.jpg" alt="Chettinad Mutton Sukka Masala" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">470.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chettinad Mutton Sukka Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_chettinad_mutton_sukka_masala.jpg')">concord_chettinad_mutton_sukka_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="chicken chettinad black pepper concord_chicken_chettinad_black_pepper.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_chicken_chettinad_black_pepper.jpg" alt="Chicken Chettinad Black Pepper" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">58.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Chettinad Black Pepper</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_chicken_chettinad_black_pepper.jpg')">concord_chicken_chettinad_black_pepper.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="chicken tikka masala gravy concord_chicken_tikka_masala_gravy.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_chicken_tikka_masala_gravy.jpg" alt="Chicken Tikka Masala Gravy" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">581.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Tikka Masala Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_chicken_tikka_masala_gravy.jpg')">concord_chicken_tikka_masala_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="creamy butter chicken delight concord_creamy_butter_chicken_delight.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg" alt="Creamy Butter Chicken Delight" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">187.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Creamy Butter Chicken Delight</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_creamy_butter_chicken_delight.jpg')">concord_creamy_butter_chicken_delight.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="crispy andhra chicken 65 concord_crispy_andhra_chicken_65.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_andhra_chicken_65.jpg" alt="Crispy Andhra Chicken 65" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">606.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Crispy Andhra Chicken 65</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_andhra_chicken_65.jpg')">concord_crispy_andhra_chicken_65.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="crispy samosa chaat bowl concord_crispy_samosa_chaat_bowl.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_samosa_chaat_bowl.jpg" alt="Crispy Samosa Chaat Bowl" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">576.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Crispy Samosa Chaat Bowl</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_crispy_samosa_chaat_bowl.jpg')">concord_crispy_samosa_chaat_bowl.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="dal makhani slow cooked concord_dal_makhani_slow_cooked.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_dal_makhani_slow_cooked.jpg" alt="Dal Makhani Slow Cooked" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">570.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dal Makhani Slow Cooked</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_dal_makhani_slow_cooked.jpg')">concord_dal_makhani_slow_cooked.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="dum biryani thali curry combo concord_dum_biryani_thali_curry_combo.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_dum_biryani_thali_curry_combo.jpg" alt="Dum Biryani Thali Curry Combo" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">160.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dum Biryani Thali Curry Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_dum_biryani_thali_curry_combo.jpg')">concord_dum_biryani_thali_curry_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="fish tikka tandoori kabab concord_fish_tikka_tandoori_kabab.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_fish_tikka_tandoori_kabab.jpg" alt="Fish Tikka Tandoori Kabab" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">446.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Fish Tikka Tandoori Kabab</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_fish_tikka_tandoori_kabab.jpg')">concord_fish_tikka_tandoori_kabab.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="garlic naan tandoori bread concord_garlic_naan_tandoori_bread.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_garlic_naan_tandoori_bread.jpg" alt="Garlic Naan Tandoori Bread" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">450.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Garlic Naan Tandoori Bread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_garlic_naan_tandoori_bread.jpg')">concord_garlic_naan_tandoori_bread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="gobi manchurian dry starter concord_gobi_manchurian_dry_starter.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_gobi_manchurian_dry_starter.jpg" alt="Gobi Manchurian Dry Starter" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">684.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Gobi Manchurian Dry Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_gobi_manchurian_dry_starter.jpg')">concord_gobi_manchurian_dry_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="hyderabadi apollo fish fry concord_hyderabadi_apollo_fish_fry.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_hyderabadi_apollo_fish_fry.jpg" alt="Hyderabadi Apollo Fish Fry" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">77.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Hyderabadi Apollo Fish Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_hyderabadi_apollo_fish_fry.jpg')">concord_hyderabadi_apollo_fish_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="hyderabadi bagara baingan concord_hyderabadi_bagara_baingan.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_hyderabadi_bagara_baingan.jpg" alt="Hyderabadi Bagara Baingan" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">258.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Hyderabadi Bagara Baingan</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_hyderabadi_bagara_baingan.jpg')">concord_hyderabadi_bagara_baingan.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="kadai paneer bell pepper gravy concord_kadai_paneer_bell_pepper_gravy.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_kadai_paneer_bell_pepper_gravy.jpg" alt="Kadai Paneer Bell Pepper Gravy" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">603.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Kadai Paneer Bell Pepper Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_kadai_paneer_bell_pepper_gravy.jpg')">concord_kadai_paneer_bell_pepper_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="kashmiri mutton curry pot concord_kashmiri_mutton_curry_pot.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_kashmiri_mutton_curry_pot.jpg" alt="Kashmiri Mutton Curry Pot" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">543.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Kashmiri Mutton Curry Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_kashmiri_mutton_curry_pot.jpg')">concord_kashmiri_mutton_curry_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="madras chicken curry bowl concord_madras_chicken_curry_bowl.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_madras_chicken_curry_bowl.jpg" alt="Madras Chicken Curry Bowl" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">156.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Madras Chicken Curry Bowl</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_madras_chicken_curry_bowl.jpg')">concord_madras_chicken_curry_bowl.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="malabar flaky parotta curry combo concord_malabar_flaky_parotta_curry_combo.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_malabar_flaky_parotta_curry_combo.jpg" alt="Malabar Flaky Parotta Curry Combo" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">603.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Malabar Flaky Parotta Curry Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_malabar_flaky_parotta_curry_combo.jpg')">concord_malabar_flaky_parotta_curry_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="mutton rogan josh slow simmered concord_mutton_rogan_josh_slow_simmered.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg" alt="Mutton Rogan Josh Slow Simmered" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">182.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mutton Rogan Josh Slow Simmered</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_mutton_rogan_josh_slow_simmered.jpg')">concord_mutton_rogan_josh_slow_simmered.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="navratan korma vegetable curry concord_navratan_korma_vegetable_curry.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_navratan_korma_vegetable_curry.jpg" alt="Navratan Korma Vegetable Curry" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">679.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Navratan Korma Vegetable Curry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_navratan_korma_vegetable_curry.jpg')">concord_navratan_korma_vegetable_curry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="palak paneer spinach gravy concord_palak_paneer_spinach_gravy.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_palak_paneer_spinach_gravy.jpg" alt="Palak Paneer Spinach Gravy" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">550.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Palak Paneer Spinach Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_palak_paneer_spinach_gravy.jpg')">concord_palak_paneer_spinach_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="paneer tikka butter masala concord_paneer_tikka_butter_masala.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_paneer_tikka_butter_masala.jpg" alt="Paneer Tikka Butter Masala" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">135.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Tikka Butter Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_paneer_tikka_butter_masala.jpg')">concord_paneer_tikka_butter_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="prawn chettinad masala roast concord_prawn_chettinad_masala_roast.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_prawn_chettinad_masala_roast.jpg" alt="Prawn Chettinad Masala Roast" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">136.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Prawn Chettinad Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_prawn_chettinad_masala_roast.jpg')">concord_prawn_chettinad_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="royal maharaja thali platter concord_royal_maharaja_thali_platter.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_royal_maharaja_thali_platter.jpg" alt="Royal Maharaja Thali Platter" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">565.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Royal Maharaja Thali Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_royal_maharaja_thali_platter.jpg')">concord_royal_maharaja_thali_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="south indian curry feast spread concord_south_indian_curry_feast_spread.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast Spread" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">665.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">South Indian Curry Feast Spread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_south_indian_curry_feast_spread.jpg')">concord_south_indian_curry_feast_spread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="spicy egg masala roast concord_spicy_egg_masala_roast.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_spicy_egg_masala_roast.jpg" alt="Spicy Egg Masala Roast" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">460.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Spicy Egg Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_spicy_egg_masala_roast.jpg')">concord_spicy_egg_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="spicy paneer 65 crispy starter concord_spicy_paneer_65_crispy_starter.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_spicy_paneer_65_crispy_starter.jpg" alt="Spicy Paneer 65 Crispy Starter" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">733.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Spicy Paneer 65 Crispy Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_spicy_paneer_65_crispy_starter.jpg')">concord_spicy_paneer_65_crispy_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="tandoori chicken leg sizzler concord_tandoori_chicken_leg_sizzler.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_tandoori_chicken_leg_sizzler.jpg" alt="Tandoori Chicken Leg Sizzler" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">482.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Chicken Leg Sizzler</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_tandoori_chicken_leg_sizzler.jpg')">concord_tandoori_chicken_leg_sizzler.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="curries_and_appetizers" data-search="tandoori mixed grill platter concord_tandoori_mixed_grill_platter.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/curries_and_appetizers/concord_tandoori_mixed_grill_platter.jpg" alt="Tandoori Mixed Grill Platter" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">50.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Mixed Grill Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/curries_and_appetizers/concord_tandoori_mixed_grill_platter.jpg')">concord_tandoori_mixed_grill_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="dosas_and_tiffin" data-search="golden ghee paper roast dosa concord_golden_ghee_paper_roast_dosa.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/dosas_and_tiffin/concord_golden_ghee_paper_roast_dosa.jpg" alt="Golden Ghee Paper Roast Dosa" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">57.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Golden Ghee Paper Roast Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/dosas_and_tiffin/concord_golden_ghee_paper_roast_dosa.jpg')">concord_golden_ghee_paper_roast_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="dosas_and_tiffin" data-search="gunpowder podi masala dosa concord_gunpowder_podi_masala_dosa.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/dosas_and_tiffin/concord_gunpowder_podi_masala_dosa.jpg" alt="Gunpowder Podi Masala Dosa" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">366.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Gunpowder Podi Masala Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/dosas_and_tiffin/concord_gunpowder_podi_masala_dosa.jpg')">concord_gunpowder_podi_masala_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="dosas_and_tiffin" data-search="medu vada sambar chutney combo concord_medu_vada_sambar_chutney_combo.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/dosas_and_tiffin/concord_medu_vada_sambar_chutney_combo.jpg" alt="Medu Vada Sambar Chutney Combo" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">79.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Medu Vada Sambar Chutney Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/dosas_and_tiffin/concord_medu_vada_sambar_chutney_combo.jpg')">concord_medu_vada_sambar_chutney_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="dosas_and_tiffin" data-search="steamed idli sambar vada tiffin concord_steamed_idli_sambar_vada_tiffin.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/dosas_and_tiffin/concord_steamed_idli_sambar_vada_tiffin.jpg" alt="Steamed Idli Sambar Vada Tiffin" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">432.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Steamed Idli Sambar Vada Tiffin</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/dosas_and_tiffin/concord_steamed_idli_sambar_vada_tiffin.jpg')">concord_steamed_idli_sambar_vada_tiffin.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="exterior_and_storefront" data-search="evening illuminated storefront sign concord_evening_illuminated_storefront_sign.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/exterior_and_storefront/concord_evening_illuminated_storefront_sign.jpg" alt="Evening Illuminated Storefront Sign" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">80.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Evening Illuminated Storefront Sign</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/exterior_and_storefront/concord_evening_illuminated_storefront_sign.jpg')">concord_evening_illuminated_storefront_sign.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="exterior_and_storefront" data-search="plaza entrance parking view concord_plaza_entrance_parking_view.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/exterior_and_storefront/concord_plaza_entrance_parking_view.jpg" alt="Plaza Entrance Parking View" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">445.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Plaza Entrance Parking View</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/exterior_and_storefront/concord_plaza_entrance_parking_view.jpg')">concord_plaza_entrance_parking_view.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="exterior_and_storefront" data-search="restaurant facade curbside view concord_restaurant_facade_curbside_view.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/exterior_and_storefront/concord_restaurant_facade_curbside_view.jpg" alt="Restaurant Facade Curbside View" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">522.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Restaurant Facade Curbside View</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/exterior_and_storefront/concord_restaurant_facade_curbside_view.jpg')">concord_restaurant_facade_curbside_view.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="exterior_and_storefront" data-search="storefront exterior daylight signboard concord_storefront_exterior_daylight_signboard.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/exterior_and_storefront/concord_storefront_exterior_daylight_signboard.jpg" alt="Storefront Exterior Daylight Signboard" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">1032.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Storefront Exterior Daylight Signboard</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/exterior_and_storefront/concord_storefront_exterior_daylight_signboard.jpg')">concord_storefront_exterior_daylight_signboard.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="menus_and_promos" data-search="dine in printed menu full card concord_dine_in_printed_menu_full_card.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/menus_and_promos/concord_dine_in_printed_menu_full_card.jpg" alt="Dine In Printed Menu Full Card" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">389.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Dine In Printed Menu Full Card</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/menus_and_promos/concord_dine_in_printed_menu_full_card.jpg')">concord_dine_in_printed_menu_full_card.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="menus_and_promos" data-search="lunch dinner specials menu sheet concord_lunch_dinner_specials_menu_sheet.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/menus_and_promos/concord_lunch_dinner_specials_menu_sheet.jpg" alt="Lunch Dinner Specials Menu Sheet" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">364.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Lunch Dinner Specials Menu Sheet</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/menus_and_promos/concord_lunch_dinner_specials_menu_sheet.jpg')">concord_lunch_dinner_specials_menu_sheet.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="store_interior_and_vibe" data-search="cozy family dining table setup concord_cozy_family_dining_table_setup.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_cozy_family_dining_table_setup.jpg" alt="Cozy Family Dining Table Setup" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">439.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Cozy Family Dining Table Setup</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/store_interior_and_vibe/concord_cozy_family_dining_table_setup.jpg')">concord_cozy_family_dining_table_setup.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="store_interior_and_vibe" data-search="order counter and dining room concord_order_counter_and_dining_room.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_order_counter_and_dining_room.jpg" alt="Order Counter And Dining Room" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">597.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Order Counter And Dining Room</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/store_interior_and_vibe/concord_order_counter_and_dining_room.jpg')">concord_order_counter_and_dining_room.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="store_interior_and_vibe" data-search="restaurant main dining hall booths concord_restaurant_main_dining_hall_booths.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_restaurant_main_dining_hall_booths.jpg" alt="Restaurant Main Dining Hall Booths" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">635.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Restaurant Main Dining Hall Booths</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/store_interior_and_vibe/concord_restaurant_main_dining_hall_booths.jpg')">concord_restaurant_main_dining_hall_booths.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="concord" data-category="store_interior_and_vibe" data-search="warm ambient lighting indoor seating concord_warm_ambient_lighting_indoor_seating.jpg concord">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/concord/store_interior_and_vibe/concord_warm_ambient_lighting_indoor_seating.jpg" alt="Warm Ambient Lighting Indoor Seating" loading="lazy">
+          <span class="loc-tag">concord</span>
+          <span class="size-tag">356.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Warm Ambient Lighting Indoor Seating</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/concord/store_interior_and_vibe/concord_warm_ambient_lighting_indoor_seating.jpg')">concord_warm_ambient_lighting_indoor_seating.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="biryani_specials" data-search="chettinad mutton sukka biryani dublin_chettinad_mutton_sukka_biryani.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/biryani_specials/dublin_chettinad_mutton_sukka_biryani.jpg" alt="Chettinad Mutton Sukka Biryani" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">567.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Chettinad Mutton Sukka Biryani</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/biryani_specials/dublin_chettinad_mutton_sukka_biryani.jpg')">dublin_chettinad_mutton_sukka_biryani.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="biryani_specials" data-search="hyderabadi chicken dum biryani pot dublin_hyderabadi_chicken_dum_biryani_pot.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Hyderabadi Chicken Dum Biryani Pot" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">356.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Hyderabadi Chicken Dum Biryani Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/biryani_specials/dublin_hyderabadi_chicken_dum_biryani_pot.jpg')">dublin_hyderabadi_chicken_dum_biryani_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="biryani_specials" data-search="royal paneer tikka biryani dublin_royal_paneer_tikka_biryani.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/biryani_specials/dublin_royal_paneer_tikka_biryani.jpg" alt="Royal Paneer Tikka Biryani" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">306.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Royal Paneer Tikka Biryani</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/biryani_specials/dublin_royal_paneer_tikka_biryani.jpg')">dublin_royal_paneer_tikka_biryani.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="biryani_specials" data-search="traditional egg dum biryani bucket dublin_traditional_egg_dum_biryani_bucket.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/biryani_specials/dublin_traditional_egg_dum_biryani_bucket.jpg" alt="Traditional Egg Dum Biryani Bucket" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">420.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Traditional Egg Dum Biryani Bucket</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/biryani_specials/dublin_traditional_egg_dum_biryani_bucket.jpg')">dublin_traditional_egg_dum_biryani_bucket.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="biryani_specials" data-search="vijayawada special spicy chicken biryani dublin_vijayawada_special_spicy_chicken_biryani.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/biryani_specials/dublin_vijayawada_special_spicy_chicken_biryani.jpg" alt="Vijayawada Special Spicy Chicken Biryani" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">714.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Vijayawada Special Spicy Chicken Biryani</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/biryani_specials/dublin_vijayawada_special_spicy_chicken_biryani.jpg')">dublin_vijayawada_special_spicy_chicken_biryani.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="aloo gobi masala homestyle dublin_aloo_gobi_masala_homestyle.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_aloo_gobi_masala_homestyle.jpg" alt="Aloo Gobi Masala Homestyle" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">437.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Aloo Gobi Masala Homestyle</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_aloo_gobi_masala_homestyle.jpg')">dublin_aloo_gobi_masala_homestyle.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="bhature chole combo platter dublin_bhature_chole_combo_platter.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_bhature_chole_combo_platter.jpg" alt="Bhature Chole Combo Platter" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">683.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Bhature Chole Combo Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_bhature_chole_combo_platter.jpg')">dublin_bhature_chole_combo_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="bhindi do pyaza stir fry dublin_bhindi_do_pyaza_stir_fry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_bhindi_do_pyaza_stir_fry.jpg" alt="Bhindi Do Pyaza Stir Fry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">513.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Bhindi Do Pyaza Stir Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_bhindi_do_pyaza_stir_fry.jpg')">dublin_bhindi_do_pyaza_stir_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="butter naan basket tandoori dublin_butter_naan_basket_tandoori.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_butter_naan_basket_tandoori.jpg" alt="Butter Naan Basket Tandoori" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">408.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Butter Naan Basket Tandoori</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_butter_naan_basket_tandoori.jpg')">dublin_butter_naan_basket_tandoori.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chana masala punjabi gravy dublin_chana_masala_punjabi_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chana_masala_punjabi_gravy.jpg" alt="Chana Masala Punjabi Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">92.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chana Masala Punjabi Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chana_masala_punjabi_gravy.jpg')">dublin_chana_masala_punjabi_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chettinad crab masala roast dublin_chettinad_crab_masala_roast.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_crab_masala_roast.jpg" alt="Chettinad Crab Masala Roast" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">1158.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chettinad Crab Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_crab_masala_roast.jpg')">dublin_chettinad_crab_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chettinad mutton sukka masala dublin_chettinad_mutton_sukka_masala.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_mutton_sukka_masala.jpg" alt="Chettinad Mutton Sukka Masala" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">107.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chettinad Mutton Sukka Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chettinad_mutton_sukka_masala.jpg')">dublin_chettinad_mutton_sukka_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chicken chettinad black pepper dublin_chicken_chettinad_black_pepper.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_chettinad_black_pepper.jpg" alt="Chicken Chettinad Black Pepper" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">836.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Chettinad Black Pepper</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_chettinad_black_pepper.jpg')">dublin_chicken_chettinad_black_pepper.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chicken korma cashew gravy dublin_chicken_korma_cashew_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_korma_cashew_gravy.jpg" alt="Chicken Korma Cashew Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">490.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Korma Cashew Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_korma_cashew_gravy.jpg')">dublin_chicken_korma_cashew_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chicken saagwala spinach curry dublin_chicken_saagwala_spinach_curry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_saagwala_spinach_curry.jpg" alt="Chicken Saagwala Spinach Curry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">757.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Saagwala Spinach Curry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_saagwala_spinach_curry.jpg')">dublin_chicken_saagwala_spinach_curry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chicken sukka dry roast dublin_chicken_sukka_dry_roast.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_sukka_dry_roast.jpg" alt="Chicken Sukka Dry Roast" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">660.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Sukka Dry Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_sukka_dry_roast.jpg')">dublin_chicken_sukka_dry_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chicken tikka masala gravy dublin_chicken_tikka_masala_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_tikka_masala_gravy.jpg" alt="Chicken Tikka Masala Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">643.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Tikka Masala Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chicken_tikka_masala_gravy.jpg')">dublin_chicken_tikka_masala_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="chilli chicken indo chinese dublin_chilli_chicken_indo_chinese.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chilli_chicken_indo_chinese.jpg" alt="Chilli Chicken Indo Chinese" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">428.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chilli Chicken Indo Chinese</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_chilli_chicken_indo_chinese.jpg')">dublin_chilli_chicken_indo_chinese.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="creamy butter chicken delight dublin_creamy_butter_chicken_delight.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_creamy_butter_chicken_delight.jpg" alt="Creamy Butter Chicken Delight" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">1169.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Creamy Butter Chicken Delight</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_creamy_butter_chicken_delight.jpg')">dublin_creamy_butter_chicken_delight.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="crispy andhra chicken 65 dublin_crispy_andhra_chicken_65.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_crispy_andhra_chicken_65.jpg" alt="Crispy Andhra Chicken 65" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">433.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Crispy Andhra Chicken 65</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_crispy_andhra_chicken_65.jpg')">dublin_crispy_andhra_chicken_65.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="crispy samosa chaat bowl dublin_crispy_samosa_chaat_bowl.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_crispy_samosa_chaat_bowl.jpg" alt="Crispy Samosa Chaat Bowl" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">707.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Crispy Samosa Chaat Bowl</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_crispy_samosa_chaat_bowl.jpg')">dublin_crispy_samosa_chaat_bowl.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="dal makhani slow cooked dublin_dal_makhani_slow_cooked.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dal_makhani_slow_cooked.jpg" alt="Dal Makhani Slow Cooked" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">603.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dal Makhani Slow Cooked</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dal_makhani_slow_cooked.jpg')">dublin_dal_makhani_slow_cooked.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="dal tadka yellow lentil dublin_dal_tadka_yellow_lentil.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dal_tadka_yellow_lentil.jpg" alt="Dal Tadka Yellow Lentil" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">723.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dal Tadka Yellow Lentil</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dal_tadka_yellow_lentil.jpg')">dublin_dal_tadka_yellow_lentil.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="dum biryani thali curry combo dublin_dum_biryani_thali_curry_combo.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dum_biryani_thali_curry_combo.jpg" alt="Dum Biryani Thali Curry Combo" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">665.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dum Biryani Thali Curry Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_dum_biryani_thali_curry_combo.jpg')">dublin_dum_biryani_thali_curry_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="egg bhurji spicy scramble dublin_egg_bhurji_spicy_scramble.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_egg_bhurji_spicy_scramble.jpg" alt="Egg Bhurji Spicy Scramble" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">477.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Egg Bhurji Spicy Scramble</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_egg_bhurji_spicy_scramble.jpg')">dublin_egg_bhurji_spicy_scramble.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="fiery curry leaf chicken fry dublin_fiery_curry_leaf_chicken_fry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_fiery_curry_leaf_chicken_fry.jpg" alt="Fiery Curry Leaf Chicken Fry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">440.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Fiery Curry Leaf Chicken Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_fiery_curry_leaf_chicken_fry.jpg')">dublin_fiery_curry_leaf_chicken_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="fish tikka tandoori kabab dublin_fish_tikka_tandoori_kabab.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_fish_tikka_tandoori_kabab.jpg" alt="Fish Tikka Tandoori Kabab" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">77.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Fish Tikka Tandoori Kabab</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_fish_tikka_tandoori_kabab.jpg')">dublin_fish_tikka_tandoori_kabab.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="garlic naan tandoori bread dublin_garlic_naan_tandoori_bread.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_garlic_naan_tandoori_bread.jpg" alt="Garlic Naan Tandoori Bread" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">869.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Garlic Naan Tandoori Bread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_garlic_naan_tandoori_bread.jpg')">dublin_garlic_naan_tandoori_bread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="gobi manchurian dry starter dublin_gobi_manchurian_dry_starter.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_gobi_manchurian_dry_starter.jpg" alt="Gobi Manchurian Dry Starter" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">160.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Gobi Manchurian Dry Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_gobi_manchurian_dry_starter.jpg')">dublin_gobi_manchurian_dry_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="hyderabadi apollo fish fry dublin_hyderabadi_apollo_fish_fry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_hyderabadi_apollo_fish_fry.jpg" alt="Hyderabadi Apollo Fish Fry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">160.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Hyderabadi Apollo Fish Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_hyderabadi_apollo_fish_fry.jpg')">dublin_hyderabadi_apollo_fish_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="hyderabadi bagara baingan dublin_hyderabadi_bagara_baingan.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_hyderabadi_bagara_baingan.jpg" alt="Hyderabadi Bagara Baingan" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">646.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Hyderabadi Bagara Baingan</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_hyderabadi_bagara_baingan.jpg')">dublin_hyderabadi_bagara_baingan.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="kadai paneer bell pepper gravy dublin_kadai_paneer_bell_pepper_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_kadai_paneer_bell_pepper_gravy.jpg" alt="Kadai Paneer Bell Pepper Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">372.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Kadai Paneer Bell Pepper Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_kadai_paneer_bell_pepper_gravy.jpg')">dublin_kadai_paneer_bell_pepper_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="kashmiri mutton curry pot dublin_kashmiri_mutton_curry_pot.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_kashmiri_mutton_curry_pot.jpg" alt="Kashmiri Mutton Curry Pot" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">955.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Kashmiri Mutton Curry Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_kashmiri_mutton_curry_pot.jpg')">dublin_kashmiri_mutton_curry_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="madras chicken curry bowl dublin_madras_chicken_curry_bowl.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_madras_chicken_curry_bowl.jpg" alt="Madras Chicken Curry Bowl" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">341.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Madras Chicken Curry Bowl</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_madras_chicken_curry_bowl.jpg')">dublin_madras_chicken_curry_bowl.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="malabar flaky parotta curry combo dublin_malabar_flaky_parotta_curry_combo.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_malabar_flaky_parotta_curry_combo.jpg" alt="Malabar Flaky Parotta Curry Combo" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">346.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Malabar Flaky Parotta Curry Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_malabar_flaky_parotta_curry_combo.jpg')">dublin_malabar_flaky_parotta_curry_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="mirchi ka salan peanut gravy dublin_mirchi_ka_salan_peanut_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mirchi_ka_salan_peanut_gravy.jpg" alt="Mirchi Ka Salan Peanut Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">145.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mirchi Ka Salan Peanut Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mirchi_ka_salan_peanut_gravy.jpg')">dublin_mirchi_ka_salan_peanut_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="mixed seafood coastal curry dublin_mixed_seafood_coastal_curry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mixed_seafood_coastal_curry.jpg" alt="Mixed Seafood Coastal Curry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">1438.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mixed Seafood Coastal Curry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mixed_seafood_coastal_curry.jpg')">dublin_mixed_seafood_coastal_curry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="mushroom pepper fry starter dublin_mushroom_pepper_fry_starter.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mushroom_pepper_fry_starter.jpg" alt="Mushroom Pepper Fry Starter" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">392.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mushroom Pepper Fry Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mushroom_pepper_fry_starter.jpg')">dublin_mushroom_pepper_fry_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="mutton curry dhaba style dublin_mutton_curry_dhaba_style.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_curry_dhaba_style.jpg" alt="Mutton Curry Dhaba Style" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">517.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mutton Curry Dhaba Style</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_curry_dhaba_style.jpg')">dublin_mutton_curry_dhaba_style.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="mutton keema masala gravy dublin_mutton_keema_masala_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_keema_masala_gravy.jpg" alt="Mutton Keema Masala Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">509.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mutton Keema Masala Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_keema_masala_gravy.jpg')">dublin_mutton_keema_masala_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="mutton rogan josh slow simmered dublin_mutton_rogan_josh_slow_simmered.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_rogan_josh_slow_simmered.jpg" alt="Mutton Rogan Josh Slow Simmered" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">767.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mutton Rogan Josh Slow Simmered</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_mutton_rogan_josh_slow_simmered.jpg')">dublin_mutton_rogan_josh_slow_simmered.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="navratan korma vegetable curry dublin_navratan_korma_vegetable_curry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_navratan_korma_vegetable_curry.jpg" alt="Navratan Korma Vegetable Curry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">479.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Navratan Korma Vegetable Curry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_navratan_korma_vegetable_curry.jpg')">dublin_navratan_korma_vegetable_curry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="palak paneer spinach gravy dublin_palak_paneer_spinach_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_palak_paneer_spinach_gravy.jpg" alt="Palak Paneer Spinach Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">640.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Palak Paneer Spinach Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_palak_paneer_spinach_gravy.jpg')">dublin_palak_paneer_spinach_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="paneer bhurji gravy dublin_paneer_bhurji_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_bhurji_gravy.jpg" alt="Paneer Bhurji Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">338.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Bhurji Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_bhurji_gravy.jpg')">dublin_paneer_bhurji_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="paneer butter masala pot dublin_paneer_butter_masala_pot.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_butter_masala_pot.jpg" alt="Paneer Butter Masala Pot" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">134.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Butter Masala Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_butter_masala_pot.jpg')">dublin_paneer_butter_masala_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="paneer lababdar creamy gravy dublin_paneer_lababdar_creamy_gravy.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_lababdar_creamy_gravy.jpg" alt="Paneer Lababdar Creamy Gravy" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">638.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Lababdar Creamy Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_lababdar_creamy_gravy.jpg')">dublin_paneer_lababdar_creamy_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="paneer tikka butter masala dublin_paneer_tikka_butter_masala.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_tikka_butter_masala.jpg" alt="Paneer Tikka Butter Masala" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">403.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Tikka Butter Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_tikka_butter_masala.jpg')">dublin_paneer_tikka_butter_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="paneer tikka masala sizzler dublin_paneer_tikka_masala_sizzler.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_tikka_masala_sizzler.jpg" alt="Paneer Tikka Masala Sizzler" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">412.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Tikka Masala Sizzler</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_paneer_tikka_masala_sizzler.jpg')">dublin_paneer_tikka_masala_sizzler.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="prawn chettinad masala roast dublin_prawn_chettinad_masala_roast.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_prawn_chettinad_masala_roast.jpg" alt="Prawn Chettinad Masala Roast" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">979.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Prawn Chettinad Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_prawn_chettinad_masala_roast.jpg')">dublin_prawn_chettinad_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="royal maharaja thali platter dublin_royal_maharaja_thali_platter.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_royal_maharaja_thali_platter.jpg" alt="Royal Maharaja Thali Platter" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">1046.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Royal Maharaja Thali Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_royal_maharaja_thali_platter.jpg')">dublin_royal_maharaja_thali_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="south indian curry feast spread dublin_south_indian_curry_feast_spread.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast Spread" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">130.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">South Indian Curry Feast Spread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_south_indian_curry_feast_spread.jpg')">dublin_south_indian_curry_feast_spread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="spicy egg masala roast dublin_spicy_egg_masala_roast.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_spicy_egg_masala_roast.jpg" alt="Spicy Egg Masala Roast" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">210.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Spicy Egg Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_spicy_egg_masala_roast.jpg')">dublin_spicy_egg_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="spicy paneer 65 crispy starter dublin_spicy_paneer_65_crispy_starter.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_spicy_paneer_65_crispy_starter.jpg" alt="Spicy Paneer 65 Crispy Starter" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">128.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Spicy Paneer 65 Crispy Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_spicy_paneer_65_crispy_starter.jpg')">dublin_spicy_paneer_65_crispy_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="tandoori chicken leg sizzler dublin_tandoori_chicken_leg_sizzler.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_chicken_leg_sizzler.jpg" alt="Tandoori Chicken Leg Sizzler" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">1054.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Chicken Leg Sizzler</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_chicken_leg_sizzler.jpg')">dublin_tandoori_chicken_leg_sizzler.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="tandoori mixed grill platter dublin_tandoori_mixed_grill_platter.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg" alt="Tandoori Mixed Grill Platter" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">722.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Mixed Grill Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_mixed_grill_platter.jpg')">dublin_tandoori_mixed_grill_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="tandoori roti whole wheat dublin_tandoori_roti_whole_wheat.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_roti_whole_wheat.jpg" alt="Tandoori Roti Whole Wheat" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">403.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Roti Whole Wheat</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_tandoori_roti_whole_wheat.jpg')">dublin_tandoori_roti_whole_wheat.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="veg korma coconut curry dublin_veg_korma_coconut_curry.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_veg_korma_coconut_curry.jpg" alt="Veg Korma Coconut Curry" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">411.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Veg Korma Coconut Curry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_veg_korma_coconut_curry.jpg')">dublin_veg_korma_coconut_curry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="curries_and_appetizers" data-search="vegetable biryani handi spread dublin_vegetable_biryani_handi_spread.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/curries_and_appetizers/dublin_vegetable_biryani_handi_spread.jpg" alt="Vegetable Biryani Handi Spread" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">396.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Vegetable Biryani Handi Spread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/curries_and_appetizers/dublin_vegetable_biryani_handi_spread.jpg')">dublin_vegetable_biryani_handi_spread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="dosas_and_tiffin" data-search="golden ghee paper roast dosa dublin_golden_ghee_paper_roast_dosa.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_golden_ghee_paper_roast_dosa.jpg" alt="Golden Ghee Paper Roast Dosa" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">693.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Golden Ghee Paper Roast Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_golden_ghee_paper_roast_dosa.jpg')">dublin_golden_ghee_paper_roast_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="dosas_and_tiffin" data-search="gunpowder podi masala dosa dublin_gunpowder_podi_masala_dosa.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_gunpowder_podi_masala_dosa.jpg" alt="Gunpowder Podi Masala Dosa" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">458.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Gunpowder Podi Masala Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_gunpowder_podi_masala_dosa.jpg')">dublin_gunpowder_podi_masala_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="dosas_and_tiffin" data-search="medu vada sambar chutney combo dublin_medu_vada_sambar_chutney_combo.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_medu_vada_sambar_chutney_combo.jpg" alt="Medu Vada Sambar Chutney Combo" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">111.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Medu Vada Sambar Chutney Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_medu_vada_sambar_chutney_combo.jpg')">dublin_medu_vada_sambar_chutney_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="dosas_and_tiffin" data-search="onion rava masala crispy dosa dublin_onion_rava_masala_crispy_dosa.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_onion_rava_masala_crispy_dosa.jpg" alt="Onion Rava Masala Crispy Dosa" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">628.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Onion Rava Masala Crispy Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_onion_rava_masala_crispy_dosa.jpg')">dublin_onion_rava_masala_crispy_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="dosas_and_tiffin" data-search="steamed idli sambar vada tiffin dublin_steamed_idli_sambar_vada_tiffin.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_steamed_idli_sambar_vada_tiffin.jpg" alt="Steamed Idli Sambar Vada Tiffin" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">135.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Steamed Idli Sambar Vada Tiffin</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/dosas_and_tiffin/dublin_steamed_idli_sambar_vada_tiffin.jpg')">dublin_steamed_idli_sambar_vada_tiffin.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="exterior_and_storefront" data-search="evening illuminated storefront sign dublin_evening_illuminated_storefront_sign.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/exterior_and_storefront/dublin_evening_illuminated_storefront_sign.jpg" alt="Evening Illuminated Storefront Sign" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">835.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Evening Illuminated Storefront Sign</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/exterior_and_storefront/dublin_evening_illuminated_storefront_sign.jpg')">dublin_evening_illuminated_storefront_sign.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="exterior_and_storefront" data-search="plaza entrance parking view dublin_plaza_entrance_parking_view.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/exterior_and_storefront/dublin_plaza_entrance_parking_view.jpg" alt="Plaza Entrance Parking View" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">169.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Plaza Entrance Parking View</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/exterior_and_storefront/dublin_plaza_entrance_parking_view.jpg')">dublin_plaza_entrance_parking_view.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="exterior_and_storefront" data-search="restaurant facade curbside view dublin_restaurant_facade_curbside_view.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/exterior_and_storefront/dublin_restaurant_facade_curbside_view.jpg" alt="Restaurant Facade Curbside View" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">92.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Restaurant Facade Curbside View</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/exterior_and_storefront/dublin_restaurant_facade_curbside_view.jpg')">dublin_restaurant_facade_curbside_view.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="exterior_and_storefront" data-search="storefront exterior daylight signboard dublin_storefront_exterior_daylight_signboard.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/exterior_and_storefront/dublin_storefront_exterior_daylight_signboard.jpg" alt="Storefront Exterior Daylight Signboard" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">686.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Storefront Exterior Daylight Signboard</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/exterior_and_storefront/dublin_storefront_exterior_daylight_signboard.jpg')">dublin_storefront_exterior_daylight_signboard.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="menus_and_promos" data-search="catering and takeout menu guide dublin_catering_and_takeout_menu_guide.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/menus_and_promos/dublin_catering_and_takeout_menu_guide.jpg" alt="Catering And Takeout Menu Guide" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">297.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Catering And Takeout Menu Guide</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/menus_and_promos/dublin_catering_and_takeout_menu_guide.jpg')">dublin_catering_and_takeout_menu_guide.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="menus_and_promos" data-search="chef special recommendation menu dublin_chef_special_recommendation_menu.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/menus_and_promos/dublin_chef_special_recommendation_menu.jpg" alt="Chef Special Recommendation Menu" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">447.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Chef Special Recommendation Menu</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/menus_and_promos/dublin_chef_special_recommendation_menu.jpg')">dublin_chef_special_recommendation_menu.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="menus_and_promos" data-search="dine in printed menu full card dublin_dine_in_printed_menu_full_card.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/menus_and_promos/dublin_dine_in_printed_menu_full_card.jpg" alt="Dine In Printed Menu Full Card" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">474.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Dine In Printed Menu Full Card</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/menus_and_promos/dublin_dine_in_printed_menu_full_card.jpg')">dublin_dine_in_printed_menu_full_card.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="menus_and_promos" data-search="dosa and biryani special menu dublin_dosa_and_biryani_special_menu.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/menus_and_promos/dublin_dosa_and_biryani_special_menu.jpg" alt="Dosa And Biryani Special Menu" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">477.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Dosa And Biryani Special Menu</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/menus_and_promos/dublin_dosa_and_biryani_special_menu.jpg')">dublin_dosa_and_biryani_special_menu.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="menus_and_promos" data-search="lunch dinner specials menu sheet dublin_lunch_dinner_specials_menu_sheet.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/menus_and_promos/dublin_lunch_dinner_specials_menu_sheet.jpg" alt="Lunch Dinner Specials Menu Sheet" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">658.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Lunch Dinner Specials Menu Sheet</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/menus_and_promos/dublin_lunch_dinner_specials_menu_sheet.jpg')">dublin_lunch_dinner_specials_menu_sheet.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="store_interior_and_vibe" data-search="cozy family dining table setup dublin_cozy_family_dining_table_setup.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_cozy_family_dining_table_setup.jpg" alt="Cozy Family Dining Table Setup" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">556.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Cozy Family Dining Table Setup</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_cozy_family_dining_table_setup.jpg')">dublin_cozy_family_dining_table_setup.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="store_interior_and_vibe" data-search="order counter and dining room dublin_order_counter_and_dining_room.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_order_counter_and_dining_room.jpg" alt="Order Counter And Dining Room" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">1010.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Order Counter And Dining Room</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_order_counter_and_dining_room.jpg')">dublin_order_counter_and_dining_room.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="store_interior_and_vibe" data-search="restaurant main dining hall booths dublin_restaurant_main_dining_hall_booths.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_restaurant_main_dining_hall_booths.jpg" alt="Restaurant Main Dining Hall Booths" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">750.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Restaurant Main Dining Hall Booths</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_restaurant_main_dining_hall_booths.jpg')">dublin_restaurant_main_dining_hall_booths.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="dublin" data-category="store_interior_and_vibe" data-search="warm ambient lighting indoor seating dublin_warm_ambient_lighting_indoor_seating.jpg dublin">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_warm_ambient_lighting_indoor_seating.jpg" alt="Warm Ambient Lighting Indoor Seating" loading="lazy">
+          <span class="loc-tag">dublin</span>
+          <span class="size-tag">481.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Warm Ambient Lighting Indoor Seating</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/dublin/store_interior_and_vibe/dublin_warm_ambient_lighting_indoor_seating.jpg')">dublin_warm_ambient_lighting_indoor_seating.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="biryani_specials" data-search="hyderabadi chicken dum biryani pot livermore_hyderabadi_chicken_dum_biryani_pot.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/biryani_specials/livermore_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Hyderabadi Chicken Dum Biryani Pot" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">1641.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Hyderabadi Chicken Dum Biryani Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/biryani_specials/livermore_hyderabadi_chicken_dum_biryani_pot.jpg')">livermore_hyderabadi_chicken_dum_biryani_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="bhature chole combo platter livermore_bhature_chole_combo_platter.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_bhature_chole_combo_platter.jpg" alt="Bhature Chole Combo Platter" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">235.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Bhature Chole Combo Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_bhature_chole_combo_platter.jpg')">livermore_bhature_chole_combo_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="chana masala punjabi gravy livermore_chana_masala_punjabi_gravy.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chana_masala_punjabi_gravy.jpg" alt="Chana Masala Punjabi Gravy" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">338.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chana Masala Punjabi Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chana_masala_punjabi_gravy.jpg')">livermore_chana_masala_punjabi_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="chettinad mutton sukka masala livermore_chettinad_mutton_sukka_masala.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chettinad_mutton_sukka_masala.jpg" alt="Chettinad Mutton Sukka Masala" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">770.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chettinad Mutton Sukka Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chettinad_mutton_sukka_masala.jpg')">livermore_chettinad_mutton_sukka_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="chicken chettinad black pepper livermore_chicken_chettinad_black_pepper.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chicken_chettinad_black_pepper.jpg" alt="Chicken Chettinad Black Pepper" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">299.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Chettinad Black Pepper</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chicken_chettinad_black_pepper.jpg')">livermore_chicken_chettinad_black_pepper.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="chicken tikka masala gravy livermore_chicken_tikka_masala_gravy.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chicken_tikka_masala_gravy.jpg" alt="Chicken Tikka Masala Gravy" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">429.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chicken Tikka Masala Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_chicken_tikka_masala_gravy.jpg')">livermore_chicken_tikka_masala_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="creamy butter chicken delight livermore_creamy_butter_chicken_delight.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_creamy_butter_chicken_delight.jpg" alt="Creamy Butter Chicken Delight" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">175.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Creamy Butter Chicken Delight</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_creamy_butter_chicken_delight.jpg')">livermore_creamy_butter_chicken_delight.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="crispy andhra chicken 65 livermore_crispy_andhra_chicken_65.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_andhra_chicken_65.jpg" alt="Crispy Andhra Chicken 65" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">92.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Crispy Andhra Chicken 65</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_andhra_chicken_65.jpg')">livermore_crispy_andhra_chicken_65.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="crispy samosa chaat bowl livermore_crispy_samosa_chaat_bowl.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_samosa_chaat_bowl.jpg" alt="Crispy Samosa Chaat Bowl" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">537.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Crispy Samosa Chaat Bowl</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_crispy_samosa_chaat_bowl.jpg')">livermore_crispy_samosa_chaat_bowl.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="dal makhani slow cooked livermore_dal_makhani_slow_cooked.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_dal_makhani_slow_cooked.jpg" alt="Dal Makhani Slow Cooked" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">154.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dal Makhani Slow Cooked</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_dal_makhani_slow_cooked.jpg')">livermore_dal_makhani_slow_cooked.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="dum biryani thali curry combo livermore_dum_biryani_thali_curry_combo.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_dum_biryani_thali_curry_combo.jpg" alt="Dum Biryani Thali Curry Combo" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">366.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Dum Biryani Thali Curry Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_dum_biryani_thali_curry_combo.jpg')">livermore_dum_biryani_thali_curry_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="garlic naan tandoori bread livermore_garlic_naan_tandoori_bread.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_garlic_naan_tandoori_bread.jpg" alt="Garlic Naan Tandoori Bread" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">305.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Garlic Naan Tandoori Bread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_garlic_naan_tandoori_bread.jpg')">livermore_garlic_naan_tandoori_bread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="gobi manchurian dry starter livermore_gobi_manchurian_dry_starter.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_gobi_manchurian_dry_starter.jpg" alt="Gobi Manchurian Dry Starter" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">356.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Gobi Manchurian Dry Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_gobi_manchurian_dry_starter.jpg')">livermore_gobi_manchurian_dry_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="hyderabadi apollo fish fry livermore_hyderabadi_apollo_fish_fry.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_hyderabadi_apollo_fish_fry.jpg" alt="Hyderabadi Apollo Fish Fry" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">31.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Hyderabadi Apollo Fish Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_hyderabadi_apollo_fish_fry.jpg')">livermore_hyderabadi_apollo_fish_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="kadai paneer bell pepper gravy livermore_kadai_paneer_bell_pepper_gravy.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kadai_paneer_bell_pepper_gravy.jpg" alt="Kadai Paneer Bell Pepper Gravy" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">139.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Kadai Paneer Bell Pepper Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kadai_paneer_bell_pepper_gravy.jpg')">livermore_kadai_paneer_bell_pepper_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="kashmiri mutton curry pot livermore_kashmiri_mutton_curry_pot.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg" alt="Kashmiri Mutton Curry Pot" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">160.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Kashmiri Mutton Curry Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_kashmiri_mutton_curry_pot.jpg')">livermore_kashmiri_mutton_curry_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="madras chicken curry bowl livermore_madras_chicken_curry_bowl.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_madras_chicken_curry_bowl.jpg" alt="Madras Chicken Curry Bowl" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">124.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Madras Chicken Curry Bowl</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_madras_chicken_curry_bowl.jpg')">livermore_madras_chicken_curry_bowl.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="malabar flaky parotta curry combo livermore_malabar_flaky_parotta_curry_combo.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_malabar_flaky_parotta_curry_combo.jpg" alt="Malabar Flaky Parotta Curry Combo" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">835.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Malabar Flaky Parotta Curry Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_malabar_flaky_parotta_curry_combo.jpg')">livermore_malabar_flaky_parotta_curry_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="mutton rogan josh slow simmered livermore_mutton_rogan_josh_slow_simmered.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_mutton_rogan_josh_slow_simmered.jpg" alt="Mutton Rogan Josh Slow Simmered" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">135.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Mutton Rogan Josh Slow Simmered</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_mutton_rogan_josh_slow_simmered.jpg')">livermore_mutton_rogan_josh_slow_simmered.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="navratan korma vegetable curry livermore_navratan_korma_vegetable_curry.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_navratan_korma_vegetable_curry.jpg" alt="Navratan Korma Vegetable Curry" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">251.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Navratan Korma Vegetable Curry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_navratan_korma_vegetable_curry.jpg')">livermore_navratan_korma_vegetable_curry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="palak paneer spinach gravy livermore_palak_paneer_spinach_gravy.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_palak_paneer_spinach_gravy.jpg" alt="Palak Paneer Spinach Gravy" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">602.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Palak Paneer Spinach Gravy</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_palak_paneer_spinach_gravy.jpg')">livermore_palak_paneer_spinach_gravy.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="paneer tikka butter masala livermore_paneer_tikka_butter_masala.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_paneer_tikka_butter_masala.jpg" alt="Paneer Tikka Butter Masala" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">242.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Paneer Tikka Butter Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_paneer_tikka_butter_masala.jpg')">livermore_paneer_tikka_butter_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="prawn chettinad masala roast livermore_prawn_chettinad_masala_roast.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_prawn_chettinad_masala_roast.jpg" alt="Prawn Chettinad Masala Roast" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">871.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Prawn Chettinad Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_prawn_chettinad_masala_roast.jpg')">livermore_prawn_chettinad_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="royal maharaja thali platter livermore_royal_maharaja_thali_platter.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_royal_maharaja_thali_platter.jpg" alt="Royal Maharaja Thali Platter" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">600.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Royal Maharaja Thali Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_royal_maharaja_thali_platter.jpg')">livermore_royal_maharaja_thali_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="south indian curry feast spread livermore_south_indian_curry_feast_spread.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_south_indian_curry_feast_spread.jpg" alt="South Indian Curry Feast Spread" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">397.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">South Indian Curry Feast Spread</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_south_indian_curry_feast_spread.jpg')">livermore_south_indian_curry_feast_spread.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="spicy egg masala roast livermore_spicy_egg_masala_roast.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_spicy_egg_masala_roast.jpg" alt="Spicy Egg Masala Roast" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">92.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Spicy Egg Masala Roast</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_spicy_egg_masala_roast.jpg')">livermore_spicy_egg_masala_roast.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="spicy paneer 65 crispy starter livermore_spicy_paneer_65_crispy_starter.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_spicy_paneer_65_crispy_starter.jpg" alt="Spicy Paneer 65 Crispy Starter" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">462.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Spicy Paneer 65 Crispy Starter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_spicy_paneer_65_crispy_starter.jpg')">livermore_spicy_paneer_65_crispy_starter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="tandoori chicken leg sizzler livermore_tandoori_chicken_leg_sizzler.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_tandoori_chicken_leg_sizzler.jpg" alt="Tandoori Chicken Leg Sizzler" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">381.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Chicken Leg Sizzler</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_tandoori_chicken_leg_sizzler.jpg')">livermore_tandoori_chicken_leg_sizzler.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="curries_and_appetizers" data-search="tandoori mixed grill platter livermore_tandoori_mixed_grill_platter.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/curries_and_appetizers/livermore_tandoori_mixed_grill_platter.jpg" alt="Tandoori Mixed Grill Platter" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">470.4 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Tandoori Mixed Grill Platter</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/curries_and_appetizers/livermore_tandoori_mixed_grill_platter.jpg')">livermore_tandoori_mixed_grill_platter.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="dosas_and_tiffin" data-search="golden ghee paper roast dosa livermore_golden_ghee_paper_roast_dosa.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_golden_ghee_paper_roast_dosa.jpg" alt="Golden Ghee Paper Roast Dosa" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">203.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Golden Ghee Paper Roast Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_golden_ghee_paper_roast_dosa.jpg')">livermore_golden_ghee_paper_roast_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="dosas_and_tiffin" data-search="gunpowder podi masala dosa livermore_gunpowder_podi_masala_dosa.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_gunpowder_podi_masala_dosa.jpg" alt="Gunpowder Podi Masala Dosa" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">454.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Gunpowder Podi Masala Dosa</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_gunpowder_podi_masala_dosa.jpg')">livermore_gunpowder_podi_masala_dosa.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="dosas_and_tiffin" data-search="medu vada sambar chutney combo livermore_medu_vada_sambar_chutney_combo.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_medu_vada_sambar_chutney_combo.jpg" alt="Medu Vada Sambar Chutney Combo" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">77.3 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Medu Vada Sambar Chutney Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_medu_vada_sambar_chutney_combo.jpg')">livermore_medu_vada_sambar_chutney_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="dosas_and_tiffin" data-search="steamed idli sambar vada tiffin livermore_steamed_idli_sambar_vada_tiffin.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_steamed_idli_sambar_vada_tiffin.jpg" alt="Steamed Idli Sambar Vada Tiffin" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">355.7 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Steamed Idli Sambar Vada Tiffin</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/dosas_and_tiffin/livermore_steamed_idli_sambar_vada_tiffin.jpg')">livermore_steamed_idli_sambar_vada_tiffin.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="exterior_and_storefront" data-search="plaza entrance parking view livermore_plaza_entrance_parking_view.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/exterior_and_storefront/livermore_plaza_entrance_parking_view.jpg" alt="Plaza Entrance Parking View" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">405.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Plaza Entrance Parking View</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/exterior_and_storefront/livermore_plaza_entrance_parking_view.jpg')">livermore_plaza_entrance_parking_view.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="exterior_and_storefront" data-search="storefront exterior daylight signboard livermore_storefront_exterior_daylight_signboard.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/exterior_and_storefront/livermore_storefront_exterior_daylight_signboard.jpg" alt="Storefront Exterior Daylight Signboard" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">1570.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">exterior and storefront</div>
+          <div class="title">Storefront Exterior Daylight Signboard</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/exterior_and_storefront/livermore_storefront_exterior_daylight_signboard.jpg')">livermore_storefront_exterior_daylight_signboard.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="menus_and_promos" data-search="dine in printed menu full card livermore_dine_in_printed_menu_full_card.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/menus_and_promos/livermore_dine_in_printed_menu_full_card.jpg" alt="Dine In Printed Menu Full Card" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">608.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">menus and promos</div>
+          <div class="title">Dine In Printed Menu Full Card</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/menus_and_promos/livermore_dine_in_printed_menu_full_card.jpg')">livermore_dine_in_printed_menu_full_card.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="store_interior_and_vibe" data-search="cozy family dining table setup livermore_cozy_family_dining_table_setup.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_cozy_family_dining_table_setup.jpg" alt="Cozy Family Dining Table Setup" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">401.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Cozy Family Dining Table Setup</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_cozy_family_dining_table_setup.jpg')">livermore_cozy_family_dining_table_setup.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="store_interior_and_vibe" data-search="order counter and dining room livermore_order_counter_and_dining_room.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_order_counter_and_dining_room.jpg" alt="Order Counter And Dining Room" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">439.6 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Order Counter And Dining Room</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_order_counter_and_dining_room.jpg')">livermore_order_counter_and_dining_room.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="store_interior_and_vibe" data-search="restaurant main dining hall booths livermore_restaurant_main_dining_hall_booths.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_restaurant_main_dining_hall_booths.jpg" alt="Restaurant Main Dining Hall Booths" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">592.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Restaurant Main Dining Hall Booths</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_restaurant_main_dining_hall_booths.jpg')">livermore_restaurant_main_dining_hall_booths.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="livermore" data-category="store_interior_and_vibe" data-search="warm ambient lighting indoor seating livermore_warm_ambient_lighting_indoor_seating.jpg livermore">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_warm_ambient_lighting_indoor_seating.jpg" alt="Warm Ambient Lighting Indoor Seating" loading="lazy">
+          <span class="loc-tag">livermore</span>
+          <span class="size-tag">182.8 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Warm Ambient Lighting Indoor Seating</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/livermore/store_interior_and_vibe/livermore_warm_ambient_lighting_indoor_seating.jpg')">livermore_warm_ambient_lighting_indoor_seating.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="milpitas" data-category="biryani_specials" data-search="hyderabadi chicken dum biryani pot milpitas_hyderabadi_chicken_dum_biryani_pot.jpg milpitas">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/milpitas/biryani_specials/milpitas_hyderabadi_chicken_dum_biryani_pot.jpg" alt="Hyderabadi Chicken Dum Biryani Pot" loading="lazy">
+          <span class="loc-tag">milpitas</span>
+          <span class="size-tag">184.9 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">biryani specials</div>
+          <div class="title">Hyderabadi Chicken Dum Biryani Pot</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/milpitas/biryani_specials/milpitas_hyderabadi_chicken_dum_biryani_pot.jpg')">milpitas_hyderabadi_chicken_dum_biryani_pot.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="milpitas" data-category="curries_and_appetizers" data-search="chettinad mutton sukka masala milpitas_chettinad_mutton_sukka_masala.jpg milpitas">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/milpitas/curries_and_appetizers/milpitas_chettinad_mutton_sukka_masala.jpg" alt="Chettinad Mutton Sukka Masala" loading="lazy">
+          <span class="loc-tag">milpitas</span>
+          <span class="size-tag">398.0 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Chettinad Mutton Sukka Masala</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/milpitas/curries_and_appetizers/milpitas_chettinad_mutton_sukka_masala.jpg')">milpitas_chettinad_mutton_sukka_masala.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="milpitas" data-category="curries_and_appetizers" data-search="hyderabadi apollo fish fry milpitas_hyderabadi_apollo_fish_fry.jpg milpitas">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/milpitas/curries_and_appetizers/milpitas_hyderabadi_apollo_fish_fry.jpg" alt="Hyderabadi Apollo Fish Fry" loading="lazy">
+          <span class="loc-tag">milpitas</span>
+          <span class="size-tag">338.1 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">curries and appetizers</div>
+          <div class="title">Hyderabadi Apollo Fish Fry</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/milpitas/curries_and_appetizers/milpitas_hyderabadi_apollo_fish_fry.jpg')">milpitas_hyderabadi_apollo_fish_fry.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="milpitas" data-category="dosas_and_tiffin" data-search="medu vada sambar chutney combo milpitas_medu_vada_sambar_chutney_combo.jpg milpitas">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/milpitas/dosas_and_tiffin/milpitas_medu_vada_sambar_chutney_combo.jpg" alt="Medu Vada Sambar Chutney Combo" loading="lazy">
+          <span class="loc-tag">milpitas</span>
+          <span class="size-tag">323.5 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">dosas and tiffin</div>
+          <div class="title">Medu Vada Sambar Chutney Combo</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/milpitas/dosas_and_tiffin/milpitas_medu_vada_sambar_chutney_combo.jpg')">milpitas_medu_vada_sambar_chutney_combo.jpg</div>
+        </div>
+      </div>
+    
+      <div class="card" data-location="milpitas" data-category="store_interior_and_vibe" data-search="restaurant main dining hall booths milpitas_restaurant_main_dining_hall_booths.jpg milpitas">
+        <div class="img-wrap">
+          <img src="/assets/images/google_maps/milpitas/store_interior_and_vibe/milpitas_restaurant_main_dining_hall_booths.jpg" alt="Restaurant Main Dining Hall Booths" loading="lazy">
+          <span class="loc-tag">milpitas</span>
+          <span class="size-tag">620.2 KB</span>
+        </div>
+        <div class="info">
+          <div class="cat">store interior and vibe</div>
+          <div class="title">Restaurant Main Dining Hall Booths</div>
+          <div class="file-path" title="Click to copy path" onclick="copyToClipboard('/assets/images/google_maps/milpitas/store_interior_and_vibe/milpitas_restaurant_main_dining_hall_booths.jpg')">milpitas_restaurant_main_dining_hall_booths.jpg</div>
+        </div>
+      </div>
+    
+  </div>
+
+  <div class="copied-toast" id="toast">Copied path to clipboard!</div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    const statsBar = document.getElementById('statsBar');
+    const toast = document.getElementById('toast');
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function filterCards() {
+      let visible = 0;
+      cards.forEach(card => {
+        const matchesLoc = (currentFilter === 'all' || card.dataset.location === currentFilter);
+        const matchesSearch = (!currentSearch || card.dataset.search.includes(currentSearch));
+
+        if (matchesLoc && matchesSearch) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      statsBar.textContent = 'Showing ' + visible + ' of 168 images';
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value.toLowerCase().trim();
+      filterCards();
+    });
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        filterCards();
+      });
+    });
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        toast.style.display = 'block';
+        setTimeout(() => toast.style.display = 'none', 1800);
+      });
+    }
+  </script>
+</body>
+</html>
